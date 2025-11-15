@@ -608,3 +608,10 @@ if (!history.state) {
   history.replaceState({ page: "home" }, "", "");
 }
 showHome(false);
+
+document.querySelectorAll(".course-card").forEach(card => {
+  const lang = card.dataset.lang;
+  const icon = card.querySelector(".course-icon");
+  icon.style.backgroundImage = `url(logos/${lang}.png)`; // change to .svg or .jpg if needed
+});
+

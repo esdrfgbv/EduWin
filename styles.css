@@ -98,18 +98,27 @@ body {
 }
 
 .course-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, #615bff, #12c9a4);
-  color: #0a0e1a;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: 700;
-  font-size: 18px;
-  margin-bottom: 10px;
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+
+  /* white square behind the logo */
+  background-color: #ffffff;
+
+  /* logo settings */
+  background-size: 70%;      /* small padding so logo fits inside */
+  background-position: center;
+  background-repeat: no-repeat;
+
+  margin-bottom: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.3); /* soft shadow (optional but looks nice) */
 }
+
+.course-card:hover .course-icon {
+  box-shadow: 0 0 16px rgba(255,255,255,0.35);
+}
+
+
 
 /* Breadcrumb */
 .breadcrumb {
