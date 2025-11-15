@@ -44,24 +44,35 @@ const startPracticingBtn = document.getElementById("startPracticingBtn");
 
 // Global state
 let currentLanguage = null;
-// from data/<lang>/levelX.json
 let challengeData = null; // { levels: [ level1Json, level2Json, ... ] }
-// from notes/<lang>/levelX.json
-let notesCache = {}; // key: `${lang}_level${index+1}` -> notes json
-
+let notesCache = {}; // key: `${lang}_level${i}` -> notes json
 let currentLevelIndex = 0;
 let currentChallengeIndex = 0;
 
-// Judge0 config
+// Judge0 config (languages that actually run)
 const JUDGE0_URL = "https://ce.judge0.com";
-const JUDGE_LANG_MAP = { c: 50, python: 71, java: 62, dsa: null };
+const JUDGE_LANG_MAP = {
+  c: 50,        // GCC C
+  python: 71,   // Python 3
+  java: 62,     // Java
+  dsa: null,    // theory
+  cpp: 54,      // C++ (G++)
+  js: 63,       // JavaScript (Node)
+  csharp: 51,   // C#
+  dbms: null,   // theory
+  os: null,     // theory
+  cn: null,     // theory
+  systemdesign: null, // theory
+  htmlcss: null // front-end, no Judge
+};
 
 /* ==============================
    PROGRESS SYSTEM
    ============================== */
 function getProgress(lang) {
   return JSON.parse(localStorage.getItem("progress_" + lang)) || {
-    levels: Array(10).fill(0), // each index: solved questions count (0–10)
+    // for each of 10 levels: number of solved challenges (0..max)
+    levels: Array(10).fill(0)
   };
 }
 
@@ -70,7 +81,46 @@ function saveProgress(lang, progress) {
 }
 
 /* ==============================
-   NAVIGATION FUNCTIONS
+   HELPERS
+   ============================== */
+function getCourseTitle(lang) {
+  switch (lang) {
+    case "c": return "C Programming — 10 Levels";
+    case "python": return "Python — 10 Levels";
+    case "java": return "Java — 10 Levels";
+    case "dsa": return "DSA — 10 Levels";
+    case "cpp": return "C++ — 10 Levels";
+    case "js": return "JavaScript — 10 Levels";
+    case "csharp": return "C# — 10 Levels";
+    case "dbms": return "DBMS + SQL — 10 Levels";
+    case "os": return "Operating Systems — 10 Levels";
+    case "cn": return "Computer Networks — 10 Levels";
+    case "systemdesign": return "System Design — 10 Levels";
+    case "htmlcss": return "HTML + CSS — 10 Levels";
+    default: return "Course — 10 Levels";
+  }
+}
+
+function getEditorPill(lang) {
+  switch (lang) {
+    case "c": return "C";
+    case "python": return "Python";
+    case "java": return "Java";
+    case "cpp": return "C++";
+    case "js": return "JavaScript";
+    case "csharp": return "C#";
+    case "htmlcss": return "HTML/CSS";
+    case "dbms": return "SQL/Theory";
+    case "os": return "OS Theory";
+    case "cn": return "CN Theory";
+    case "systemdesign": return "System Design";
+    case "dsa": return "DSA";
+    default: return "Code";
+  }
+}
+
+/* ==============================
+   NAVIGATION
    ============================== */
 function showHome(pushHistory = true) {
   homeSection.classList.remove("hidden");
@@ -85,17 +135,9 @@ function showHome(pushHistory = true) {
 
 function openLevels(lang, pushHistory = true) {
   currentLanguage = lang;
+  selectedLanguageTitle.textContent = getCourseTitle(lang);
 
-  selectedLanguageTitle.textContent =
-    lang === "c"
-      ? "C Programming — 10 Levels"
-      : lang === "python"
-      ? "Python — 10 Levels"
-      : lang === "java"
-      ? "Java — 10 Levels"
-      : "DSA — 10 Levels";
-
-  const levelsPromise = loadLevelsUI(); // fetch all question JSONs
+  const levelsPromise = loadLevelsUI(); // fetch data JSONs
 
   homeSection.classList.add("hidden");
   levelsSection.classList.remove("hidden");
@@ -109,10 +151,8 @@ function openLevels(lang, pushHistory = true) {
   return levelsPromise;
 }
 
-/**
- * Render notes into Level Intro section
- * notesJson from: notes/<lang>/levelX.json
- */
+/* ---------- Level intro (notes from notes/<lang>/levelX.json) ---------- */
+
 function renderLevelIntro(notesJson, levelIdx) {
   const level = challengeData.levels[levelIdx];
 
@@ -121,7 +161,8 @@ function renderLevelIntro(notesJson, levelIdx) {
   const notesIntro =
     notesJson.intro ||
     notesJson.description ||
-    "In this level, you will practice 10 problems on this topic.";
+    level.concept ||
+    "In this level, you will practice problems related to this topic.";
   const points = Array.isArray(notesJson.points) ? notesJson.points : [];
 
   levelIntroTitle.textContent = notesTitle;
@@ -146,10 +187,6 @@ function renderLevelIntro(notesJson, levelIdx) {
   }
 }
 
-/**
- * Open Level Intro page
- * Fetch notes from notes/<lang>/levelX.json
- */
 function openLevelIntro(levelIdx, pushHistory = true) {
   currentLevelIndex = levelIdx;
 
@@ -173,15 +210,12 @@ function openLevelIntro(levelIdx, pushHistory = true) {
     }
   };
 
-  // if already fetched once, use cache
   if (notesCache[key]) {
     showIntro(notesCache[key]);
   } else {
     fetch(notesPath)
       .then((r) => {
-        if (!r.ok) {
-          throw new Error("Notes JSON not found: " + notesPath);
-        }
+        if (!r.ok) throw new Error("Notes JSON not found: " + notesPath);
         return r.json();
       })
       .then((json) => {
@@ -190,11 +224,10 @@ function openLevelIntro(levelIdx, pushHistory = true) {
       })
       .catch((err) => {
         console.error(err);
-        // fallback default notes
         const fallback = {
           title: challengeData.levels[levelIdx].title || `Level ${levelIdx + 1}`,
           intro: "Notes for this level are coming soon.",
-          points: [],
+          points: []
         };
         notesCache[key] = fallback;
         showIntro(fallback);
@@ -218,7 +251,7 @@ function openChallenge(levelIdx, challengeIdx, pushHistory = true) {
         page: "challenge",
         lang: currentLanguage,
         levelIdx,
-        challengeIdx,
+        challengeIdx
       },
       "",
       ""
@@ -227,7 +260,7 @@ function openChallenge(levelIdx, challengeIdx, pushHistory = true) {
 }
 
 /* ==============================
-   LOAD LEVELS FROM data/<lang>/*.json
+   LOAD LEVELS UI FROM data/<lang>/levelX.json
    ============================== */
 function loadLevelsUI() {
   levelsContainer.innerHTML = "";
@@ -251,11 +284,10 @@ function loadLevelsUI() {
         })
         .catch((err) => {
           console.error(err);
-          // fallback if file missing
           return {
             title: `Level ${i}`,
             concept: "Coming soon",
-            challenges: [],
+            challenges: []
           };
         })
     );
@@ -268,15 +300,23 @@ function loadLevelsUI() {
       const card = document.createElement("div");
       card.className = "level-card";
 
-      const completedChallenges = progress.levels[idx];
+      const solvedCount = progress.levels[idx] || 0;
+      const totalChallenges = Array.isArray(lvl.challenges)
+        ? lvl.challenges.length
+        : 0;
 
-      if (idx > 0 && progress.levels[idx - 1] !== 10) {
-        card.classList.add("locked");
+      if (idx > 0) {
+        const prevTotal = Array.isArray(levels[idx - 1].challenges)
+          ? levels[idx - 1].challenges.length
+          : 0;
+        if (progress.levels[idx - 1] < prevTotal || prevTotal === 0) {
+          card.classList.add("locked");
+        }
       }
 
       card.innerHTML = `
         <h3>${lvl.title || `Level ${idx + 1}`}</h3>
-        <p class="level-progress">${completedChallenges}/10 challenges completed</p>
+        <p class="level-progress">${solvedCount}/${totalChallenges || 0} challenges completed</p>
       `;
 
       if (
@@ -300,17 +340,18 @@ function loadLevelsUI() {
 function loadChallengeScreen() {
   const level = challengeData.levels[currentLevelIndex];
   const challenge = level.challenges[currentChallengeIndex];
+  const totalChallenges = level.challenges.length;
 
   challengeBreadcrumb.textContent = `${level.title} — Challenge ${
     currentChallengeIndex + 1
-  } / 10`;
+  } / ${totalChallenges}`;
 
   challengeTitle.textContent = challenge.title;
-  challengeDescription.textContent = challenge.description;
+  challengeDescription.textContent = challenge.description || "";
   challengeConcept.textContent = level.concept || "";
 
-  inputFormat.textContent = challenge.inputDescription;
-  outputFormat.textContent = challenge.outputDescription;
+  inputFormat.textContent = challenge.inputDescription || "";
+  outputFormat.textContent = challenge.outputDescription || "";
   examplesArea.textContent = (challenge.examples || []).join("\n\n");
 
   testcaseTable.innerHTML = "";
@@ -326,17 +367,9 @@ function loadChallengeScreen() {
   });
 
   codeEditor.value = challenge.starterCode || "";
-  editorLangPill.textContent =
-    currentLanguage === "c"
-      ? "C"
-      : currentLanguage === "python"
-      ? "Python"
-      : currentLanguage === "java"
-      ? "Java"
-      : "DSA";
+  editorLangPill.textContent = getEditorPill(currentLanguage);
 
   const progress = getProgress(currentLanguage);
-
   prevChallengeBtn.disabled = currentChallengeIndex === 0;
   nextChallengeBtn.disabled =
     progress.levels[currentLevelIndex] <= currentChallengeIndex;
@@ -349,19 +382,20 @@ function loadChallengeScreen() {
    RUN CODE (NO TESTS)
    ============================== */
 async function runCode() {
-  outputArea.textContent = "⏳ Running...";
-
   const langId = JUDGE_LANG_MAP[currentLanguage];
+
   if (!langId) {
     outputArea.textContent =
-      "⚠ DSA mode is only for logic; code execution disabled.";
+      "⚠ Code execution is disabled for this course. Focus on logic/theory here.";
     return;
   }
+
+  outputArea.textContent = "⏳ Running...";
 
   const payload = {
     language_id: langId,
     source_code: codeEditor.value,
-    stdin: "",
+    stdin: ""
   };
 
   const job = await fetch(
@@ -369,7 +403,7 @@ async function runCode() {
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
+      body: JSON.stringify(payload)
     }
   ).then((r) => r.json());
 
@@ -393,23 +427,27 @@ async function runCode() {
    RUN TESTS + UNLOCK PROGRESS
    ============================== */
 async function testCode() {
+  const langId = JUDGE_LANG_MAP[currentLanguage];
+  if (!langId) {
+    challengeStatusMsg.textContent =
+      "⚠ Automatic test checking is disabled for this course.";
+    return;
+  }
+
   const level = challengeData.levels[currentLevelIndex];
   const challenge = level.challenges[currentChallengeIndex];
-
-  const langId = JUDGE_LANG_MAP[currentLanguage];
-  if (!langId) return;
-
   const rows = testcaseTable.querySelectorAll("tr");
+
   let passed = 0;
   challengeStatusMsg.textContent = "Running tests...";
 
-  for (let i = 0; i < challenge.tests.length; i++) {
+  for (let i = 0; i < (challenge.tests || []).length; i++) {
     const t = challenge.tests[i];
 
     const payload = {
       language_id: langId,
       source_code: codeEditor.value,
-      stdin: t.input,
+      stdin: t.input || ""
     };
 
     const statusCell = rows[i].querySelector(".status");
@@ -421,7 +459,7 @@ async function testCode() {
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: JSON.stringify(payload)
       }
     ).then((r) => r.json());
 
@@ -447,7 +485,7 @@ async function testCode() {
     }
   }
 
-  if (passed === challenge.tests.length) {
+  if (passed === (challenge.tests || []).length) {
     challengeStatusMsg.textContent = "🎉 Challenge Passed!";
     unlockNext();
   } else {
@@ -457,6 +495,8 @@ async function testCode() {
 
 function unlockNext() {
   const progress = getProgress(currentLanguage);
+  const level = challengeData.levels[currentLevelIndex];
+  const totalChallenges = level.challenges.length;
 
   if (progress.levels[currentLevelIndex] < currentChallengeIndex + 1) {
     progress.levels[currentLevelIndex] = currentChallengeIndex + 1;
@@ -465,6 +505,11 @@ function unlockNext() {
 
   nextChallengeBtn.disabled =
     progress.levels[currentLevelIndex] <= currentChallengeIndex;
+
+  // If all challenges solved, user has effectively completed this level.
+  if (progress.levels[currentLevelIndex] === totalChallenges) {
+    // can unlock next level (handled in loadLevelsUI)
+  }
 }
 
 /* ==============================
@@ -489,18 +534,13 @@ prevChallengeBtn.addEventListener("click", () => {
   }
 });
 
-/**
- * NEXT button behaviour:
- * - Inside a level: goes to next challenge
- * - On 10th question:
- *     - if all 10 are solved, go to NEXT LEVEL notes screen
- *     - else, show message to complete all
- */
 nextChallengeBtn.addEventListener("click", () => {
+  const level = challengeData.levels[currentLevelIndex];
+  const totalChallenges = level.challenges.length;
   const progress = getProgress(currentLanguage);
 
   if (progress.levels[currentLevelIndex] >= currentChallengeIndex + 1) {
-    if (currentChallengeIndex < 9) {
+    if (currentChallengeIndex < totalChallenges - 1) {
       openChallenge(currentLevelIndex, currentChallengeIndex + 1);
     } else {
       const isLastLevel =
@@ -508,42 +548,32 @@ nextChallengeBtn.addEventListener("click", () => {
 
       if (isLastLevel) {
         challengeStatusMsg.textContent =
-          "✅ You finished all levels in this course!";
+          "✅ You finished all challenges in this course!";
         nextChallengeBtn.disabled = true;
       } else {
-        if (progress.levels[currentLevelIndex] === 10) {
+        if (progress.levels[currentLevelIndex] === totalChallenges) {
           const nextLevelIndex = currentLevelIndex + 1;
           openLevelIntro(nextLevelIndex);
         } else {
           challengeStatusMsg.textContent =
-            "Complete all 10 questions in this level to unlock the next level.";
+            "Complete all challenges in this level to unlock the next level.";
         }
       }
     }
   }
 });
 
-// From Level Intro → start practicing Q1 of that level
+// From Level Intro → first challenge
 startPracticingBtn.addEventListener("click", () => {
   openChallenge(currentLevelIndex, 0);
 });
 
 /* Back buttons (use browser history) */
-backToHome.addEventListener("click", () => {
-  history.back();
-});
+backToHome.addEventListener("click", () => history.back());
+backToLevels.addEventListener("click", () => history.back());
+backToLevelsFromIntro.addEventListener("click", () => history.back());
 
-backToLevels.addEventListener("click", () => {
-  history.back();
-});
-
-backToLevelsFromIntro.addEventListener("click", () => {
-  history.back();
-});
-
-/* ==============================
-   HANDLE ANDROID / BROWSER BACK
-   ============================== */
+/* Handle browser / Android back */
 window.addEventListener("popstate", (event) => {
   const state = event.state;
 
@@ -565,9 +595,7 @@ window.addEventListener("popstate", (event) => {
   }
 });
 
-/* ==============================
-   COURSE CARD CLICKS (HOME)
-   ============================== */
+/* Course cards → open levels */
 document.querySelectorAll(".course-card").forEach((card) => {
   card.addEventListener("click", () => {
     const lang = card.getAttribute("data-lang");
@@ -575,9 +603,7 @@ document.querySelectorAll(".course-card").forEach((card) => {
   });
 });
 
-/* ==============================
-   INITIAL STATE
-   ============================== */
+/* Initial state */
 if (!history.state) {
   history.replaceState({ page: "home" }, "", "");
 }

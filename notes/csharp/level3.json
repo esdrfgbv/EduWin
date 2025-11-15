@@ -1,0 +1,11 @@
+{
+  "title": "C# Level 3 — Conditional Statements",
+  "intro": "This level teaches decision-making in C# using if, else if, and else.",
+  "points": [
+    "Write simple if statements to check a condition.",
+    "Use if-else to choose between two code paths.",
+    "Use else if chains for multiple conditions.",
+    "Combine conditions using &&, ||, and ! operators.",
+    "Practice small decision-based programs like grading and checking ranges."
+  ]
+}

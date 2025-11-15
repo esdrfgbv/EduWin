@@ -1,0 +1,34 @@
+{
+  "title": "JavaScript Level 8 — Strings & Methods",
+  "concept": "Use basic string operations and methods like length and toUpperCase.",
+  "challenges": [
+    {
+      "title": "Length of String",
+      "description": "Read a line of text and print its length.",
+      "inputDescription": "A single line string (may contain spaces).",
+      "outputDescription": "Single integer: length of the string.",
+      "examples": [
+        "Input:\nHello\n\nOutput:\n5"
+      ],
+      "starterCode": "const fs = require('fs');\nconst str = fs.readFileSync(0, 'utf8').replace(/\\r?\\n$/, \"\");\n// Print the length of the string\n",
+      "tests": [
+        { "input": "Hello", "expected": "5" },
+        { "input": "JS", "expected": "2" }
+      ]
+    },
+    {
+      "title": "Uppercase String",
+      "description": "Read a line of text and print the same string in uppercase.",
+      "inputDescription": "A single line string.",
+      "outputDescription": "The same string converted to uppercase.",
+      "examples": [
+        "Input:\nhello js\n\nOutput:\nHELLO JS"
+      ],
+      "starterCode": "const fs = require('fs');\nconst str = fs.readFileSync(0, 'utf8').replace(/\\r?\\n$/, \"\");\n// Convert to uppercase and print\n",
+      "tests": [
+        { "input": "hello", "expected": "HELLO" },
+        { "input": "Hello Js", "expected": "HELLO JS" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "CN Level 9 — Performance & Troubleshooting",
+  "concept": "Scenario-based questions on diagnosing latency and connectivity issues.",
+  "challenges": [
+    {
+      "title": "Q1: High Latency Investigation",
+      "description": "Users in an office complain that a web application is very slow. Describe a step-by-step approach you would use to troubleshoot whether the issue is due to local network, ISP, DNS, or the web server itself.",
+      "inputDescription": "No input. Scenario question.",
+      "outputDescription": "Ordered list of troubleshooting steps (checked manually).",
+      "examples": [
+        "Mention tests like ping to gateway, ping to external IP, DNS lookup, traceroute, etc."
+      ],
+      "starterCode": "// List steps you would follow and what each step checks.\n",
+      "tests": []
+    },
+    {
+      "title": "Q2: Packet Loss Scenario",
+      "description": "Some users notice frequent disconnections in a video call app. Explain possible network-level reasons (e.g., Wi-Fi interference, congestion) and what measurements or tools could help confirm the root cause.",
+      "inputDescription": "No input. Scenario question.",
+      "outputDescription": "Short explanation of causes and measurements (checked manually).",
+      "examples": [
+        "You can mention checking Wi-Fi signal strength, channel overlap, packet loss stats, etc."
+      ],
+      "starterCode": "// Describe likely causes and how you would measure them.\n",
+      "tests": []
+    }
+  ]
+}

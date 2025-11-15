@@ -1,0 +1,11 @@
+{
+  "title": "System Design Level 7 — Reliability, Fault Tolerance & Monitoring",
+  "intro": "This level covers making systems robust and observable.",
+  "points": [
+    "Understand redundancy for high availability (multiple instances, multiple zones).",
+    "Know basic fault tolerance ideas: retries, timeouts, circuit breakers.",
+    "Importance of logging, metrics and tracing.",
+    "Use health checks and load balancer integrations.",
+    "Understand rate limiting and backpressure at a simple level."
+  ]
+}

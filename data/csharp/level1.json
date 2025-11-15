@@ -1,0 +1,38 @@
+{
+  "title": "C# Level 1 — Basics & Console Output",
+  "concept": "Use Console.WriteLine to print simple messages.",
+  "challenges": [
+    {
+      "title": "Print Hello C#",
+      "description": "Write a program that prints exactly: Hello C#",
+      "inputDescription": "No input.",
+      "outputDescription": "The output should be exactly: Hello C#",
+      "examples": [
+        "Input:\n<no input>\n\nOutput:\nHello C#"
+      ],
+      "starterCode": "using System;\n\nclass Program {\n    static void Main() {\n        // print Hello C#\n    }\n}\n",
+      "tests": [
+        {
+          "input": "",
+          "expected": "Hello C#"
+        }
+      ]
+    },
+    {
+      "title": "Print Welcome Message",
+      "description": "Write a program that prints: Welcome to C#",
+      "inputDescription": "No input.",
+      "outputDescription": "Single line: Welcome to C#",
+      "examples": [
+        "Output:\nWelcome to C#"
+      ],
+      "starterCode": "using System;\n\nclass Program {\n    static void Main() {\n        // your code here\n    }\n}\n",
+      "tests": [
+        {
+          "input": "",
+          "expected": "Welcome to C#"
+        }
+      ]
+    }
+  ]
+}

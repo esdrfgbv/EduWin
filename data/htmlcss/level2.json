@@ -1,0 +1,28 @@
+{
+  "title": "HTML+CSS Level 2 — Text & Links",
+  "concept": "Practice basic formatting tags and hyperlinks.",
+  "challenges": [
+    {
+      "title": "Q1: Profile Text Formatting",
+      "description": "Create a small profile section with your name in bold, your role in italics, and a short description in a paragraph. Use <strong> and <em> instead of <b> and <i>.",
+      "inputDescription": "No input.",
+      "outputDescription": "Styled text using semantic formatting tags.",
+      "examples": [
+        "E.g., 'My name is <strong>Ram</strong> and I am an <em>Engineering Student</em>.'"
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Profile Formatting</title>\n</head>\n<body>\n    <!-- Use strong, em and p here -->\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "title": "Q2: External Link",
+      "description": "Create a link to 'https://www.google.com' with the text 'Open Google' that opens in a new tab.",
+      "inputDescription": "No input.",
+      "outputDescription": "Clickable link that opens Google in a new tab.",
+      "examples": [
+        "Use target=\"_blank\" and a proper href."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Links Demo</title>\n</head>\n<body>\n    <!-- Add a link to Google here -->\n</body>\n</html>\n",
+      "tests": []
+    }
+  ]
+}

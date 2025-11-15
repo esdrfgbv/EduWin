@@ -1,0 +1,11 @@
+{
+  "title": "OS Level 8 — Memory Management & Paging",
+  "intro": "This level introduces main memory management, logical vs physical address and paging.",
+  "points": [
+    "Understand why memory management is needed and role of OS in it.",
+    "Difference between logical (virtual) address and physical address.",
+    "Concept of contiguous vs non-contiguous memory allocation.",
+    "Introduce paging: page, frame, page table and address translation conceptually.",
+    "Know basic fragmentation types: internal and external fragmentation."
+  ]
+}

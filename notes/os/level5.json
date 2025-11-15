@@ -1,0 +1,11 @@
+{
+  "title": "OS Level 5 — Process Synchronization & Critical Section",
+  "intro": "This level focuses on the need for synchronization, critical section problem and classical solutions.",
+  "points": [
+    "Understand race conditions when multiple processes/threads access shared data.",
+    "Define critical section, entry section, exit section and remainder section.",
+    "State the three requirements for a correct solution: mutual exclusion, progress, bounded waiting.",
+    "Know software solutions like Peterson’s algorithm (concept level).",
+    "Understand the idea of hardware support: Test-and-Set, locks (at basic level)."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "OS Level 9 — Virtual Memory & Page Replacement",
+  "intro": "This level covers virtual memory, demand paging and basic page replacement algorithms.",
+  "points": [
+    "Understand the concept of virtual memory and its advantages.",
+    "Demand paging: pages are brought into memory only when needed.",
+    "Page fault: what it is and when it occurs.",
+    "Basic page replacement algorithms: FIFO, Optimal (OPT), LRU.",
+    "Belady’s anomaly in FIFO (at concept level)."
+  ]
+}

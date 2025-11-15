@@ -1,0 +1,35 @@
+{
+  "title": "C++ Level 4 — Loops & Counting",
+  "concept": "Use for and while loops to perform repeated tasks.",
+  "challenges": [
+    {
+      "title": "Print 1 to N",
+      "description": "Given an integer N, print numbers from 1 to N each on a new line.",
+      "inputDescription": "Single integer N.",
+      "outputDescription": "Numbers from 1 to N on separate lines.",
+      "examples": [
+        "Input:\n3\n\nOutput:\n1\n2\n3"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int N;\n    // your code here\n    return 0;\n}\n",
+      "tests": [
+        { "input": "3", "expected": "1\n2\n3" },
+        { "input": "1", "expected": "1" }
+      ]
+    },
+    {
+      "title": "Sum of First N Natural Numbers",
+      "description": "Given N, compute the sum 1 + 2 + ... + N.",
+      "inputDescription": "Single integer N.",
+      "outputDescription": "Single integer: sum of first N natural numbers.",
+      "examples": [
+        "Input:\n5\n\nOutput:\n15"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int N;\n    // read N and compute sum using a loop\n    return 0;\n}\n",
+      "tests": [
+        { "input": "5", "expected": "15" },
+        { "input": "1", "expected": "1" },
+        { "input": "3", "expected": "6" }
+      ]
+    }
+  ]
+}

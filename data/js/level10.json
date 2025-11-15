@@ -1,0 +1,36 @@
+{
+  "title": "JavaScript Level 10 — Objects, Maps & Frequencies",
+  "concept": "Use objects as frequency maps to solve small problems.",
+  "challenges": [
+    {
+      "title": "Frequency of Numbers",
+      "description": "Given N and N integers, print the frequency of each distinct number in increasing order of the number. Each line should contain: number count.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Multiple lines of 'number count' in ascending order of number.",
+      "examples": [
+        "Input:\n5\n1 2 2 3 1\n\nOutput:\n1 2\n2 2\n3 1"
+      ],
+      "starterCode": "const fs = require('fs');\nconst data = fs.readFileSync(0, 'utf8').trim().split(/\\s+/);\n// Use an object to store frequencies and then print in sorted order\n",
+      "tests": [
+        {
+          "input": "5\n1 2 2 3 1",
+          "expected": "1 2\n2 2\n3 1"
+        }
+      ]
+    },
+    {
+      "title": "Sum of Unique Elements",
+      "description": "Given N and an array of N integers, compute the sum of distinct elements (each value counted only once).",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Single integer: sum of distinct values.",
+      "examples": [
+        "Input:\n5\n1 2 2 3 1\n\nOutput:\n6"
+      ],
+      "starterCode": "const fs = require('fs');\nconst data = fs.readFileSync(0, 'utf8').trim().split(/\\s+/);\n// Use an object or Set to track distinct numbers and compute sum\n",
+      "tests": [
+        { "input": "5\n1 2 2 3 1", "expected": "6" },
+        { "input": "4\n5 5 5 5", "expected": "5" }
+      ]
+    }
+  ]
+}

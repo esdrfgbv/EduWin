@@ -1,0 +1,28 @@
+{
+  "title": "System Design Level 1 — Fundamentals",
+  "concept": "MCQs on basic system design terms and goals.",
+  "challenges": [
+    {
+      "title": "Q1: Scalability",
+      "description": "In system design, scalability mainly refers to:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\\na) Ability to run without any bugs\\nb) Ability to handle increasing load by adding resources\\nc) Ability to have a beautiful UI\\nd) Ability to store data permanently on disk"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "title": "Q2: Latency vs Throughput",
+      "description": "Latency and throughput are best described as:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\\na) Latency = requests per second, Throughput = time per request\\nb) Latency = time per request, Throughput = requests per second\\nc) Both mean the same thing\\nd) Latency is only about database, throughput is only about network"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    }
+  ]
+}

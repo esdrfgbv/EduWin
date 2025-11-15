@@ -1,0 +1,11 @@
+{
+  "title": "HTML+CSS Level 10 — Mini Landing Page",
+  "intro": "This level combines all concepts to build a small landing page.",
+  "points": [
+    "Structure a page with header, hero section, features and footer.",
+    "Use flexbox for layout of sections and cards.",
+    "Apply consistent colors, fonts and spacing.",
+    "Make the layout responsive using media queries.",
+    "Keep HTML semantic and CSS organized and readable."
+  ]
+}

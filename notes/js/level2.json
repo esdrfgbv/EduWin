@@ -1,0 +1,11 @@
+{
+  "title": "JavaScript Level 2 — Variables, Types & Operators",
+  "intro": "This level focuses on variables (let, const), basic data types and arithmetic operations.",
+  "points": [
+    "Declare variables using let and const.",
+    "Understand primitive data types like number, string and boolean.",
+    "Use arithmetic operators (+, -, *, /, %) in expressions.",
+    "Use comparison operators (==, ===, !=, !==, <, >, <=, >=).",
+    "Get a basic idea of type coercion when mixing strings and numbers."
+  ]
+}

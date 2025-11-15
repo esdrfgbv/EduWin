@@ -1,0 +1,34 @@
+{
+  "title": "C++ Level 7 — Functions & References",
+  "concept": "Use functions and pass arguments by reference.",
+  "challenges": [
+    {
+      "title": "Swap Two Numbers (By Reference)",
+      "description": "Write a function swapNumbers(int &a, int &b) that swaps two integers using references. In main, read a and b, call the function, and print the swapped values.",
+      "inputDescription": "Two integers a and b.",
+      "outputDescription": "Two integers after swapping: b and a, separated by space.",
+      "examples": [
+        "Input:\n3 5\n\nOutput:\n5 3"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nvoid swapNumbers(int &a, int &b) {\n    // your code here\n}\n\nint main() {\n    int a, b;\n    // read a and b, call swapNumbers, then print\n    return 0;\n}\n",
+      "tests": [
+        { "input": "3 5", "expected": "5 3" },
+        { "input": "10 20", "expected": "20 10" }
+      ]
+    },
+    {
+      "title": "Increment by Function",
+      "description": "Write a function increment(int &x) that increases x by 1. In main, read n, call increment(n), and print the result.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Single integer: n + 1.",
+      "examples": [
+        "Input:\n7\n\nOutput:\n8"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nvoid increment(int &x) {\n    // your code here\n}\n\nint main() {\n    int n;\n    // read n, call increment, print n\n    return 0;\n}\n",
+      "tests": [
+        { "input": "7", "expected": "8" },
+        { "input": "0", "expected": "1" }
+      ]
+    }
+  ]
+}

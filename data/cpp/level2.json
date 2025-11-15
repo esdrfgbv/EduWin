@@ -1,0 +1,35 @@
+{
+  "title": "C++ Level 2 — Data Types & Operators",
+  "concept": "Practice using different data types and arithmetic operators.",
+  "challenges": [
+    {
+      "title": "Area of Rectangle",
+      "description": "Given length L and breadth B of a rectangle, print its area.",
+      "inputDescription": "Two integers L and B.",
+      "outputDescription": "Single integer: L * B.",
+      "examples": [
+        "Input:\n4 5\n\nOutput:\n20"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int L, B;\n    // your code here\n    return 0;\n}\n",
+      "tests": [
+        { "input": "4 5", "expected": "20" },
+        { "input": "2 3", "expected": "6" },
+        { "input": "10 10", "expected": "100" }
+      ]
+    },
+    {
+      "title": "Simple Interest (Integer)",
+      "description": "Given principal P, rate R and time T (all integers), compute simple interest (P * R * T / 100). Answer is an integer.",
+      "inputDescription": "Three integers P R T.",
+      "outputDescription": "Single integer representing simple interest.",
+      "examples": [
+        "Input:\n1000 10 1\n\nOutput:\n100"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int P, R, T;\n    // read P, R, T and print simple interest\n    return 0;\n}\n",
+      "tests": [
+        { "input": "1000 10 1", "expected": "100" },
+        { "input": "2000 5 2", "expected": "200" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "CN Level 3 — Physical & Data Link Layer Basics",
+  "intro": "This level introduces how bits are transmitted and how frames are handled.",
+  "points": [
+    "Understand that physical layer deals with raw bits over a medium.",
+    "Know that data link layer deals with frames between directly connected nodes.",
+    "MAC address basics and role in local networks.",
+    "Concept of switches operating mainly at data link layer.",
+    "Basic idea of error detection using parity/CRC (concept only)."
+  ]
+}

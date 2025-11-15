@@ -1,0 +1,28 @@
+{
+  "title": "System Design Level 10 — Chat / Messaging System",
+  "concept": "Scenario-based design questions for a chat/messaging application.",
+  "challenges": [
+    {
+      "title": "Q1: Messaging Requirements & APIs",
+      "description": "Design a basic real-time chat system supporting 1-1 messaging. List functional requirements (send, receive, delivery status) and sketch the core APIs or protocols you would use (HTTP, WebSockets, etc.).",
+      "inputDescription": "No input. Design question.",
+      "outputDescription": "List of requirements and example API/protocol choices (checked manually).",
+      "examples": [
+        "You can suggest using HTTP for login/history and WebSockets for live chat."
+      ],
+      "starterCode": "// List requirements, then outline APIs and protocol usage.\n",
+      "tests": []
+    },
+    {
+      "title": "Q2: Data Storage & Scaling",
+      "description": "Explain how you would store messages and conversation metadata. How would you scale the system horizontally when the number of users grows, and how would you ensure messages are not lost?",
+      "inputDescription": "No input. Design question.",
+      "outputDescription": "Description of message tables/collections, sharding/partitioning, replication and durability strategies (checked manually).",
+      "examples": [
+        "Mention storing messages by conversation, using replicated databases or message queues for durability."
+      ],
+      "starterCode": "// Describe message schema, partitioning (by user/conversation), and durability strategy.\n",
+      "tests": []
+    }
+  ]
+}

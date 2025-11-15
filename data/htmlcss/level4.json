@@ -1,0 +1,28 @@
+{
+  "title": "HTML+CSS Level 4 — Tables",
+  "concept": "Create simple tables for structured data.",
+  "challenges": [
+    {
+      "title": "Q1: Student Marks Table",
+      "description": "Create a table showing 3 students and marks in 3 subjects. Use a header row for column titles: Name, Subject 1, Subject 2, Subject 3.",
+      "inputDescription": "No input.",
+      "outputDescription": "A basic table with header row and data rows.",
+      "examples": [
+        "Use <table>, <tr>, <th>, <td> with simple sample data."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Marks Table</title>\n</head>\n<body>\n    <!-- Build your marks table here -->\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "title": "Q2: Timetable Table",
+      "description": "Create a weekly timetable table with days as columns (Mon–Fri) and time slots as rows (at least 4). Fill in subject names in each cell.",
+      "inputDescription": "No input.",
+      "outputDescription": "A timetable-like table with headers and content.",
+      "examples": [
+        "First row: empty corner + Mon + Tue + ... as <th> cells."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Timetable</title>\n</head>\n<body>\n    <!-- Create your timetable table here -->\n</body>\n</html>\n",
+      "tests": []
+    }
+  ]
+}

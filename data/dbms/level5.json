@@ -1,0 +1,28 @@
+{
+  "title": "DBMS Level 5 — SQL SELECT & WHERE",
+  "concept": "MCQs on SELECT, WHERE and ORDER BY.",
+  "challenges": [
+    {
+      "title": "Q1: Select All Columns",
+      "description": "Which SQL query selects all columns from table EMPLOYEE?",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) SELECT * FROM EMPLOYEE;\nb) GET ALL EMPLOYEE;\nc) DISPLAY EMPLOYEE;\nd) SHOW COLUMNS EMPLOYEE;"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "title": "Q2: WHERE Clause Usage",
+      "description": "To select students with branch = 'CSE' from STUDENT table, which condition is correct?",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) WHERE branch == 'CSE'\nb) WHERE branch = 'CSE'\nc) WHERE branch := 'CSE'\nd) WHERE branch LIKE = 'CSE'"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    }
+  ]
+}

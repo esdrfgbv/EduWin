@@ -1,0 +1,11 @@
+{
+  "title": "JavaScript Level 1 — Basics & Console Output",
+  "intro": "This level introduces JavaScript syntax, console output and your first few lines of JS code.",
+  "points": [
+    "Understand how JavaScript code is executed by a JS engine (like Node.js or the browser).",
+    "Use console.log() to print messages and values.",
+    "Write your first JS program with a few console.log statements.",
+    "Get familiar with semicolons, braces and indentation style.",
+    "Understand the difference between single-line and multi-line comments."
+  ]
+}

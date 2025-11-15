@@ -1,0 +1,11 @@
+{
+  "title": "CN Level 4 — Network Layer & IP Addressing",
+  "intro": "This level covers IP addressing and routing concepts.",
+  "points": [
+    "Understand the role of network layer: logical addressing and routing.",
+    "Know basics of IPv4 address and subnetting idea (very high level).",
+    "Difference between router and switch at a basic level.",
+    "Concept of routing table and next hop.",
+    "Understand unicast vs broadcast vs multicast conceptually."
+  ]
+}

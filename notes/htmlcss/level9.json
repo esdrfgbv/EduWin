@@ -1,0 +1,11 @@
+{
+  "title": "HTML+CSS Level 9 — Responsive Design & Media Queries",
+  "intro": "This level teaches basic responsive design techniques.",
+  "points": [
+    "Understand why sites must work on mobile, tablet and desktop.",
+    "Use the viewport meta tag in <head>.",
+    "Use relative units like %, em, rem, vh, vw.",
+    "Write simple @media queries to adjust layout on small screens.",
+    "Create mobile-friendly navbars and content sections."
+  ]
+}

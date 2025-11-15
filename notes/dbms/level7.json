@@ -1,0 +1,11 @@
+{
+  "title": "DBMS Level 7 — SQL Aggregation & GROUP BY",
+  "intro": "This level focuses on aggregate functions and grouping of data.",
+  "points": [
+    "Use aggregate functions: COUNT, SUM, AVG, MIN, MAX.",
+    "Understand GROUP BY to group rows before applying aggregates.",
+    "Use HAVING to filter groups after aggregation.",
+    "Difference between WHERE (filters rows) and HAVING (filters groups).",
+    "Common examples: total salary per department, count of students per branch."
+  ]
+}

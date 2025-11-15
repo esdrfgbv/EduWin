@@ -1,0 +1,11 @@
+{
+  "title": "C# Level 5 — Arrays & Basic Algorithms",
+  "intro": "This level introduces 1D arrays and simple array algorithms.",
+  "points": [
+    "Declare and initialize arrays using [] syntax.",
+    "Access and modify elements using indices.",
+    "Use Length property to find the size of an array.",
+    "Traverse arrays using loops to compute sum, min, and max.",
+    "Understand how arrays are stored contiguously in memory (conceptually)."
+  ]
+}

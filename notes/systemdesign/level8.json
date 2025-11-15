@@ -1,0 +1,11 @@
+{
+  "title": "System Design Level 8 — URL Shortener Design",
+  "intro": "This level uses a URL shortener as a starter system design problem.",
+  "points": [
+    "Clarify requirements: shorten URL, redirect, analytics (optional).",
+    "Understand core entities: URL mapping, users (optional), click logs (optional).",
+    "Think of API endpoints for creating and resolving short links.",
+    "Consider database choices, hashing/encoding, and collision handling.",
+    "Discuss scaling read-heavy redirect traffic using cache and replicas."
+  ]
+}

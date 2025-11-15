@@ -1,0 +1,28 @@
+{
+  "title": "CN Level 5 — Transport Layer: TCP & UDP",
+  "concept": "MCQs on TCP, UDP and ports.",
+  "challenges": [
+    {
+      "title": "Q1: TCP Feature",
+      "description": "Which of the following is a key characteristic of TCP?",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\\na) Connectionless and unreliable\\nb) Connection-oriented and reliable\\nc) Used only for streaming video\\nd) Does not support port numbers"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "title": "Q2: UDP Usage",
+      "description": "UDP is preferred over TCP when:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\\na) Reliability is more important than delay\\nb) Applications can tolerate some loss but need low latency (e.g., live streaming)\\nc) We need guaranteed in-order delivery\\nd) We are transferring critical banking data"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    }
+  ]
+}

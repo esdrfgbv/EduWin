@@ -1,0 +1,28 @@
+{
+  "title": "HTML+CSS Level 10 — Mini Landing Page",
+  "concept": "Combine HTML and CSS to build a small landing page.",
+  "challenges": [
+    {
+      "title": "Q1: Simple Landing Page",
+      "description": "Build a single-page landing layout with: a header (site title + navbar), a hero section (big heading + button), a features section with 3 feature cards, and a footer. Use flexbox and basic responsive design.",
+      "inputDescription": "No input.",
+      "outputDescription": "A clean, structured landing page layout.",
+      "examples": [
+        "Hero button could say 'Get Started' or 'Learn More'."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>My Landing Page</title>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <style>\n        /* Add your landing page CSS here */\n    </style>\n</head>\n<body>\n    <header>\n        <!-- Logo/title + nav -->\n    </header>\n\n    <section class=\"hero\">\n        <!-- Big heading + subtitle + button -->\n    </section>\n\n    <section class=\"features\">\n        <!-- Three feature cards -->\n    </section>\n\n    <footer>\n        <!-- Footer text -->\n    </footer>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "title": "Q2: Theming & Polish",
+      "description": "Improve the landing page by choosing a color palette (primary, secondary, background) and consistent font styles. Add hover effect on buttons and links.",
+      "inputDescription": "No input.",
+      "outputDescription": "Landing page with consistent theme and hover interactions.",
+      "examples": [
+        "Use :hover to change button background or link color on hover."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Landing Page Theme</title>\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <style>\n        /* Add theme colors and hover effects here */\n    </style>\n</head>\n<body>\n    <!-- Reuse your landing page structure here and add theming CSS -->\n</body>\n</html>\n",
+      "tests": []
+    }
+  ]
+}

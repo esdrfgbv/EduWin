@@ -1,0 +1,11 @@
+{
+  "title": "OS Level 10 — File Systems, Disk Scheduling & Protection",
+  "intro": "This level introduces file systems, disk scheduling algorithms and basic protection/security concepts.",
+  "points": [
+    "Define file, directory and file system.",
+    "Basic file operations: create, open, read, write, delete.",
+    "Concept of disk scheduling: FCFS, SSTF, SCAN, C-SCAN (just the idea).",
+    "Understand access control and protection (user, group, others; read/write/execute).",
+    "Basic idea of OS-level security mechanisms and user authentication."
+  ]
+}

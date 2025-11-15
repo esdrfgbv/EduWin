@@ -1,0 +1,11 @@
+{
+  "title": "C# Level 1 — Basics & Console Output",
+  "intro": "This level introduces the basic structure of a C# console application and simple output using Console.WriteLine.",
+  "points": [
+    "Understand the structure of a C# program with namespace, class, and Main method.",
+    "Use Console.WriteLine to print text and values to the console.",
+    "Know where the program starts executing (Main method).",
+    "Use single-line and multi-line comments in C#.",
+    "Compile and run simple C# console applications."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "System Design Level 5 — CAP & Consistency Patterns",
+  "intro": "This level introduces CAP theorem and some consistency patterns.",
+  "points": [
+    "Know CAP theorem: Consistency, Availability, Partition tolerance.",
+    "Understand that in presence of network partitions you trade off C vs A.",
+    "Learn basic patterns: read replicas, leader–follower, quorum reads/writes (concept).",
+    "Understand eventual consistency at user level (stale reads).",
+    "Realize that many real systems are AP or CP depending on use-case."
+  ]
+}

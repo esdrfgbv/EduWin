@@ -1,0 +1,11 @@
+{
+  "title": "HTML+CSS Level 1 — Basic HTML Structure",
+  "intro": "This level introduces the basic structure of an HTML document and simple text content.",
+  "points": [
+    "Understand the basic HTML skeleton: <!DOCTYPE html>, <html>, <head>, <body>.",
+    "Know the purpose of <title> and how it appears in the browser tab.",
+    "Use headings <h1> to <h6> for titles and subtitles.",
+    "Use <p> for paragraphs of text.",
+    "Open and close tags correctly and indent code for readability."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "DBMS Level 8 — Subqueries & Nested Queries",
+  "intro": "This level introduces subqueries, where one query is nested inside another.",
+  "points": [
+    "Use subqueries in WHERE clause with IN, NOT IN.",
+    "Use subqueries with comparison operators (=, <, >) to compare with single values.",
+    "Use EXISTS and NOT EXISTS with correlated subqueries (conceptual).",
+    "Understand difference between correlated and non-correlated subqueries.",
+    "Write queries involving 'find max', 'find students with marks greater than class average', etc."
+  ]
+}

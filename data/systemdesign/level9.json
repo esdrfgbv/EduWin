@@ -1,0 +1,28 @@
+{
+  "title": "System Design Level 9 — News Feed / Timeline",
+  "concept": "Scenario-based design questions for a social media feed.",
+  "challenges": [
+    {
+      "title": "Q1: Feed Requirements & Data Flow",
+      "description": "Design a simple news feed for a social network. Define what data needs to be stored for posts and follows, and describe how data flows from a user posting something to that post appearing in followers' feeds.",
+      "inputDescription": "No input. Design question.",
+      "outputDescription": "High-level description of entities (User, Post, Follow, Feed) and data flow (checked manually).",
+      "examples": [
+        "Mention that when a user posts, the system may push it to follower feeds (fan-out on write) or compute on read."
+      ],
+      "starterCode": "// Describe entities, relationships, and posting-to-feed flow.\n",
+      "tests": []
+    },
+    {
+      "title": "Q2: Fan-out Choices & Caching",
+      "description": "Explain fan-out on write vs fan-out on read in the context of feeds. Which approach would you pick for: (a) a user with few followers, (b) a celebrity with millions of followers? How would you use caching to speed up feed loading?",
+      "inputDescription": "No input. Design question.",
+      "outputDescription": "Comparison of fan-out strategies and caching plan (checked manually).",
+      "examples": [
+        "Think about precomputing feeds for normal users and dynamic feed generation for celebrities."
+      ],
+      "starterCode": "// Compare fan-out approaches and explain caching strategy (per-user feed cache, etc.).\n",
+      "tests": []
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "CN Level 8 — Small Office Network Design",
+  "intro": "This level uses a small office network as a design scenario.",
+  "points": [
+    "Identify devices needed: router, switch, access point, end-hosts.",
+    "Understand IP addressing and subnetting at simple office scale.",
+    "Consider wired vs wireless access for different areas.",
+    "Plan basic network topology (star, tree) for the office.",
+    "Handle Internet access, internal services and basic segmentation."
+  ]
+}

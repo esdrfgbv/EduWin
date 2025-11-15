@@ -1,0 +1,28 @@
+{
+  "title": "System Design Level 4 — Databases & Replication",
+  "concept": "MCQs on SQL vs NoSQL and replication ideas.",
+  "challenges": [
+    {
+      "title": "Q1: SQL vs NoSQL",
+      "description": "Which of the following is generally true about NoSQL databases compared to relational databases?",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\\na) NoSQL databases never support indexing\\nb) NoSQL databases are always slower\\nc) NoSQL databases often provide flexible schemas and horizontal scaling\\nd) NoSQL databases do not store large amounts of data"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "title": "Q2: Replication",
+      "description": "Database replication is mainly used to:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\\na) Reduce number of tables\\nb) Improve read availability and fault tolerance\\nc) Remove backup needs completely\\nd) Convert SQL database to NoSQL database"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    }
+  ]
+}

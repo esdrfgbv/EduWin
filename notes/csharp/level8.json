@@ -1,0 +1,11 @@
+{
+  "title": "C# Level 8 — Classes & Objects",
+  "intro": "This level introduces object-oriented basics in C# using classes and objects.",
+  "points": [
+    "Define classes with fields (data members) and methods.",
+    "Create objects using the new keyword.",
+    "Understand constructors and how they initialize objects.",
+    "Use properties (get/set) for safe field access (basic idea).",
+    "Model simple entities like Student or Rectangle as classes."
+  ]
+}

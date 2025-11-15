@@ -1,0 +1,11 @@
+{
+  "title": "DBMS Level 9 — Normalization & Functional Dependencies",
+  "intro": "This level teaches normalization to reduce redundancy and anomalies.",
+  "points": [
+    "Understand the need for normalization (update, insert, delete anomalies).",
+    "Concept of functional dependency (FD) X → Y.",
+    "First Normal Form (1NF) — no repeating groups, atomic attributes.",
+    "Second Normal Form (2NF) — 1NF + no partial dependency on candidate key.",
+    "Third Normal Form (3NF) — 2NF + no transitive dependency on candidate key."
+  ]
+}

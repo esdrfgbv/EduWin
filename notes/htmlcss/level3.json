@@ -1,0 +1,11 @@
+{
+  "title": "HTML+CSS Level 3 — Images & Lists",
+  "intro": "This level introduces images and list elements for structured content.",
+  "points": [
+    "Insert images using the <img> tag with src and alt attributes.",
+    "Understand width and height attributes for basic image sizing.",
+    "Create ordered lists using <ol> and <li>.",
+    "Create unordered lists using <ul> and <li>.",
+    "Nest lists to represent sub-points or menus."
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "title": "C++ Level 1 — Basics & Input/Output",
+  "intro": "This level introduces the basic structure of a C++ program and simple input/output using cout and cin.",
+  "points": [
+    "Understand the structure of a C++ program with headers and the main() function.",
+    "Use cout to print text and values to the console.",
+    "Use cin to read integers and other basic data types.",
+    "Get comfortable compiling and running simple C++ programs.",
+    "Understand the difference between statements and expressions."
+  ]
+}

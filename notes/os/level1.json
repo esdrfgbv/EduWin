@@ -1,0 +1,11 @@
+{
+  "title": "OS Level 1 — Introduction to Operating Systems",
+  "intro": "This level introduces what an Operating System is, its role between user and hardware, and basic types of operating systems.",
+  "points": [
+    "Understand the position of OS as an interface between user programs and hardware.",
+    "Know basic OS functions: process management, memory management, file management, I/O device management.",
+    "Differentiate between system software and application software.",
+    "Recognize different types of OS: batch, time-sharing, multi-programming, multi-tasking, real-time.",
+    "Understand the concept of kernel and system calls at a basic level."
+  ]
+}

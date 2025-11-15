@@ -1,0 +1,11 @@
+{
+  "title": "JavaScript Level 5 — Arrays & Basic Operations",
+  "intro": "This level introduces arrays and simple operations like traversal, sum and finding maximum.",
+  "points": [
+    "Create arrays using [] syntax.",
+    "Access and update elements using indices.",
+    "Use array.length to get the size of an array.",
+    "Traverse arrays using for loops.",
+    "Compute sum, minimum and maximum of array elements."
+  ]
+}

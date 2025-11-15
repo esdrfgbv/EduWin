@@ -1,0 +1,11 @@
+{
+  "title": "System Design Level 4 — Databases & Replication",
+  "intro": "This level covers database choices and simple scaling techniques.",
+  "points": [
+    "Difference between relational (SQL) and NoSQL databases.",
+    "Understand vertical scaling vs sharding (horizontal partitioning).",
+    "Know what replication is (master/primary – replica/secondary).",
+    "Basic read-heavy vs write-heavy workload considerations.",
+    "Understand trade-offs of strong vs eventual consistency (high-level)."
+  ]
+}

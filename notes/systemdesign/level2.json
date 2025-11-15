@@ -1,0 +1,11 @@
+{
+  "title": "System Design Level 2 — Architecture & Components",
+  "intro": "This level focuses on high-level architecture blocks used in most systems.",
+  "points": [
+    "Understand basic components: clients, API gateway, application servers, databases.",
+    "Know what REST APIs are at a high level.",
+    "Understand synchronous vs asynchronous communication conceptually.",
+    "Know what a stateless service is.",
+    "Recognize common layers: presentation, application, data."
+  ]
+}

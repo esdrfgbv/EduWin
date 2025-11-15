@@ -1,0 +1,34 @@
+{
+  "title": "C++ Level 5 — Arrays & Basic Algorithms",
+  "concept": "Practice traversal, sum, and min/max on arrays.",
+  "challenges": [
+    {
+      "title": "Array Sum",
+      "description": "Given N and an array of N integers, print the sum of all elements.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Single integer: sum of array.",
+      "examples": [
+        "Input:\n5\n1 2 3 4 5\n\nOutput:\n15"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int N;\n    // your code here\n    return 0;\n}\n",
+      "tests": [
+        { "input": "5\n1 2 3 4 5", "expected": "15" },
+        { "input": "3\n-1 0 1", "expected": "0" }
+      ]
+    },
+    {
+      "title": "Maximum in Array",
+      "description": "Given N and an array of N integers, print the maximum element.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Single integer: maximum value in the array.",
+      "examples": [
+        "Input:\n4\n3 7 2 9\n\nOutput:\n9"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int N;\n    // read N and array, then print maximum\n    return 0;\n}\n",
+      "tests": [
+        { "input": "4\n3 7 2 9", "expected": "9" },
+        { "input": "3\n-5 -2 -10", "expected": "-2" }
+      ]
+    }
+  ]
+}

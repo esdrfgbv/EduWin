@@ -1,0 +1,11 @@
+{
+  "title": "HTML+CSS Level 6 — CSS Basics & Selectors",
+  "intro": "This level starts CSS: ways to include styles and basic selectors.",
+  "points": [
+    "Include CSS using inline styles, <style> in <head>, and external .css files.",
+    "Understand the structure: selector { property: value; }.",
+    "Use element selectors (p, h1), class selectors (.btn) and id selectors (#main).",
+    "Change text color, background color, font-size and font-family.",
+    "Understand the idea of cascading and specificity at a basic level."
+  ]
+}

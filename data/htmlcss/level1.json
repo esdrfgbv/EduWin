@@ -1,0 +1,28 @@
+{
+  "title": "HTML+CSS Level 1 — Basic Structure",
+  "concept": "Create a simple HTML page with proper skeleton and headings/paragraphs.",
+  "challenges": [
+    {
+      "title": "Q1: Simple Hello Page",
+      "description": "Create an HTML page with a proper skeleton that displays a main heading 'Welcome to HTML' and a paragraph saying 'This is my first HTML page.'",
+      "inputDescription": "No input.",
+      "outputDescription": "Browser should show a heading and a paragraph.",
+      "examples": [
+        "The page title (on the tab) should be 'My First Page'."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>My First Page</title>\n</head>\n<body>\n    <!-- Add your h1 and p here -->\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "title": "Q2: Multiple Headings",
+      "description": "Create a page with three headings: an <h1> main title, an <h2> subtitle, and an <h3> small heading. Add at least one paragraph under them.",
+      "inputDescription": "No input.",
+      "outputDescription": "Page shows a clear heading hierarchy and a paragraph.",
+      "examples": [
+        "Example headings: 'My Website', 'About Me', 'Hobbies'."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Headings Demo</title>\n</head>\n<body>\n    <!-- Add h1, h2, h3 and a paragraph -->\n</body>\n</html>\n",
+      "tests": []
+    }
+  ]
+}

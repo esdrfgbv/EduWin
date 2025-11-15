@@ -1,0 +1,11 @@
+{
+  "title": "JavaScript Level 6 — Functions",
+  "intro": "This level focuses on defining and calling functions for reusable logic.",
+  "points": [
+    "Define functions using the function keyword.",
+    "Call functions with arguments and use return to send back values.",
+    "Understand the difference between parameters and arguments.",
+    "Organize code by putting repeated logic inside functions.",
+    "Get a basic idea of arrow functions as a shorter syntax."
+  ]
+}

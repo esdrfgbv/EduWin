@@ -1,0 +1,11 @@
+{
+  "title": "C++ Level 9 — OOP Advanced & Inheritance",
+  "intro": "This level covers inheritance and a bit of polymorphism in C++.",
+  "points": [
+    "Create a derived class that inherits from a base class using the : public syntax.",
+    "Reuse base class functionality in derived classes.",
+    "Override member functions in derived classes.",
+    "Use base class pointers to refer to derived objects (conceptual polymorphism).",
+    "Understand when and why inheritance is useful."
+  ]
+}

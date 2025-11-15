@@ -1,0 +1,11 @@
+{
+  "title": "HTML+CSS Level 5 — Forms & Inputs",
+  "intro": "This level introduces HTML forms and different input controls.",
+  "points": [
+    "Create a form using the <form> element.",
+    "Use <input> types like text, password, email, number, checkbox, radio.",
+    "Use <label> for better accessibility and clickable inputs.",
+    "Use <select>, <option> for dropdowns and <textarea> for multi-line input.",
+    "Understand basic form attributes: action, method (GET/POST concept only)."
+  ]
+}

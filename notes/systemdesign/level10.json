@@ -1,0 +1,11 @@
+{
+  "title": "System Design Level 10 — Chat / Messaging System",
+  "intro": "This level uses a chat/messaging system design to combine multiple concepts.",
+  "points": [
+    "Clarify 1-1 vs group chat requirements, message ordering, delivery guarantees.",
+    "Choose protocols (HTTP for APIs, WebSocket/long polling for realtime).",
+    "Plan for storing messages and conversation metadata.",
+    "Consider presence/online status, typing indicators (at concept level).",
+    "Handle scaling, persistence, and eventual consistency between online clients."
+  ]
+}

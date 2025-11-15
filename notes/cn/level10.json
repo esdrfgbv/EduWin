@@ -1,0 +1,11 @@
+{
+  "title": "CN Level 10 — Secure Web Application Networking",
+  "intro": "This level combines networking and basic security for web apps.",
+  "points": [
+    "Understand typical web deployment: browser → Internet → load balancer → app servers → database.",
+    "Use HTTPS (TLS) to secure data in transit.",
+    "Place firewall or security groups around subnets.",
+    "Use DMZ/VPC subnets to separate public and private components.",
+    "Consider rate limiting, WAF (web application firewall) and logging."
+  ]
+}

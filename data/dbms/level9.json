@@ -1,0 +1,28 @@
+{
+  "title": "DBMS Level 9 — Normalization & FDs",
+  "concept": "MCQs on functional dependencies and normal forms.",
+  "challenges": [
+    {
+      "title": "Q1: Functional Dependency",
+      "description": "In a relation R, X → Y means:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) X uniquely determines Y\nb) Y uniquely determines X\nc) X and Y are always primary keys\nd) X and Y cannot be attributes of the same table"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "title": "Q2: 1NF Condition",
+      "description": "A relation is in First Normal Form (1NF) if:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) It has no partial dependencies\nb) It has no transitive dependencies\nc) It has only atomic (indivisible) attributes\nd) It has at least one candidate key"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    }
+  ]
+}

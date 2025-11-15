@@ -1,0 +1,11 @@
+{
+  "title": "C# Level 10 — Collections, Dictionaries & Problem Solving",
+  "intro": "This level introduces dictionaries and uses C# features to solve small problems.",
+  "points": [
+    "Use Dictionary<TKey,TValue> to map keys to values.",
+    "Store frequencies or counts in dictionaries.",
+    "Iterate over KeyValuePair entries using foreach.",
+    "Combine loops, methods, arrays/lists and dictionaries in one solution.",
+    "Develop a step-by-step approach to solving coding problems in C#."
+  ]
+}

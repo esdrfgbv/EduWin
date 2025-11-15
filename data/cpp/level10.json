@@ -1,0 +1,36 @@
+{
+  "title": "C++ Level 10 — STL & Problem Solving",
+  "concept": "Use vectors, sets, and maps from STL to solve basic problems.",
+  "challenges": [
+    {
+      "title": "Distinct Elements using Set",
+      "description": "Given N and N integers, print how many distinct values there are (using a set).",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Single integer: count of distinct elements.",
+      "examples": [
+        "Input:\n5\n1 2 2 3 1\n\nOutput:\n3"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int N;\n    // use set<int> to count distinct values\n    return 0;\n}\n",
+      "tests": [
+        { "input": "5\n1 2 2 3 1", "expected": "3" },
+        { "input": "4\n5 5 5 5", "expected": "1" }
+      ]
+    },
+    {
+      "title": "Frequency of Numbers using Map",
+      "description": "Given N and N integers, print the frequency of each distinct number in increasing order of the number. Each line should be: number count.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Multiple lines, each containing: number count.",
+      "examples": [
+        "Input:\n5\n1 2 2 3 1\n\nOutput:\n1 2\n2 2\n3 1"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int N;\n    // use map<int,int> to store frequencies and then print\n    return 0;\n}\n",
+      "tests": [
+        {
+          "input": "5\n1 2 2 3 1",
+          "expected": "1 2\n2 2\n3 1"
+        }
+      ]
+    }
+  ]
+}

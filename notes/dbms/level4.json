@@ -1,0 +1,11 @@
+{
+  "title": "DBMS Level 4 — SQL Basics: DDL & Simple DML",
+  "intro": "This level starts SQL with basic commands to create and modify tables and insert data.",
+  "points": [
+    "Difference between DDL (Data Definition Language) and DML (Data Manipulation Language).",
+    "Basic DDL commands: CREATE TABLE, ALTER TABLE, DROP TABLE.",
+    "Basic DML commands: INSERT, UPDATE, DELETE.",
+    "Specify column data types like INT, VARCHAR, DATE, etc.",
+    "Add primary key and foreign key constraints in CREATE TABLE."
+  ]
+}

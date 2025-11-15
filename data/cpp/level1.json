@@ -1,0 +1,37 @@
+{
+  "title": "C++ Level 1 — Basics & I/O",
+  "concept": "Introduction to basic input-output operations in C++ using cout and cin.",
+  "challenges": [
+    {
+      "title": "Print Hello C++",
+      "description": "Write a program that prints the exact text: Hello C++",
+      "inputDescription": "No input.",
+      "outputDescription": "Output must be exactly: Hello C++",
+      "examples": [
+        "Input:\n<no input>\n\nOutput:\nHello C++"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    // print Hello C++\n    return 0;\n}\n",
+      "tests": [
+        {
+          "input": "",
+          "expected": "Hello C++"
+        }
+      ]
+    },
+    {
+      "title": "Sum of Two Integers",
+      "description": "Read two integers a and b, and print their sum.",
+      "inputDescription": "Two integers a and b separated by space.",
+      "outputDescription": "Single integer which is a + b.",
+      "examples": [
+        "Input:\n3 5\n\nOutput:\n8"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int a, b;\n    // read a and b, then print their sum\n    return 0;\n}\n",
+      "tests": [
+        { "input": "3 5", "expected": "8" },
+        { "input": "10 20", "expected": "30" },
+        { "input": "-2 7", "expected": "5" }
+      ]
+    }
+  ]
+}

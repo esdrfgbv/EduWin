@@ -1,0 +1,28 @@
+{
+  "title": "HTML+CSS Level 7 — Box Model & Layout Basics",
+  "concept": "Use margins, padding, borders and box sizing.",
+  "challenges": [
+    {
+      "title": "Q1: Card Box",
+      "description": "Create a 'card' div with some text inside. Apply CSS to give it a border, padding, margin from the page edge, and a fixed width (e.g., 300px).",
+      "inputDescription": "No input.",
+      "outputDescription": "A card-like box with clear spacing.",
+      "examples": [
+        "Use box-sizing: border-box to make width easier to control."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Card Box</title>\n    <style>\n        /* Add .card styles here */\n    </style>\n</head>\n<body>\n    <div class=\"card\">\n        <!-- Card content here -->\n    </div>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "title": "Q2: Two Columns (Basic)",
+      "description": "Create two divs side by side that each contain some text. Use CSS (float or inline-block or flex if you know it) to make them appear in two columns with some gap.",
+      "inputDescription": "No input.",
+      "outputDescription": "Two columns visible on the page.",
+      "examples": [
+        "Columns could be 45% width each with margin between."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Two Columns</title>\n    <style>\n        /* Style your columns here */\n    </style>\n</head>\n<body>\n    <div class=\"col left\">\n        <!-- Left column content -->\n    </div>\n    <div class=\"col right\">\n        <!-- Right column content -->\n    </div>\n</body>\n</html>\n",
+      "tests": []
+    }
+  ]
+}

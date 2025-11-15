@@ -1,0 +1,28 @@
+{
+  "title": "OS Level 2 — Process Concepts & States",
+  "concept": "MCQs on process, states and PCB.",
+  "challenges": [
+    {
+      "title": "Q1: Process Definition",
+      "description": "A process in an operating system is:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) A program stored on disk\nb) A program in execution\nc) A compiler program\nd) A device driver only"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "title": "Q2: Process State Not Valid",
+      "description": "Which of the following is NOT typically a process state?",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) Ready\nb) Running\nc) Blocked/Waiting\nd) Compiling"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    }
+  ]
+}

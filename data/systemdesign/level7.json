@@ -1,0 +1,28 @@
+{
+  "title": "System Design Level 7 — Reliability & Monitoring",
+  "concept": "MCQs on fault tolerance and observability.",
+  "challenges": [
+    {
+      "title": "Q1: Circuit Breaker Pattern",
+      "description": "Circuit breaker pattern is used to:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\\na) Control access to files\\nb) Prevent repeated calls to a failing downstream service\\nc) Encrypt network traffic\\nd) Balance load between servers"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "title": "Q2: Health Check",
+      "description": "Health checks in system design are primarily used to:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\\na) Delete faulty instances automatically\\nb) Allow load balancers to route traffic only to healthy instances\\nc) Compress API responses\\nd) Scale database storage up or down"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    }
+  ]
+}

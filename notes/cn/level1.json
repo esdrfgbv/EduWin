@@ -1,0 +1,11 @@
+{
+  "title": "CN Level 1 — Introduction to Computer Networks",
+  "intro": "This level introduces basic networking concepts and why networks are used.",
+  "points": [
+    "Understand what a computer network is and why we use networking.",
+    "Know basic network components: hosts, routers, switches, links, media.",
+    "Differentiate between LAN, MAN and WAN at a high level.",
+    "Understand the idea of bandwidth and latency conceptually.",
+    "Know common examples: the Internet, campus network, home Wi-Fi."
+  ]
+}

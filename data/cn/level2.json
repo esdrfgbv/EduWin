@@ -1,0 +1,28 @@
+{
+  "title": "CN Level 2 — OSI & TCP/IP Models",
+  "concept": "MCQs on layered models and protocol placement.",
+  "challenges": [
+    {
+      "title": "Q1: OSI Layers Count",
+      "description": "The OSI reference model has:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\\na) 4 layers\\nb) 5 layers\\nc) 7 layers\\nd) 8 layers"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "title": "Q2: HTTP Layer",
+      "description": "In the OSI or TCP/IP model, HTTP is considered an example of a protocol at the:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\\na) Physical layer\\nb) Network layer\\nc) Transport layer\\nd) Application layer"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    }
+  ]
+}

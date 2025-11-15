@@ -1,0 +1,34 @@
+{
+  "title": "C++ Level 9 — Inheritance Basics",
+  "concept": "Use inheritance to reuse and extend behavior from a base class.",
+  "challenges": [
+    {
+      "title": "Person and Student (Inheritance)",
+      "description": "Create a base class Person with data member name and a member function printName() that prints the name. Create a derived class Student that adds an integer rollNo and a function printDetails() that prints name and rollNo on one line separated by space.",
+      "inputDescription": "First line: name (single word). Second line: rollNo (integer).",
+      "outputDescription": "Print: name rollNo",
+      "examples": [
+        "Input:\nRam\n42\n\nOutput:\nRam 42"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Person {\npublic:\n    string name;\n    // add printName()\n};\n\nclass Student : public Person {\npublic:\n    int rollNo;\n    // add printDetails()\n};\n\nint main() {\n    // your code here\n    return 0;\n}\n",
+      "tests": [
+        { "input": "Ram\n42", "expected": "Ram 42" },
+        { "input": "Arya\n1", "expected": "Arya 1" }
+      ]
+    },
+    {
+      "title": "Employee Salary (Simple Inheritance)",
+      "description": "Create a base class Employee with a name and a derived class FullTimeEmployee with an additional salary. Read name and salary, and print them in the format: name salary.",
+      "inputDescription": "First line: name (single word). Second line: integer salary.",
+      "outputDescription": "Print: name salary",
+      "examples": [
+        "Input:\nRavi\n50000\n\nOutput:\nRavi 50000"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Employee {\npublic:\n    string name;\n};\n\nclass FullTimeEmployee : public Employee {\npublic:\n    int salary;\n};\n\nint main() {\n    // your code here\n    return 0;\n}\n",
+      "tests": [
+        { "input": "Ravi\n50000", "expected": "Ravi 50000" },
+        { "input": "Teja\n30000", "expected": "Teja 30000" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "title": "C++ Level 6 — Vectors & Dynamic Arrays",
+  "concept": "Use std::vector to store and process dynamic lists of integers.",
+  "challenges": [
+    {
+      "title": "Vector Input & Sum",
+      "description": "Read N and then N integers into a vector, and print their sum.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Single integer: sum of all elements.",
+      "examples": [
+        "Input:\n4\n2 4 6 8\n\nOutput:\n20"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int N;\n    // read N and then N integers into a vector, then print sum\n    return 0;\n}\n",
+      "tests": [
+        { "input": "4\n2 4 6 8", "expected": "20" },
+        { "input": "3\n1 1 1", "expected": "3" }
+      ]
+    },
+    {
+      "title": "Count Greater Than X",
+      "description": "Given N, a vector of N integers and a value X, count how many elements are strictly greater than X.",
+      "inputDescription": "First line: N. Second line: N integers. Third line: X.",
+      "outputDescription": "Single integer: count of elements > X.",
+      "examples": [
+        "Input:\n5\n1 5 2 7 3\n3\n\nOutput:\n2"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int N;\n    // your code here using vector<int>\n    return 0;\n}\n",
+      "tests": [
+        { "input": "5\n1 5 2 7 3\n3", "expected": "2" },
+        { "input": "4\n10 20 30 40\n25", "expected": "2" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "title": "JavaScript Level 1 — Basics & Console Output",
+  "concept": "Use console.log to print messages and simple values.",
+  "challenges": [
+    {
+      "title": "Hello JavaScript",
+      "description": "Write a JavaScript program that prints exactly: Hello JavaScript",
+      "inputDescription": "No input.",
+      "outputDescription": "The output should be exactly: Hello JavaScript",
+      "examples": [
+        "Input:\n<no input>\n\nOutput:\nHello JavaScript"
+      ],
+      "starterCode": "// Print Hello JavaScript to the console\n// Example:\n// console.log(\"Hello JavaScript\");\n",
+      "tests": [
+        {
+          "input": "",
+          "expected": "Hello JavaScript"
+        }
+      ]
+    },
+    {
+      "title": "Print Your Favourite Number",
+      "description": "Write a program that prints your favourite number. For testing, assume the number is 7.",
+      "inputDescription": "No input.",
+      "outputDescription": "Print a single integer: 7",
+      "examples": [
+        "Output:\n7"
+      ],
+      "starterCode": "// Print your favourite number (for now, just print 7)\n",
+      "tests": [
+        {
+          "input": "",
+          "expected": "7"
+        }
+      ]
+    }
+  ]
+}

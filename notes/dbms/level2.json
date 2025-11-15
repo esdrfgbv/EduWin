@@ -1,0 +1,11 @@
+{
+  "title": "DBMS Level 2 — Data Models & ER Model Basics",
+  "intro": "This level focuses on data models, mainly the Entity-Relationship (ER) model, which is used to design databases conceptually.",
+  "points": [
+    "Know the main types of data models: hierarchical, network, relational, object-oriented.",
+    "Understand what an Entity and Entity Set are.",
+    "Understand Attributes and types of attributes (simple, composite, single-valued, multi-valued, derived).",
+    "Know what a Relationship and Relationship Set are.",
+    "Basic idea of ER diagram components: rectangles, ellipses, diamonds, lines."
+  ]
+}

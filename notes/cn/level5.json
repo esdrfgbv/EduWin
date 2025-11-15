@@ -1,0 +1,11 @@
+{
+  "title": "CN Level 5 — Transport Layer: TCP & UDP",
+  "intro": "This level introduces end-to-end communication using TCP and UDP.",
+  "points": [
+    "Know the role of transport layer: end-to-end logical communication.",
+    "Understand TCP features: connection-oriented, reliable, ordered.",
+    "Understand UDP: connectionless, best-effort, low overhead.",
+    "Know what a port number is and why it is used.",
+    "Examples: HTTP over TCP, DNS often over UDP."
+  ]
+}

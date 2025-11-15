@@ -1,0 +1,34 @@
+{
+  "title": "JavaScript Level 5 — Arrays & Basic Operations",
+  "concept": "Use arrays to store collections and perform sum and max operations.",
+  "challenges": [
+    {
+      "title": "Sum of Array Elements",
+      "description": "Given N and an array of N integers, print the sum of all elements.",
+      "inputDescription": "First line: N. Second line: N integers separated by space.",
+      "outputDescription": "Single integer: sum of the array elements.",
+      "examples": [
+        "Input:\n5\n1 2 3 4 5\n\nOutput:\n15"
+      ],
+      "starterCode": "const fs = require('fs');\nconst data = fs.readFileSync(0, 'utf8').trim().split(/\\s+/);\n// data[0] = N, data[1..N] = array elements\n",
+      "tests": [
+        { "input": "5\n1 2 3 4 5", "expected": "15" },
+        { "input": "3\n-1 0 1", "expected": "0" }
+      ]
+    },
+    {
+      "title": "Maximum Element in Array",
+      "description": "Given N and an array of N integers, print the maximum element.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Single integer: maximum value.",
+      "examples": [
+        "Input:\n4\n3 7 2 9\n\nOutput:\n9"
+      ],
+      "starterCode": "const fs = require('fs');\nconst data = fs.readFileSync(0, 'utf8').trim().split(/\\s+/);\n// Your code here to find maximum\n",
+      "tests": [
+        { "input": "4\n3 7 2 9", "expected": "9" },
+        { "input": "3\n-5 -2 -10", "expected": "-2" }
+      ]
+    }
+  ]
+}

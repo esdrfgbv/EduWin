@@ -1,0 +1,11 @@
+{
+  "title": "OS Level 4 — Threads & Multithreading",
+  "intro": "This level introduces the concept of threads, their benefits, and basic multi-threading ideas.",
+  "points": [
+    "Understand what a thread is and how it differs from a process.",
+    "Advantages of multi-threading: responsiveness, resource sharing, economy, scalability.",
+    "User-level vs kernel-level threads (concept only).",
+    "Multithreading models: many-to-one, one-to-one, many-to-many (basic idea).",
+    "Common use-cases where threads are preferred over multiple processes."
+  ]
+}

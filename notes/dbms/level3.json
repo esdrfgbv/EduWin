@@ -1,0 +1,11 @@
+{
+  "title": "DBMS Level 3 — Keys & Relational Model",
+  "intro": "This level introduces the relational model, keys, and basic integrity constraints.",
+  "points": [
+    "Understand relation (table), tuple (row), attribute (column), and domain.",
+    "Different types of keys: super key, candidate key, primary key, alternate key, foreign key.",
+    "Entity integrity constraint (primary key cannot be NULL).",
+    "Referential integrity constraint (foreign key references primary key in another table).",
+    "Basic idea of schema vs instance of a relation."
+  ]
+}

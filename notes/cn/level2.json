@@ -1,0 +1,11 @@
+{
+  "title": "CN Level 2 — OSI & TCP/IP Models",
+  "intro": "This level focuses on layered models used to understand networking.",
+  "points": [
+    "Know the 7 layers of OSI model (names only).",
+    "Know the 4/5 layers of TCP/IP model.",
+    "Understand why layering is used (abstraction, modularity).",
+    "Be able to roughly map protocols to layers (HTTP, TCP, IP, etc.).",
+    "Remember that real Internet follows TCP/IP more closely than OSI."
+  ]
+}

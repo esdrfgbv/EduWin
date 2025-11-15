@@ -1,0 +1,11 @@
+{
+  "title": "C++ Level 7 — Functions, References & Passing by Reference",
+  "intro": "This level introduces functions in C++ and how to pass arguments by value and by reference.",
+  "points": [
+    "Define and call functions with parameters and return values.",
+    "Understand the difference between pass-by-value and pass-by-reference.",
+    "Use reference parameters (int &x) to modify arguments inside functions.",
+    "Split logic into smaller reusable functions.",
+    "Use function overloading in simple cases."
+  ]
+}

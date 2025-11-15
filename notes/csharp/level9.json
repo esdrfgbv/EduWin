@@ -1,0 +1,11 @@
+{
+  "title": "C# Level 9 — Inheritance & Basic OOP Design",
+  "intro": "This level covers inheritance to reuse and extend class behavior.",
+  "points": [
+    "Create a derived class that inherits from a base class using the : syntax.",
+    "Reuse base class fields and methods in derived classes.",
+    "Override virtual methods in derived classes.",
+    "Call base class constructors using base().",
+    "See simple examples like Person → Student or Employee → Manager."
+  ]
+}

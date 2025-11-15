@@ -1,0 +1,28 @@
+{
+  "title": "HTML+CSS Level 3 — Images & Lists",
+  "concept": "Practice inserting images and creating lists.",
+  "challenges": [
+    {
+      "title": "Q1: Image with Alt Text",
+      "description": "Add an image to the page using an <img> tag. Use any valid image URL and provide meaningful alt text describing the image.",
+      "inputDescription": "No input.",
+      "outputDescription": "Page shows an image and has proper alt text.",
+      "examples": [
+        "Example alt text: 'Beautiful sunset over the mountains'."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Image Demo</title>\n</head>\n<body>\n    <!-- Add your img tag here -->\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "title": "Q2: Favourite Movies List",
+      "description": "Create an unordered list of at least 3 of your favourite movies. Below it, create an ordered list of the top 3 things you want to learn in web development.",
+      "inputDescription": "No input.",
+      "outputDescription": "One unordered and one ordered list displayed.",
+      "examples": [
+        "Use <ul> with <li> for movies and <ol> with <li> for learning goals."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Lists Demo</title>\n</head>\n<body>\n    <!-- Add your UL and OL lists here -->\n</body>\n</html>\n",
+      "tests": []
+    }
+  ]
+}

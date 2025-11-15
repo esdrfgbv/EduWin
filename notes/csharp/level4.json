@@ -1,0 +1,11 @@
+{
+  "title": "C# Level 4 — Loops & Repetition",
+  "intro": "This level covers loops to repeat tasks: for, while, and basic counting patterns.",
+  "points": [
+    "Use for loops when the number of iterations is known.",
+    "Use while loops for condition-controlled repetition.",
+    "Understand do-while loops where the body runs at least once.",
+    "Use break and continue to control loop flow.",
+    "Solve simple counting and factorial problems using loops."
+  ]
+}

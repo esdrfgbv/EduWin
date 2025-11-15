@@ -1,0 +1,11 @@
+{
+  "title": "CN Level 7 — Network Security Basics",
+  "intro": "This level introduces basic concepts of security in computer networks.",
+  "points": [
+    "Understand goals of security: confidentiality, integrity, availability.",
+    "Know what encryption roughly does (scramble data using a key).",
+    "Concept of firewalls and basic packet filtering.",
+    "Basic idea of authentication vs authorization.",
+    "Recognize common threats: eavesdropping, spoofing, DoS (concept only)."
+  ]
+}

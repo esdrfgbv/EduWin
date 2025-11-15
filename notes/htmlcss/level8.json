@@ -1,0 +1,11 @@
+{
+  "title": "HTML+CSS Level 8 — Layout with Flexbox",
+  "intro": "This level introduces flexbox for modern layout.",
+  "points": [
+    "Turn a container into a flex container using display: flex.",
+    "Use justify-content to align items horizontally.",
+    "Use align-items to align items vertically.",
+    "Use flex-direction: row / column for layout orientation.",
+    "Create simple navbars and card layouts using flexbox."
+  ]
+}

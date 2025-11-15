@@ -1,0 +1,11 @@
+{
+  "title": "DBMS Level 1 — Introduction to Databases",
+  "intro": "This level introduces the basic ideas of data, databases, and DBMS. You understand why databases are needed and where they are used.",
+  "points": [
+    "Difference between data and information.",
+    "What is a database and what is a DBMS.",
+    "Real-life examples of database applications (banking, railway, college ERP, etc.).",
+    "Advantages of DBMS over file system (redundancy control, consistency, sharing, security).",
+    "Basic terms: table, row (tuple), column (attribute), record, field."
+  ]
+}

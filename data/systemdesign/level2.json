@@ -1,0 +1,28 @@
+{
+  "title": "System Design Level 2 — Architecture & Components",
+  "concept": "MCQs on basic components in a web architecture.",
+  "challenges": [
+    {
+      "title": "Q1: API Gateway",
+      "description": "The main role of an API Gateway is to:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\\na) Store data permanently\\nb) Distribute traffic to multiple microservices and handle cross-cutting concerns\\nc) Render HTML pages directly on client browser\\nd) Act as a replacement for the database"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "title": "Q2: Stateless Service",
+      "description": "A stateless service is one where:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\\na) Server stores user session data in local memory\\nb) Server does not store any per-session data; each request is independent\\nc) Server stores all user data in files\\nd) Server does not use any database at all"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    }
+  ]
+}

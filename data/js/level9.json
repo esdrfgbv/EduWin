@@ -1,0 +1,34 @@
+{
+  "title": "JavaScript Level 9 — Array Filtering & Counting",
+  "concept": "Process arrays to filter elements and count based on conditions.",
+  "challenges": [
+    {
+      "title": "Print Even Numbers in Array",
+      "description": "Given N and an array of N integers, print all even numbers in the array in the same order, separated by spaces.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "All even numbers separated by a single space. If no even numbers, print nothing.",
+      "examples": [
+        "Input:\n5\n1 2 3 4 5\n\nOutput:\n2 4"
+      ],
+      "starterCode": "const fs = require('fs');\nconst data = fs.readFileSync(0, 'utf8').trim().split(/\\s+/);\n// Filter even numbers and print\n",
+      "tests": [
+        { "input": "5\n1 2 3 4 5", "expected": "2 4" },
+        { "input": "3\n1 3 5", "expected": "" }
+      ]
+    },
+    {
+      "title": "Count Numbers Greater Than X",
+      "description": "Given N, an array of N integers and a value X, count how many elements are strictly greater than X.",
+      "inputDescription": "First line: N. Second line: N integers. Third line: X.",
+      "outputDescription": "Single integer: count of elements > X.",
+      "examples": [
+        "Input:\n5\n1 5 2 7 3\n3\n\nOutput:\n2"
+      ],
+      "starterCode": "const fs = require('fs');\nconst data = fs.readFileSync(0, 'utf8').trim().split(/\\s+/);\n// Count elements > X and print\n",
+      "tests": [
+        { "input": "5\n1 5 2 7 3\n3", "expected": "2" },
+        { "input": "4\n10 20 30 40\n25", "expected": "2" }
+      ]
+    }
+  ]
+}

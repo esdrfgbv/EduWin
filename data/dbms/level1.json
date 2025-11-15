@@ -1,0 +1,28 @@
+{
+  "title": "DBMS Level 1 — Introduction to Databases",
+  "concept": "MCQs on basic database and DBMS concepts.",
+  "challenges": [
+    {
+      "title": "Q1: What is a Database?",
+      "description": "Which of the following best describes a database?",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) A collection of programs that manage hardware\nb) A collection of interrelated data stored together\nc) A single text file with random data\nd) A backup copy of operating system files"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "title": "Q2: What is a DBMS?",
+      "description": "DBMS stands for:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) Database Managing System\nb) Data Backup Management System\nc) Database Management System\nd) Data Base Main Storage"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    }
+  ]
+}

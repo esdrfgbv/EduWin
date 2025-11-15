@@ -1,0 +1,11 @@
+{
+  "title": "OS Level 2 — Process Concepts & States",
+  "intro": "This level focuses on process concepts, process states, and the Process Control Block (PCB).",
+  "points": [
+    "Understand what a process is (program in execution).",
+    "Know the difference between program, process and thread (basic idea).",
+    "Learn common process states: New, Ready, Running, Waiting/Blocked, Terminated.",
+    "Understand the role of Process Control Block (PCB) and what it stores.",
+    "Basics of context switching between processes."
+  ]
+}

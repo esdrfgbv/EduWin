@@ -1,0 +1,28 @@
+{
+  "title": "HTML+CSS Level 5 — Forms & Inputs",
+  "concept": "Build basic forms with different input types.",
+  "challenges": [
+    {
+      "title": "Q1: Login Form",
+      "description": "Create a simple login form with 'Email' and 'Password' fields and a 'Login' button. Use labels linked to the inputs.",
+      "inputDescription": "No input.",
+      "outputDescription": "A basic login form appears on the page.",
+      "examples": [
+        "Use <form>, <label>, <input type=\"email\">, <input type=\"password\"> and <button>."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Login Form</title>\n</head>\n<body>\n    <!-- Create your login form here -->\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "title": "Q2: Feedback Form",
+      "description": "Create a feedback form with fields: Name (text), Email, Rating (1–5 using radio buttons), and a multi-line feedback box. Add a Submit button.",
+      "inputDescription": "No input.",
+      "outputDescription": "A feedback form with multiple input types.",
+      "examples": [
+        "Group radio buttons with the same name attribute for rating."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Feedback Form</title>\n</head>\n<body>\n    <!-- Build your feedback form here -->\n</body>\n</html>\n",
+      "tests": []
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "System Design Level 8 — URL Shortener",
+  "concept": "Scenario-based design questions for a URL shortener system.",
+  "challenges": [
+    {
+      "title": "Q1: Requirements & APIs",
+      "description": "Design a basic URL shortener service like bit.ly. List the core functional requirements and sketch simple API endpoints for creating a short URL and redirecting to the original URL.",
+      "inputDescription": "No input. Design question.",
+      "outputDescription": "List of requirements and example API definitions (checked manually).",
+      "examples": [
+        "Think of endpoints like: POST /shorten, GET /:shortCode."
+      ],
+      "starterCode": "// Write your answer as notes or comments.\n// Mention requirements (shorten, redirect, optional analytics) and API paths.",
+      "tests": []
+    },
+    {
+      "title": "Q2: Data Model & Scaling",
+      "description": "For the same URL shortener, propose a simple data model for storing URL mappings (shortCode -> longURL). Discuss how you would: (a) avoid collisions, and (b) scale the system for read-heavy traffic.",
+      "inputDescription": "No input. Design question.",
+      "outputDescription": "Short explanation of table/schema, hashing/encoding, and use of cache/replicas (checked manually).",
+      "examples": [
+        "You can mention using a key-value store, base62 encoding of IDs, and caching popular links."
+      ],
+      "starterCode": "// Describe schema, collision handling idea, and use of caching/replication.\n",
+      "tests": []
+    }
+  ]
+}

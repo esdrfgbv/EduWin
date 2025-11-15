@@ -1,0 +1,28 @@
+{
+  "title": "HTML+CSS Level 8 — Flexbox Layout",
+  "concept": "Create layouts using flexbox for alignment.",
+  "challenges": [
+    {
+      "title": "Q1: Horizontal Navigation Bar",
+      "description": "Create a horizontal navigation bar with 3–4 links (Home, About, Contact, etc.). Use flexbox to space the items evenly across the width.",
+      "inputDescription": "No input.",
+      "outputDescription": "A simple nav bar with evenly spaced items.",
+      "examples": [
+        "Use display: flex and justify-content: space-around or space-between."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Flexbox Navbar</title>\n    <style>\n        /* Add flexbox styles for nav here */\n    </style>\n</head>\n<body>\n    <nav class=\"navbar\">\n        <a href=\"#\">Home</a>\n        <a href=\"#\">About</a>\n        <a href=\"#\">Contact</a>\n    </nav>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "title": "Q2: Card Grid with Flexbox",
+      "description": "Create a container with 3 cards inside (divs). Use flexbox so that cards appear in a row on wide screens and wrap to the next line when screen is narrow.",
+      "inputDescription": "No input.",
+      "outputDescription": "Responsive card row using flexbox.",
+      "examples": [
+        "Use flex-wrap: wrap and a max-width on cards."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Flexbox Cards</title>\n    <style>\n        /* Style .card-container and .card with flexbox */\n    </style>\n</head>\n<body>\n    <div class=\"card-container\">\n        <div class=\"card\">Card 1</div>\n        <div class=\"card\">Card 2</div>\n        <div class=\"card\">Card 3</div>\n    </div>\n</body>\n</html>\n",
+      "tests": []
+    }
+  ]
+}

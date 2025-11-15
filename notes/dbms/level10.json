@@ -1,0 +1,11 @@
+{
+  "title": "DBMS Level 10 — Transactions, ACID & Indexing",
+  "intro": "This level covers transactions, ACID properties, and basic indexing concepts.",
+  "points": [
+    "Understand what a transaction is (logical unit of work).",
+    "ACID properties: Atomicity, Consistency, Isolation, Durability.",
+    "Basic idea of concurrency issues: dirty read, lost update (concept).",
+    "What is an index and why it speeds up searches.",
+    "Difference between clustered and non-clustered indexes (conceptual)."
+  ]
+}

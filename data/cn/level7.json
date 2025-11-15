@@ -1,0 +1,28 @@
+{
+  "title": "CN Level 7 — Network Security Basics",
+  "concept": "MCQs on basic security, encryption and firewalls.",
+  "challenges": [
+    {
+      "title": "Q1: Encryption Goal",
+      "description": "The main goal of encryption in networking is to provide:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\\na) Integrity only\\nb) Confidentiality of data\\nc) Availability only\\nd) Physical security of devices"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "title": "Q2: Firewall Role",
+      "description": "A firewall in a network is used to:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\\na) Increase Wi-Fi range\\nb) Filter incoming and outgoing traffic based on security rules\\nc) Replace all routers\\nd) Provide automatic software updates"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    }
+  ]
+}

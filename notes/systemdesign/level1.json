@@ -1,0 +1,11 @@
+{
+  "title": "System Design Level 1 — Fundamentals",
+  "intro": "This level introduces the basic goals and vocabulary of system design.",
+  "points": [
+    "Understand what system design means in the context of large-scale applications.",
+    "Know key non-functional requirements: scalability, availability, reliability, maintainability.",
+    "Differentiate between latency and throughput.",
+    "Understand vertical vs horizontal scaling at a basic level.",
+    "Know the high-level idea of client–server architecture."
+  ]
+}

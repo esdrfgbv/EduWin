@@ -1,0 +1,11 @@
+{
+  "title": "C# Level 2 — Data Types, Variables & Operators",
+  "intro": "This level focuses on built-in data types, variable declarations, and basic operators in C#.",
+  "points": [
+    "Declare variables of types int, double, char, bool, and string.",
+    "Understand value types vs reference types at a basic level.",
+    "Use arithmetic operators (+, -, *, /, %) and assignment operators.",
+    "Use relational and logical operators in conditions.",
+    "Get a feeling for implicit and explicit casting between numeric types."
+  ]
+}

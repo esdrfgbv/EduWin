@@ -1,0 +1,11 @@
+{
+  "title": "C++ Level 10 — STL (Vectors, Sets, Maps) & Problem Solving",
+  "intro": "This level introduces key STL containers and applies C++ concepts to solve problems.",
+  "points": [
+    "Use std::vector for dynamic arrays in real problems.",
+    "Understand std::set and std::map at a basic level.",
+    "Use range-based for loops and auto keyword for convenience.",
+    "Combine loops, functions, and STL containers to solve problems.",
+    "Practice reading problems carefully and designing efficient solutions."
+  ]
+}

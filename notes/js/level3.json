@@ -1,0 +1,11 @@
+{
+  "title": "JavaScript Level 3 — Conditional Statements",
+  "intro": "This level teaches decision-making using if, else if, else and the ternary operator.",
+  "points": [
+    "Write simple if statements to check a condition.",
+    "Use if-else to choose between two paths.",
+    "Use else if chains for multiple conditions.",
+    "Combine conditions with &&, || and ! operators.",
+    "Use the ternary operator condition ? a : b for short decisions."
+  ]
+}

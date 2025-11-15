@@ -1,0 +1,28 @@
+{
+  "title": "CN Level 10 — Secure Web App Networking",
+  "concept": "Scenario-based design questions for a secure web application deployment.",
+  "challenges": [
+    {
+      "title": "Q1: Secure Deployment Architecture",
+      "description": "Design a high-level network architecture for hosting a secure web application. Include components like load balancer, web servers, database, and indicate which parts are exposed to the Internet and which are in a private network.",
+      "inputDescription": "No input. Scenario question.",
+      "outputDescription": "Diagram-style text description of public vs private segments (checked manually).",
+      "examples": [
+        "Think of: Internet → load balancer in public subnet → app servers in private subnet → DB in deeper private subnet."
+      ],
+      "starterCode": "// Describe the components, their placement (public/private), and basic data flow.\n",
+      "tests": []
+    },
+    {
+      "title": "Q2: HTTPS & Firewall Rules",
+      "description": "Explain how HTTPS and firewall rules help secure the web application in the above architecture. Mention what traffic is allowed from the Internet and what is restricted between subnets.",
+      "inputDescription": "No input. Scenario question.",
+      "outputDescription": "Explanation of TLS for encryption and firewall rules for access control (checked manually).",
+      "examples": [
+        "Example: Allow HTTPS (443) from Internet to load balancer only, allow app servers to talk to DB on specific port."
+      ],
+      "starterCode": "// Describe how HTTPS protects data in transit and how firewall rules restrict access.\n",
+      "tests": []
+    }
+  ]
+}

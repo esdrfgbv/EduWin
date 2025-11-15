@@ -1,0 +1,28 @@
+{
+  "title": "DBMS Level 3 — Keys & Relational Model",
+  "concept": "MCQs on super key, candidate key, primary key and foreign key.",
+  "challenges": [
+    {
+      "title": "Q1: Primary Key",
+      "description": "Which of the following is true about a Primary Key?",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) It can have duplicate values\nb) It uniquely identifies a row and cannot be NULL\nc) It is always a combination of two attributes\nd) It must be a numeric attribute"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "title": "Q2: Foreign Key",
+      "description": "A Foreign Key is used to:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) Enforce referential integrity between two tables\nb) Store backup copy of primary key\nc) Speed up search operations\nd) Encrypt sensitive columns in a table"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    }
+  ]
+}

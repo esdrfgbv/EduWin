@@ -1,0 +1,11 @@
+{
+  "title": "System Design Level 6 — Microservices & Messaging",
+  "intro": "This level focuses on breaking monoliths into services and using messaging systems.",
+  "points": [
+    "Understand monolith vs microservices at high level.",
+    "Benefits of microservices: independent deploy, scaling, tech mix.",
+    "Challenges: data consistency, distributed transactions, observability.",
+    "Know what message queues and event streams are used for.",
+    "Understand sync (HTTP) vs async (queue) communication choices."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "title": "System Design Level 6 — Microservices & Messaging",
+  "concept": "MCQs on microservices and message queues.",
+  "challenges": [
+    {
+      "title": "Q1: Monolith vs Microservices",
+      "description": "A main advantage of microservices over a monolithic architecture is:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\\na) All teams must use the same language and framework\\nb) Easier independent deployment and scaling of services\\nc) Single database schema is enforced\\nd) No need for network communication at all"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "title": "Q2: Message Queue",
+      "description": "A message queue is mainly used for:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\\na) Synchronous request-response communication\\nb) Asynchronous communication and decoupling producers and consumers\\nc) Storing log files only\\nd) Replacing all databases in the system"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    }
+  ]
+}

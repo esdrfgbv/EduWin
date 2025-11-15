@@ -1,0 +1,28 @@
+{
+  "title": "CN Level 8 — Small Office Network Design",
+  "concept": "Scenario-based design questions for a small office network.",
+  "challenges": [
+    {
+      "title": "Q1: Devices & Topology",
+      "description": "Design a basic network for an office with 30 computers and Internet access. List the main network devices you would use (router, switches, access points, etc.) and describe a simple topology connecting them.",
+      "inputDescription": "No input. Design question.",
+      "outputDescription": "Short design with device list and topology explanation (checked manually).",
+      "examples": [
+        "Think of: ISP modem/router → core switch → access switches → PCs and Wi-Fi AP."
+      ],
+      "starterCode": "// Describe devices and how they are connected in a simple diagram (text).\n",
+      "tests": []
+    },
+    {
+      "title": "Q2: IP Addressing Plan",
+      "description": "For the same office network, propose a simple IP addressing plan using a private IPv4 subnet (for example 192.168.x.x). Explain how devices get their IPs.",
+      "inputDescription": "No input. Design question.",
+      "outputDescription": "Simple subnet choice and explanation of DHCP/static assignment (checked manually).",
+      "examples": [
+        "Example: Use 192.168.1.0/24, router = 192.168.1.1, DHCP range 192.168.1.100-200."
+      ],
+      "starterCode": "// Write your IP scheme and how DHCP would be used.\n",
+      "tests": []
+    }
+  ]
+}

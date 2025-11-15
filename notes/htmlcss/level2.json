@@ -1,0 +1,11 @@
+{
+  "title": "HTML+CSS Level 2 — Text Formatting & Links",
+  "intro": "This level focuses on text formatting tags and creating hyperlinks.",
+  "points": [
+    "Use <b>, <strong>, <i>, <em>, <u>, <small> for basic text styling.",
+    "Create links using the <a> tag with href attribute.",
+    "Understand absolute vs relative URLs at a basic level.",
+    "Use target=\"_blank\" to open a link in a new tab.",
+    "Use <br> for line breaks (only when semantically needed)."
+  ]
+}

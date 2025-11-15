@@ -1,0 +1,11 @@
+{
+  "title": "C++ Level 3 — Conditional Statements",
+  "intro": "This level teaches decision-making using if, if-else, and nested conditions, plus the ternary operator.",
+  "points": [
+    "Write simple if and if-else statements for basic decisions.",
+    "Use nested if-else to handle multiple conditions.",
+    "Use logical operators (&&, ||, !) inside conditions.",
+    "Understand and use the ternary operator (condition ? a : b).",
+    "Practice small decision-based problems like grading and max of three numbers."
+  ]
+}

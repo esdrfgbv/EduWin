@@ -1,0 +1,11 @@
+{
+  "title": "C# Level 6 — Lists (List<T>) & Dynamic Collections",
+  "intro": "This level focuses on generic lists in C# for dynamic collections.",
+  "points": [
+    "Understand why dynamic collections are useful compared to fixed-size arrays.",
+    "Declare and use List<int> and other generic lists.",
+    "Use methods like Add, Remove, Count, and indexing with lists.",
+    "Traverse lists using for and foreach loops.",
+    "Convert between arrays and lists when needed."
+  ]
+}

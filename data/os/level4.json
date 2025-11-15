@@ -1,0 +1,28 @@
+{
+  "title": "OS Level 4 — Threads & Multithreading",
+  "concept": "MCQs on threads, processes and advantages of multithreading.",
+  "challenges": [
+    {
+      "title": "Q1: Process vs Thread",
+      "description": "Which statement about threads is TRUE?",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) Threads have their own separate address space like processes\nb) Threads of a process share the same address space\nc) Threads cannot run in parallel\nd) Threads cannot communicate with each other"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "title": "Q2: Advantage of Multithreading",
+      "description": "Which of the following is NOT an advantage of multithreading?",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) Improved responsiveness\nb) Better resource sharing\nc) Reduced context-switch overhead in all cases\nd) Better utilization of multiprocessor systems"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    }
+  ]
+}

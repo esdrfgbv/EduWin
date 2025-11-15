@@ -1,0 +1,11 @@
+{
+  "title": "HTML+CSS Level 7 — Box Model & Spacing",
+  "intro": "This level focuses on the CSS box model and spacing around elements.",
+  "points": [
+    "Understand that every element is a box: content, padding, border, margin.",
+    "Use border, padding and margin properties.",
+    "Set width and height of elements.",
+    "Use display: block, inline, inline-block (conceptually).",
+    "Use box-sizing: border-box to make sizing easier."
+  ]
+}

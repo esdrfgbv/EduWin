@@ -1,0 +1,28 @@
+{
+  "title": "DBMS Level 8 — Subqueries & Nested Queries",
+  "concept": "MCQs on subqueries and IN/EXISTS.",
+  "challenges": [
+    {
+      "title": "Q1: Subquery Location",
+      "description": "A subquery in SQL is a query:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) That is always executed after the main query\nb) Written inside another SQL query\nc) That cannot reference other tables\nd) Used only for DELETE operations"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "title": "Q2: IN vs =",
+      "description": "Which operator is commonly used with subqueries to check membership in a list of values?",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) BETWEEN\nb) LIKE\nc) IN\nd) HAVING"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    }
+  ]
+}

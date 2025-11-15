@@ -1,0 +1,11 @@
+{
+  "title": "OS Level 6 — Semaphores & Classic Synchronization Problems",
+  "intro": "This level introduces semaphores and standard synchronization problems.",
+  "points": [
+    "Define semaphore and understand its two main operations: wait(P) and signal(V).",
+    "Difference between binary semaphore and counting semaphore.",
+    "Use semaphores conceptually to solve synchronization problems.",
+    "Classical problems: Producer–Consumer (Bounded Buffer), Readers–Writers, Dining Philosophers (concept solutions).",
+    "Understand how incorrect use of semaphores can cause deadlock or starvation."
+  ]
+}

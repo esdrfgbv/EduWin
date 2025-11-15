@@ -1,0 +1,11 @@
+{
+  "title": "C++ Level 8 — Object-Oriented Basics: Classes & Objects",
+  "intro": "This level introduces basic OOP concepts in C++ using classes and objects.",
+  "points": [
+    "Define a class with data members and member functions.",
+    "Create objects from a class and access members using the dot operator.",
+    "Use constructors to initialize object data.",
+    "Understand public and private access specifiers.",
+    "Model simple real-world entities as C++ classes."
+  ]
+}

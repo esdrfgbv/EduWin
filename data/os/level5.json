@@ -1,0 +1,28 @@
+{
+  "title": "OS Level 5 — Process Synchronization & Critical Section",
+  "concept": "MCQs on race conditions, critical section and properties.",
+  "challenges": [
+    {
+      "title": "Q1: Race Condition",
+      "description": "Race condition occurs when:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) Two processes use different variables\nb) Final result depends on the order of execution of processes\nc) Only one process is running in the system\nd) Processes are in blocked state"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "title": "Q2: Critical Section Requirement",
+      "description": "Which of the following is NOT a requirement of a good critical section solution?",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) Mutual exclusion\nb) Progress\nc) Bounded waiting\nd) Maximum CPU utilization"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    }
+  ]
+}

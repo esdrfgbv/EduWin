@@ -1,0 +1,11 @@
+{
+  "title": "C++ Level 6 — Vectors (STL) & Dynamic Arrays",
+  "intro": "This level focuses on std::vector as a dynamic array and introduces basic STL usage.",
+  "points": [
+    "Understand the need for dynamic arrays compared to static arrays.",
+    "Declare and use std::vector<int> and other vector types.",
+    "Use push_back, size, and indexing with vectors.",
+    "Traverse vectors with range-based for loops.",
+    "Start thinking in terms of STL containers instead of raw arrays."
+  ]
+}

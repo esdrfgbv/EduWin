@@ -1,0 +1,11 @@
+{
+  "title": "C++ Level 4 — Loops & Patterns",
+  "intro": "This level covers repetition using for, while, and do-while loops, and introduces simple patterns.",
+  "points": [
+    "Write for loops for fixed-count iterations.",
+    "Use while loops for condition-controlled repetition.",
+    "Use do-while loops where body needs to run at least once.",
+    "Understand break and continue within loops.",
+    "Solve basic pattern problems using nested loops."
+  ]
+}

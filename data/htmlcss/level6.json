@@ -1,0 +1,28 @@
+{
+  "title": "HTML+CSS Level 6 — CSS Basics",
+  "concept": "Apply simple CSS styles using classes and IDs.",
+  "challenges": [
+    {
+      "title": "Q1: Styled Heading & Paragraph",
+      "description": "Create a heading and a paragraph. Use CSS to make the heading blue and center aligned, and the paragraph with a gray text color and font-size 18px.",
+      "inputDescription": "No input.",
+      "outputDescription": "Styled text as per description.",
+      "examples": [
+        "Use a <style> tag in <head> or an external stylesheet."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>CSS Basics</title>\n    <style>\n        /* Add your CSS here */\n    </style>\n</head>\n<body>\n    <!-- Add heading and paragraph here -->\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "title": "Q2: Button with Class",
+      "description": "Create a button with class 'primary-btn'. Style it using CSS to have a background color, white text, some padding, and rounded corners.",
+      "inputDescription": "No input.",
+      "outputDescription": "A visually styled button appears.",
+      "examples": [
+        "Use .primary-btn selector and properties like padding, border-radius."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Button Styling</title>\n    <style>\n        /* Style .primary-btn here */\n    </style>\n</head>\n<body>\n    <!-- Add your button with class=\"primary-btn\" -->\n</body>\n</html>\n",
+      "tests": []
+    }
+  ]
+}

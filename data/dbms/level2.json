@@ -1,0 +1,28 @@
+{
+  "title": "DBMS Level 2 — Data Models & ER Basics",
+  "concept": "MCQs on data models, entities and relationships.",
+  "challenges": [
+    {
+      "title": "Q1: Entity in ER Model",
+      "description": "In an ER diagram, an Entity is:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) A real-world object that can be uniquely identified\nb) A set of all attributes in a database\nc) A many-to-many relationship\nd) A primary key of any table"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "title": "Q2: Relational Model Type",
+      "description": "The relational model represents data using:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) Trees\nb) Graphs\nc) Tables (relations)\nd) Files and folders"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    }
+  ]
+}

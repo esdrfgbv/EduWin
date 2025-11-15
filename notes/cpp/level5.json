@@ -1,0 +1,11 @@
+{
+  "title": "C++ Level 5 — Arrays & Basic Algorithms",
+  "intro": "This level introduces 1D arrays and simple operations like traversal, sum, and finding minimum/maximum.",
+  "points": [
+    "Declare and initialize arrays in C++.",
+    "Access and update array elements using indices.",
+    "Traverse arrays using loops to compute sums and counts.",
+    "Find minimum and maximum elements in an array.",
+    "Understand the idea of time complexity informally (O(n) for simple traversals)."
+  ]
+}

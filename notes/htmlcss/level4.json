@@ -1,0 +1,11 @@
+{
+  "title": "HTML+CSS Level 4 — Tables",
+  "intro": "This level teaches building tables to display tabular data.",
+  "points": [
+    "Create basic tables using <table>, <tr>, <td>.",
+    "Use <th> for header cells.",
+    "Group headers, body and footer using <thead>, <tbody>, <tfoot> (conceptually).",
+    "Add basic attributes like border, cellpadding, cellspacing via CSS (preferred).",
+    "Use tables only for tabular data (not for layout)."
+  ]
+}

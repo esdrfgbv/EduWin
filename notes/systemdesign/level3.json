@@ -1,0 +1,11 @@
+{
+  "title": "System Design Level 3 — Caching & Load Balancing",
+  "intro": "This level introduces caching and load balancers to handle higher load.",
+  "points": [
+    "Understand what a cache is and why it is used.",
+    "Differentiate between client-side, CDN and server-side caches.",
+    "Know basic cache policies: TTL, LRU (concept), write-through vs write-back (concept).",
+    "Understand what a load balancer does.",
+    "Know simple LB strategies: round-robin, least connections (concept only)."
+  ]
+}

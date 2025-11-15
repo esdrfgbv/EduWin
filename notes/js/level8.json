@@ -1,0 +1,11 @@
+{
+  "title": "JavaScript Level 8 — Strings & String Methods",
+  "intro": "This level covers string manipulation and common string methods.",
+  "points": [
+    "Understand that strings are sequences of characters.",
+    "Access characters in a string using indexing (str[0], str[1], ...).",
+    "Use length property to get the size of a string.",
+    "Use methods like toUpperCase(), toLowerCase(), trim(), and slice().",
+    "Solve simple problems like counting characters or formatting text."
+  ]
+}

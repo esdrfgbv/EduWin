@@ -1,0 +1,39 @@
+{
+  "title": "JavaScript Level 3 — Conditional Statements",
+  "concept": "Use if-else and comparison operators to make decisions.",
+  "challenges": [
+    {
+      "title": "Even or Odd",
+      "description": "Given an integer n, print Even if n is even, otherwise print Odd.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Print Either Even or Odd.",
+      "examples": [
+        "Input:\n4\n\nOutput:\nEven",
+        "Input:\n7\n\nOutput:\nOdd"
+      ],
+      "starterCode": "const fs = require('fs');\nconst input = fs.readFileSync(0, 'utf8').trim();\n// Convert input to number and check if it is even or odd\n",
+      "tests": [
+        { "input": "4", "expected": "Even" },
+        { "input": "7", "expected": "Odd" },
+        { "input": "0", "expected": "Even" }
+      ]
+    },
+    {
+      "title": "Grade from Marks",
+      "description": "Given marks (0 to 100), print the grade as follows: marks >= 90: A, 80-89: B, 70-79: C, 60-69: D, else: F.",
+      "inputDescription": "Single integer marks.",
+      "outputDescription": "Single character: A, B, C, D or F.",
+      "examples": [
+        "Input:\n85\n\nOutput:\nB"
+      ],
+      "starterCode": "const fs = require('fs');\nconst input = fs.readFileSync(0, 'utf8').trim();\n// Convert marks to number and print grade based on ranges\n",
+      "tests": [
+        { "input": "95", "expected": "A" },
+        { "input": "82", "expected": "B" },
+        { "input": "75", "expected": "C" },
+        { "input": "65", "expected": "D" },
+        { "input": "40", "expected": "F" }
+      ]
+    }
+  ]
+}

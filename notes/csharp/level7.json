@@ -1,0 +1,11 @@
+{
+  "title": "C# Level 7 — Methods & Parameters",
+  "intro": "This level introduces methods in C# and passing parameters to them.",
+  "points": [
+    "Define methods with return types and parameters.",
+    "Call methods from Main and use return values.",
+    "Understand the difference between value parameters and ref parameters (basic idea).",
+    "Break down logic into multiple small methods for readability.",
+    "Use method overloading in simple cases."
+  ]
+}

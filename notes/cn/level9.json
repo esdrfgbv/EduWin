@@ -1,0 +1,11 @@
+{
+  "title": "CN Level 9 — Performance & Troubleshooting",
+  "intro": "This level focuses on latency, packet loss and simple troubleshooting.",
+  "points": [
+    "Know common causes of high latency and packet loss.",
+    "Basic use of tools like ping and traceroute (concept).",
+    "Recognize impact of bandwidth vs congestion.",
+    "Understand how DNS or routing issues can break connectivity.",
+    "Approach to troubleshooting: isolate layers and components."
+  ]
+}

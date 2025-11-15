@@ -1,0 +1,11 @@
+{
+  "title": "JavaScript Level 4 — Loops & Repetition",
+  "intro": "This level covers loops to repeat tasks: for, while and basic counting patterns.",
+  "points": [
+    "Write for loops for counting from 1 to N.",
+    "Use while loops when you don't know the exact number of iterations.",
+    "Understand the role of initialization, condition and increment in loops.",
+    "Use break and continue to control loop flow.",
+    "Solve simple counting and factorial problems using loops."
+  ]
+}

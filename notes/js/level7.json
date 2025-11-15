@@ -1,0 +1,11 @@
+{
+  "title": "JavaScript Level 7 — Objects & Key-Value Data",
+  "intro": "This level introduces objects, which are collections of key-value pairs.",
+  "points": [
+    "Create objects using {} with key: value pairs.",
+    "Access properties using dot notation and bracket notation.",
+    "Update and add new properties to existing objects.",
+    "Model real-world entities (like student, product) as JS objects.",
+    "Loop over object properties using for...in loops (conceptually)."
+  ]
+}

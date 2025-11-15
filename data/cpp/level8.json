@@ -1,0 +1,34 @@
+{
+  "title": "C++ Level 8 — Classes & Objects",
+  "concept": "Define simple classes and create objects to store and process data.",
+  "challenges": [
+    {
+      "title": "Student Class (Total Marks)",
+      "description": "Create a class Student with data members: name (string), m1, m2, m3 (int). Read these values, compute total marks, and print: name total.",
+      "inputDescription": "First line: name (single word). Next line: three integers m1 m2 m3.",
+      "outputDescription": "Print: name totalMarks",
+      "examples": [
+        "Input:\nRam\n80 75 90\n\nOutput:\nRam 245"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Student {\npublic:\n    string name;\n    int m1, m2, m3;\n    // you can add methods if needed\n};\n\nint main() {\n    // your code here\n    return 0;\n}\n",
+      "tests": [
+        { "input": "Ram\n80 75 90", "expected": "Ram 245" },
+        { "input": "Sam\n50 50 50", "expected": "Sam 150" }
+      ]
+    },
+    {
+      "title": "Rectangle Class (Area)",
+      "description": "Create a class Rectangle with data members length and breadth. Add a member function area() that returns length * breadth. Read length and breadth, create an object, and print the area.",
+      "inputDescription": "Two integers length and breadth.",
+      "outputDescription": "Single integer: area of the rectangle.",
+      "examples": [
+        "Input:\n4 5\n\nOutput:\n20"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Rectangle {\npublic:\n    int length, breadth;\n    // define area() function here\n};\n\nint main() {\n    // your code here\n    return 0;\n}\n",
+      "tests": [
+        { "input": "4 5", "expected": "20" },
+        { "input": "2 3", "expected": "6" }
+      ]
+    }
+  ]
+}

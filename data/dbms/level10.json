@@ -1,0 +1,28 @@
+{
+  "title": "DBMS Level 10 — Transactions & Indexing",
+  "concept": "MCQs on ACID properties, transactions and indexes.",
+  "challenges": [
+    {
+      "title": "Q1: ACID - A Stands For",
+      "description": "In ACID properties of a transaction, A stands for:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) Accuracy\nb) Atomicity\nc) Access\nd) Association"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "title": "Q2: Purpose of Index",
+      "description": "The main purpose of an index in a database is to:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) Increase redundancy\nb) Enforce referential integrity\nc) Speed up data retrieval\nd) Compress table data"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    }
+  ]
+}

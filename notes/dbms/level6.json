@@ -1,0 +1,11 @@
+{
+  "title": "DBMS Level 6 — SQL Joins",
+  "intro": "This level teaches how to combine data from multiple tables using joins.",
+  "points": [
+    "Understand the need for joins when data is spread across tables.",
+    "INNER JOIN: get matching rows from both tables.",
+    "LEFT OUTER JOIN: get all rows from left table and matching from right.",
+    "RIGHT OUTER JOIN (concept) and FULL OUTER JOIN (where supported).",
+    "Use table aliases to make queries cleaner."
+  ]
+}

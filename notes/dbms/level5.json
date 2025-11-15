@@ -1,0 +1,11 @@
+{
+  "title": "DBMS Level 5 — SQL SELECT & WHERE",
+  "intro": "This level focuses on retrieving data using SELECT with simple filtering.",
+  "points": [
+    "Basic SELECT syntax to fetch all columns or specific columns.",
+    "Use WHERE clause to filter rows based on conditions.",
+    "Use comparison operators (=, <, >, <=, >=, <>) in WHERE.",
+    "Use logical operators AND, OR, NOT in conditions.",
+    "Use ORDER BY to sort the result in ascending or descending order."
+  ]
+}

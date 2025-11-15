@@ -1,0 +1,11 @@
+{
+  "title": "C++ Level 2 — Data Types, Variables & Operators",
+  "intro": "This level focuses on declaring variables, using different data types, and working with operators.",
+  "points": [
+    "Declare variables of types int, long long, float, double, char, and bool.",
+    "Initialize variables and understand default values.",
+    "Use arithmetic operators (+, -, *, /, %) and assignment operators.",
+    "Apply relational and logical operators in expressions.",
+    "Understand operator precedence and the use of parentheses."
+  ]
+}

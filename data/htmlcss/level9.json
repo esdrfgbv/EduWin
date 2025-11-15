@@ -1,0 +1,28 @@
+{
+  "title": "HTML+CSS Level 9 — Responsive Design",
+  "concept": "Use media queries to adjust layout on small screens.",
+  "challenges": [
+    {
+      "title": "Q1: Responsive Two-Column to One-Column",
+      "description": "Create two content sections side by side (two columns) on desktop. Using a media query, make them stack vertically (one column) when the screen width is less than 600px.",
+      "inputDescription": "No input.",
+      "outputDescription": "Layout changes from two columns to one column on small screens.",
+      "examples": [
+        "Use @media (max-width: 600px) and change flex-direction or width."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Responsive Columns</title>\n    <style>\n        /* Base styles + media query here */\n    </style>\n</head>\n<body>\n    <div class=\"container\">\n        <section class=\"left\">Left content</section>\n        <section class=\"right\">Right content</section>\n    </div>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "title": "Q2: Responsive Navbar",
+      "description": "Create a simple navbar that displays menu items in a row on desktop. On small screens (width < 600px), increase font size and add more vertical padding to make links easier to tap.",
+      "inputDescription": "No input.",
+      "outputDescription": "Navbar looks comfortable on both desktop and mobile widths.",
+      "examples": [
+        "Use media query to change font-size and padding."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Responsive Navbar</title>\n    <style>\n        /* Base navbar styles + media query here */\n    </style>\n</head>\n<body>\n    <nav class=\"navbar\">\n        <a href=\"#\">Home</a>\n        <a href=\"#\">Services</a>\n        <a href=\"#\">Contact</a>\n    </nav>\n</body>\n</html>\n",
+      "tests": []
+    }
+  ]
+}

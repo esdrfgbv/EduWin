@@ -1,0 +1,28 @@
+{
+  "title": "DBMS Level 7 — Aggregation & GROUP BY",
+  "concept": "MCQs on aggregate functions and grouping.",
+  "challenges": [
+    {
+      "title": "Q1: Aggregate Function",
+      "description": "Which of the following is NOT an aggregate function in SQL?",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) COUNT\nb) SUM\nc) AVG\nd) WHERE"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "title": "Q2: GROUP BY Usage",
+      "description": "GROUP BY clause is used in SQL to:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) Filter rows before selection\nb) Group rows that have the same values in specified columns\nc) Sort rows in ascending order\nd) Remove duplicate rows"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    }
+  ]
+}

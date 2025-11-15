@@ -1,0 +1,11 @@
+{
+  "title": "OS Level 7 — Deadlocks",
+  "intro": "This level covers deadlock concepts, conditions, handling methods and basic algorithms.",
+  "points": [
+    "Define deadlock and recognize situations where it can occur.",
+    "Know the four Coffman conditions for deadlock: mutual exclusion, hold and wait, no preemption, circular wait.",
+    "Basic approaches: deadlock prevention, avoidance, detection and recovery.",
+    "Understand the idea of safe and unsafe states in deadlock avoidance.",
+    "Conceptual overview of Banker’s algorithm (no need to memorize full implementation at this level)."
+  ]
+}

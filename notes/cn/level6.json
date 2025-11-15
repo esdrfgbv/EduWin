@@ -1,0 +1,11 @@
+{
+  "title": "CN Level 6 — Application Layer Protocols",
+  "intro": "This level focuses on common application protocols used on the Internet.",
+  "points": [
+    "Understand HTTP/HTTPS concepts (request/response, methods).",
+    "Know what DNS does (name to IP mapping).",
+    "Basic idea of email protocols: SMTP, POP3/IMAP (concept).",
+    "Understand client–server interaction at application layer.",
+    "Know that many application protocols run over TCP or UDP."
+  ]
+}

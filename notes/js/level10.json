@@ -1,0 +1,11 @@
+{
+  "title": "JavaScript Level 10 — Problem Solving with Objects & Arrays",
+  "intro": "This level combines arrays, objects and loops to solve slightly bigger problems.",
+  "points": [
+    "Use objects as frequency maps to count occurrences of values.",
+    "Combine arrays and objects to store structured data.",
+    "Sort or iterate in a specific order when printing outputs.",
+    "Carefully design input-output formats for coding problems.",
+    "Develop a problem-solving approach: read, think, plan, then code."
+  ]
+}

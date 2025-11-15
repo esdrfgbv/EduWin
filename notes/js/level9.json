@@ -1,0 +1,11 @@
+{
+  "title": "JavaScript Level 9 — Array Algorithms & Filtering Data",
+  "intro": "This level applies arrays to real tasks like filtering, counting and processing data.",
+  "points": [
+    "Loop through arrays to filter elements based on conditions.",
+    "Build new arrays by selecting certain elements.",
+    "Count how many elements match a condition (like even numbers).",
+    "Understand basic search patterns: find an element in an array.",
+    "Prepare for using higher-order methods like map, filter and reduce later."
+  ]
+}

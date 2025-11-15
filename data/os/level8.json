@@ -1,0 +1,28 @@
+{
+  "title": "OS Level 8 — Memory Management & Paging",
+  "concept": "MCQs on paging, logical vs physical address and fragmentation.",
+  "challenges": [
+    {
+      "title": "Q1: Paging",
+      "description": "In paging, logical memory is divided into:",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) Frames\nb) Pages\nc) Segments\nd) Blocks of variable size"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "title": "Q2: Fragmentation Type",
+      "description": "In paging, which type of fragmentation can occur?",
+      "inputDescription": "No input. This is an MCQ.",
+      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "examples": [
+        "Options:\na) External fragmentation only\nb) Internal fragmentation only\nc) Both internal and external\nd) No fragmentation"
+      ],
+      "starterCode": "// Mark your answer: a / b / c / d",
+      "tests": []
+    }
+  ]
+}
