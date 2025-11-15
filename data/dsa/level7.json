@@ -1,0 +1,107 @@
+{
+  "level": 7,
+  "title": "Trees",
+  "concept": "This level focuses on binary trees and BSTs — construction from input, traversals, height/depth, leaf counting, searching, insertion in BST, LCA, diameter, and level order traversal.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Inorder Traversal",
+      "description": "Given binary tree input in form of N nodes: each line 'value left_index right_index' where -1 means no child. Print inorder traversal.",
+      "starterCode": "// store nodes, recursively do left-root-right",
+      "tests": [
+        { "input": "5\n1 1 2\n2 -1 -1\n3 3 4\n4 -1 -1\n5 -1 -1", "expected": "2 1 4 3 5" },
+        { "input": "1\n10 -1 -1", "expected": "10" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Preorder Traversal",
+      "description": "Print preorder traversal: root-left-right.",
+      "starterCode": "// recursive preorder",
+      "tests": [
+        { "input": "3\n1 1 2\n2 -1 -1\n3 -1 -1", "expected": "1 2 3" },
+        { "input": "1\n7 -1 -1", "expected": "7" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Postorder Traversal",
+      "description": "Print postorder traversal: left-right-root.",
+      "starterCode": "// recursive postorder",
+      "tests": [
+        { "input": "3\n1 1 2\n2 -1 -1\n3 -1 -1", "expected": "2 3 1" },
+        { "input": "1\n8 -1 -1", "expected": "8" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Count Leaf Nodes",
+      "description": "Count and print number of leaf nodes in the tree (nodes with no children).",
+      "starterCode": "// leaf if left==-1 & right==-1",
+      "tests": [
+        { "input": "3\n1 1 2\n2 -1 -1\n3 -1 -1", "expected": "2" },
+        { "input": "1\n10 -1 -1", "expected": "1" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Height of Binary Tree",
+      "description": "Height = max height of subtrees + 1. Height of leaf = 1.",
+      "starterCode": "// recursive height function",
+      "tests": [
+        { "input": "5\n1 1 2\n2 -1 -1\n3 3 4\n4 -1 -1\n5 -1 -1", "expected": "3" },
+        { "input": "1\n99 -1 -1", "expected": "1" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Search in BST",
+      "description": "Insert values in BST in given order then search X. Print Yes or No.",
+      "starterCode": "// build BST using compare logic",
+      "tests": [
+        { "input": "5\n5 3 7 1 4\n7", "expected": "Yes" },
+        { "input": "4\n8 4 2 10\n5", "expected": "No" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Insert in BST & Print Inorder",
+      "description": "Insert all given N integers into BST then print inorder traversal.",
+      "starterCode": "// insert recursively, then inorder print",
+      "tests": [
+        { "input": "5\n5 3 7 1 4", "expected": "1 3 4 5 7" },
+        { "input": "3\n2 1 3", "expected": "1 2 3" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Lowest Common Ancestor (LCA) in BST",
+      "description": "Build BST with N values then find LCA of a and b. Print the LCA value.",
+      "starterCode": "// while root not null, if a and b < root go left, etc.",
+      "tests": [
+        { "input": "6\n6 2 8 1 4 7\n2 8", "expected": "6" },
+        { "input": "6\n6 2 8 1 4 7\n1 4", "expected": "2" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Diameter of Binary Tree",
+      "description": "Diameter = longest path between any two nodes (in terms of number of nodes). Print diameter.",
+      "starterCode": "// compute height + diameter recursively",
+      "tests": [
+        { "input": "5\n1 1 2\n2 -1 -1\n3 3 4\n4 -1 -1\n5 -1 -1", "expected": "4" },
+        { "input": "1\n10 -1 -1", "expected": "1" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Level Order Traversal (BFS)",
+      "description": "Print nodes level by level using queue (root → next level → next).",
+      "starterCode": "// queue push root, pop and push children",
+      "tests": [
+        { "input": "3\n1 1 2\n2 -1 -1\n3 -1 -1", "expected": "1 2 3" },
+        { "input": "1\n9 -1 -1", "expected": "9" }
+      ]
+    }
+  ]
+}

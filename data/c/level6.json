@@ -1,0 +1,145 @@
+{
+  "level": 6,
+  "title": "Strings",
+  "concept": "This level builds core string manipulation skills in C. Focus on traversing characters using loops, avoiding strcpy/strcat/strlen unless specified. Pay attention to whitespace-sensitive output. Do not print extra messages.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "String Length",
+      "description": "Read a string and print its length without using strlen().",
+      "inputDescription": "A single word or sentence.",
+      "outputDescription": "Length of string.",
+      "examples": ["Input:\nhello → Output:\n5"],
+      "starterCode": "#include <stdio.h>\nint main() {\n    char s[200];\n    // compute length manually\n    return 0;\n}",
+      "tests": [
+        { "input": "hello", "expected": "5" },
+        { "input": "abcde", "expected": "5" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Count Vowels",
+      "description": "Count vowels (a,e,i,o,u in both cases) in the given string.",
+      "inputDescription": "A single string.",
+      "outputDescription": "Number of vowels.",
+      "examples": ["Input:\nprogram → Output:\n2"],
+      "starterCode": "#include <stdio.h>\nint main() {\n    char s[200];\n    // count vowels\n    return 0;\n}",
+      "tests": [
+        { "input": "program", "expected": "2" },
+        { "input": "AEIOU", "expected": "5" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Count Consonants",
+      "description": "Read a string and count consonants (alphabet but not vowel).",
+      "inputDescription": "A single string.",
+      "outputDescription": "Number of consonants.",
+      "examples": ["Input:\ncode → Output:\n2"],
+      "starterCode": "#include <stdio.h>\nint main() {\n    char s[200];\n    // count consonants\n    return 0;\n}",
+      "tests": [
+        { "input": "code", "expected": "2" },
+        { "input": "xyz", "expected": "3" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Palindrome Check",
+      "description": "Print Yes if the string is palindrome else No.",
+      "inputDescription": "A single string (no spaces).",
+      "outputDescription": "Yes | No",
+      "examples": ["Input:\nmadam → Output:\nYes"],
+      "starterCode": "#include <stdio.h>\nint main() {\n    char s[200];\n    // check palindrome\n    return 0;\n}",
+      "tests": [
+        { "input": "madam", "expected": "Yes" },
+        { "input": "hello", "expected": "No" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Copy String (manual)",
+      "description": "Copy string S1 to S2 without using strcpy(). Print S2.",
+      "inputDescription": "One string.",
+      "outputDescription": "Copied string.",
+      "examples": ["Input:\nhello → Output:\nhello"],
+      "starterCode": "#include <stdio.h>\nint main() {\n    char s1[200], s2[200];\n    // copy manually\n    return 0;\n}",
+      "tests": [
+        { "input": "hello", "expected": "hello" },
+        { "input": "coding", "expected": "coding" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Concatenate (manual)",
+      "description": "Concatenate two strings without using strcat().",
+      "inputDescription": "Two strings S1 and S2.",
+      "outputDescription": "S1S2",
+      "examples": ["Input:\nHello World → Output:\nHelloWorld"],
+      "starterCode": "#include <stdio.h>\nint main() {\n    char s1[200], s2[200];\n    // concatenate manually\n    return 0;\n}",
+      "tests": [
+        { "input": "Hello World", "expected": "HelloWorld" },
+        { "input": "abc xyz", "expected": "abcxyz" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "First Occurrence",
+      "description": "Print the index of first occurrence of character X in string S. If not found print -1.",
+      "inputDescription": "String S and character X.",
+      "outputDescription": "Index or -1.",
+      "examples": ["Input:\nbanana\na → Output:\n1"],
+      "starterCode": "#include <stdio.h>\nint main() {\n    char s[200], x;\n    // find first index\n    return 0;\n}",
+      "tests": [
+        { "input": "banana\na", "expected": "1" },
+        { "input": "hello\nx", "expected": "-1" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Last Occurrence",
+      "description": "Print index of last occurrence of character X.",
+      "inputDescription": "String S and character X.",
+      "outputDescription": "Index or -1.",
+      "examples": ["Input:\nbanana\na → Output:\n5"],
+      "starterCode": "#include <stdio.h>\nint main() {\n    char s[200], x;\n    // find last index\n    return 0;\n}",
+      "tests": [
+        { "input": "banana\na", "expected": "5" },
+        { "input": "hello\nl", "expected": "3" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Word Count",
+      "description": "Count total words in a sentence. Words are separated by spaces.",
+      "inputDescription": "A full sentence.",
+      "outputDescription": "Number of words.",
+      "examples": ["Input:\nHello world from C → Output:\n4"],
+      "starterCode": "#include <stdio.h>\nint main() {\n    char s[200];\n    // count words using spaces\n    return 0;\n}",
+      "tests": [
+        { "input": "Hello world from C", "expected": "4" },
+        { "input": "One", "expected": "1" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Character Frequency",
+      "description": "Count how many times each lowercase alphabet a–z appears. Print 26 lines a:x",
+      "inputDescription": "A string.",
+      "outputDescription": "a:x, b:y ... z:k (26 lines)",
+      "examples": [
+        "Input:\napple\nOutput:\na:1\nb:0\nc:0\n...\np:2\n...\nz:0"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    char s[200];\n    int freq[26]={0};\n    // count a-z frequency\n    return 0;\n}",
+      "tests": [
+        {
+          "input": "apple",
+          "expected": "a:1\nb:0\nc:0\nd:0\ne:1\nf:0\ng:0\nh:0\ni:0\nj:0\nk:0\nl:1\nm:0\nn:0\no:0\np:2\nq:0\nr:0\ns:0\nt:0\nu:0\nv:0\nw:0\nx:0\ny:0\nz:0"
+        },
+        {
+          "input": "aaa",
+          "expected": "a:3\nb:0\nc:0\nd:0\ne:0\nf:0\ng:0\nh:0\ni:0\nj:0\nk:0\nl:0\nm:0\nn:0\no:0\np:0\nq:0\nr:0\ns:0\nt:0\nu:0\nv:0\nw:0\nx:0\ny:0\nz:0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "level": 10,
+  "title": "Mini Projects (All Concepts Combined)",
+  "concept": "Final level of Java track. Each program uses multiple concepts together: classes, objects, constructors, arrays, strings, loops, methods, and exception handling. Solving these makes the learner industry-ready.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Student Grade System",
+      "description": "Class Student has name and 3 marks. Method percentage() returns int percentage. grade() returns grade based on percentage: O>=90, A+>=80, A>=70, B>=60, C>=50 else F. Print name and grade.",
+      "starterCode": "import java.util.*;\nclass Student{\n  String name;\n  int m1,m2,m3;\n  Student(String n,int a,int b,int c){ /* store */ }\n  int percentage(){ /* compute */ return 0; }\n  String grade(){ /* return grade based on percentage */ return \"\"; }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String n=sc.next();\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    int c=sc.nextInt();\n    Student s=new Student(n,a,b,c);\n    System.out.println(s.name+\" \" + s.grade());\n  }\n}",
+      "tests": [
+        { "input": "Ram 90 90 90", "expected": "Ram O" },
+        { "input": "Kiran 60 60 60", "expected": "Kiran B" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Online Wallet",
+      "description": "Wallet has owner and balance. deposit(x) adds, pay(y) subtracts. but if pay amount > balance throw exception and print 'Insufficient'. Otherwise print final balance.",
+      "starterCode": "import java.util.*;\nclass Wallet{\n  String owner;\n  int bal;\n  Wallet(String o,int b){ /* store */ }\n  void deposit(int x){ /* add */ }\n  void pay(int y) throws Exception{ /* subtract or throw */ }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String o=sc.next();\n    int b=sc.nextInt();\n    int d=sc.nextInt();\n    int p=sc.nextInt();\n    Wallet w=new Wallet(o,b);\n    try{\n      w.deposit(d);\n      w.pay(p);\n      System.out.println(w.bal);\n    }catch(Exception e){ System.out.println(\"Insufficient\"); }\n  }\n}",
+      "tests": [
+        { "input": "Ram 1000 200 500", "expected": "700" },
+        { "input": "Ram 500 100 800", "expected": "Insufficient" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Employee Management System",
+      "description": "Class Employee with name, salary. HR extends Employee with bonus. Accountant extends Employee with deduction. Method netSalary() applied accordingly.",
+      "starterCode": "import java.util.*;\nclass Employee{\n  String name;\n  int salary;\n  Employee(String n,int s){ name=n; salary=s; }\n  int netSalary(){ return salary; }\n}\nclass HR extends Employee{\n  int bonus;\n  HR(String n,int s,int b){ super(n,s); bonus=b; }\n  int netSalary(){ return salary+bonus; }\n}\nclass Accountant extends Employee{\n  int ded;\n  Accountant(String n,int s,int d){ super(n,s); ded=d; }\n  int netSalary(){ return salary-ded; }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String role=sc.next();\n    if(role.equals(\"HR\")){\n      String n=sc.next(); int s=sc.nextInt(); int b=sc.nextInt();\n      System.out.println(new HR(n,s,b).netSalary());\n    }else{\n      String n=sc.next(); int s=sc.nextInt(); int d=sc.nextInt();\n      System.out.println(new Accountant(n,s,d).netSalary());\n    }\n  }\n}",
+      "tests": [
+        { "input": "HR Ram 20000 5000", "expected": "25000" },
+        { "input": "Accountant Kiran 20000 3000", "expected": "17000" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Basic Dictionary",
+      "description": "Maintain word meanings using HashMap. Insert N entries. Then read query word and print meaning. If missing print Not Found.",
+      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    HashMap<String,String> map=new HashMap<>();\n    for(int i=0;i<n;i++) map.put(sc.next(),sc.next());\n    String q=sc.next();\n    System.out.println(map.getOrDefault(q,\"Not Found\"));\n  }\n}",
+      "tests": [
+        { "input": "2\nhi hello\nbye tata\nhi", "expected": "hello" },
+        { "input": "2\nhi hello\nbye tata\nok", "expected": "Not Found" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Attendance Report",
+      "description": "Class Student stores name & presentDays. totalDays given. attendance() returns percentage. If <75 print Detained else Allowed.",
+      "starterCode": "import java.util.*;\nclass Student{\n  String n;\n  int present;\n  static int total;\n  Student(String n,int p){ /* store */ }\n  int attendance(){ return (present*100)/total; }\n  String status(){ /* return Allowed/Detained */ return \"\"; }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    Student.total=sc.nextInt();\n    String name=sc.next();\n    int p=sc.nextInt();\n    Student s=new Student(name,p);\n    System.out.println(s.status());\n  }\n}",
+      "tests": [
+        { "input": "100 Ram 90", "expected": "Allowed" },
+        { "input": "100 Kiran 60", "expected": "Detained" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Library Management — Total Pages",
+      "description": "Class Book with title & pages. Library stores list of books. add() adds book. total() returns total pages.",
+      "starterCode": "import java.util.*;\nclass Book{ String t; int p; Book(String t,int p){ this.t=t; this.p=p; }}\nclass Library{\n  ArrayList<Book> list=new ArrayList<>();\n  void add(Book b){ /* add */ }\n  int total(){ /* sum and return */ return 0; }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    Library L=new Library();\n    for(int i=0;i<n;i++) L.add(new Book(sc.next(),sc.nextInt()));\n    System.out.println(L.total());\n  }\n}",
+      "tests": [
+        { "input": "2\nC 200\nPython 300", "expected": "500" },
+        { "input": "1\nDSA 450", "expected": "450" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Movie Ticket Booking",
+      "description": "Class Movie with price & seats. book(x) decreases seats if enough, else throws exception. Print remaining seats or Sold Out.",
+      "starterCode": "import java.util.*;\nclass Movie{\n  int price, seats;\n  Movie(int p,int s){ price=p; seats=s; }\n  void book(int x) throws Exception{\n    /* if x>seats throw */\n  }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int p=sc.nextInt();\n    int s=sc.nextInt();\n    int x=sc.nextInt();\n    Movie m=new Movie(p,s);\n    try{\n      m.book(x);\n      System.out.println(m.seats);\n    }catch(Exception e){ System.out.println(\"Sold Out\"); }\n  }\n}",
+      "tests": [
+        { "input": "120 100 5", "expected": "95" },
+        { "input": "120 2 5", "expected": "Sold Out" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Online Shopping Bill",
+      "description": "Each item has name, quantity and price per item. Bill = sum(qty * price). Print total bill.",
+      "starterCode": "import java.util.*;\nclass Item{ String n; int q,p; Item(String n,int q,int p){ this.n=n; this.q=q; this.p=p; }}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    int bill=0;\n    for(int i=0;i<n;i++){\n      String x=sc.next();\n      int q=sc.nextInt();\n      int p=sc.nextInt();\n      bill += q*p;\n    }\n    System.out.println(bill);\n  }\n}",
+      "tests": [
+        { "input": "2\nPen 2 10\nBook 1 50", "expected": "70" },
+        { "input": "1\nLaptop 1 40000", "expected": "40000" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Bank — Transaction History",
+      "description": "Class Account has balance & ArrayList of transactions. deposit(x) adds and records. withdraw(y) subtracts if possible else ignores. Print balance then list of transactions (each in new line).",
+      "starterCode": "import java.util.*;\nclass Account{\n  int bal;\n  ArrayList<String> t = new ArrayList<>();\n  Account(int b){ bal=b; }\n  void deposit(int x){ /* update + record */ }\n  void withdraw(int y){ /* update or ignore */ }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    Account A=new Account(sc.nextInt());\n    int n=sc.nextInt();\n    for(int i=0;i<n;i++){\n      String op=sc.next();\n      int v=sc.nextInt();\n      if(op.equals(\"dep\")) A.deposit(v);\n      else A.withdraw(v);\n    }\n    System.out.println(A.bal);\n    for(String s:A.t) System.out.println(s);\n  }\n}",
+      "tests": [
+        { "input": "1000\n3\ndep 500\nwith 200\nwith 2000", "expected": "1300\ndep 500\nwith 200" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "University Result System",
+      "description": "Student has roll, name and marks of 5 subjects. total() returns sum. result() returns Pass if every subject >= 40 else Fail. Print roll, name and Pass/Fail.",
+      "starterCode": "import java.util.*;\nclass Student{\n  String name; int roll;\n  int[] m=new int[5];\n  Student(int r,String n,int[] x){ /* store */ }\n  String result(){ /* return Pass/Fail */ return \"\"; }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int r=sc.nextInt();\n    String n=sc.next();\n    int[] x=new int[5];\n    for(int i=0;i<5;i++) x[i]=sc.nextInt();\n    Student s=new Student(r,n,x);\n    System.out.println(r + \" \" + n + \" \" + s.result());\n  }\n}",
+      "tests": [
+        { "input": "1 Ram 50 50 50 50 50", "expected": "1 Ram Pass" },
+        { "input": "2 Kiran 70 70 70 30 70", "expected": "2 Kiran Fail" }
+      ]
+    }
+  ]
+}

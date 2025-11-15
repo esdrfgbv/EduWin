@@ -1,0 +1,137 @@
+{
+  "level": 7,
+  "title": "Tuples & Dictionaries",
+  "concept": "This level teaches storing and accessing key–value data using dictionaries and using tuples as immutable collections. You will practice counting, mapping, searching, sorting and frequency-based tasks.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Tuple Sum",
+      "description": "Read N integers and store them in a tuple. Print their sum.",
+      "inputDescription": "N then N integers separated by space.",
+      "outputDescription": "Sum of all numbers.",
+      "examples": ["Input:\n4\n1 2 3 4\nOutput:\n10"],
+      "starterCode": "n = int(input())\nt = tuple(map(int, input().split()))\n# print sum of tuple\n",
+      "tests": [
+        { "input": "4\n1 2 3 4", "expected": "10" },
+        { "input": "3\n5 5 5", "expected": "15" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Tuple Max & Min",
+      "description": "Print maximum and minimum elements from tuple separated by space.",
+      "inputDescription": "N then N integers.",
+      "outputDescription": "max min",
+      "examples": ["Input:\n5\n1 9 3 8 6\nOutput:\n9 1"],
+      "starterCode": "n = int(input())\nt = tuple(map(int, input().split()))\n# print max and min\n",
+      "tests": [
+        { "input": "5\n1 9 3 8 6", "expected": "9 1" },
+        { "input": "3\n7 7 7", "expected": "7 7" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Dictionary Lookup",
+      "description": "Given N key:value pairs and a key K, print its value or Not Found.",
+      "inputDescription": "N lines each key value, then a key K.",
+      "outputDescription": "Value | Not Found",
+      "examples": ["Input:\n3\napple 10\norange 20\nbanana 15\norange\nOutput:\n20"],
+      "starterCode": "n = int(input())\nd = {}\n# read pairs and lookup key\n",
+      "tests": [
+        { "input": "3\napple 10\norange 20\nbanana 15\norange", "expected": "20" },
+        { "input": "2\naaa 1\nbbb 2\nccc", "expected": "Not Found" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Character Frequency (Dictionary)",
+      "description": "Read a string and count frequency of each character using a dictionary. Print only keys that appear in ascending order of character.",
+      "inputDescription": "A string.",
+      "outputDescription": "char:count lines sorted by char.",
+      "examples": ["Input:\nbanana\nOutput:\na:3\nb:1\nn:2"],
+      "starterCode": "s = input()\nfreq = {}\n# fill dictionary and print sorted by key\n",
+      "tests": [
+        { "input": "banana", "expected": "a:3\nb:1\nn:2" },
+        { "input": "aab", "expected": "a:2\nb:1" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Word Frequency",
+      "description": "Count frequency of each word in a sentence and print in alphabetical order of words.",
+      "inputDescription": "Sentence of words.",
+      "outputDescription": "word:count on new lines sorted by word.",
+      "examples": ["Input:\nthis is a test this is\nOutput:\na:1\nis:2\ntest:1\nthis:2"],
+      "starterCode": "s = input()\nwords = s.split()\nfreq = {}\n# fill and print word counts sorted alphabetically\n",
+      "tests": [
+        { "input": "this is a test this is", "expected": "a:1\nis:2\ntest:1\nthis:2" },
+        { "input": "hello hello world", "expected": "hello:2\nworld:1" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Dictionary Swap Key Value",
+      "description": "Given N key:value pairs, swap them to value:key pairs and print entries sorted by key.",
+      "inputDescription": "N lines key value.",
+      "outputDescription": "value:key sorted by value.",
+      "examples": ["Input:\n3\na 1\nb 2\nc 3\nOutput:\n1:a\n2:b\n3:c"],
+      "starterCode": "n = int(input())\nd = {}\n# read input, swap and print sorted\n",
+      "tests": [
+        { "input": "3\na 1\nb 2\nc 3", "expected": "1:a\n2:b\n3:c" },
+        { "input": "2\nx 5\ny 1", "expected": "1:y\n5:x" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Second Most Frequent Character",
+      "description": "Print the second most frequent character in string. If tie choose lexicographically smaller. If not possible print -1.",
+      "inputDescription": "A string.",
+      "outputDescription": "Character or -1.",
+      "examples": ["Input:\nbanana\nOutput:\nn"],
+      "starterCode": "s = input()\n# build freq dict and determine second most frequent\n",
+      "tests": [
+        { "input": "banana", "expected": "n" },
+        { "input": "aaaa", "expected": "-1" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Phonebook",
+      "description": "Given N entries (name number), then Q queries (names). For each query print number or Not Found.",
+      "inputDescription": "N entries followed by Q names.",
+      "outputDescription": "Number or Not Found each on new line.",
+      "examples": ["Input:\n3\nRam 999\nKiran 888\nShyam 777\n2\nKiran\nAmit\nOutput:\n888\nNot Found"],
+      "starterCode": "n = int(input())\nd = {}\n# store dictionary and respond to queries\n",
+      "tests": [
+        { "input": "3\nRam 999\nKiran 888\nShyam 777\n2\nKiran\nAmit", "expected": "888\nNot Found" },
+        { "input": "1\nA 111\n1\nA", "expected": "111" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Marks Dictionary",
+      "description": "Given student names and marks, print name with highest marks.",
+      "inputDescription": "N then N lines name marks.",
+      "outputDescription": "Name with highest marks.",
+      "examples": ["Input:\n3\nRam 50\nKiran 80\nAkhil 70\nOutput:\nKiran"],
+      "starterCode": "n = int(input())\nd = {}\n# keep track of highest\n",
+      "tests": [
+        { "input": "3\nRam 50\nKiran 80\nAkhil 70", "expected": "Kiran" },
+        { "input": "2\nX 10\nY 10", "expected": "X" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Tuple Pair Sorting",
+      "description": "Given N pair tuples (a, b), sort them by a, and if tie by b. Print sorted pairs in format (a,b) separated by space.",
+      "inputDescription": "N then N pairs a b.",
+      "outputDescription": "(a,b) (a,b) ...",
+      "examples": ["Input:\n3\n1 3\n1 2\n0 4\nOutput:\n(0,4) (1,2) (1,3)"],
+      "starterCode": "n = int(input())\narr = []\n# store tuples and sort then print same format\n",
+      "tests": [
+        { "input": "3\n1 3\n1 2\n0 4", "expected": "(0,4) (1,2) (1,3)" },
+        { "input": "2\n5 3\n5 1", "expected": "(5,1) (5,3)" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "level": 8,
+  "title": "File Handling",
+  "concept": "This level teaches opening files, reading content, writing output, counting words and characters, copying files, searching text, reversing lines, and generating modified output using another file. Use standard Python open(), read(), write() operations.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Read & Print File",
+      "description": "Given a file input.txt, read full content and print it exactly.",
+      "inputDescription": "Content exists inside input.txt.",
+      "outputDescription": "Print entire content.",
+      "examples": ["input.txt contains:\nHello Python\nOutput:\nHello Python"],
+      "starterCode": "f = open('input.txt', 'r')\n# read and print\n",
+      "tests": [
+        { "file": "Hello", "expected": "Hello" },
+        { "file": "Hello World", "expected": "Hello World" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Count Words",
+      "description": "Print the total number of words present in input.txt.",
+      "inputDescription": "File input.txt contains text.",
+      "outputDescription": "Integer word count.",
+      "examples": ["input.txt:\nHello world from Python\nOutput:\n4"],
+      "starterCode": "f = open('input.txt', 'r')\n# count words\n",
+      "tests": [
+        { "file": "Hello world from Python", "expected": "4" },
+        { "file": "One", "expected": "1" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Count Lines",
+      "description": "Print number of lines in input.txt.",
+      "inputDescription": "File input.txt contains multiple lines.",
+      "outputDescription": "Line count.",
+      "examples": ["3 lines in input.txt → Output: 3"],
+      "starterCode": "f = open('input.txt', 'r')\n# count lines\n",
+      "tests": [
+        { "file": "a\nb\nc", "expected": "3" },
+        { "file": "hello", "expected": "1" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Character Count (No Spaces)",
+      "description": "Count number of characters excluding spaces and newlines.",
+      "inputDescription": "File input.txt.",
+      "outputDescription": "Character count.",
+      "examples": ["input.txt:\na b c\nOutput:\n3"],
+      "starterCode": "f = open('input.txt', 'r')\n# count chars except space and newline\n",
+      "tests": [
+        { "file": "a b c", "expected": "3" },
+        { "file": "abc", "expected": "3" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Copy File",
+      "description": "Copy content of input.txt into output.txt exactly.",
+      "inputDescription": "input.txt exists.",
+      "outputDescription": "Content stored in output.txt.",
+      "examples": ["input.txt:\nHello\nAfter running → output.txt also contains Hello"],
+      "starterCode": "fin = open('input.txt', 'r')\nfout = open('output.txt', 'w')\n# copy content\n",
+      "tests": [
+        { "file": "Hello", "expectedFile": "output.txt:Hello" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Search Word",
+      "description": "Given a word in input.txt, print Yes if found else No.",
+      "inputDescription": "input.txt holds sentence; program must search entire text.",
+      "outputDescription": "Yes | No",
+      "examples": ["input.txt: hello python\nsearch 'python' → Yes"],
+      "starterCode": "word = input().strip()\nf = open('input.txt','r')\n# check word in file\n",
+      "tests": [
+        { "file": "hello python", "user": "python", "expected": "Yes" },
+        { "file": "hello world", "user": "python", "expected": "No" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Reverse Each Line",
+      "description": "Print reverse of each line from input.txt on separate lines.",
+      "inputDescription": "input.txt has multiple lines.",
+      "outputDescription": "Each line reversed.",
+      "examples": ["input.txt:\nabc\ndef\nOutput:\ncba\nfed"],
+      "starterCode": "f = open('input.txt','r')\n# reverse each line\n",
+      "tests": [
+        { "file": "abc\ndef", "expected": "cba\nfed" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Longest Word",
+      "description": "Print the longest word in input.txt. If tie, print first longest in file order.",
+      "inputDescription": "input.txt contains sentences.",
+      "outputDescription": "Longest word.",
+      "examples": ["input.txt: hello programming world\nOutput: programming"],
+      "starterCode": "f = open('input.txt','r')\n# compute longest word\n",
+      "tests": [
+        { "file": "hello programming world", "expected": "programming" },
+        { "file": "a bb ccc ddd", "expected": "ccc" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Remove Empty Lines",
+      "description": "Read input.txt and write only non-empty lines to output.txt.",
+      "inputDescription": "input.txt may contain empty lines.",
+      "outputDescription": "output.txt with no blank lines.",
+      "examples": ["input.txt:\na\n\nb\nOutput.txt:\na\nb"],
+      "starterCode": "fin = open('input.txt','r')\nfout = open('output.txt','w')\n# filter blank lines\n",
+      "tests": [
+        { "file": "a\n\nb", "expectedFile": "output.txt:a\nb" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Sort File Lines",
+      "description": "Sort all lines alphabetically and write to output.txt.",
+      "inputDescription": "input.txt has multiple lines.",
+      "outputDescription": "Alphabetically sorted lines stored in output.txt.",
+      "examples": ["input.txt:\nbanana\napple\ncarrot\nOutput.txt:\napple\nbanana\ncarrot"],
+      "starterCode": "fin = open('input.txt','r')\nfout = open('output.txt','w')\n# sort lines\n",
+      "tests": [
+        { "file": "banana\napple\ncarrot", "expectedFile": "output.txt:apple\nbanana\ncarrot" }
+      ]
+    }
+  ]
+}

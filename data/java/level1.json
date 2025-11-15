@@ -1,0 +1,133 @@
+{
+  "level": 1,
+  "title": "Java Basics - Printing & Simple I/O",
+  "concept": "In this level you will learn the basic structure of a Java program, using main method, printing with System.out.println, and reading simple input using Scanner. Focus on exact output format without extra text.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Hello, Java!",
+      "description": "Print exactly: Hello, Java!",
+      "inputDescription": "No input.",
+      "outputDescription": "Hello, Java!",
+      "examples": ["Input:\n(none)\n\nOutput:\nHello, Java!"],
+      "starterCode": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        // print Hello, Java!\n    }\n}\n",
+      "tests": [
+        { "input": "", "expected": "Hello, Java!" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Welcome Line",
+      "description": "Print: Welcome to Java Programming",
+      "inputDescription": "No input.",
+      "outputDescription": "Welcome to Java Programming",
+      "examples": ["Output:\nWelcome to Java Programming"],
+      "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // print welcome line\n    }\n}\n",
+      "tests": [
+        { "input": "", "expected": "Welcome to Java Programming" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Print With Quotes",
+      "description": "Print the text including double quotes: \"Learning Java\"",
+      "inputDescription": "No input.",
+      "outputDescription": "\"Learning Java\"",
+      "examples": ["Output:\n\"Learning Java\""],
+      "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // output must include the double quotes\n    }\n}\n",
+      "tests": [
+        { "input": "", "expected": "\"Learning Java\"" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Two Lines",
+      "description": "Print Hello on first line and Java on second line.",
+      "inputDescription": "No input.",
+      "outputDescription": "Hello\\nJava",
+      "examples": ["Output:\nHello\nJava"],
+      "starterCode": "public class Main {\n    public static void main(String[] args) {\n        // print on two lines\n    }\n}\n",
+      "tests": [
+        { "input": "", "expected": "Hello\nJava" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Greet by Name",
+      "description": "Read a name and print: Hello <name>",
+      "inputDescription": "Single word name.",
+      "outputDescription": "Hello <name>",
+      "examples": ["Input:\nRam\n\nOutput:\nHello Ram"],
+      "starterCode": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String name = sc.next();\n        // print greeting\n    }\n}\n",
+      "tests": [
+        { "input": "Ram", "expected": "Hello Ram" },
+        { "input": "Krishna", "expected": "Hello Krishna" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Add Two Numbers",
+      "description": "Read two integers and print their sum.",
+      "inputDescription": "Two integers separated by space.",
+      "outputDescription": "Sum of the two integers.",
+      "examples": ["Input:\n3 7\nOutput:\n10"],
+      "starterCode": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        // print sum\n    }\n}\n",
+      "tests": [
+        { "input": "3 7", "expected": "10" },
+        { "input": "10 -5", "expected": "5" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Multiply Two Numbers",
+      "description": "Read two integers and print their product.",
+      "inputDescription": "Two integers separated by space.",
+      "outputDescription": "Product of the two integers.",
+      "examples": ["Input:\n4 5\nOutput:\n20"],
+      "starterCode": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        // print product\n    }\n}\n",
+      "tests": [
+        { "input": "4 5", "expected": "20" },
+        { "input": "7 0", "expected": "0" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Square of a Number",
+      "description": "Read an integer n and print its square.",
+      "inputDescription": "A single integer n.",
+      "outputDescription": "n squared.",
+      "examples": ["Input:\n6\nOutput:\n36"],
+      "starterCode": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        // print square\n    }\n}\n",
+      "tests": [
+        { "input": "6", "expected": "36" },
+        { "input": "10", "expected": "100" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Simple Interest",
+      "description": "Read principal P, rate R and time T (in years), compute simple interest = (P*R*T)/100 and print the value. You can print int or double.",
+      "inputDescription": "Three numbers P R T separated by space.",
+      "outputDescription": "Simple interest.",
+      "examples": ["Input:\n1000 10 2\nOutput:\n200"],
+      "starterCode": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        double P = sc.nextDouble();\n        double R = sc.nextDouble();\n        double T = sc.nextDouble();\n        // compute simple interest\n    }\n}\n",
+      "tests": [
+        { "input": "1000 10 2", "expected": "200" },
+        { "input": "500 5 1", "expected": "25" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Formatted Message",
+      "description": "Read a name and an integer age, then print exactly: <name> is <age> years old",
+      "inputDescription": "First token: name, second: age.",
+      "outputDescription": "<name> is <age> years old",
+      "examples": ["Input:\nRam 20\nOutput:\nRam is 20 years old"],
+      "starterCode": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        String name = sc.next();\n        int age = sc.nextInt();\n        // print formatted message\n    }\n}\n",
+      "tests": [
+        { "input": "Ram 20", "expected": "Ram is 20 years old" },
+        { "input": "Kiran 18", "expected": "Kiran is 18 years old" }
+      ]
+    }
+  ]
+}

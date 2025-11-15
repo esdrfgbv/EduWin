@@ -2,143 +2,133 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>CodeCraft Academy - Learn & Practice</title>
+  <title>EduWin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
 <body>
   <div class="app-gradient"></div>
 
+  <!-- TOP BAR -->
   <header class="top-bar">
     <div class="logo">
-      <span class="logo-icon">⚡</span>
-      <span class="logo-text">CodeCraft Academy</span>
+      <div class="logo-img"></div>  <!-- logo box now uses coding.png -->
+      <span class="logo-text">EduWin</span>
     </div>
-    <button class="home-btn" id="homeBtn">Home</button>
   </header>
 
   <!-- HOME PAGE -->
   <section id="home-section">
     <div class="home-hero">
-      <div>
-        <h1>Learn C, Python, Java & DSA</h1>
-        <p>
-          Choose a track, solve hand-picked questions, and practice code in the built-in playground.
-        </p>
-      </div>
+      <h1>Learn step-by-step</h1>
+      <p>Structured learning with 10 levels per language and real coding compiler.</p>
     </div>
 
     <div class="courses-grid">
       <div class="course-card" data-lang="c">
         <div class="course-icon">C</div>
         <h2>C Programming</h2>
-        <p>Low-level power, high control. Perfect for systems and embedded programming.</p>
-        <button class="card-btn">Start C Quiz</button>
+        <p>Master fundamentals, loops, functions, pointers and more.</p>
       </div>
 
       <div class="course-card" data-lang="python">
         <div class="course-icon">Py</div>
         <h2>Python</h2>
-        <p>Clean, readable and super popular for AI, web, and automation.</p>
-        <button class="card-btn">Start Python Quiz</button>
+        <p>Build logic & problem solving using clean and readable syntax.</p>
       </div>
 
       <div class="course-card" data-lang="java">
         <div class="course-icon">J</div>
         <h2>Java</h2>
-        <p>Object-oriented and robust. Used in Android apps & big enterprise systems.</p>
-        <button class="card-btn">Start Java Quiz</button>
+        <p>Object-oriented programming for both beginners & interview prep.</p>
       </div>
 
       <div class="course-card" data-lang="dsa">
         <div class="course-icon">DS</div>
         <h2>DSA</h2>
-        <p>Master data structures & algorithms for interviews and CP.</p>
-        <button class="card-btn">Start DSA Quiz</button>
+        <p>Data structures & algorithms with 100 real coding challenges.</p>
       </div>
     </div>
   </section>
 
-  <!-- LEARNING / QUIZ PAGE -->
-  <section id="learning-section" class="hidden">
+  <!-- LEVEL SELECTION PAGE -->
+  <section id="levels-section" class="hidden">
     <div class="breadcrumb">
-      <button id="backHome" class="back-btn">← Back to Home</button>
-      <span id="currentCourseTitle">C Programming Quiz</span>
+      <button id="backToHome" class="back-btn">← Back</button>
+      <span id="selectedLanguageTitle"></span>
     </div>
 
-    <main class="main-layout">
-      <!-- Left: Quiz Content -->
-      <section class="content-card">
-        <div class="quiz-header">
-          <h2 id="quizHeading">C Programming - 10 Questions</h2>
-          <p class="quiz-subtitle">
-            Answer all questions and click <strong>Check Answers</strong> to see your score.
-          </p>
+    <div class="levels-container" id="levelsContainer"></div>
+  </section>
+
+  <!-- CHALLENGE PAGE -->
+  <section id="challenge-section" class="hidden">
+    <div class="breadcrumb">
+      <button id="backToLevels" class="back-btn">← Back</button>
+      <span id="challengeBreadcrumb"></span>
+    </div>
+
+    <div class="challenge-layout">
+      <div class="challenge-left">
+        <h2 id="challengeTitle"></h2>
+        <p id="challengeDescription" class="challenge-description"></p>
+        <div id="challengeConcept" class="challenge-concept"></div>
+
+        <div class="io-container">
+          <h3>Input format</h3>
+          <pre id="inputFormat"></pre>
+          <h3>Output format</h3>
+          <pre id="outputFormat"></pre>
+
+          <h3>Examples</h3>
+          <pre id="examplesArea"></pre>
         </div>
 
-        <div id="questionsContainer"></div>
+        <table id="testcaseTable" class="test-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Input</th>
+              <th>Expected Output</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
 
-        <div class="quiz-footer">
-          <button id="checkAnswersBtn" class="btn primary">Check Answers ✅</button>
-          <span id="scoreDisplay" class="score-display"></span>
+        <p id="challengeStatusMsg" class="challenge-status"></p>
+
+        <div class="nav-buttons">
+          <button id="prevChallenge" class="btn ghost">← Previous</button>
+          <button id="nextChallenge" class="btn primary">Next →</button>
         </div>
-      </section>
+      </div>
 
-      <!-- Right: Code Playground -->
-      <section class="playground-card">
-        <div class="playground-header">
-          <div>
-            <h2>Code Playground</h2>
-            <p class="playground-subtitle">
-              Use this scratchpad to test ideas. Only Python runs in the browser.
-            </p>
-          </div>
-          <div class="language-pill" id="current-lang-pill">Python</div>
-        </div>
+      <div class="challenge-right">
+        <div class="language-pill" id="editorLangPill">C</div>
+        <textarea id="codeEditor" spellcheck="false"></textarea>
 
-        <div class="editor-toolbar">
-          <label for="languageSelect">Playground Language</label>
-          <select id="languageSelect">
-            <option value="c">C</option>
-            <option value="python" selected>Python</option>
-            <option value="java">Java</option>
-            <option value="dsa">DSA (Pseudo)</option>
-          </select>
-
-          <div class="toolbar-buttons">
-            <button id="runBtn" class="btn primary">Run Code ▶</button>
-            <button id="clearBtn" class="btn ghost">Clear</button>
-            <button id="templateBtn" class="btn ghost">Insert Sample</button>
-          </div>
-        </div>
-
-        <div class="editor-wrapper">
-          <textarea id="codeEditor" spellcheck="false"></textarea>
+        <div class="editor-buttons">
+          <button id="runCodeBtn" class="btn primary">Run Code ▶</button>
+          <button id="testCodeBtn" class="btn ghost">Run Tests ✅</button>
+          <button id="resetStarterBtn" class="btn ghost">Reset Starter</button>
+          <button id="clearCodeBtn" class="btn ghost">Clear</button>
         </div>
 
         <div class="output-section">
-          <div class="output-header">
-            <span>Output</span>
-            <span class="output-hint">Python is executed using Skulpt 🐍</span>
-          </div>
-          <pre id="output"></pre>
+          <h3>Output</h3>
+          <pre id="outputArea"></pre>
         </div>
-      </section>
-    </main>
+      </div>
+    </div>
   </section>
 
   <footer class="footer">
-    <span>© 2025 CodeCraft Academy • Practice-focused learning</span>
+    <span>© 2025 EduWin — Learn coding step-by-step</span>
   </footer>
 
-  <!-- Skulpt for Python execution -->
-  <script src="https://cdn.jsdelivr.net/npm/skulpt@latest/dist/skulpt.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/skulpt@latest/dist/skulpt-stdlib.js"></script>
-
-  <!-- Your JS -->
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,0 +1,133 @@
+{
+  "level": 1,
+  "title": "Python Basics - Printing & Simple I/O",
+  "concept": "In this level you will learn how to print text using print(), read input using input(), and do simple operations. Focus on exact output format, without extra text.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Hello, Python!",
+      "description": "Print exactly: Hello, Python!",
+      "inputDescription": "No input.",
+      "outputDescription": "Hello, Python!",
+      "examples": ["Input:\n(none)\n\nOutput:\nHello, Python!"],
+      "starterCode": "# TODO: print Hello, Python!\n",
+      "tests": [
+        { "input": "", "expected": "Hello, Python!" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Welcome Line",
+      "description": "Print: Welcome to Python",
+      "inputDescription": "No input.",
+      "outputDescription": "Welcome to Python",
+      "examples": ["Output:\nWelcome to Python"],
+      "starterCode": "# print the welcome message\n",
+      "tests": [
+        { "input": "", "expected": "Welcome to Python" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Print with Quotes",
+      "description": "Print the text including double quotes: \"Learning Python\"",
+      "inputDescription": "No input.",
+      "outputDescription": "\"Learning Python\"",
+      "examples": ["Output:\n\"Learning Python\""],
+      "starterCode": "# output must include the double quotes\n",
+      "tests": [
+        { "input": "", "expected": "\"Learning Python\"" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Two Lines",
+      "description": "Print Hello on first line and Python on second line.",
+      "inputDescription": "No input.",
+      "outputDescription": "Hello\\nPython",
+      "examples": ["Output:\nHello\nPython"],
+      "starterCode": "# print on two lines\n",
+      "tests": [
+        { "input": "", "expected": "Hello\nPython" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Greet by Name",
+      "description": "Read a name and print: Hello <name>",
+      "inputDescription": "Single word name.",
+      "outputDescription": "Hello <name>",
+      "examples": ["Input:\nRam\n\nOutput:\nHello Ram"],
+      "starterCode": "name = input().strip()\n# print greeting here\n",
+      "tests": [
+        { "input": "Ram", "expected": "Hello Ram" },
+        { "input": "Krishna", "expected": "Hello Krishna" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Add Two Numbers",
+      "description": "Read two integers and print their sum.",
+      "inputDescription": "Two integers separated by space.",
+      "outputDescription": "Sum of the two integers.",
+      "examples": ["Input:\n3 7\nOutput:\n10"],
+      "starterCode": "a, b = map(int, input().split())\n# print sum\n",
+      "tests": [
+        { "input": "3 7", "expected": "10" },
+        { "input": "10 -5", "expected": "5" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Multiply Two Numbers",
+      "description": "Read two integers and print their product.",
+      "inputDescription": "Two integers separated by space.",
+      "outputDescription": "Product of the two integers.",
+      "examples": ["Input:\n4 5\nOutput:\n20"],
+      "starterCode": "a, b = map(int, input().split())\n# print product\n",
+      "tests": [
+        { "input": "4 5", "expected": "20" },
+        { "input": "7 0", "expected": "0" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Square of a Number",
+      "description": "Read an integer n and print its square.",
+      "inputDescription": "A single integer n.",
+      "outputDescription": "n squared.",
+      "examples": ["Input:\n6\nOutput:\n36"],
+      "starterCode": "n = int(input())\n# print square\n",
+      "tests": [
+        { "input": "6", "expected": "36" },
+        { "input": "10", "expected": "100" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Simple Interest",
+      "description": "Read principal P, rate R and time T (in years), compute simple interest = (P*R*T)/100 and print the value. You can print float or int.",
+      "inputDescription": "Three numbers P R T separated by space.",
+      "outputDescription": "Simple interest.",
+      "examples": ["Input:\n1000 10 2\nOutput:\n200.0"],
+      "starterCode": "P, R, T = map(float, input().split())\n# compute simple interest\n",
+      "tests": [
+        { "input": "1000 10 2", "expected": "200" },
+        { "input": "500 5 1", "expected": "25" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Formatted Message",
+      "description": "Read a name and an integer age, then print exactly: <name> is <age> years old",
+      "inputDescription": "First line: name, second line: age.",
+      "outputDescription": "<name> is <age> years old",
+      "examples": ["Input:\nRam\n20\nOutput:\nRam is 20 years old"],
+      "starterCode": "name = input().strip()\nage = int(input())\n# print formatted message\n",
+      "tests": [
+        { "input": "Ram\n20", "expected": "Ram is 20 years old" },
+        { "input": "Kiran\n18", "expected": "Kiran is 18 years old" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "level": 6,
+  "title": "Methods / Functions",
+  "concept": "This level focuses on defining and calling methods in Java, returning values, passing parameters, using static methods and writing helper methods to organize logic.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Square using Method",
+      "description": "Create a method square(int n) that returns n*n. Read n and print result.",
+      "inputDescription": "Single integer.",
+      "outputDescription": "n squared.",
+      "starterCode": "import java.util.*;\npublic class Main{\n  static int square(int n){\n    // return n*n\n    return 0;\n  }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    // call method and print\n  }\n}",
+      "tests": [
+        { "input": "5", "expected": "25" },
+        { "input": "8", "expected": "64" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Max of Two",
+      "description": "Create method max2(int a,int b) that returns the larger of the two. If equal return either.",
+      "starterCode": "import java.util.*;\npublic class Main{\n  static int max2(int a,int b){\n    // return larger\n    return 0;\n  }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    // print result of max2\n  }\n}",
+      "tests": [
+        { "input": "3 9", "expected": "9" },
+        { "input": "7 2", "expected": "7" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Factorial Method",
+      "description": "Create factorial(int n) and compute n! using loop. Print result.",
+      "starterCode": "import java.util.*;\npublic class Main{\n  static int factorial(int n){\n    // loop and compute\n    return 0;\n  }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    // call factorial and print\n  }\n}",
+      "tests": [
+        { "input": "5", "expected": "120" },
+        { "input": "3", "expected": "6" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Prime Check using Method",
+      "description": "Create isPrime(int n) that returns true if prime else false. Print Yes or No.",
+      "starterCode": "import java.util.*;\npublic class Main{\n  static boolean isPrime(int n){\n    // return true/false\n    return false;\n  }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    // print Yes or No\n  }\n}",
+      "tests": [
+        { "input": "7", "expected": "Yes" },
+        { "input": "9", "expected": "No" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Reverse Number using Method",
+      "description": "Create reverseNum(int n) that returns integer reversed.",
+      "starterCode": "import java.util.*;\npublic class Main{\n  static int reverseNum(int n){\n    // reverse and return\n    return 0;\n  }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    // print reverseNum(n)\n  }\n}",
+      "tests": [
+        { "input": "123", "expected": "321" },
+        { "input": "500", "expected": "5" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Sum of Array using Method",
+      "description": "Create sumArr(int[] arr) that returns sum of array elements.",
+      "starterCode": "import java.util.*;\npublic class Main{\n  static int sumArr(int[] arr){\n    // return sum\n    return 0;\n  }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    int[] arr=new int[n];\n    for(int i=0;i<n;i++) arr[i]=sc.nextInt();\n    // print sumArr(arr)\n  }\n}",
+      "tests": [
+        { "input": "5\n1 2 3 4 5", "expected": "15" },
+        { "input": "3\n10 10 10", "expected": "30" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "GCD using Method",
+      "description": "Create gcd(int a,int b) using Euclidean algorithm. Print result.",
+      "starterCode": "import java.util.*;\npublic class Main{\n  static int gcd(int a,int b){\n    // return gcd\n    return 0;\n  }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    // print gcd\n  }\n}",
+      "tests": [
+        { "input": "12 18", "expected": "6" },
+        { "input": "7 13", "expected": "1" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "LCM using Method",
+      "description": "Create lcm(int a,int b) that uses gcd inside and returns LCM.",
+      "starterCode": "import java.util.*;\npublic class Main{\n  static int gcd(int a,int b){ return 0; }\n  static int lcm(int a,int b){\n    // call gcd and compute lcm\n    return 0;\n  }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    // print lcm(a,b)\n  }\n}",
+      "tests": [
+        { "input": "4 6", "expected": "12" },
+        { "input": "3 5", "expected": "15" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Check Palindrome Number using Method",
+      "description": "Create isPal(int n) that returns true if number is palindrome else false. Print Yes or No.",
+      "starterCode": "import java.util.*;\npublic class Main{\n  static boolean isPal(int n){ return false; }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    // print Yes or No\n  }\n}",
+      "tests": [
+        { "input": "121", "expected": "Yes" },
+        { "input": "123", "expected": "No" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Mini Calculator (Methods)",
+      "description": "Create methods add, sub, mul, div. Read a, b and operator (+ - * /). Print result. Division should be integer division.",
+      "starterCode": "import java.util.*;\npublic class Main{\n  static int add(int a,int b){ return 0; }\n  static int sub(int a,int b){ return 0; }\n  static int mul(int a,int b){ return 0; }\n  static int div(int a,int b){ return 0; }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    char op=sc.next().charAt(0);\n    // choose method based on op\n  }\n}",
+      "tests": [
+        { "input": "8 4 *", "expected": "32" },
+        { "input": "10 3 -", "expected": "7" },
+        { "input": "9 3 /", "expected": "3" }
+      ]
+    }
+  ]
+}

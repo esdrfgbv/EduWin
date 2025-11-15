@@ -1,0 +1,146 @@
+{
+  "level": 2,
+  "title": "Conditions & Basic Logic",
+  "concept": "This level focuses on decision making in Python using if, elif and else. You will practice comparisons, simple maths and printing specific messages based on conditions.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Positive, Negative or Zero",
+      "description": "Read an integer and print Positive if n > 0, Negative if n < 0, and Zero otherwise.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Positive | Negative | Zero",
+      "examples": ["Input:\n5\nOutput:\nPositive", "Input:\n-3\nOutput:\nNegative"],
+      "starterCode": "n = int(input())\n# write your if-elif-else here\n",
+      "tests": [
+        { "input": "5", "expected": "Positive" },
+        { "input": "-3", "expected": "Negative" },
+        { "input": "0", "expected": "Zero" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Even or Odd",
+      "description": "Print Even if the number is divisible by 2, otherwise print Odd.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Even | Odd",
+      "examples": ["Input:\n7\nOutput:\nOdd"],
+      "starterCode": "n = int(input())\n# check n % 2\n",
+      "tests": [
+        { "input": "7", "expected": "Odd" },
+        { "input": "12", "expected": "Even" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Maximum of Two",
+      "description": "Read two integers and print the larger one.",
+      "inputDescription": "Two integers a and b separated by space.",
+      "outputDescription": "The larger integer.",
+      "examples": ["Input:\n3 9\nOutput:\n9"],
+      "starterCode": "a, b = map(int, input().split())\n# print the maximum\n",
+      "tests": [
+        { "input": "3 9", "expected": "9" },
+        { "input": "10 7", "expected": "10" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Minimum of Three",
+      "description": "Read three integers and print the smallest one.",
+      "inputDescription": "Three integers separated by space.",
+      "outputDescription": "The smallest integer.",
+      "examples": ["Input:\n4 1 9\nOutput:\n1"],
+      "starterCode": "a, b, c = map(int, input().split())\n# find and print minimum\n",
+      "tests": [
+        { "input": "4 1 9", "expected": "1" },
+        { "input": "7 7 5", "expected": "5" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Pass or Fail",
+      "description": "Read marks (0–100). If marks >= 40 print Pass, else print Fail.",
+      "inputDescription": "Single integer marks.",
+      "outputDescription": "Pass | Fail",
+      "examples": ["Input:\n55\nOutput:\nPass"],
+      "starterCode": "marks = int(input())\n# check pass or fail\n",
+      "tests": [
+        { "input": "55", "expected": "Pass" },
+        { "input": "39", "expected": "Fail" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Grade Calculator",
+      "description": "Given percentage p, print grade: A if p>=90, B if p>=75, C if p>=60, D if p>=40, else Fail.",
+      "inputDescription": "Single integer p.",
+      "outputDescription": "A | B | C | D | Fail",
+      "examples": ["Input:\n78\nOutput:\nB"],
+      "starterCode": "p = int(input())\n# use if-elif ladder\n",
+      "tests": [
+        { "input": "95", "expected": "A" },
+        { "input": "78", "expected": "B" },
+        { "input": "63", "expected": "C" },
+        { "input": "41", "expected": "D" },
+        { "input": "30", "expected": "Fail" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Divisible by 5 and 11",
+      "description": "Print Yes if the number is divisible by BOTH 5 and 11, otherwise print No.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Yes | No",
+      "examples": ["Input:\n55\nOutput:\nYes"],
+      "starterCode": "n = int(input())\n# check divisibility\n",
+      "tests": [
+        { "input": "55", "expected": "Yes" },
+        { "input": "22", "expected": "No" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Leap Year",
+      "description": "Check if a year is leap year: divisible by 400 OR (divisible by 4 AND not divisible by 100). Print Yes or No.",
+      "inputDescription": "Year as integer.",
+      "outputDescription": "Yes | No",
+      "examples": ["Input:\n2020\nOutput:\nYes"],
+      "starterCode": "year = int(input())\n# apply leap year logic\n",
+      "tests": [
+        { "input": "2020", "expected": "Yes" },
+        { "input": "1900", "expected": "No" },
+        { "input": "2000", "expected": "Yes" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Character Type",
+      "description": "Read a single character c. If it is uppercase letter print Uppercase, if lowercase letter print Lowercase, if digit print Digit, else print Symbol.",
+      "inputDescription": "One character.",
+      "outputDescription": "Uppercase | Lowercase | Digit | Symbol",
+      "examples": ["Input:\nG\nOutput:\nUppercase"],
+      "starterCode": "c = input().strip()\n# classify character\n",
+      "tests": [
+        { "input": "G", "expected": "Uppercase" },
+        { "input": "p", "expected": "Lowercase" },
+        { "input": "7", "expected": "Digit" },
+        { "input": "@", "expected": "Symbol" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Simple Calculator",
+      "description": "Read two integers a, b and an operator op (+, -, *, /). Perform the operation and print the result. Use integer division for /.",
+      "inputDescription": "a b op (space separated).",
+      "outputDescription": "Result of the operation.",
+      "examples": ["Input:\n5 3 +\nOutput:\n8"],
+      "starterCode": "data = input().split()\na = int(data[0])\nb = int(data[1])\nop = data[2]\n# perform operation based on op\n",
+      "tests": [
+        { "input": "5 3 +", "expected": "8" },
+        { "input": "10 4 -", "expected": "6" },
+        { "input": "7 8 *", "expected": "56" },
+        { "input": "8 2 /", "expected": "4" }
+      ]
+    }
+  ]
+}

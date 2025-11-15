@@ -1,0 +1,107 @@
+{
+  "level": 8,
+  "title": "Graphs",
+  "concept": "This level focuses on graph representations and algorithms — adjacency list, BFS, DFS, connected components, cycle detection, bipartite check, topological sort, shortest path in unweighted graph, and MST (Kruskal with DSU logic simplified).",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Build Graph & Print Adjacency List",
+      "description": "Given N nodes and M edges (undirected), build adjacency list and print neighbors of each node in sorted order.",
+      "starterCode": "// create vector<vector<int>> and push both ways",
+      "tests": [
+        { "input": "4 3\n1 2\n2 3\n1 4", "expected": "1: 2 4\n2: 1 3\n3: 2\n4: 1" },
+        { "input": "3 1\n2 3", "expected": "1:\n2: 3\n3: 2" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "BFS Traversal",
+      "description": "Given graph and starting node S, perform BFS and print order of visits.",
+      "starterCode": "// use queue and visited array",
+      "tests": [
+        { "input": "4 4\n1 2\n1 3\n2 4\n3 4\n1", "expected": "1 2 3 4" },
+        { "input": "3 2\n1 2\n2 3\n2", "expected": "2 1 3" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "DFS Traversal",
+      "description": "Given graph and starting node S, perform DFS and print order of visits.",
+      "starterCode": "// recursive DFS with visited array",
+      "tests": [
+        { "input": "4 3\n1 2\n2 3\n2 4\n2", "expected": "2 1 3 4" },
+        { "input": "3 2\n1 2\n1 3\n1", "expected": "1 2 3" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Connected Components",
+      "description": "Given N and edges (undirected), print the number of connected components.",
+      "starterCode": "// loop through nodes, if unvisited run DFS/BFS and count",
+      "tests": [
+        { "input": "5 3\n1 2\n2 3\n4 5", "expected": "2" },
+        { "input": "4 0", "expected": "4" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Cycle Detection in Undirected Graph",
+      "description": "Given undirected graph, detect if it contains a cycle. Print Yes / No.",
+      "starterCode": "// DFS with parent logic",
+      "tests": [
+        { "input": "3 3\n1 2\n2 3\n3 1", "expected": "Yes" },
+        { "input": "4 2\n1 2\n3 4", "expected": "No" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Check Bipartite (Graph Coloring)",
+      "description": "Color graph using 2 colors (0/1). If conflict occurs print No else Yes.",
+      "starterCode": "// BFS with color[] array = {-1 initially}",
+      "tests": [
+        { "input": "4 4\n1 2\n2 3\n3 4\n4 1", "expected": "Yes" },
+        { "input": "3 3\n1 2\n2 3\n1 3", "expected": "No" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Topological Sort (DAG only)",
+      "description": "Given directed graph perform topological ordering using Kahn’s BFS (indegree method).",
+      "starterCode": "// queue + decrease indegree",
+      "tests": [
+        { "input": "6 6\n5 2\n5 0\n4 0\n4 1\n2 3\n3 1", "expected": "5 4 2 3 1 0" },
+        { "input": "3 2\n0 1\n1 2", "expected": "0 1 2" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Shortest Path in Unweighted Graph",
+      "description": "Find shortest distance from S to all nodes using BFS. Print distances (-1 if unreachable).",
+      "starterCode": "// maintain dist[] initialized to -1",
+      "tests": [
+        { "input": "5 4\n1 2\n2 3\n1 4\n4 5\n1", "expected": "0 1 2 1 2" },
+        { "input": "4 1\n2 3\n2", "expected": "-1 0 1 -1" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Count Number of Paths (DAG, small graph)",
+      "description": "Given directed acyclic graph and S→D, count number of different paths using DFS.",
+      "starterCode": "// DFS and return count of paths",
+      "tests": [
+        { "input": "4 4\n1 2\n1 3\n2 4\n3 4\n1 4", "expected": "2" },
+        { "input": "3 2\n1 2\n2 3\n1 3", "expected": "1" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Minimum Spanning Tree — Kruskal (Simplified)",
+      "description": "Given weighted undirected graph, compute MST total weight using Kruskal’s algorithm. Use DSU (Union–Find).",
+      "starterCode": "// sort edges by weight, union only if not same set",
+      "tests": [
+        { "input": "4 5\n1 2 10\n1 3 6\n2 3 5\n3 4 15\n2 4 4", "expected": "19" },
+        { "input": "3 3\n1 2 2\n2 3 3\n1 3 5", "expected": "5" }
+      ]
+    }
+  ]
+}

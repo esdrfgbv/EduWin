@@ -1,0 +1,109 @@
+{
+  "level": 9,
+  "title": "Exception Handling",
+  "concept": "This level focuses on try–catch, multiple catch blocks, finally block, throwing exceptions manually with 'throw new', and custom exception classes. All questions are designed to work inside standard online compilers without real file I/O.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Handle Divide by Zero",
+      "description": "Read a and b. Print a/b. If b = 0, catch exception and print 'Error'.",
+      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    int a = sc.nextInt();\n    int b = sc.nextInt();\n    // try division with exception handling\n  }\n}",
+      "tests": [
+        { "input": "10 2", "expected": "5" },
+        { "input": "5 0", "expected": "Error" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Multiple Catch Blocks",
+      "description": "Read integer n. Print n*n. If input is invalid (ex: string input), catch and print 'Invalid'.",
+      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    try{\n      int n = sc.nextInt();\n      System.out.println(n*n);\n    }\n    // catch suitable exception and print 'Invalid'\n  }\n}",
+      "tests": [
+        { "input": "5", "expected": "25" },
+        { "input": "abc", "expected": "Invalid" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Array Index Exception",
+      "description": "Read N then N elements in array, then index i. Print arr[i]. If index is invalid print 'Out of bounds'.",
+      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    int[] arr = new int[n];\n    for(int i=0;i<n;i++) arr[i]=sc.nextInt();\n    int idx = sc.nextInt();\n    // try printing arr[idx]\n  }\n}",
+      "tests": [
+        { "input": "5\n1 2 3 4 5\n2", "expected": "3" },
+        { "input": "4\n10 20 30 40\n5", "expected": "Out of bounds" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Finally Block Execution",
+      "description": "Always print 'Done' in finally block after executing either normal result or Error.",
+      "examplesNote": "Final output must be two lines only.",
+      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    try{\n      int a = sc.nextInt();\n      int b = sc.nextInt();\n      System.out.println(a/b);\n    }\n    catch(Exception e){ System.out.println(\"Error\"); }\n    finally{\n      // print Done\n    }\n  }\n}",
+      "tests": [
+        { "input": "10 2", "expected": "5\nDone" },
+        { "input": "5 0", "expected": "Error\nDone" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Throw Custom Error (Manual)",
+      "description": "If number is negative, manually throw exception and print 'Negative'. Else print square.",
+      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n = sc.nextInt();\n    try{\n      // throw exception manually if negative\n    }\n    catch(Exception e){\n      System.out.println(\"Negative\");\n    }\n  }\n}",
+      "tests": [
+        { "input": "5", "expected": "25" },
+        { "input": "-3", "expected": "Negative" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "User Defined Exception Class",
+      "description": "Create class InvalidAgeException. If age < 18 throw exception and print 'Underage', else print 'Allowed'.",
+      "starterCode": "import java.util.*;\nclass InvalidAgeException extends Exception{}\npublic class Main{\n  static void validate(int age) throws InvalidAgeException{\n    // throw if age<18\n  }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int age=sc.nextInt();\n    try{\n      validate(age);\n      System.out.println(\"Allowed\");\n    } catch(InvalidAgeException e){\n      System.out.println(\"Underage\");\n    }\n  }\n}",
+      "tests": [
+        { "input": "20", "expected": "Allowed" },
+        { "input": "15", "expected": "Underage" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Null Exception Simulation",
+      "description": "Read a string. If string is 'null' (exact text), simulate a NullPointerException and print 'Null'. Else print the length.",
+      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String s=sc.next();\n    try{\n      // if s equals \"null\" throw new NullPointerException\n    }\n    catch(NullPointerException e){\n      System.out.println(\"Null\");\n    }\n  }\n}",
+      "tests": [
+        { "input": "hello", "expected": "5" },
+        { "input": "null", "expected": "Null" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Number Format Validation",
+      "description": "Read string input. Convert to integer. If not valid print 'Invalid Number'. Else print n*2.",
+      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String s=sc.next();\n    try{\n      // convert and print double of integer\n    }\n    catch(NumberFormatException e){ System.out.println(\"Invalid Number\"); }\n  }\n}",
+      "tests": [
+        { "input": "12", "expected": "24" },
+        { "input": "abc", "expected": "Invalid Number" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Safe Average",
+      "description": "Read N then N integers. If N == 0 print 'NA'. Else print average (int division).",
+      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    try{\n      // handle 0 case using exception\n    }\n    catch(Exception e){ System.out.println(\"NA\"); }\n  }\n}",
+      "tests": [
+        { "input": "3\n10 20 30", "expected": "20" },
+        { "input": "0", "expected": "NA" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Mini Exception Calculator",
+      "description": "Perform + - * /. If division by zero → Error. If operator invalid → Invalid.",
+      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    char op=sc.next().charAt(0);\n    try{\n      // handle calculator with exception safety\n    }\n    catch(ArithmeticException e){ System.out.println(\"Error\"); }\n    catch(Exception e){ System.out.println(\"Invalid\"); }\n  }\n}",
+      "tests": [
+        { "input": "10 2 +", "expected": "12" },
+        { "input": "5 0 /", "expected": "Error" },
+        { "input": "3 4 x", "expected": "Invalid" }
+      ]
+    }
+  ]
+}

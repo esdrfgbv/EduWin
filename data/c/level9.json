@@ -1,0 +1,137 @@
+{
+  "level": 9,
+  "title": "Structures & Mixed Concepts",
+  "concept": "This level introduces structures in C and mixes previously learned concepts such as arrays, loops, and functions to handle structured data.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Student Structure",
+      "description": "Define a struct Student with name (string) and marks (int). Read one student and print name and marks in one line separated by space.",
+      "inputDescription": "name and marks.",
+      "outputDescription": "<name> <marks>",
+      "examples": ["Input:\nRam\n90\nOutput:\nRam 90"],
+      "starterCode": "#include <stdio.h>\nstruct Student {\n    char name[100];\n    int marks;\n};\nint main() {\n    struct Student s;\n    // read and print\n    return 0;\n}\n",
+      "tests": [
+        { "input": "Ram\n90", "expected": "Ram 90" },
+        { "input": "Kiran\n75", "expected": "Kiran 75" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Array of Students - Highest Marks",
+      "description": "Read N students (name and marks). Print the name of student with highest marks.",
+      "inputDescription": "N then name & marks of each.",
+      "outputDescription": "Name with highest marks.",
+      "examples": ["Input:\n2\nRam\n90\nKiran\n95\nOutput:\nKiran"],
+      "starterCode": "#include <stdio.h>\nstruct Student { char name[100]; int marks; };\nint main() {\n    int n; struct Student s[200];\n    // find highest marks\n    return 0;\n}\n",
+      "tests": [
+        { "input": "2\nRam\n90\nKiran\n95", "expected": "Kiran" },
+        { "input": "3\nA\n50\nB\n80\nC\n75", "expected": "B" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Point Structure Distance",
+      "description": "Define a struct Point with x,y (ints). Read two points and print Manhattan distance |x1-x2|+|y1-y2|.",
+      "inputDescription": "x1 y1 x2 y2",
+      "outputDescription": "Distance as integer.",
+      "examples": ["Input:\n1 2 4 6\nOutput:\n7"],
+      "starterCode": "#include <stdio.h>\nstruct Point { int x, y; };\nint main() {\n    struct Point p1, p2;\n    // compute manhattan distance\n    return 0;\n}\n",
+      "tests": [
+        { "input": "1 2 4 6", "expected": "7" },
+        { "input": "0 0 3 3", "expected": "6" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Complex Number Addition",
+      "description": "Define struct Complex{int real, imag;}. Read two complex numbers and print their sum in format a+bi (no spaces).",
+      "inputDescription": "r1 i1 r2 i2",
+      "outputDescription": "Sum as a+bi.",
+      "examples": ["Input:\n1 2 3 4\nOutput:\n4+6i"],
+      "starterCode": "#include <stdio.h>\nstruct Complex { int real, imag; };\nint main() {\n    struct Complex c1, c2, sum;\n    // compute sum\n    return 0;\n}\n",
+      "tests": [
+        { "input": "1 2 3 4", "expected": "4+6i" },
+        { "input": "0 5 2 -5", "expected": "2+0i" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Employee with Max Salary",
+      "description": "struct Emp {char name[100]; int salary;}. Print the name of employee with max salary.",
+      "inputDescription": "N, then N lines: name salary.",
+      "outputDescription": "Name with highest salary.",
+      "examples": ["Input:\n2\nRam\n50000\nKiran\n60000\nOutput:\nKiran"],
+      "starterCode": "#include <stdio.h>\nstruct Emp { char name[100]; int salary; };\nint main() {\n    int n; struct Emp e[200];\n    // find max salary\n    return 0;\n}\n",
+      "tests": [
+        { "input": "2\nRam\n50000\nKiran\n60000", "expected": "Kiran" },
+        { "input": "3\nA\n100\nB\n200\nC\n150", "expected": "B" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Mixed: Even Count and Sum",
+      "description": "Read N and N integers in array. Print count of even numbers and their sum separated by space.",
+      "inputDescription": "N and N integers.",
+      "outputDescription": "<count> <sum>",
+      "examples": ["Input:\n5\n1 2 3 4 6\nOutput:\n3 12"],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int n, arr[200];\n    // count even and sum\n    return 0;\n}\n",
+      "tests": [
+        { "input": "5\n1 2 3 4 6", "expected": "3 12" },
+        { "input": "4\n1 3 5 7", "expected": "0 0" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "String + Number Mix",
+      "description": "Read a name and an age and print: name-age (dash between, no spaces).",
+      "inputDescription": "name and age.",
+      "outputDescription": "name-age",
+      "examples": ["Input:\nRam\n20\nOutput:\nRam-20"],
+      "starterCode": "#include <stdio.h>\nint main() {\n    char name[100]; int age;\n    // read and print name-age\n    return 0;\n}\n",
+      "tests": [
+        { "input": "Ram\n20", "expected": "Ram-20" },
+        { "input": "Kiran\n18", "expected": "Kiran-18" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Struct and Function",
+      "description": "Create a function that takes struct Student and returns 1 if marks >= 50 else 0. Print Pass or Fail.",
+      "inputDescription": "name and marks.",
+      "outputDescription": "Pass | Fail",
+      "examples": ["Input:\nRam\n55\nOutput:\nPass"],
+      "starterCode": "#include <stdio.h>\nstruct Student { char name[100]; int marks; };\nint isPass(struct Student s) {\n    // return 1 or 0\n}\nint main() {\n    struct Student s;\n    // read and print Pass/Fail\n    return 0;\n}\n",
+      "tests": [
+        { "input": "Ram\n55", "expected": "Pass" },
+        { "input": "Kiran\n40", "expected": "Fail" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Array of Structs - Average Marks",
+      "description": "Read N students with marks and print average marks (integer division allowed).",
+      "inputDescription": "N, then N lines: name marks.",
+      "outputDescription": "Average marks.",
+      "examples": ["Input:\n2\nA\n80\nB\n90\nOutput:\n85"],
+      "starterCode": "#include <stdio.h>\nstruct Student { char name[100]; int marks; };\nint main() {\n    int n; struct Student s[200];\n    // compute average\n    return 0;\n}\n",
+      "tests": [
+        { "input": "2\nA\n80\nB\n90", "expected": "85" },
+        { "input": "3\nA\n60\nB\n60\nC\n60", "expected": "60" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Mix: Struct + Max + Average",
+      "description": "Read N students. Print name of topper and then average marks on next line.",
+      "inputDescription": "N then name & marks.",
+      "outputDescription": "Line1: topper name\nLine2: average marks",
+      "examples": ["Input:\n2\nA\n80\nB\n90\nOutput:\nB\n85"],
+      "starterCode": "#include <stdio.h>\nstruct Student { char name[100]; int marks; };\nint main() {\n    int n; struct Student s[200];\n    // topper + average\n    return 0;\n}\n",
+      "tests": [
+        { "input": "2\nA\n80\nB\n90", "expected": "B\n85" },
+        { "input": "3\nA\n50\nB\n70\nC\n90", "expected": "C\n70" }
+      ]
+    }
+  ]
+}

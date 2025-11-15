@@ -1,0 +1,141 @@
+{
+  "level": 2,
+  "title": "Conditional Statements",
+  "concept": "This level focuses on decision-making using if, else if and else conditions to compare numbers, characters and handle basic logic. Output must match exactly the expected format.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Positive or Negative",
+      "description": "Read an integer and print Positive if number > 0 else Negative if < 0 else Zero.",
+      "inputDescription": "Single integer.",
+      "outputDescription": "Positive | Negative | Zero",
+      "examples": ["Input:\n10\nOutput:\nPositive"],
+      "starterCode": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        // your code\n    }\n}",
+      "tests": [
+        { "input": "10", "expected": "Positive" },
+        { "input": "-5", "expected": "Negative" },
+        { "input": "0", "expected": "Zero" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Even or Odd",
+      "description": "Read an integer and print Even or Odd.",
+      "inputDescription": "Single integer.",
+      "outputDescription": "Even | Odd",
+      "examples": ["Input:\n4\nOutput:\nEven"],
+      "starterCode": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        // your code\n    }\n}",
+      "tests": [
+        { "input": "4", "expected": "Even" },
+        { "input": "7", "expected": "Odd" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Maximum of Two",
+      "description": "Read two numbers and print the larger one. If equal print Equal.",
+      "inputDescription": "Two integers.",
+      "outputDescription": "Larger integer | Equal",
+      "examples": ["Input:\n10 20\nOutput:\n20"],
+      "starterCode": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        // your code\n    }\n}",
+      "tests": [
+        { "input": "10 20", "expected": "20" },
+        { "input": "5 5", "expected": "Equal" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Three Number Maximum",
+      "description": "Read three numbers and print the largest.",
+      "inputDescription": "Three integers.",
+      "outputDescription": "Largest number.",
+      "examples": ["Input:\n3 9 7\nOutput:\n9"],
+      "starterCode": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        int c = sc.nextInt();\n        // your code\n    }\n}",
+      "tests": [
+        { "input": "3 9 7", "expected": "9" },
+        { "input": "5 5 9", "expected": "9" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Leap Year",
+      "description": "Check if a year is leap year. Print Yes or No.\nRules: divisible by 400 → Yes; divisible by 100 → No; divisible by 4 → Yes; otherwise No.",
+      "inputDescription": "Year integer.",
+      "outputDescription": "Yes | No",
+      "examples": ["Input:\n2000\nOutput:\nYes"],
+      "starterCode": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int y = sc.nextInt();\n        // your code\n    }\n}",
+      "tests": [
+        { "input": "2000", "expected": "Yes" },
+        { "input": "1900", "expected": "No" },
+        { "input": "2024", "expected": "Yes" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Grade System",
+      "description": "Read marks (0–100) and print grade:\n>=90: O\n>=80: A+\n>=70: A\n>=60: B\n>=50: C\nelse: F",
+      "inputDescription": "Single integer marks.",
+      "outputDescription": "Grade letter.",
+      "examples": ["Input:\n85\nOutput:\nA+"],
+      "starterCode": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int marks = sc.nextInt();\n        // your code\n    }\n}",
+      "tests": [
+        { "input": "92", "expected": "O" },
+        { "input": "75", "expected": "A" },
+        { "input": "40", "expected": "F" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Vowel or Consonant",
+      "description": "Read a lowercase alphabet and print Vowel or Consonant.",
+      "inputDescription": "Single lowercase character.",
+      "outputDescription": "Vowel | Consonant",
+      "examples": ["Input:\na\nOutput:\nVowel"],
+      "starterCode": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        char ch = sc.next().charAt(0);\n        // your code\n    }\n}",
+      "tests": [
+        { "input": "a", "expected": "Vowel" },
+        { "input": "z", "expected": "Consonant" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Divisible by 3 and 5",
+      "description": "Print Yes if n divisible by both 3 and 5 else No.",
+      "inputDescription": "Single integer.",
+      "outputDescription": "Yes | No",
+      "examples": ["Input:\n15\nOutput:\nYes"],
+      "starterCode": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        // your code\n    }\n}",
+      "tests": [
+        { "input": "15", "expected": "Yes" },
+        { "input": "9", "expected": "No" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Uppercase or Lowercase",
+      "description": "If character is A–Z print Uppercase else if a–z print Lowercase else Invalid.",
+      "inputDescription": "A single character.",
+      "outputDescription": "Uppercase | Lowercase | Invalid",
+      "examples": ["Input:\nA\nOutput:\nUppercase"],
+      "starterCode": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        char ch = sc.next().charAt(0);\n        // your code\n    }\n}",
+      "tests": [
+        { "input": "Z", "expected": "Uppercase" },
+        { "input": "x", "expected": "Lowercase" },
+        { "input": "5", "expected": "Invalid" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Day Name",
+      "description": "1=Monday, 2=Tuesday, ... 7=Sunday. Print corresponding day name. Else print Invalid.",
+      "inputDescription": "Single integer 1–7.",
+      "outputDescription": "Day name | Invalid",
+      "examples": ["Input:\n1\nOutput:\nMonday"],
+      "starterCode": "import java.util.*;\npublic class Main {\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int n = sc.nextInt();\n        // your code\n    }\n}",
+      "tests": [
+        { "input": "1", "expected": "Monday" },
+        { "input": "8", "expected": "Invalid" }
+      ]
+    }
+  ]
+}

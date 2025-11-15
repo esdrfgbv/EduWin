@@ -1,0 +1,113 @@
+{
+  "level": 4,
+  "title": "Recursion",
+  "concept": "This level teaches how to solve problems using recursive functions — base case, recursive case, tree recursion, recursion on arrays, strings, and basic backtracking.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Print 1 to N",
+      "description": "Using recursion, print numbers from 1 to N (space separated).",
+      "starterCode": "// define recursive print function from 1 to N",
+      "tests": [
+        { "input": "5", "expected": "1 2 3 4 5" },
+        { "input": "3", "expected": "1 2 3" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Factorial",
+      "description": "Write a recursive function fact(n) that returns n!.",
+      "starterCode": "// base case: n==0 return 1; recursive: n * fact(n-1)",
+      "tests": [
+        { "input": "5", "expected": "120" },
+        { "input": "3", "expected": "6" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Fibonacci Number",
+      "description": "Using recursion, print the nth Fibonacci number where fib(0)=0 and fib(1)=1.",
+      "starterCode": "// use fib(n-1)+fib(n-2)",
+      "tests": [
+        { "input": "6", "expected": "8" },
+        { "input": "0", "expected": "0" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Sum of Digits",
+      "description": "Given integer N, recursively compute sum of its digits.",
+      "starterCode": "// sumDigits(n/10) + (n%10)",
+      "tests": [
+        { "input": "12345", "expected": "15" },
+        { "input": "99", "expected": "18" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Power Function",
+      "description": "Using recursion, compute a^b.",
+      "starterCode": "// if b==0 return 1 else a*pow(a,b-1)",
+      "tests": [
+        { "input": "2 5", "expected": "32" },
+        { "input": "3 3", "expected": "27" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Reverse String Recursively",
+      "description": "Given a string S, print its reverse recursively.",
+      "starterCode": "// return reverse(s.substring(1)) + s.charAt(0)",
+      "tests": [
+        { "input": "hello", "expected": "olleh" },
+        { "input": "abc", "expected": "cba" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Count Occurrences of X",
+      "description": "Given N and array of N integers and X, count recursively how many times X appears.",
+      "starterCode": "// recursive count by index",
+      "tests": [
+        { "input": "5\n1 2 2 3 2\n2", "expected": "3" },
+        { "input": "4\n1 1 1 1\n1", "expected": "4" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "First Index of X",
+      "description": "Recursively find the first index of X in the array. If not found print -1.",
+      "starterCode": "// check current index then recursive call for next",
+      "tests": [
+        { "input": "5\n9 8 7 8 6\n8", "expected": "1" },
+        { "input": "5\n1 2 3 4 5\n9", "expected": "-1" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Subset Sum (Recursive)",
+      "description": "Given N, array and target K, print Yes if a subset sums to K else No. Use recursion (include/exclude).",
+      "starterCode": "// try include current element OR exclude",
+      "tests": [
+        { "input": "4\n1 2 3 4\n6", "expected": "Yes" },
+        { "input": "4\n2 4 6 8\n5", "expected": "No" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Generate All Subsets (Power Set)",
+      "description": "Given N integers, recursively print all subsets (order doesn't matter). Each subset must be printed on a new line with elements space-separated. Empty subset should be represented by an empty line.",
+      "starterCode": "// recursive: include element / exclude element",
+      "tests": [
+        {
+          "input": "2\n1 2",
+          "expected": "\n1\n2\n1 2"
+        },
+        {
+          "input": "1\n5",
+          "expected": "\n5"
+        }
+      ]
+    }
+  ]
+}

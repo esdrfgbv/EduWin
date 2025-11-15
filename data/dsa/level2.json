@@ -1,0 +1,107 @@
+{
+  "level": 2,
+  "title": "Sorting Algorithms",
+  "concept": "This level teaches how sorting works internally. Focus is on writing logic without library sort functions. Problems include implementing Bubble Sort, Selection Sort, Insertion Sort, checking sorted, sorting strings, sorting pairs and stable sorting logic.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Sort Array (Ascending)",
+      "description": "Read N and N integers. Sort the array in ascending order using any sorting logic and print.",
+      "starterCode": "// sort array without using built-in sort",
+      "tests": [
+        { "input": "5\n4 1 3 2 5", "expected": "1 2 3 4 5" },
+        { "input": "3\n10 10 5", "expected": "5 10 10" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Sort Array (Descending)",
+      "description": "Sort given array in descending order and print.",
+      "starterCode": "// descending order sort manually",
+      "tests": [
+        { "input": "4\n1 2 3 4", "expected": "4 3 2 1" },
+        { "input": "3\n5 5 1", "expected": "5 5 1" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Bubble Sort Simulation",
+      "description": "Apply Bubble Sort and print the final sorted array.",
+      "starterCode": "// implement bubble sort loop",
+      "tests": [
+        { "input": "5\n5 1 4 2 3", "expected": "1 2 3 4 5" },
+        { "input": "4\n4 3 2 1", "expected": "1 2 3 4" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Selection Sort Simulation",
+      "description": "Apply Selection Sort and print the final sorted array.",
+      "starterCode": "// implement selection sort",
+      "tests": [
+        { "input": "5\n64 25 12 22 11", "expected": "11 12 22 25 64" },
+        { "input": "3\n3 2 1", "expected": "1 2 3" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Insertion Sort Simulation",
+      "description": "Apply Insertion Sort and print the final sorted array.",
+      "starterCode": "// implement insertion sort",
+      "tests": [
+        { "input": "5\n12 11 13 5 6", "expected": "5 6 11 12 13" },
+        { "input": "4\n4 3 2 10", "expected": "2 3 4 10" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Sort 0s and 1s",
+      "description": "Given array containing only 0 and 1, sort without full sorting (count or two-pointer).",
+      "starterCode": "// rearrange 0s and 1s",
+      "tests": [
+        { "input": "6\n0 1 0 1 1 0", "expected": "0 0 0 1 1 1" },
+        { "input": "5\n1 1 1 0 0", "expected": "0 0 1 1 1" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Sort by Absolute Value",
+      "description": "Sort array by absolute values (e.g., -2 before -5 because |-2| < |-5|).",
+      "starterCode": "// compare absolute values while sorting",
+      "tests": [
+        { "input": "5\n-2 -5 4 1 0", "expected": "0 1 -2 4 -5" },
+        { "input": "4\n-1 2 -2 1", "expected": "1 -1 2 -2" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Sort Strings (Lexicographically)",
+      "description": "Sort N strings in dictionary order.",
+      "starterCode": "// sort array of strings without builtin sort",
+      "tests": [
+        { "input": "3\ncat bat apple", "expected": "apple bat cat" },
+        { "input": "4\nz b c a", "expected": "a b c z" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Sort Pairs by First Value",
+      "description": "Given N pairs (x, y), sort in ascending order of x. If x ties, maintain order of input (stable sort).",
+      "starterCode": "// stable sort on first element only",
+      "tests": [
+        { "input": "3\n1 9\n1 5\n2 4", "expected": "1 9\n1 5\n2 4" },
+        { "input": "4\n3 10\n1 2\n3 1\n2 2", "expected": "1 2\n2 2\n3 10\n3 1" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Kth Smallest",
+      "description": "Given array and K (1-indexed), sort and print the Kth smallest element.",
+      "starterCode": "// sort and print Kth element",
+      "tests": [
+        { "input": "5\n7 10 4 3 20\n4", "expected": "10" },
+        { "input": "6\n12 3 5 7 19 26\n3", "expected": "7" }
+      ]
+    }
+  ]
+}

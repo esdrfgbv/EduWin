@@ -1,0 +1,107 @@
+{
+  "level": 7,
+  "title": "Object-Oriented Programming (Classes & Objects)",
+  "concept": "This level focuses on defining classes, attributes, constructors, instance methods, objects, encapsulation of logic, and using objects to solve problems.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Rectangle Area",
+      "description": "Create a class Rectangle with attributes width and height and a method area() that returns width * height. Read width and height, create an object and print area.",
+      "starterCode": "import java.util.*;\nclass Rectangle {\n  int width, height;\n  Rectangle(int w, int h) {\n    // store values\n  }\n  int area() {\n    // return width*height\n    return 0;\n  }\n}\npublic class Main{\n  public static void main(String[] args) {\n    Scanner sc=new Scanner(System.in);\n    int w=sc.nextInt();\n    int h=sc.nextInt();\n    // create object and print area\n  }\n}",
+      "tests": [
+        { "input": "4 5", "expected": "20" },
+        { "input": "3 7", "expected": "21" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Student Average",
+      "description": "Create class Student with name and 3 marks. Method average() returns integer average. Read input and print average.",
+      "starterCode": "import java.util.*;\nclass Student{\n  String name;\n  int m1, m2, m3;\n  Student(String n,int a,int b,int c){\n    // store fields\n  }\n  int average(){\n    // compute avg\n    return 0;\n  }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String name=sc.next();\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    int c=sc.nextInt();\n    // create object and print average\n  }\n}",
+      "tests": [
+        { "input": "Ram 80 90 100", "expected": "90" },
+        { "input": "Kiran 60 60 60", "expected": "60" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Bank Account",
+      "description": "Create class Account with holder and balance. Methods deposit(x) and withdraw(y). After performing both, print final balance.",
+      "starterCode": "import java.util.*;\nclass Account{\n  String holder;\n  int balance;\n  Account(String h,int b){ /* store */ }\n  void deposit(int x){ /* add */ }\n  void withdraw(int y){ /* subtract */ }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String name=sc.next();\n    int bal=sc.nextInt();\n    int d=sc.nextInt();\n    int w=sc.nextInt();\n    // create account, call deposit & withdraw, print balance\n  }\n}",
+      "tests": [
+        { "input": "Ram 1000 500 200", "expected": "1300" },
+        { "input": "Kiran 0 100 50", "expected": "50" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Counter Class",
+      "description": "Create class Counter starting with 0. Methods inc() increments, dec() decrements. Read N operations and print final value.",
+      "starterCode": "import java.util.*;\nclass Counter{\n  int v;\n  Counter(){ /* init 0 */ }\n  void inc(){ /* +1 */ }\n  void dec(){ /* -1 */ }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    // apply operations and print\n  }\n}",
+      "tests": [
+        { "input": "3\ninc\ninc\ndec", "expected": "1" },
+        { "input": "4\ninc\ndec\ndec\ninc", "expected": "0" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Point Distance",
+      "description": "Create class Point with x and y. Method dist() returns distance from origin using sqrt(x^2 + y^2). Print distance.",
+      "starterCode": "import java.util.*;\nclass Point{\n  int x,y;\n  Point(int a,int b){ /* store */ }\n  double dist(){ /* return distance */ return 0; }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int x=sc.nextInt();\n    int y=sc.nextInt();\n    // create object and print distance\n  }\n}",
+      "tests": [
+        { "input": "3 4", "expected": "5.0" },
+        { "input": "0 0", "expected": "0.0" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Book Info",
+      "description": "Class Book has title, author, price. Method info() returns: title-by-author-price. Print info().",
+      "starterCode": "import java.util.*;\nclass Book{\n  String title, author;\n  int price;\n  Book(String t,String a,int p){ /* store */ }\n  String info(){ /* return formatted */ return \"\"; }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String t=sc.nextLine();\n    String a=sc.nextLine();\n    int p=sc.nextInt();\n    // create object and print info()\n  }\n}",
+      "tests": [
+        { "input": "C Programming\nDennis Ritchie\n500", "expected": "C Programming-by-Dennis Ritchie-500" },
+        { "input": "Python\nGuido\n1000", "expected": "Python-by-Guido-1000" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Employee Hike",
+      "description": "Class Employee has name and salary. Method hike(percent) increases salary. Print updated salary.",
+      "starterCode": "import java.util.*;\nclass Employee{\n  String name;\n  int salary;\n  Employee(String n,int s){ /* store */ }\n  void hike(double p){ /* increase by p% */ }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String n=sc.next();\n    int s=sc.nextInt();\n    int p=sc.nextInt();\n    // create object, apply hike, print salary\n  }\n}",
+      "tests": [
+        { "input": "Ram 10000 10", "expected": "11000" },
+        { "input": "Kiran 5000 20", "expected": "6000" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Circle Area",
+      "description": "Class Circle with radius r. Method area() returns 3.14*r*r.",
+      "starterCode": "import java.util.*;\nclass Circle{\n  double r;\n  Circle(double x){ /* store */ }\n  double area(){ return 0; }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    double r=sc.nextDouble();\n    // create object and print area\n  }\n}",
+      "tests": [
+        { "input": "2", "expected": "12.56" },
+        { "input": "1", "expected": "3.14" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Car Mileage",
+      "description": "Class Car has fuel and distance. Method mileage() returns distance/fuel (double).",
+      "starterCode": "import java.util.*;\nclass Car{\n  double fuel, dist;\n  Car(double f,double d){ /* store */ }\n  double mileage(){ /* return dist/fuel */ return 0; }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    double f=sc.nextDouble();\n    double d=sc.nextDouble();\n    // create object and print mileage\n  }\n}",
+      "tests": [
+        { "input": "5 100", "expected": "20.0" },
+        { "input": "10 90", "expected": "9.0" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Library — Total Pages",
+      "description": "Class Book with title, pages. Class Library stores list of Book. After adding N books, print total pages.",
+      "starterCode": "import java.util.*;\nclass Book{\n  String title;\n  int pages;\n  Book(String t,int p){ /* store */ }\n}\nclass Library{\n  ArrayList<Book> books=new ArrayList<>();\n  void add(Book b){ /* add */ }\n  int total(){ /* return sum of pages */ return 0; }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    Library L=new Library();\n    // read n books, add to L, print L.total()\n  }\n}",
+      "tests": [
+        { "input": "2\nC 200\nPython 300", "expected": "500" },
+        { "input": "1\nDSA 450", "expected": "450" }
+      ]
+    }
+  ]
+}

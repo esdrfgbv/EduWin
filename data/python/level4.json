@@ -1,0 +1,137 @@
+{
+  "level": 4,
+  "title": "Lists (Arrays)",
+  "concept": "This level focuses on handling lists in Python: indexing, iteration, summing values, filtering even/odd, searching, counting occurrences, reversing and frequency operations.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Sum of List",
+      "description": "Read N and then N integers. Print their sum.",
+      "inputDescription": "N then N integers separated by space.",
+      "outputDescription": "Sum as integer.",
+      "examples": ["Input:\n5\n1 2 3 4 5\nOutput:\n15"],
+      "starterCode": "n = int(input())\narr = list(map(int, input().split()))\n# compute and print sum\n",
+      "tests": [
+        { "input": "5\n1 2 3 4 5", "expected": "15" },
+        { "input": "3\n10 10 10", "expected": "30" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Maximum Element",
+      "description": "Read N and a list of N integers. Print the largest element.",
+      "inputDescription": "N then N integers.",
+      "outputDescription": "Maximum element.",
+      "examples": ["Input:\n4\n3 9 1 8\nOutput:\n9"],
+      "starterCode": "n = int(input())\narr = list(map(int, input().split()))\n# print max\n",
+      "tests": [
+        { "input": "4\n3 9 1 8", "expected": "9" },
+        { "input": "3\n7 7 7", "expected": "7" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Minimum Element",
+      "description": "Print the smallest number in the list.",
+      "inputDescription": "N then N integers.",
+      "outputDescription": "Minimum element.",
+      "examples": ["Input:\n4\n3 9 1 8\nOutput:\n1"],
+      "starterCode": "n = int(input())\narr = list(map(int, input().split()))\n# find minimum\n",
+      "tests": [
+        { "input": "4\n3 9 1 8", "expected": "1" },
+        { "input": "3\n5 5 5", "expected": "5" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Search Element",
+      "description": "Read N list elements and X. Print Yes if X is present, else No.",
+      "inputDescription": "N, list of N integers, and integer X.",
+      "outputDescription": "Yes | No",
+      "examples": ["Input:\n5\n1 2 3 4 5\n3\nOutput:\nYes"],
+      "starterCode": "n = int(input())\narr = list(map(int, input().split()))\nx = int(input())\n# search x\n",
+      "tests": [
+        { "input": "5\n1 2 3 4 5\n3", "expected": "Yes" },
+        { "input": "4\n10 20 30 40\n25", "expected": "No" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Count Occurrences",
+      "description": "Print how many times X occurs in the list.",
+      "inputDescription": "N, list of N integers, then X.",
+      "outputDescription": "Count of occurrences.",
+      "examples": ["Input:\n6\n2 3 2 5 2 8\n2\nOutput:\n3"],
+      "starterCode": "n = int(input())\narr = list(map(int, input().split()))\nx = int(input())\n# count x\n",
+      "tests": [
+        { "input": "6\n2 3 2 5 2 8\n2", "expected": "3" },
+        { "input": "5\n1 2 3 4 5\n6", "expected": "0" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Sum of Even Numbers",
+      "description": "Sum only the even numbers in the list.",
+      "inputDescription": "N then N integers.",
+      "outputDescription": "Sum of even elements.",
+      "examples": ["Input:\n5\n1 2 3 4 6\nOutput:\n12"],
+      "starterCode": "n = int(input())\narr = list(map(int, input().split()))\n# sum evens\n",
+      "tests": [
+        { "input": "5\n1 2 3 4 6", "expected": "12" },
+        { "input": "4\n1 3 5 7", "expected": "0" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Reverse Print",
+      "description": "Print the list elements in reverse order separated by spaces.",
+      "inputDescription": "N then N integers.",
+      "outputDescription": "Elements reversed in one line.",
+      "examples": ["Input:\n4\n10 20 30 40\nOutput:\n40 30 20 10"],
+      "starterCode": "n = int(input())\narr = list(map(int, input().split()))\n# print in reverse\n",
+      "tests": [
+        { "input": "4\n10 20 30 40", "expected": "40 30 20 10" },
+        { "input": "3\n1 2 3", "expected": "3 2 1" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Second Largest",
+      "description": "Print the second largest distinct number.",
+      "inputDescription": "N then N integers.",
+      "outputDescription": "Second largest value.",
+      "examples": ["Input:\n5\n8 1 4 9 7\nOutput:\n8"],
+      "starterCode": "n = int(input())\narr = list(map(int, input().split()))\n# find 2nd largest\n",
+      "tests": [
+        { "input": "5\n8 1 4 9 7", "expected": "8" },
+        { "input": "4\n10 9 8 7", "expected": "9" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Sorted or Not",
+      "description": "If the list is sorted in non-decreasing order print Yes else No.",
+      "inputDescription": "N then list of N integers.",
+      "outputDescription": "Yes | No",
+      "examples": ["Input:\n5\n1 2 2 4 5\nOutput:\nYes"],
+      "starterCode": "n = int(input())\narr = list(map(int, input().split()))\n# check if sorted\n",
+      "tests": [
+        { "input": "5\n1 2 2 4 5", "expected": "Yes" },
+        { "input": "4\n3 1 4 5", "expected": "No" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Digit Frequency (0-9)",
+      "description": "Given N numbers (each 0–9), count frequency of each digit and print in format d:x for 0 to 9.",
+      "inputDescription": "N then N numbers 0–9.",
+      "outputDescription": "10 lines of digit frequencies.",
+      "examples": ["Input:\n5\n1 2 1 3 2\nOutput:\n0:0\n1:2\n2:2\n3:1\n4:0\n5:0\n6:0\n7:0\n8:0\n9:0"],
+      "starterCode": "n = int(input())\narr = list(map(int, input().split()))\n# freq count 0-9\n",
+      "tests": [
+        { "input": "5\n1 2 1 3 2", "expected": "0:0\n1:2\n2:2\n3:1\n4:0\n5:0\n6:0\n7:0\n8:0\n9:0" },
+        { "input": "3\n0 0 0", "expected": "0:3\n1:0\n2:0\n3:0\n4:0\n5:0\n6:0\n7:0\n8:0\n9:0" }
+      ]
+    }
+  ]
+}

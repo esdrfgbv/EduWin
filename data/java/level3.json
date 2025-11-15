@@ -1,0 +1,137 @@
+{
+  "level": 3,
+  "title": "Loops (for, while, do-while)",
+  "concept": "This level builds mastery of loops in Java: for, while and do-while. Tasks include iteration, summation, counting, multiplication table, reversing numbers, factorial, prime checking and nested loops.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Print 1 to N",
+      "description": "Read N and print numbers from 1 to N separated by spaces.",
+      "inputDescription": "Single integer N.",
+      "outputDescription": "Numbers in one line separated by spaces.",
+      "examples": ["Input:\n5\nOutput:\n1 2 3 4 5"],
+      "starterCode": "import java.util.*;\npublic class Main {\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    // print 1 to n\n  }\n}",
+      "tests": [
+        { "input": "5", "expected": "1 2 3 4 5" },
+        { "input": "1", "expected": "1" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Sum of First N Numbers",
+      "description": "Read N and print sum from 1 to N.",
+      "inputDescription": "Single integer.",
+      "outputDescription": "Sum as integer.",
+      "examples": ["Input:\n5\nOutput:\n15"],
+      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    // compute sum\n  }\n}",
+      "tests": [
+        { "input": "5", "expected": "15" },
+        { "input": "10", "expected": "55" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Multiplication Table",
+      "description": "Read N and print N×1, N×2, ..., N×10 each on new line.",
+      "inputDescription": "Single integer.",
+      "outputDescription": "10 lines of results.",
+      "examples": ["Input:\n2\nOutput:\n2 4 6 8 10 12 14 16 18 20"],
+      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    // loop for 1 to 10\n  }\n}",
+      "tests": [
+        { "input": "2", "expected": "2\n4\n6\n8\n10\n12\n14\n16\n18\n20" },
+        { "input": "5", "expected": "5\n10\n15\n20\n25\n30\n35\n40\n45\n50" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Count Digits",
+      "description": "Read integer n and print number of digits in it.",
+      "inputDescription": "Single integer.",
+      "outputDescription": "Digit count.",
+      "examples": ["Input:\n1234\nOutput:\n4"],
+      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    // count digits\n  }\n}",
+      "tests": [
+        { "input": "1234", "expected": "4" },
+        { "input": "7", "expected": "1" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Reverse Number",
+      "description": "Read number n and print the reversed number.",
+      "inputDescription": "Single integer.",
+      "outputDescription": "Reversed integer.",
+      "examples": ["Input:\n120\nOutput:\n21"],
+      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    // reverse number\n  }\n}",
+      "tests": [
+        { "input": "123", "expected": "321" },
+        { "input": "500", "expected": "5" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Factorial",
+      "description": "Read N and print N! (factorial).",
+      "inputDescription": "Single integer.",
+      "outputDescription": "N factorial.",
+      "examples": ["Input:\n5\nOutput:\n120"],
+      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    // factorial via loop\n  }\n}",
+      "tests": [
+        { "input": "5", "expected": "120" },
+        { "input": "1", "expected": "1" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Sum of Digits",
+      "description": "Read n and print sum of its digits.",
+      "inputDescription": "Single integer.",
+      "outputDescription": "Sum of digits.",
+      "examples": ["Input:\n123\nOutput:\n6"],
+      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    // sum digits\n  }\n}",
+      "tests": [
+        { "input": "123", "expected": "6" },
+        { "input": "909", "expected": "18" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Prime or Not",
+      "description": "Read n and print Yes if prime else No.",
+      "inputDescription": "Single integer.",
+      "outputDescription": "Yes | No",
+      "examples": ["Input:\n7\nOutput:\nYes"],
+      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    // check prime using loop\n  }\n}",
+      "tests": [
+        { "input": "7", "expected": "Yes" },
+        { "input": "9", "expected": "No" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Fibonacci N Terms",
+      "description": "Read N and print first N Fibonacci numbers separated by spaces (0 1 1 2 3 5 ...).",
+      "inputDescription": "Single integer.",
+      "outputDescription": "N Fibonacci numbers separated by space.",
+      "examples": ["Input:\n5\nOutput:\n0 1 1 2 3"],
+      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    // print first n Fibonacci values\n  }\n}",
+      "tests": [
+        { "input": "5", "expected": "0 1 1 2 3" },
+        { "input": "1", "expected": "0" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Star Pattern",
+      "description": "Read N and print a left triangle pattern:\n*\n**\n***\n.... (N rows)",
+      "inputDescription": "Single integer.",
+      "outputDescription": "Pattern of stars.",
+      "examples": ["Input:\n3\nOutput:\n*\n**\n***"],
+      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    // nested loops to print pattern\n  }\n}",
+      "tests": [
+        { "input": "3", "expected": "*\n**\n***" },
+        { "input": "1", "expected": "*" }
+      ]
+    }
+  ]
+}

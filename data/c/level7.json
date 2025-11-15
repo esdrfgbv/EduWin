@@ -1,0 +1,138 @@
+{
+  "level": 7,
+  "title": "Functions",
+  "concept": "This level focuses on writing and using functions in C. You will practice functions with and without return values, functions with parameters, and using them to perform modular computations like max, factorial, prime check, etc.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Square using Function",
+      "description": "Write a function int square(int n) that returns n*n. In main(), read n and print the result.",
+      "inputDescription": "One integer n.",
+      "outputDescription": "Square of n.",
+      "examples": ["Input:\n5\nOutput:\n25"],
+      "starterCode": "#include <stdio.h>\n\nint square(int n) {\n    // return n*n\n}\n\nint main() {\n    int n;\n    // read n, call square\n    return 0;\n}\n",
+      "tests": [
+        { "input": "5", "expected": "25" },
+        { "input": "10", "expected": "100" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Max of Two (Function)",
+      "description": "Write a function int max2(int a, int b) that returns the larger of the two. Use it in main().",
+      "inputDescription": "Two integers.",
+      "outputDescription": "Maximum of the two.",
+      "examples": ["Input:\n3 9\nOutput:\n9"],
+      "starterCode": "#include <stdio.h>\n\nint max2(int a, int b) {\n    // return larger value\n}\n\nint main() {\n    int a, b;\n    // read and print max\n    return 0;\n}\n",
+      "tests": [
+        { "input": "3 9", "expected": "9" },
+        { "input": "10 7", "expected": "10" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Factorial Function",
+      "description": "Write a function long long fact(int n) that returns n!. Use a loop inside the function.",
+      "inputDescription": "One integer n.",
+      "outputDescription": "n! value.",
+      "examples": ["Input:\n4\nOutput:\n24"],
+      "starterCode": "#include <stdio.h>\n\nlong long fact(int n) {\n    // compute factorial\n}\n\nint main() {\n    int n;\n    // read n and print fact(n)\n    return 0;\n}\n",
+      "tests": [
+        { "input": "4", "expected": "24" },
+        { "input": "5", "expected": "120" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Prime Check Function",
+      "description": "Write a function int isPrime(int n) that returns 1 if prime, else 0. In main(), print Yes or No.",
+      "inputDescription": "One integer.",
+      "outputDescription": "Yes if prime, No otherwise.",
+      "examples": ["Input:\n7\nOutput:\nYes"],
+      "starterCode": "#include <stdio.h>\n\nint isPrime(int n) {\n    // return 1 if prime else 0\n}\n\nint main() {\n    int n;\n    // read n, call isPrime, print Yes/No\n    return 0;\n}\n",
+      "tests": [
+        { "input": "7", "expected": "Yes" },
+        { "input": "9", "expected": "No" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Sum of Array using Function",
+      "description": "Write a function int sumArray(int arr[], int n) that returns sum of elements. Call it from main.",
+      "inputDescription": "N followed by N integers.",
+      "outputDescription": "Sum of array.",
+      "examples": ["Input:\n5\n1 2 3 4 5\nOutput:\n15"],
+      "starterCode": "#include <stdio.h>\n\nint sumArray(int arr[], int n) {\n    // loop and sum\n}\n\nint main() {\n    int n, arr[200];\n    // read and call sumArray\n    return 0;\n}\n",
+      "tests": [
+        { "input": "5\n1 2 3 4 5", "expected": "15" },
+        { "input": "3\n10 10 10", "expected": "30" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Reverse Number using Function",
+      "description": "Write int reverseNum(int n) that returns the reversed integer.",
+      "inputDescription": "One integer n.",
+      "outputDescription": "Reversed number.",
+      "examples": ["Input:\n123\nOutput:\n321"],
+      "starterCode": "#include <stdio.h>\n\nint reverseNum(int n) {\n    // reverse digits\n}\n\nint main() {\n    int n;\n    // read and print reverseNum(n)\n    return 0;\n}\n",
+      "tests": [
+        { "input": "123", "expected": "321" },
+        { "input": "500", "expected": "5" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "GCD using Function",
+      "description": "Write int gcd(int a, int b) that returns greatest common divisor using Euclidean algorithm.",
+      "inputDescription": "Two positive integers.",
+      "outputDescription": "GCD of the two.",
+      "examples": ["Input:\n12 18\nOutput:\n6"],
+      "starterCode": "#include <stdio.h>\n\nint gcd(int a, int b) {\n    // Euclidean algorithm\n}\n\nint main() {\n    int a, b;\n    // read and print gcd\n    return 0;\n}\n",
+      "tests": [
+        { "input": "12 18", "expected": "6" },
+        { "input": "7 13", "expected": "1" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "LCM using Function",
+      "description": "Using gcd() function, write int lcm(int a, int b) that returns LCM.",
+      "inputDescription": "Two positive integers.",
+      "outputDescription": "LCM of the two.",
+      "examples": ["Input:\n4 6\nOutput:\n12"],
+      "starterCode": "#include <stdio.h>\n\nint gcd(int a, int b) {\n    // gcd code here\n}\n\nint lcm(int a, int b) {\n    // lcm using gcd\n}\n\nint main() {\n    int a, b;\n    // read and print lcm\n    return 0;\n}\n",
+      "tests": [
+        { "input": "4 6", "expected": "12" },
+        { "input": "3 5", "expected": "15" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "isPalindrome Number (Function)",
+      "description": "Write int isPal(int n) that returns 1 if n is palindrome, else 0.",
+      "inputDescription": "One integer n.",
+      "outputDescription": "Yes if palindrome, No otherwise.",
+      "examples": ["Input:\n121\nOutput:\nYes"],
+      "starterCode": "#include <stdio.h>\n\nint isPal(int n) {\n    // return 1 if palindrome, else 0\n}\n\nint main() {\n    int n;\n    // read, call isPal, print Yes/No\n    return 0;\n}\n",
+      "tests": [
+        { "input": "121", "expected": "Yes" },
+        { "input": "123", "expected": "No" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Calculator using Functions",
+      "description": "Create functions add, sub, mul, divi and perform operation based on operator.",
+      "inputDescription": "a b op",
+      "outputDescription": "Result as integer division for '/'.",
+      "examples": ["Input:\n8 4 *\nOutput:\n32"],
+      "starterCode": "#include <stdio.h>\n\nint add(int a, int b) { /*...*/ }\nint sub(int a, int b) { /*...*/ }\nint mul(int a, int b) { /*...*/ }\nint divi(int a, int b) { /*...*/ }\n\nint main() {\n    int a, b;\n    char op;\n    // read, choose function and print\n    return 0;\n}\n",
+      "tests": [
+        { "input": "8 4 *", "expected": "32" },
+        { "input": "10 3 -", "expected": "7" },
+        { "input": "9 3 /", "expected": "3" }
+      ]
+    }
+  ]
+}

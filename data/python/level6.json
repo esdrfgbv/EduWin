@@ -1,0 +1,139 @@
+{
+  "level": 6,
+  "title": "Functions",
+  "concept": "This level teaches how to define and call functions in Python, return values, pass parameters, compute using functions, and structure programs modularly.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Square using Function",
+      "description": "Write a function square(n) that returns n*n. Read n and print result.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "n squared.",
+      "examples": ["Input:\n5\nOutput:\n25"],
+      "starterCode": "def square(n):\n    # return n*n\n    pass\n\nn = int(input())\n# call square and print result\n",
+      "tests": [
+        { "input": "5", "expected": "25" },
+        { "input": "10", "expected": "100" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Max of Two",
+      "description": "Write a function max2(a, b) that returns the larger of the two.",
+      "inputDescription": "Two integers a and b.",
+      "outputDescription": "Maximum of the two.",
+      "examples": ["Input:\n3 9\nOutput:\n9"],
+      "starterCode": "def max2(a, b):\n    # return larger\n    pass\n\na, b = map(int, input().split())\n# print max2(a, b)\n",
+      "tests": [
+        { "input": "3 9", "expected": "9" },
+        { "input": "10 7", "expected": "10" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Factorial Function",
+      "description": "Write factorial(n) that returns n!. Use loop inside function.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "n factorial.",
+      "examples": ["Input:\n4\nOutput:\n24"],
+      "starterCode": "def factorial(n):\n    # loop and compute\n    pass\n\nn = int(input())\n# print factorial(n)\n",
+      "tests": [
+        { "input": "4", "expected": "24" },
+        { "input": "5", "expected": "120" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Prime Check",
+      "description": "Write isPrime(n) that returns True if n is prime else False. Print Yes or No.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Yes | No",
+      "examples": ["Input:\n7\nOutput:\nYes"],
+      "starterCode": "def isPrime(n):\n    # check prime\n    pass\n\nn = int(input())\n# print Yes/No based on isPrime(n)\n",
+      "tests": [
+        { "input": "7", "expected": "Yes" },
+        { "input": "9", "expected": "No" },
+        { "input": "1", "expected": "No" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Sum of List using Function",
+      "description": "Write sumList(arr) that returns sum of elements.",
+      "inputDescription": "N and N integers.",
+      "outputDescription": "Sum of list.",
+      "examples": ["Input:\n5\n1 2 3 4 5\nOutput:\n15"],
+      "starterCode": "def sumList(arr):\n    # return total\n    pass\n\nn = int(input())\narr = list(map(int, input().split()))\n# print sumList(arr)\n",
+      "tests": [
+        { "input": "5\n1 2 3 4 5", "expected": "15" },
+        { "input": "3\n10 10 10", "expected": "30" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Reverse Number using Function",
+      "description": "Write reverseNum(n) that returns integer reversed.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Reversed integer.",
+      "examples": ["Input:\n123\nOutput:\n321"],
+      "starterCode": "def reverseNum(n):\n    # reverse digits and return\n    pass\n\nn = int(input())\n# print reverseNum(n)\n",
+      "tests": [
+        { "input": "123", "expected": "321" },
+        { "input": "500", "expected": "5" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "GCD Function",
+      "description": "Write gcd(a, b) using Euclidean algorithm and print result.",
+      "inputDescription": "Two integers a, b.",
+      "outputDescription": "GCD of a and b.",
+      "examples": ["Input:\n12 18\nOutput:\n6"],
+      "starterCode": "def gcd(a, b):\n    # Euclidean algorithm\n    pass\n\na, b = map(int, input().split())\n# print gcd(a, b)\n",
+      "tests": [
+        { "input": "12 18", "expected": "6" },
+        { "input": "7 13", "expected": "1" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "LCM using Function",
+      "description": "Write lcm(a, b) that uses gcd(a, b) and returns LCM.",
+      "inputDescription": "Two integers a and b.",
+      "outputDescription": "LCM of a and b.",
+      "examples": ["Input:\n4 6\nOutput:\n12"],
+      "starterCode": "def gcd(a, b):\n    pass\n\ndef lcm(a, b):\n    # return LCM using gcd\n    pass\n\na, b = map(int, input().split())\n# print lcm(a, b)\n",
+      "tests": [
+        { "input": "4 6", "expected": "12" },
+        { "input": "3 5", "expected": "15" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "isPalindrome Number",
+      "description": "Write isPal(n) that returns True if number is palindrome else False. Print Yes or No.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Yes | No",
+      "examples": ["Input:\n121\nOutput:\nYes"],
+      "starterCode": "def isPal(n):\n    # return True/False\n    pass\n\nn = int(input())\n# print Yes/No\n",
+      "tests": [
+        { "input": "121", "expected": "Yes" },
+        { "input": "123", "expected": "No" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Mini Calculator (Functions)",
+      "description": "Write functions add, sub, mul, divi and perform operation based on operator.",
+      "inputDescription": "a b op",
+      "outputDescription": "Result of operation (integer division for /).",
+      "examples": ["Input:\n8 4 *\nOutput:\n32"],
+      "starterCode": "def add(a, b): pass\n\ndef sub(a, b): pass\n\ndef mul(a, b): pass\n\ndef divi(a, b): pass\n\n# read input, choose function and print\n",
+      "tests": [
+        { "input": "8 4 *", "expected": "32" },
+        { "input": "10 3 -", "expected": "7" },
+        { "input": "9 3 /", "expected": "3" }
+      ]
+    }
+  ]
+}

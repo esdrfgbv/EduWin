@@ -1,0 +1,108 @@
+{
+  "level": 5,
+  "title": "Linked Lists",
+  "concept": "This level teaches how singly linked lists work internally — node creation, insertion at beginning/end/position, deletion, searching, counting, reversing, and detecting loops.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Create Linked List & Print",
+      "description": "Given N and N integers, create a singly linked list by inserting nodes at the end and print the linked list.",
+      "starterCode": "// define Node class and build list\n// print data using temp traversal",
+      "tests": [
+        { "input": "5\n1 2 3 4 5", "expected": "1 2 3 4 5" },
+        { "input": "3\n10 20 30", "expected": "10 20 30" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Insert at Beginning",
+      "description": "Insert a new value X at the beginning of a linked list.",
+      "starterCode": "// insert X before head and update head",
+      "tests": [
+        { "input": "5\n1 2 3 4 5\n100", "expected": "100 1 2 3 4 5" },
+        { "input": "1\n7\n9", "expected": "9 7" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Insert at End",
+      "description": "Insert a new value X at the end of a linked list.",
+      "starterCode": "// traverse till last node then append",
+      "tests": [
+        { "input": "4\n2 4 6 8\n10", "expected": "2 4 6 8 10" },
+        { "input": "1\n9\n100", "expected": "9 100" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Insert at Position",
+      "description": "Insert X at position P (0-indexed). If P > length, perform no insertion.",
+      "starterCode": "// if P==0 insert at head else traverse P-1 nodes then connect",
+      "tests": [
+        { "input": "4\n10 20 30 40\n25 2", "expected": "10 20 25 30 40" },
+        { "input": "3\n1 2 3\n100 5", "expected": "1 2 3" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Delete at Position",
+      "description": "Delete node at position P (0-indexed). If invalid index, do nothing.",
+      "starterCode": "// if P==0 move head to head.next else traverse P-1 and bypass",
+      "tests": [
+        { "input": "5\n1 2 3 4 5\n2", "expected": "1 2 4 5" },
+        { "input": "3\n7 8 9\n0", "expected": "8 9" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Search a Value",
+      "description": "Search for X in the list. Print Yes if found, otherwise No.",
+      "starterCode": "// traverse and compare with each node",
+      "tests": [
+        { "input": "5\n1 3 5 7 9\n7", "expected": "Yes" },
+        { "input": "4\n2 4 6 8\n5", "expected": "No" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Length of Linked List",
+      "description": "Count the number of nodes in a linked list.",
+      "starterCode": "// maintain counter while traversing",
+      "tests": [
+        { "input": "5\n1 2 3 4 5", "expected": "5" },
+        { "input": "0\n", "expected": "0" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Reverse Linked List",
+      "description": "Reverse the linked list (iteratively) and print the result.",
+      "starterCode": "// use prev, curr, next pointer iteration",
+      "tests": [
+        { "input": "5\n1 2 3 4 5", "expected": "5 4 3 2 1" },
+        { "input": "3\n9 8 7", "expected": "7 8 9" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Middle of Linked List",
+      "description": "Print the middle element using two-pointer (slow/fast) technique. If even number of nodes, print the second middle.",
+      "starterCode": "// slow = head, fast = head.next.next steps",
+      "tests": [
+        { "input": "5\n1 2 3 4 5", "expected": "3" },
+        { "input": "6\n10 20 30 40 50 60", "expected": "40" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Detect Loop (Cycle Detection)",
+      "description": "Given Linked List and integer P that tells where last node connects (P = -1 means no loop). Detect if cycle exists using Floyd's cycle algorithm and print Yes or No.",
+      "inputNote": "Last input (P) is index of node to connect last node to (0-indexed).",
+      "starterCode": "// after creating list, if P!=-1 connect tail.next to Pth node\n// apply slow-fast pointers",
+      "tests": [
+        { "input": "3\n1 2 3\n-1", "expected": "No" },
+        { "input": "4\n1 2 3 4\n1", "expected": "Yes" }
+      ]
+    }
+  ]
+}
