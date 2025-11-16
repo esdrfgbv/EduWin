@@ -707,3 +707,19 @@ body {
     margin-inline: 0;
   }
 }
+
+.status-notrun {
+  color: gray;
+}
+.status-pass {
+  color: green;
+  font-weight: 600;
+}
+.status-fail {
+  color: red;
+  font-weight: 600;
+}
+.status-running {
+  color: blue;
+  font-weight: 600;
+}

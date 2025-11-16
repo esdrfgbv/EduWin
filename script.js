@@ -703,7 +703,7 @@ function loadChallengeScreen() {
       <td>${i + 1}</td>
       <td>${(t.input || "").replace(/\n/g, "\\n")}</td>
       <td>${(t.expected || "").replace(/\n/g, "\\n")}</td>
-      <td class="status">Pass</td>
+      <td class="status status-notrun">Not Run</td>
     `;
     testcaseTable.appendChild(tr);
   });
@@ -793,6 +793,9 @@ async function testCode() {
 
   let passed = 0;
   challengeStatusMsg.textContent = "Running tests...";
+  outputArea.textContent = "Running tests on all cases...\n";
+
+  let outputsSummary = "";
 
   for (let i = 0; i < (challenge.tests || []).length; i++) {
     const t = challenge.tests[i];
@@ -825,10 +828,23 @@ async function testCode() {
       if (result.status.id >= 3) break;
     }
 
-    const actual = (result.stdout || "").trim();
+    const rawStdout = result.stdout || "";
+    const stderr = result.stderr || "";
+    const compileOutput = result.compile_output || "";
+
+    const actual = rawStdout.trim();
     const expected = (t.expected || "").trim();
 
-    if (actual === expected) {
+    // Build displayed "your output"
+    let displayOutput = "";
+    if (rawStdout) displayOutput += rawStdout;
+    if (stderr) displayOutput += (displayOutput ? "\n" : "") + "[stderr]\n" + stderr;
+    if (compileOutput) displayOutput += (displayOutput ? "\n" : "") + "[compile]\n" + compileOutput;
+    if (!displayOutput) displayOutput = "(no output)";
+
+    const isPass = actual === expected;
+
+    if (isPass) {
       passed++;
       statusCell.textContent = "Pass";
       statusCell.className = "status status-pass";
@@ -836,13 +852,23 @@ async function testCode() {
       statusCell.textContent = "Fail";
       statusCell.className = "status status-fail";
     }
+
+    outputsSummary +=
+      `Test ${i + 1}\n` +
+      `Input:\n${t.input || ""}\n\n` +
+      `Expected Output:\n${expected || ""}\n\n` +
+      `Your Output:\n${displayOutput}\n\n` +
+      `Status: ${isPass ? "Pass ✅" : "Fail ❌"}\n` +
+      `---------------------------\n\n`;
   }
+
+  outputArea.textContent = outputsSummary.trim();
 
   if (passed === (challenge.tests || []).length) {
     challengeStatusMsg.textContent = "🎉 Challenge Passed!";
     unlockNext();
   } else {
-    challengeStatusMsg.textContent = "❌ One or more test cases failed.";
+    challengeStatusMsg.textContent = "❌ One or more test cases failed. Scroll up in Output to see details.";
   }
 }
 
@@ -863,7 +889,8 @@ function unlockNext() {
     updateCourseSummaryForCurrentLanguage();
   }
 
-  loadChallengeScreen();
+  // Do NOT reload the challenge screen here,
+  // so the user still sees the latest test statuses & outputs.
 }
 
 /* ==============================
