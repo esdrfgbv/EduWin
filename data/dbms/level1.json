@@ -1,7 +1,7 @@
 {
   "title": "DBMS Level 1 — Fundamentals",
   "concept": "Basic terminology, relational model, keys and simple SQL.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "Which of the following best describes a Database Management System (DBMS)?",
