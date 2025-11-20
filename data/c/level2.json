@@ -1,136 +1,156 @@
 {
   "level": 2,
-  "title": "Variables & Input/Output",
-  "concept": "This level teaches how to declare variables in C, take input using scanf(), and format output using printf(). You will practice integers, floats and characters. Focus on correct format specifiers: %d for int, %f for float, %c for char. Do not add extra text beyond what is required.",
+  "title": "Numbers, Time and Simple Decisions",
+  "concept": "This level uses integers and real numbers in simple tasks: fractional parts, time calculations, basic comparisons and minimums. All tasks are adapted from Snakify-style beginner problems.",
   "challenges": [
     {
       "id": 1,
-      "title": "Square the Number",
-      "description": "Read an integer and print its square.",
-      "inputDescription": "A single integer.",
-      "outputDescription": "<square of the number>",
-      "examples": ["Input:\n4\n\nOutput:\n16"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // read n and print its square\n    return 0;\n}",
+      "title": "Fractional Part",
+      "description": "Given a positive real number, print its fractional part (everything after the decimal point).",
+      "inputDescription": "One positive real number x.",
+      "outputDescription": "Fractional part of x as a real number.",
+      "examples": [
+        "Input:\n3.25\n\nOutput:\n0.25"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    double x;\n    // print fractional part of x\n    return 0;\n}",
       "tests": [
-        { "input": "4", "expected": "16" },
-        { "input": "10", "expected": "100" }
+        { "input": "3.25", "expected": "0.25" },
+        { "input": "5.0", "expected": "0" }
       ]
     },
     {
       "id": 2,
-      "title": "Add and Print",
-      "description": "Read two integers and print their sum.",
-      "inputDescription": "Two integers separated by a space.",
-      "outputDescription": "<sum>",
-      "examples": ["Input:\n3 8\n\nOutput:\n11"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int a, b;\n    // read integers and print sum\n    return 0;\n}",
+      "title": "First Digit After Decimal",
+      "description": "Given a positive real number, print the first digit to the right of the decimal point.",
+      "inputDescription": "One positive real number x.",
+      "outputDescription": "Single digit: first digit after decimal point.",
+      "examples": [
+        "Input:\n1.79\n\nOutput:\n7"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    double x;\n    // extract first digit after decimal\n    return 0;\n}",
       "tests": [
-        { "input": "3 8", "expected": "11" },
-        { "input": "15 -5", "expected": "10" }
+        { "input": "1.79", "expected": "7" },
+        { "input": "3.04", "expected": "0" }
       ]
     },
     {
       "id": 3,
-      "title": "Multiply and Display",
-      "description": "Read two integers and print their product.",
-      "inputDescription": "Two integers separated by a space.",
-      "outputDescription": "<product>",
-      "examples": ["Input:\n6 9\n\nOutput:\n54"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int a, b;\n    // multiply and print result\n    return 0;\n}",
+      "title": "Car Route Days",
+      "description": "A car can travel N kilometers per day. How many days are needed to cover a route of length M kilometers? Use ceiling of M/N.",
+      "inputDescription": "Two positive integers N and M.",
+      "outputDescription": "One integer: number of days.",
+      "examples": [
+        "Input:\n700 750\n\nOutput:\n2"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, M;\n    // compute ceil(M / N)\n    return 0;\n}",
       "tests": [
-        { "input": "6 9", "expected": "54" },
-        { "input": "10 7", "expected": "70" }
+        { "input": "700 700", "expected": "1" },
+        { "input": "700 750", "expected": "2" }
       ]
     },
     {
       "id": 4,
-      "title": "Average of Two",
-      "description": "Read two floating-point numbers and print their average.",
-      "inputDescription": "Two floats separated by a space.",
-      "outputDescription": "Average printed in decimal format.",
-      "examples": ["Input:\n3.0 4.0\n\nOutput:\n3.5"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    float x, y;\n    // read x, y and print (x+y)/2\n    return 0;\n}",
+      "title": "Digital Clock",
+      "description": "Given N minutes since midnight (0 ≤ N), print the current time in hours and minutes on a 24h digital clock.",
+      "inputDescription": "Integer N.",
+      "outputDescription": "Two integers: hours (0–23) and minutes (0–59) separated by a space.",
+      "examples": [
+        "Input:\n150\n\nOutput:\n2 30"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N;\n    // convert minutes to H and M\n    return 0;\n}",
       "tests": [
-        { "input": "3.0 4.0", "expected": "3.5" },
-        { "input": "10.0 2.0", "expected": "6.0" }
+        { "input": "150", "expected": "2 30" },
+        { "input": "0", "expected": "0 0" }
       ]
     },
     {
       "id": 5,
-      "title": "Area of Rectangle",
-      "description": "Given length and breadth, print the area.",
-      "inputDescription": "Two integers L and B.",
-      "outputDescription": "Area printed as an integer.",
-      "examples": ["Input:\n5 7\n\nOutput:\n35"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int L, B;\n    // read and print area\n    return 0;\n}",
+      "title": "Cupcake Cost",
+      "description": "A cupcake costs A dollars and B cents. Find how many dollars and cents are needed to buy N cupcakes.",
+      "inputDescription": "Three integers A, B, N.",
+      "outputDescription": "Two integers: total dollars and total cents.",
+      "examples": [
+        "Input:\n1 50 3\n\nOutput:\n4 50"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int A, B, N;\n    // compute total cost\n    return 0;\n}",
       "tests": [
-        { "input": "5 7", "expected": "35" },
-        { "input": "10 9", "expected": "90" }
+        { "input": "1 50 3", "expected": "4 50" },
+        { "input": "0 99 2", "expected": "1 98" }
       ]
     },
     {
       "id": 6,
-      "title": "Perimeter of Square",
-      "description": "Read the side length of a square and print its perimeter (4 × side).",
-      "inputDescription": "One integer.",
-      "outputDescription": "Perimeter as integer.",
-      "examples": ["Input:\n6\n\nOutput:\n24"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int s;\n    // 4 * s\n    return 0;\n}",
+      "title": "Hour Hand Angle",
+      "description": "H hours, M minutes and S seconds have passed since midnight (0 ≤ H < 12). Determine the angle in degrees of the hour hand.",
+      "inputDescription": "Three integers: H, M, S.",
+      "outputDescription": "Real number: angle of the hour hand in degrees.",
+      "examples": [
+        "Input:\n0 0 0\n\nOutput:\n0"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int H, M, S;\n    // compute hour hand angle\n    return 0;\n}",
       "tests": [
-        { "input": "6", "expected": "24" },
-        { "input": "12", "expected": "48" }
+        { "input": "0 0 0", "expected": "0" },
+        { "input": "3 0 0", "expected": "90" }
       ]
     },
     {
       "id": 7,
-      "title": "Character Code",
-      "description": "Read a character and print its ASCII value.",
-      "inputDescription": "A single character.",
-      "outputDescription": "ASCII value (integer).",
-      "examples": ["Input:\nA\n\nOutput:\n65"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    char c;\n    // print ASCII of c\n    return 0;\n}",
+      "title": "Minute Hand from Hour Angle",
+      "description": "The hour hand has turned by α degrees since midnight. Find the angle by which the minute hand has turned since the start of the current hour.",
+      "inputDescription": "One real number α.",
+      "outputDescription": "Real number: angle turned by minute hand in degrees.",
+      "examples": [
+        "Input:\n90\n\nOutput:\n0"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    double a;\n    // compute minute hand angle\n    return 0;\n}",
       "tests": [
-        { "input": "A", "expected": "65" },
-        { "input": "a", "expected": "97" }
+        { "input": "0", "expected": "0" }
       ]
     },
     {
       "id": 8,
-      "title": "Swap Numbers (No Temp)",
-      "description": "Read two integers and swap them without using a third variable. Print them after swapping separated by a space.",
+      "title": "Smaller of Two",
+      "description": "Given two integers, print the smaller value.",
       "inputDescription": "Two integers a and b.",
-      "outputDescription": "<b> <a> after swap",
-      "examples": ["Input:\n5 9\n\nOutput:\n9 5"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int a, b;\n    // swap logic without 3rd variable\n    return 0;\n}",
+      "outputDescription": "One integer: min(a, b).",
+      "examples": [
+        "Input:\n3 7\n\nOutput:\n3"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int a, b;\n    // print smaller of a and b\n    return 0;\n}",
       "tests": [
-        { "input": "5 9", "expected": "9 5" },
-        { "input": "10 3", "expected": "3 10" }
+        { "input": "3 7", "expected": "3" },
+        { "input": "10 -5", "expected": "-5" }
       ]
     },
     {
       "id": 9,
-      "title": "Meters to Centimeters",
-      "description": "Convert meters to centimeters (1 meter = 100 cm).",
-      "inputDescription": "One integer representing meters.",
-      "outputDescription": "Centimeters as integer.",
-      "examples": ["Input:\n2\n\nOutput:\n200"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int m;\n    // multiply by 100\n    return 0;\n}",
+      "title": "Sign of a Number",
+      "description": "For the given integer X print 1 if it's positive, -1 if it's negative or 0 if it's zero.",
+      "inputDescription": "One integer X.",
+      "outputDescription": "1, -1 or 0.",
+      "examples": [
+        "Input:\n5\n\nOutput:\n1"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int x;\n    // print 1, -1 or 0\n    return 0;\n}",
       "tests": [
-        { "input": "2", "expected": "200" },
-        { "input": "12", "expected": "1200" }
+        { "input": "5", "expected": "1" },
+        { "input": "-3", "expected": "-1" },
+        { "input": "0", "expected": "0" }
       ]
     },
     {
       "id": 10,
-      "title": "Minutes to Hours",
-      "description": "Convert minutes to hours (float output allowed).",
-      "inputDescription": "One integer (minutes).",
-      "outputDescription": "Hours as a decimal number.",
-      "examples": ["Input:\n90\n\nOutput:\n1.5"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    float m;\n    // m / 60\n    return 0;\n}",
+      "title": "Smallest of Three",
+      "description": "Given three integers, print the smallest value.",
+      "inputDescription": "Three integers a, b, c.",
+      "outputDescription": "One integer: smallest of the three.",
+      "examples": [
+        "Input:\n3 1 5\n\nOutput:\n1"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int a, b, c;\n    // print minimum of a, b, c\n    return 0;\n}",
       "tests": [
-        { "input": "90", "expected": "1.5" },
-        { "input": "120", "expected": "2" }
+        { "input": "3 1 5", "expected": "1" },
+        { "input": "7 7 5", "expected": "5" }
       ]
     }
   ]

@@ -1,136 +1,157 @@
 {
   "level": 4,
-  "title": "Loops (for / while)",
-  "concept": "This level focuses on using loop constructs in C such as for and while. You will practice repeating computations, generating sequences, and using counters. Be careful with off-by-one errors and whitespace formatting in output. No extra messages should be printed.",
+  "title": "Loops and Number Sequences",
+  "concept": "This level focuses on using loops (for / while) in C to process numeric sequences: printing ranges, sums, factorials, divisors and powers. Problems are adapted from Snakify loop tasks.",
   "challenges": [
     {
       "id": 1,
-      "title": "Print 1 to N",
-      "description": "Read an integer N and print numbers from 1 to N separated by spaces.",
-      "inputDescription": "A single integer N.",
-      "outputDescription": "1 2 3 ... N",
-      "examples": ["Input:\n5\nOutput:\n1 2 3 4 5"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // print 1 to n\n    return 0;\n}",
+      "title": "From A to B",
+      "description": "Given two integers A and B, print all numbers from A to B inclusive in ascending order if A < B, or in descending order if A >= B.",
+      "inputDescription": "Two integers A and B.",
+      "outputDescription": "Sequence of integers separated by spaces.",
+      "examples": [
+        "Input:\n3 7\n\nOutput:\n3 4 5 6 7",
+        "Input:\n7 3\n\nOutput:\n7 6 5 4 3"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int A, B;\n    // print from A to B using proper direction\n    return 0;\n}",
       "tests": [
-        { "input": "5", "expected": "1 2 3 4 5" },
-        { "input": "1", "expected": "1" }
+        { "input": "3 7", "expected": "3 4 5 6 7" },
+        { "input": "7 3", "expected": "7 6 5 4 3" }
       ]
     },
     {
       "id": 2,
-      "title": "Sum of 1 to N",
-      "description": "Calculate the sum of numbers from 1 to N.",
-      "inputDescription": "A single integer N.",
-      "outputDescription": "Sum as a single integer.",
-      "examples": ["Input:\n5\nOutput:\n15"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // sum = 1 + 2 + ... + n\n    return 0;\n}",
+      "title": "Squares Not Exceeding N",
+      "description": "Given an integer N (N >= 1), print all squares of integers (1^2, 2^2, ...) that are less than or equal to N.",
+      "inputDescription": "One integer N.",
+      "outputDescription": "Squares in ascending order separated by spaces.",
+      "examples": [
+        "Input:\n15\n\nOutput:\n1 4 9"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N;\n    // print squares <= N\n    return 0;\n}",
       "tests": [
-        { "input": "5", "expected": "15" },
-        { "input": "10", "expected": "55" }
+        { "input": "15", "expected": "1 4 9" },
+        { "input": "1", "expected": "1" }
       ]
     },
     {
       "id": 3,
-      "title": "Factorial",
-      "description": "Compute factorial of N (N!).",
-      "inputDescription": "A single integer N.",
-      "outputDescription": "Factorial value.",
-      "examples": ["Input:\n5 → Output:\n120"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // factorial using loop\n    return 0;\n}",
+      "title": "Sum of 10 Numbers",
+      "description": "Read exactly 10 integers and print their sum.",
+      "inputDescription": "10 integers, one per line or separated by spaces.",
+      "outputDescription": "Single integer: sum of the 10 numbers.",
+      "examples": [
+        "Input:\n1 2 3 4 5 6 7 8 9 10\n\nOutput:\n55"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int i, x, sum = 0;\n    // read 10 numbers and sum\n    return 0;\n}",
       "tests": [
-        { "input": "5", "expected": "120" },
-        { "input": "3", "expected": "6" }
+        { "input": "1 2 3 4 5 6 7 8 9 10", "expected": "55" },
+        { "input": "0 0 0 0 0 0 0 0 0 0", "expected": "0" }
       ]
     },
     {
       "id": 4,
-      "title": "Count Digits",
-      "description": "Read an integer and print how many digits it has.",
-      "inputDescription": "A single integer.",
-      "outputDescription": "Count of digits.",
-      "examples": ["Input:\n12345 → Output:\n5"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    long long n;\n    // count digits using loop\n    return 0;\n}",
+      "title": "Sum of N Numbers",
+      "description": "The first input line contains integer N. Then follow N integers (one per line or separated by spaces). Print their sum.",
+      "inputDescription": "N followed by N integers.",
+      "outputDescription": "Single integer: sum of N numbers.",
+      "examples": [
+        "Input:\n3\n10 20 30\n\nOutput:\n60"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, i, x, sum = 0;\n    // read N then N numbers and sum\n    return 0;\n}",
       "tests": [
-        { "input": "12345", "expected": "5" },
-        { "input": "7", "expected": "1" }
+        { "input": "3\n10 20 30", "expected": "60" },
+        { "input": "1\n5", "expected": "5" }
       ]
     },
     {
       "id": 5,
-      "title": "Reverse a Number",
-      "description": "Reverse the digits of the given integer and print the reversed number.",
-      "inputDescription": "A single integer.",
-      "outputDescription": "Reversed integer.",
-      "examples": ["Input:\n1234 → Output:\n4321"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // reverse number using loop\n    return 0;\n}",
+      "title": "Sum of Cubes",
+      "description": "For the given integer N, compute the sum 1^3 + 2^3 + ... + N^3.",
+      "inputDescription": "One integer N >= 1.",
+      "outputDescription": "Single integer: sum of cubes.",
+      "examples": [
+        "Input:\n3\n\nOutput:\n36"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N;\n    // compute sum of cubes from 1 to N\n    return 0;\n}",
       "tests": [
-        { "input": "1234", "expected": "4321" },
-        { "input": "500", "expected": "5" }
+        { "input": "3", "expected": "36" },
+        { "input": "1", "expected": "1" }
       ]
     },
     {
       "id": 6,
-      "title": "Sum of Digits",
-      "description": "Print the sum of digits of the given number.",
-      "inputDescription": "A single integer.",
-      "outputDescription": "Sum of digits.",
-      "examples": ["Input:\n246 → Output:\n12"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // sum of digits\n    return 0;\n}",
+      "title": "Factorial",
+      "description": "Given integer n, compute n! = 1 * 2 * ... * n.",
+      "inputDescription": "One integer n >= 0.",
+      "outputDescription": "Single integer: n! value.",
+      "examples": [
+        "Input:\n4\n\nOutput:\n24"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // compute factorial using loop\n    return 0;\n}",
       "tests": [
-        { "input": "246", "expected": "12" },
-        { "input": "999", "expected": "27" }
+        { "input": "4", "expected": "24" },
+        { "input": "0", "expected": "1" }
       ]
     },
     {
       "id": 7,
-      "title": "Power Using Loop",
-      "description": "Read a and b and compute a^b using loop.",
-      "inputDescription": "Two integers a and b.",
-      "outputDescription": "a^b",
-      "examples": ["Input:\n2 3 → Output:\n8"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int a, b;\n    // compute a^b using loop\n    return 0;\n}",
+      "title": "Count Zeros",
+      "description": "First read integer N, then read N integers. Count how many of them are equal to zero and print that count.",
+      "inputDescription": "N followed by N integers.",
+      "outputDescription": "Number of elements equal to zero.",
+      "examples": [
+        "Input:\n5\n1 0 2 0 3\n\nOutput:\n2"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, i, x, count = 0;\n    // count how many of the N numbers are zero\n    return 0;\n}",
       "tests": [
-        { "input": "2 3", "expected": "8" },
-        { "input": "5 2", "expected": "25" }
+        { "input": "5\n1 0 2 0 3", "expected": "2" },
+        { "input": "3\n0 0 0", "expected": "3" }
       ]
     },
     {
       "id": 8,
-      "title": "Fibonacci N Terms",
-      "description": "Print first N Fibonacci numbers separated by spaces.",
-      "inputDescription": "A single integer N.",
-      "outputDescription": "Fibonacci sequence.",
-      "examples": ["Input:\n5 → Output:\n0 1 1 2 3"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // fibonacci loop\n    return 0;\n}",
+      "title": "Sum of Factorials",
+      "description": "Given integer n, compute 1! + 2! + 3! + ... + n!. Use a single loop if possible.",
+      "inputDescription": "One integer n >= 1.",
+      "outputDescription": "Single integer: the sum.",
+      "examples": [
+        "Input:\n3\n\nOutput:\n9"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // compute sum of factorials from 1 to n\n    return 0;\n}",
       "tests": [
-        { "input": "5", "expected": "0 1 1 2 3" },
-        { "input": "1", "expected": "0" }
+        { "input": "3", "expected": "9" },
+        { "input": "1", "expected": "1" }
       ]
     },
     {
       "id": 9,
-      "title": "Prime or Not",
-      "description": "Print Yes if the number is prime else print No.",
-      "inputDescription": "A single integer.",
-      "outputDescription": "Yes | No",
-      "examples": ["Input:\n7 → Output:\nYes"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // check prime using loop\n    return 0;\n}",
+      "title": "Smallest Divisor",
+      "description": "Given an integer n >= 2, find its smallest divisor greater than 1.",
+      "inputDescription": "One integer n >= 2.",
+      "outputDescription": "Smallest integer d > 1 that divides n.",
+      "examples": [
+        "Input:\n15\n\nOutput:\n3"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // find smallest divisor > 1 using loop\n    return 0;\n}",
       "tests": [
-        { "input": "7", "expected": "Yes" },
-        { "input": "9", "expected": "No" }
+        { "input": "15", "expected": "3" },
+        { "input": "17", "expected": "17" }
       ]
     },
     {
       "id": 10,
-      "title": "Sum of First N Even Numbers",
-      "description": "Print the sum of the first N even natural numbers.\nExample: N = 4 → 2 + 4 + 6 + 8 = 20",
-      "inputDescription": "A single integer N.",
-      "outputDescription": "Sum.",
-      "examples": ["Input:\n4\nOutput:\n20"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // loop to accumulate even numbers\n    return 0;\n}",
+      "title": "Power of Two",
+      "description": "Given integer N, find the greatest integer x such that 2^x <= N. Print x and 2^x separated by a space. Do not use the pow function.",
+      "inputDescription": "One integer N >= 1.",
+      "outputDescription": "Two integers x and 2^x.",
+      "examples": [
+        "Input:\n5\n\nOutput:\n2 4"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N;\n    // find largest power of 2 not exceeding N\n    return 0;\n}",
       "tests": [
-        { "input": "4", "expected": "20" },
-        { "input": "1", "expected": "2" }
+        { "input": "5", "expected": "2 4" },
+        { "input": "1", "expected": "0 1" }
       ]
     }
   ]

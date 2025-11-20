@@ -1,130 +1,163 @@
 {
   "level": 1,
-  "title": "Basics of Printing in C",
-  "concept": "In this level you will learn the basic structure of a C program and how to print text using the printf() function. You will also practice escape characters, newline output and formatting. No input processing is required in most problems here.",
+  "title": "Basic Input and Simple Calculations",
+  "concept": "This level focuses on simple input and output in C, as well as very basic arithmetic operations: sums, squares, and digit extraction. Problems are adapted from Snakify-style beginner tasks.",
   "challenges": [
     {
       "id": 1,
-      "title": "Hello, C!",
-      "description": "Print exactly: Hello, C!",
-      "inputDescription": "No input.",
-      "outputDescription": "Hello, C!",
-      "examples": ["Input:\n(none)\n\nOutput:\nHello, C!"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    // print Hello, C!\n    return 0;\n}",
+      "title": "Sum of Three Numbers",
+      "description": "Read three integers (each on a separate line) and print their sum.",
+      "inputDescription": "Three integers, one per line.",
+      "outputDescription": "Single integer: the sum of the three numbers.",
+      "examples": [
+        "Input:\n2\n3\n4\n\nOutput:\n9"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int a, b, c;\n    // read a, b, c and print their sum\n    return 0;\n}",
       "tests": [
-        { "input": "", "expected": "Hello, C!" }
+        { "input": "2\n3\n4", "expected": "9" },
+        { "input": "0\n0\n0", "expected": "0" },
+        { "input": "10\n-5\n1", "expected": "6" }
       ]
     },
     {
       "id": 2,
-      "title": "Welcome Message",
-      "description": "Print: Welcome to C Programming",
-      "inputDescription": "No input.",
-      "outputDescription": "Welcome to C Programming",
-      "examples": ["Output:\nWelcome to C Programming"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    // print Welcome to C Programming\n    return 0;\n}",
+      "title": "Say Hi",
+      "description": "Read a name and print: Hi <name>",
+      "inputDescription": "One word: the name.",
+      "outputDescription": "Hi <name>",
+      "examples": [
+        "Input:\nRam\n\nOutput:\nHi Ram"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    char name[100];\n    // read name and print Hi <name>\n    return 0;\n}",
       "tests": [
-        { "input": "", "expected": "Welcome to C Programming" }
+        { "input": "Ram", "expected": "Hi Ram" },
+        { "input": "Kiran", "expected": "Hi Kiran" }
       ]
     },
     {
       "id": 3,
-      "title": "Print With Quotes",
-      "description": "Print: \"Learning C\" including the quotes.",
-      "inputDescription": "No input.",
-      "outputDescription": "\"Learning C\"",
-      "examples": ["Output:\n\"Learning C\""],
-      "starterCode": "#include <stdio.h>\nint main() {\n    // output must include the double quotes\n    return 0;\n}",
+      "title": "Square of a Number",
+      "description": "Read an integer and print its square.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "n*n",
+      "examples": [
+        "Input:\n5\n\nOutput:\n25"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // read n and print its square\n    return 0;\n}",
       "tests": [
-        { "input": "", "expected": "\"Learning C\"" }
+        { "input": "5", "expected": "25" },
+        { "input": "-4", "expected": "16" }
       ]
     },
     {
       "id": 4,
-      "title": "New Line Practice",
-      "description": "Print Hello and World on two separate lines.",
-      "inputDescription": "No input.",
-      "outputDescription": "Hello\nWorld",
-      "examples": ["Output:\nHello\nWorld"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    // print Hello and World on new lines\n    return 0;\n}",
+      "title": "Area of Right Triangle",
+      "description": "Read the base and height of a right-angled triangle (each on a new line) and print its area. Use formula: area = 0.5 * base * height. Print as a floating-point number.",
+      "inputDescription": "Two real numbers: base and height, one per line.",
+      "outputDescription": "Area as a decimal number.",
+      "examples": [
+        "Input:\n3\n4\n\nOutput:\n6"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    double b, h;\n    // read b, h and print 0.5*b*h\n    return 0;\n}",
       "tests": [
-        { "input": "", "expected": "Hello\nWorld" }
+        { "input": "3\n4", "expected": "6" },
+        { "input": "5\n2", "expected": "5" }
       ]
     },
     {
       "id": 5,
-      "title": "Hello <name>",
-      "description": "Read a single word and print: Hello <name>",
-      "inputDescription": "A single word.",
-      "outputDescription": "Hello <name>",
-      "examples": ["Input:\nRam\n\nOutput:\nHello Ram"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    char name[100];\n    // read name\n    // print Hello <name>\n    return 0;\n}",
+      "title": "Hello, Name!",
+      "description": "Read a name and print: Hello, <name>! There should be a comma after Hello, and no space before the exclamation mark.",
+      "inputDescription": "One word: the name.",
+      "outputDescription": "Hello, <name>!",
+      "examples": [
+        "Input:\nRam\n\nOutput:\nHello, Ram!"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    char name[100];\n    // read name and print Hello, <name>!\n    return 0;\n}",
       "tests": [
-        { "input": "Ram", "expected": "Hello Ram" },
-        { "input": "Krishna", "expected": "Hello Krishna" }
+        { "input": "Ram", "expected": "Hello, Ram!" },
+        { "input": "Kiran", "expected": "Hello, Kiran!" }
       ]
     },
     {
       "id": 6,
-      "title": "Print Two Words",
-      "description": "Read two strings and print them separated by a space.",
-      "inputDescription": "Two words separated by a space.",
-      "outputDescription": "<word1> <word2>",
-      "examples": ["Input:\nHello World\n\nOutput:\nHello World"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    char a[50], b[50];\n    // read input\n    // print a and b\n    return 0;\n}",
+      "title": "Apples for Students",
+      "description": "N students take K apples and share them equally. Print how many apples each student gets and how many remain in the basket.",
+      "inputDescription": "Two integers N and K (students and apples).",
+      "outputDescription": "Two integers: apples per student and remaining apples, separated by a space.",
+      "examples": [
+        "Input:\n3 14\n\nOutput:\n4 2"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, K;\n    // compute K/N and K%N\n    return 0;\n}",
       "tests": [
-        { "input": "Hello World", "expected": "Hello World" },
-        { "input": "C Language", "expected": "C Language" }
+        { "input": "3 14", "expected": "4 2" },
+        { "input": "5 10", "expected": "2 0" }
       ]
     },
     {
       "id": 7,
-      "title": "Print the Number",
-      "description": "Read an integer and print: You entered: <number>",
-      "inputDescription": "A single integer.",
-      "outputDescription": "You entered: <number>",
-      "examples": ["Input:\n9\n\nOutput:\nYou entered: 9"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // read n\n    // print You entered: <n>\n    return 0;\n}",
+      "title": "Previous and Next",
+      "description": "Given an integer n, print its previous and next numbers in the exact format: \nThe next number for the number n is <next>.\nThe previous number for the number n is <prev>.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Two lines of text as described.",
+      "examples": [
+        "Input:\n10\n\nOutput:\nThe next number for the number 10 is 11.\nThe previous number for the number 10 is 9."
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // print previous and next with exact formatting\n    return 0;\n}",
       "tests": [
-        { "input": "9", "expected": "You entered: 9" },
-        { "input": "-20", "expected": "You entered: -20" }
+        {
+          "input": "10",
+          "expected": "The next number for the number 10 is 11.\nThe previous number for the number 10 is 9."
+        },
+        {
+          "input": "0",
+          "expected": "The next number for the number 0 is 1.\nThe previous number for the number 0 is -1."
+        }
       ]
     },
     {
       "id": 8,
-      "title": "Sum Message",
-      "description": "Read two integers and print: Sum = <total>",
-      "inputDescription": "Two integers separated by a space.",
-      "outputDescription": "Sum = <total>",
-      "examples": ["Input:\n5 7\nOutput:\nSum = 12"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int a, b;\n    // read a and b\n    // print Sum = result\n    return 0;\n}",
+      "title": "Last Digit",
+      "description": "Given an integer n, print its last digit.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "One digit: the last decimal digit of n.",
+      "examples": [
+        "Input:\n123\n\nOutput:\n3"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // print last digit of n\n    return 0;\n}",
       "tests": [
-        { "input": "5 7", "expected": "Sum = 12" },
-        { "input": "10 -3", "expected": "Sum = 7" }
+        { "input": "123", "expected": "3" },
+        { "input": "-98", "expected": "8" }
       ]
     },
     {
       "id": 9,
-      "title": "A B C",
-      "description": "Print: A B C",
-      "inputDescription": "No input.",
-      "outputDescription": "A B C",
-      "examples": ["Output:\nA B C"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    // print A B C with spaces\n    return 0;\n}",
+      "title": "Tens Digit",
+      "description": "Given an integer n, print its tens digit (the second digit from the right).",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "One digit: the tens digit.",
+      "examples": [
+        "Input:\n123\n\nOutput:\n2"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // print tens digit of n\n    return 0;\n}",
       "tests": [
-        { "input": "", "expected": "A B C" }
+        { "input": "123", "expected": "2" },
+        { "input": "5", "expected": "0" }
       ]
     },
     {
       "id": 10,
-      "title": "Text Box",
-      "description": "Print exactly:\n*****\nHello\n*****",
-      "inputDescription": "No input.",
-      "outputDescription": "*****\nHello\n*****",
-      "examples": ["Output:\n*****\nHello\n*****"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    // print box of stars\n    return 0;\n}",
+      "title": "Sum of Digits (Three-Digit)",
+      "description": "Given a three-digit integer n, print the sum of its digits.",
+      "inputDescription": "Three-digit integer n (100 to 999 or -999 to -100).",
+      "outputDescription": "Integer: sum of digits.",
+      "examples": [
+        "Input:\n123\n\nOutput:\n6"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // sum digits of |n|\n    return 0;\n}",
       "tests": [
-        { "input": "", "expected": "*****\nHello\n*****" }
+        { "input": "123", "expected": "6" },
+        { "input": "-501", "expected": "6" }
       ]
     }
   ]

@@ -1,144 +1,149 @@
 {
   "level": 6,
-  "title": "Strings",
-  "concept": "This level builds core string manipulation skills in C. Focus on traversing characters using loops, avoiding strcpy/strcat/strlen unless specified. Pay attention to whitespace-sensitive output. Do not print extra messages.",
+  "title": "Strings and Character Operations",
+  "concept": "This level focuses on string indexing, slicing, searching, replacing and deleting characters, adapted from Snakify string tasks. Implement using character arrays in C.",
   "challenges": [
     {
       "id": 1,
-      "title": "String Length",
-      "description": "Read a string and print its length without using strlen().",
-      "inputDescription": "A single word or sentence.",
-      "outputDescription": "Length of string.",
-      "examples": ["Input:\nhello → Output:\n5"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    char s[200];\n    // compute length manually\n    return 0;\n}",
+      "title": "String Slices & Properties",
+      "description": "Given a string s, print on separate lines: (1) the third character, (2) the second to last character, (3) the first five characters, (4) all but the last two characters, (5) characters with even indices, (6) characters with odd indices, (7) the string in reverse, (8) every second character in reverse starting from the last, (9) the length of the string.",
+      "inputDescription": "One line: a string s (no spaces or with spaces, up to 200 characters).",
+      "outputDescription": "Nine lines according to the description.",
+      "examples": [
+        "Example: for input 'abcdef', you should output:\n c\n e\n abcde\n abcd\n ace\n bdf\n fedcba\n fdb\n 6"
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nint main() {\n    char s[205];\n    // read line and print slices as described\n    return 0;\n}",
       "tests": [
-        { "input": "hello", "expected": "5" },
-        { "input": "abcde", "expected": "5" }
+        { "input": "abcdef", "expected": "c\ne\nabcde\nabcd\nace\nbdf\nfedcba\nfdb\n6" }
       ]
     },
     {
       "id": 2,
-      "title": "Count Vowels",
-      "description": "Count vowels (a,e,i,o,u in both cases) in the given string.",
-      "inputDescription": "A single string.",
-      "outputDescription": "Number of vowels.",
-      "examples": ["Input:\nprogram → Output:\n2"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    char s[200];\n    // count vowels\n    return 0;\n}",
-      "tests": [
-        { "input": "program", "expected": "2" },
-        { "input": "AEIOU", "expected": "5" }
-      ]
-    },
-    {
-      "id": 3,
-      "title": "Count Consonants",
-      "description": "Read a string and count consonants (alphabet but not vowel).",
-      "inputDescription": "A single string.",
-      "outputDescription": "Number of consonants.",
-      "examples": ["Input:\ncode → Output:\n2"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    char s[200];\n    // count consonants\n    return 0;\n}",
-      "tests": [
-        { "input": "code", "expected": "2" },
-        { "input": "xyz", "expected": "3" }
-      ]
-    },
-    {
-      "id": 4,
-      "title": "Palindrome Check",
-      "description": "Print Yes if the string is palindrome else No.",
-      "inputDescription": "A single string (no spaces).",
-      "outputDescription": "Yes | No",
-      "examples": ["Input:\nmadam → Output:\nYes"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    char s[200];\n    // check palindrome\n    return 0;\n}",
-      "tests": [
-        { "input": "madam", "expected": "Yes" },
-        { "input": "hello", "expected": "No" }
-      ]
-    },
-    {
-      "id": 5,
-      "title": "Copy String (manual)",
-      "description": "Copy string S1 to S2 without using strcpy(). Print S2.",
-      "inputDescription": "One string.",
-      "outputDescription": "Copied string.",
-      "examples": ["Input:\nhello → Output:\nhello"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    char s1[200], s2[200];\n    // copy manually\n    return 0;\n}",
-      "tests": [
-        { "input": "hello", "expected": "hello" },
-        { "input": "coding", "expected": "coding" }
-      ]
-    },
-    {
-      "id": 6,
-      "title": "Concatenate (manual)",
-      "description": "Concatenate two strings without using strcat().",
-      "inputDescription": "Two strings S1 and S2.",
-      "outputDescription": "S1S2",
-      "examples": ["Input:\nHello World → Output:\nHelloWorld"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    char s1[200], s2[200];\n    // concatenate manually\n    return 0;\n}",
-      "tests": [
-        { "input": "Hello World", "expected": "HelloWorld" },
-        { "input": "abc xyz", "expected": "abcxyz" }
-      ]
-    },
-    {
-      "id": 7,
-      "title": "First Occurrence",
-      "description": "Print the index of first occurrence of character X in string S. If not found print -1.",
-      "inputDescription": "String S and character X.",
-      "outputDescription": "Index or -1.",
-      "examples": ["Input:\nbanana\na → Output:\n1"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    char s[200], x;\n    // find first index\n    return 0;\n}",
-      "tests": [
-        { "input": "banana\na", "expected": "1" },
-        { "input": "hello\nx", "expected": "-1" }
-      ]
-    },
-    {
-      "id": 8,
-      "title": "Last Occurrence",
-      "description": "Print index of last occurrence of character X.",
-      "inputDescription": "String S and character X.",
-      "outputDescription": "Index or -1.",
-      "examples": ["Input:\nbanana\na → Output:\n5"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    char s[200], x;\n    // find last index\n    return 0;\n}",
-      "tests": [
-        { "input": "banana\na", "expected": "5" },
-        { "input": "hello\nl", "expected": "3" }
-      ]
-    },
-    {
-      "id": 9,
-      "title": "Word Count",
-      "description": "Count total words in a sentence. Words are separated by spaces.",
-      "inputDescription": "A full sentence.",
-      "outputDescription": "Number of words.",
-      "examples": ["Input:\nHello world from C → Output:\n4"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    char s[200];\n    // count words using spaces\n    return 0;\n}",
+      "title": "Word Count in Sentence",
+      "description": "Given a string consisting of words separated by spaces, determine how many words it has.",
+      "inputDescription": "One line: words separated by spaces.",
+      "outputDescription": "Single integer: number of words.",
+      "examples": [
+        "Input:\nHello world from C\n\nOutput:\n4"
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nint main() {\n    char s[205];\n    // count words separated by spaces\n    return 0;\n}",
       "tests": [
         { "input": "Hello world from C", "expected": "4" },
         { "input": "One", "expected": "1" }
       ]
     },
     {
-      "id": 10,
-      "title": "Character Frequency",
-      "description": "Count how many times each lowercase alphabet a–z appears. Print 26 lines a:x",
-      "inputDescription": "A string.",
-      "outputDescription": "a:x, b:y ... z:k (26 lines)",
+      "id": 3,
+      "title": "Swap Two Words",
+      "description": "Given a string consisting of exactly two words separated by a space, print a new string with the second word first and the first word second.",
+      "inputDescription": "One line: two words separated by a single space.",
+      "outputDescription": "Two words in swapped order.",
       "examples": [
-        "Input:\napple\nOutput:\na:1\nb:0\nc:0\n...\np:2\n...\nz:0"
+        "Input:\nhello world\n\nOutput:\nworld hello"
       ],
-      "starterCode": "#include <stdio.h>\nint main() {\n    char s[200];\n    int freq[26]={0};\n    // count a-z frequency\n    return 0;\n}",
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nint main() {\n    char s[205];\n    // split into two words and swap\n    return 0;\n}",
       "tests": [
-        {
-          "input": "apple",
-          "expected": "a:1\nb:0\nc:0\nd:0\ne:1\nf:0\ng:0\nh:0\ni:0\nj:0\nk:0\nl:1\nm:0\nn:0\no:0\np:2\nq:0\nr:0\ns:0\nt:0\nu:0\nv:0\nw:0\nx:0\ny:0\nz:0"
-        },
-        {
-          "input": "aaa",
-          "expected": "a:3\nb:0\nc:0\nd:0\ne:0\nf:0\ng:0\nh:0\ni:0\nj:0\nk:0\nl:0\nm:0\nn:0\no:0\np:0\nq:0\nr:0\ns:0\nt:0\nu:0\nv:0\nw:0\nx:0\ny:0\nz:0"
-        }
+        { "input": "hello world", "expected": "world hello" },
+        { "input": "Ram Kiran", "expected": "Kiran Ram" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "First and Last f",
+      "description": "Given a string, print the index of the first and the last occurrence of the letter 'f'. Indices are 0-based. If 'f' occurs only once, print its index only once. If 'f' does not occur, print nothing.",
+      "inputDescription": "One line: string s.",
+      "outputDescription": "Either one or two integers separated by a space, or empty output.",
+      "examples": [
+        "Input:\ncoffee\n\nOutput:\n1 4"
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nint main() {\n    char s[205];\n    // find first and last index of 'f'\n    return 0;\n}",
+      "tests": [
+        { "input": "coffee", "expected": "1 4" },
+        { "input": "abc", "expected": "" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Second Occurrence of f",
+      "description": "Given a string, print the index of the second occurrence of 'f'. If the string contains 'f' only once, print -1. If it does not contain 'f', print -2.",
+      "inputDescription": "One line: string s.",
+      "outputDescription": "One integer: index or -1 or -2.",
+      "examples": [
+        "Input:\ncoffee\n\nOutput:\n4"
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nint main() {\n    char s[205];\n    // find second occurrence of 'f'\n    return 0;\n}",
+      "tests": [
+        { "input": "coffee", "expected": "4" },
+        { "input": "fast", "expected": "-1" },
+        { "input": "abc", "expected": "-2" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Remove Between First and Last h",
+      "description": "Given a string in which letter 'h' occurs at least twice, remove from that string the first occurrence of 'h', the last occurrence of 'h' and all characters between them.",
+      "inputDescription": "One line: string s containing at least two 'h'.",
+      "outputDescription": "Modified string.",
+      "examples": [
+        "Input:\nabchxyzha\n\nOutput:\naba"
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nint main() {\n    char s[205];\n    // remove between first and last 'h' (including them)\n    return 0;\n}",
+      "tests": [
+        { "input": "abchxyzha", "expected": "aba" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Reverse Between First and Last h",
+      "description": "Given a string in which letter 'h' occurs at least twice, reverse the sequence of characters between the first and last appearance of 'h' (do not remove any characters).",
+      "inputDescription": "One line: string s containing at least two 'h'.",
+      "outputDescription": "New string with the middle segment reversed.",
+      "examples": [
+        "Input:\nabchxyzha\n\nOutput:\nahzyxh cba (example will differ depending on exact string)"
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nint main() {\n    char s[205];\n    // reverse characters between first and last 'h'\n    return 0;\n}",
+      "tests": []
+    },
+    {
+      "id": 8,
+      "title": "Replace 1 With one",
+      "description": "Given a string, replace every digit '1' with the word \"one\".",
+      "inputDescription": "One line: string s.",
+      "outputDescription": "Modified string.",
+      "examples": [
+        "Input:\nI have 1 apple\n\nOutput:\nI have one apple"
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nint main() {\n    char s[205];\n    // replace every '1' with \"one\"\n    return 0;\n}",
+      "tests": [
+        { "input": "1", "expected": "one" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Remove @ Characters",
+      "description": "Given a string, remove all '@' characters.",
+      "inputDescription": "One line: string s.",
+      "outputDescription": "Modified string without '@'.",
+      "examples": [
+        "Input:\na@b@c\n\nOutput:\nabc"
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nint main() {\n    char s[205];\n    // copy all chars except '@'\n    return 0;\n}",
+      "tests": [
+        { "input": "a@b@c", "expected": "abc" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Replace Middle h With H",
+      "description": "Given a string, replace every occurrence of 'h' by 'H', except for the first and the last 'h'.",
+      "inputDescription": "One line: string s with at least two 'h'.",
+      "outputDescription": "Modified string.",
+      "examples": [
+        "Input:\nhihhih\n\nOutput:\nhiHHih"
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nint main() {\n    char s[205];\n    // replace middle 'h' with 'H'\n    return 0;\n}",
+      "tests": [
+        { "input": "hihhih", "expected": "hiHHih" }
       ]
     }
   ]

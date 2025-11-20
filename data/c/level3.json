@@ -1,142 +1,158 @@
 {
   "level": 3,
-  "title": "Conditions (if / else)",
-  "concept": "This level teaches decision making in C using if, else if and else. Focus on correct relational operators (>, <, ==, !=, >=, <=) and proper formatting of output WITHOUT extra words or spaces. Pay attention to uppercase/lowercase in print statements.",
+  "title": "Conditions and Chess Problems",
+  "concept": "This level focuses on if/else logic and classical Snakify-style condition problems: equality counting, leap year, and chess piece moves.",
   "challenges": [
     {
       "id": 1,
-      "title": "Positive or Negative",
-      "description": "Read an integer and print Positive if number > 0, Negative if number < 0, and Zero otherwise.",
-      "inputDescription": "One integer.",
-      "outputDescription": "Positive | Negative | Zero",
-      "examples": ["Input:\n5 → Output:\nPositive", "Input:\n-8 → Output:\nNegative"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // read n and use conditions\n    return 0;\n}",
+      "title": "How Many are Equal?",
+      "description": "Given three integers, print 3 if all of them are equal, 2 if exactly two of them are equal, or 0 if all numbers are different.",
+      "inputDescription": "Three integers a, b, c.",
+      "outputDescription": "3, 2, or 0.",
+      "examples": [
+        "Input:\n1 1 1\n\nOutput:\n3"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int a, b, c;\n    // print 3, 2 or 0 depending on equality\n    return 0;\n}",
       "tests": [
-        { "input": "5", "expected": "Positive" },
-        { "input": "-2", "expected": "Negative" },
-        { "input": "0", "expected": "Zero" }
+        { "input": "1 1 1", "expected": "3" },
+        { "input": "1 1 2", "expected": "2" },
+        { "input": "1 2 3", "expected": "0" }
       ]
     },
     {
       "id": 2,
-      "title": "Even or Odd",
-      "description": "Print Even if the number is divisible by 2 else print Odd.",
-      "inputDescription": "One integer.",
-      "outputDescription": "Even | Odd",
-      "examples": ["Input:\n7 → Output:\nOdd"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // print Even or Odd\n    return 0;\n}",
+      "title": "Rook Move",
+      "description": "Given coordinates of two different squares on a chessboard, determine whether a rook can move from the first to the second in one move.",
+      "inputDescription": "Four integers x1, y1, x2, y2 (1 to 8).",
+      "outputDescription": "YES if rook can move in one move, otherwise NO.",
+      "examples": [
+        "Input:\n1 1 1 8\n\nOutput:\nYES"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int x1, y1, x2, y2;\n    // rook: same row or same column\n    return 0;\n}",
       "tests": [
-        { "input": "7", "expected": "Odd" },
-        { "input": "12", "expected": "Even" }
+        { "input": "1 1 1 8", "expected": "YES" },
+        { "input": "1 1 8 8", "expected": "NO" }
       ]
     },
     {
       "id": 3,
-      "title": "Maximum of Two",
-      "description": "Read two integers and print the bigger one.",
-      "inputDescription": "Two integers.",
-      "outputDescription": "The greater number.",
-      "examples": ["Input:\n8 5 → Output:\n8"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int a, b;\n    // print max\n    return 0;\n}",
+      "title": "Same Color Cells",
+      "description": "Given two squares of a chessboard, determine if they have the same color.",
+      "inputDescription": "Four integers x1, y1, x2, y2 (1 to 8).",
+      "outputDescription": "YES if same color, otherwise NO.",
+      "examples": [
+        "Input:\n1 1 2 2\n\nOutput:\nYES"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int x1, y1, x2, y2;\n    // cells are same color if (x1 + y1) % 2 == (x2 + y2) % 2\n    return 0;\n}",
       "tests": [
-        { "input": "8 5", "expected": "8" },
-        { "input": "2 7", "expected": "7" }
+        { "input": "1 1 2 2", "expected": "YES" },
+        { "input": "1 1 1 2", "expected": "NO" }
       ]
     },
     {
       "id": 4,
-      "title": "Minimum of Three",
-      "description": "Read three integers and print the smallest.",
-      "inputDescription": "Three integers.",
-      "outputDescription": "Smallest number.",
-      "examples": ["Input:\n4 1 9 → Output:\n1"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int a, b, c;\n    // find smallest\n    return 0;\n}",
+      "title": "King Move",
+      "description": "Given two different chessboard cells, determine whether a king can move from the first to the second in one move.",
+      "inputDescription": "Four integers x1, y1, x2, y2.",
+      "outputDescription": "YES if king can move in one move, otherwise NO.",
+      "examples": [
+        "Input:\n4 4 5 5\n\nOutput:\nYES"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int x1, y1, x2, y2;\n    // king: |dx| <= 1 and |dy| <= 1 and not same cell\n    return 0;\n}",
       "tests": [
-        { "input": "4 1 9", "expected": "1" },
-        { "input": "7 7 5", "expected": "5" }
+        { "input": "4 4 5 5", "expected": "YES" },
+        { "input": "4 4 6 6", "expected": "NO" }
       ]
     },
     {
       "id": 5,
-      "title": "Absolute Value",
-      "description": "Print the absolute value of the integer.",
-      "inputDescription": "One integer.",
-      "outputDescription": "Absolute value of integer.",
-      "examples": ["Input:\n-6 → Output:\n6"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // absolute value\n    return 0;\n}",
+      "title": "Bishop Move",
+      "description": "Given two chessboard cells, determine whether a bishop can move from the first to the second in one move.",
+      "inputDescription": "Four integers x1, y1, x2, y2.",
+      "outputDescription": "YES if bishop can move in one move, otherwise NO.",
+      "examples": [
+        "Input:\n1 1 3 3\n\nOutput:\nYES"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int x1, y1, x2, y2;\n    // bishop: |dx| == |dy|\n    return 0;\n}",
       "tests": [
-        { "input": "-6", "expected": "6" },
-        { "input": "10", "expected": "10" }
+        { "input": "1 1 3 3", "expected": "YES" },
+        { "input": "1 1 1 3", "expected": "NO" }
       ]
     },
     {
       "id": 6,
-      "title": "Divisible by 5 and 11",
-      "description": "Print Yes if the number is divisible by BOTH 5 and 11 else print No.",
-      "inputDescription": "One integer.",
-      "outputDescription": "Yes | No",
-      "examples": ["Input:\n55 → Output:\nYes"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // check divisibility by 5 and 11\n    return 0;\n}",
+      "title": "Queen Move",
+      "description": "Given two chessboard cells, determine whether a queen can move from the first to the second in one move.",
+      "inputDescription": "Four integers x1, y1, x2, y2.",
+      "outputDescription": "YES if queen can move in one move, otherwise NO.",
+      "examples": [
+        "Input:\n1 1 1 8\n\nOutput:\nYES"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int x1, y1, x2, y2;\n    // queen: rook move OR bishop move\n    return 0;\n}",
       "tests": [
-        { "input": "55", "expected": "Yes" },
-        { "input": "22", "expected": "No" }
+        { "input": "1 1 1 8", "expected": "YES" },
+        { "input": "1 1 2 3", "expected": "NO" }
       ]
     },
     {
       "id": 7,
-      "title": "Leap Year",
-      "description": "Print Yes if the year is a leap year else print No.",
-      "inputDescription": "Year number.",
-      "outputDescription": "Yes | No",
-      "examples": ["Input:\n2020 → Output:\nYes"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int y;\n    // leap year condition\n    return 0;\n}",
+      "title": "Knight Move",
+      "description": "Given two chessboard cells, determine whether a knight can move from the first to the second in one move.",
+      "inputDescription": "Four integers x1, y1, x2, y2.",
+      "outputDescription": "YES if knight can move in one move, otherwise NO.",
+      "examples": [
+        "Input:\n1 1 2 3\n\nOutput:\nYES"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int x1, y1, x2, y2;\n    // knight: |dx| == 2 and |dy| == 1 OR |dx| == 1 and |dy| == 2\n    return 0;\n}",
       "tests": [
-        { "input": "2020", "expected": "Yes" },
-        { "input": "1900", "expected": "No" }
+        { "input": "1 1 2 3", "expected": "YES" },
+        { "input": "1 1 3 3", "expected": "NO" }
       ]
     },
     {
       "id": 8,
-      "title": "Grade Calculator",
-      "description": "Given percentage marks, print the grade: A if >=90, B if >=75, C if >=60, D if >=40 else Fail.",
-      "inputDescription": "A single integer percentage.",
-      "outputDescription": "A | B | C | D | Fail",
-      "examples": ["Input:\n78 → Output:\nB"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int p;\n    // decide grade\n    return 0;\n}",
+      "title": "Chocolate Bar Split",
+      "description": "A chocolate bar is n × m pieces. Determine if it can be split into two rectangles so that one part has exactly k pieces.",
+      "inputDescription": "Three integers n, m, k.",
+      "outputDescription": "YES if such a split is possible, otherwise NO.",
+      "examples": [
+        "Input:\n4 2 6\n\nOutput:\nYES"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int n, m, k;\n    // check if k is a multiple of n or m and less than n*m\n    return 0;\n}",
       "tests": [
-        { "input": "95", "expected": "A" },
-        { "input": "78", "expected": "B" },
-        { "input": "32", "expected": "Fail" }
+        { "input": "4 2 6", "expected": "YES" },
+        { "input": "4 2 7", "expected": "NO" }
       ]
     },
     {
       "id": 9,
-      "title": "Character Type",
-      "description": "Print Uppercase if A–Z, Lowercase if a–z, Digit if 0–9 else Symbol.",
-      "inputDescription": "A single character.",
-      "outputDescription": "Uppercase | Lowercase | Digit | Symbol",
-      "examples": ["Input:\nG → Output:\nUppercase"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    char c;\n    // check character category\n    return 0;\n}",
+      "title": "Leap Year",
+      "description": "Given a year number, print LEAP if it's a leap year according to Gregorian rules, otherwise print COMMON.",
+      "inputDescription": "Integer year.",
+      "outputDescription": "LEAP or COMMON (all caps).",
+      "examples": [
+        "Input:\n2000\n\nOutput:\nLEAP"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int y;\n    // leap year logic: divisible by 4 and not by 100, or divisible by 400\n    return 0;\n}",
       "tests": [
-        { "input": "G", "expected": "Uppercase" },
-        { "input": "p", "expected": "Lowercase" },
-        { "input": "8", "expected": "Digit" },
-        { "input": "@", "expected": "Symbol" }
+        { "input": "2000", "expected": "LEAP" },
+        { "input": "1900", "expected": "COMMON" },
+        { "input": "2020", "expected": "LEAP" }
       ]
     },
     {
       "id": 10,
-      "title": "Menu Driven Operation",
-      "description": "Input: 2 numbers and an operator (+, -, *, /). Perform the operation and print the result.",
-      "inputDescription": "a b op",
-      "outputDescription": "Result of expression.",
-      "examples": ["Input:\n5 3 + → Output:\n8"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int a, b;\n    char op;\n    // read values & operator then compute\n    return 0;\n}",
+      "title": "Min and Max Check (Extra Condition Practice)",
+      "description": "Given three integers, print the smallest and the largest, separated by a space.",
+      "inputDescription": "Three integers a, b, c.",
+      "outputDescription": "Two integers: min and max.",
+      "examples": [
+        "Input:\n3 7 5\n\nOutput:\n3 7"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int a, b, c;\n    // find and print min and max\n    return 0;\n}",
       "tests": [
-        { "input": "5 3 +", "expected": "8" },
-        { "input": "10 4 -", "expected": "6" },
-        { "input": "7 8 *", "expected": "56" },
-        { "input": "8 2 /", "expected": "4" }
+        { "input": "3 7 5", "expected": "3 7" },
+        { "input": "10 10 10", "expected": "10 10" }
       ]
     }
   ]

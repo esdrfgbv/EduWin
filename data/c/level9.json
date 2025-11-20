@@ -1,137 +1,127 @@
 {
   "level": 9,
-  "title": "Structures & Mixed Concepts",
-  "concept": "This level introduces structures in C and mixes previously learned concepts such as arrays, loops, and functions to handle structured data.",
+  "title": "Maps and Frequency Counting",
+  "concept": "This level introduces dictionary-like problems: synonym dictionaries, vote counting, word frequency, permissions. Implement in C using arrays of structs or parallel arrays.",
   "challenges": [
     {
       "id": 1,
-      "title": "Student Structure",
-      "description": "Define a struct Student with name (string) and marks (int). Read one student and print name and marks in one line separated by space.",
-      "inputDescription": "name and marks.",
-      "outputDescription": "<name> <marks>",
-      "examples": ["Input:\nRam\n90\nOutput:\nRam 90"],
-      "starterCode": "#include <stdio.h>\nstruct Student {\n    char name[100];\n    int marks;\n};\nint main() {\n    struct Student s;\n    // read and print\n    return 0;\n}\n",
-      "tests": [
-        { "input": "Ram\n90", "expected": "Ram 90" },
-        { "input": "Kiran\n75", "expected": "Kiran 75" }
-      ]
+      "title": "Synonyms",
+      "description": "You are given N pairs of synonyms (word1 word2). Then you are given one more word. Print its synonym from the pairs.",
+      "inputDescription": "Integer N, then N lines each containing two words. Then one more word.",
+      "outputDescription": "The synonym of the given word.",
+      "examples": [
+        "Input:\n3\nbig large\nsmart clever\nfast quick\nclever\n\nOutput:\nsmart"
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nstruct Pair { char a[50]; char b[50]; };\nint main() {\n    int N; struct Pair p[200]; char query[50];\n    // read pairs and query, then find synonym\n    return 0;\n}\n",
+      "tests": []
     },
     {
       "id": 2,
-      "title": "Array of Students - Highest Marks",
-      "description": "Read N students (name and marks). Print the name of student with highest marks.",
-      "inputDescription": "N then name & marks of each.",
-      "outputDescription": "Name with highest marks.",
-      "examples": ["Input:\n2\nRam\n90\nKiran\n95\nOutput:\nKiran"],
-      "starterCode": "#include <stdio.h>\nstruct Student { char name[100]; int marks; };\nint main() {\n    int n; struct Student s[200];\n    // find highest marks\n    return 0;\n}\n",
-      "tests": [
-        { "input": "2\nRam\n90\nKiran\n95", "expected": "Kiran" },
-        { "input": "3\nA\n50\nB\n80\nC\n75", "expected": "B" }
-      ]
+      "title": "Election Votes",
+      "description": "You are given records of candidates and vote counts for each state. For each candidate, sum total votes and print results sorted by candidate name.",
+      "inputDescription": "Integer N (number of records), then N lines: candidateName votes.",
+      "outputDescription": "For each candidate, one line: name totalVotes, sorted alphabetically by name.",
+      "examples": [
+        "Example: if input has two lines 'Alice 10' and 'Bob 5', output:\nAlice 10\nBob 5"
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nstruct Cand { char name[50]; int votes; };\nint main() {\n    int N;\n    // accumulate votes per candidate, then sort by name and print\n    return 0;\n}\n",
+      "tests": []
     },
     {
       "id": 3,
-      "title": "Point Structure Distance",
-      "description": "Define a struct Point with x,y (ints). Read two points and print Manhattan distance |x1-x2|+|y1-y2|.",
-      "inputDescription": "x1 y1 x2 y2",
-      "outputDescription": "Distance as integer.",
-      "examples": ["Input:\n1 2 4 6\nOutput:\n7"],
-      "starterCode": "#include <stdio.h>\nstruct Point { int x, y; };\nint main() {\n    struct Point p1, p2;\n    // compute manhattan distance\n    return 0;\n}\n",
-      "tests": [
-        { "input": "1 2 4 6", "expected": "7" },
-        { "input": "0 0 3 3", "expected": "6" }
-      ]
+      "title": "Most Frequent Word",
+      "description": "Given n lines of text, find the word that occurs most often. If there are many, print the lexicographically smallest among them.",
+      "inputDescription": "Integer n followed by n lines of text.",
+      "outputDescription": "Single word: most frequent (with smallest lexicographic order if tie).",
+      "examples": [
+        "Example: text 'hi hi what is hi' -> hi"
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nstruct Word { char w[50]; int cnt; };\nint main() {\n    int n;\n    // build frequency table of words, then choose best\n    return 0;\n}\n",
+      "tests": []
     },
     {
       "id": 4,
-      "title": "Complex Number Addition",
-      "description": "Define struct Complex{int real, imag;}. Read two complex numbers and print their sum in format a+bi (no spaces).",
-      "inputDescription": "r1 i1 r2 i2",
-      "outputDescription": "Sum as a+bi.",
-      "examples": ["Input:\n1 2 3 4\nOutput:\n4+6i"],
-      "starterCode": "#include <stdio.h>\nstruct Complex { int real, imag; };\nint main() {\n    struct Complex c1, c2, sum;\n    // compute sum\n    return 0;\n}\n",
-      "tests": [
-        { "input": "1 2 3 4", "expected": "4+6i" },
-        { "input": "0 5 2 -5", "expected": "2+0i" }
-      ]
+      "title": "File Access Rights",
+      "description": "You are given N files with allowed operations (read R, write W, execute X). Then M queries of operations on files. For each query, print OK if allowed, otherwise Access denied.",
+      "inputDescription": "Integer N, then N lines: fileName and allowed ops (e.g., 'file1 R W'). Then integer M and M lines: operation fileName.",
+      "outputDescription": "For each query, one line: OK or Access denied.",
+      "examples": [
+        "Example only: depends on input mapping."
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nstruct File { char name[50]; char ops[10]; };\nint main() {\n    int N, M;\n    // store file permissions and answer queries\n    return 0;\n}\n",
+      "tests": []
     },
     {
       "id": 5,
-      "title": "Employee with Max Salary",
-      "description": "struct Emp {char name[100]; int salary;}. Print the name of employee with max salary.",
-      "inputDescription": "N, then N lines: name salary.",
-      "outputDescription": "Name with highest salary.",
-      "examples": ["Input:\n2\nRam\n50000\nKiran\n60000\nOutput:\nKiran"],
-      "starterCode": "#include <stdio.h>\nstruct Emp { char name[100]; int salary; };\nint main() {\n    int n; struct Emp e[200];\n    // find max salary\n    return 0;\n}\n",
-      "tests": [
-        { "input": "2\nRam\n50000\nKiran\n60000", "expected": "Kiran" },
-        { "input": "3\nA\n100\nB\n200\nC\n150", "expected": "B" }
-      ]
+      "title": "Cities and Countries",
+      "description": "Given a list of countries and their cities, then given Q city names, print the country of each city.",
+      "inputDescription": "Integer N, then for each country: countryName, integer k, then k city names. Then integer Q and Q city names.",
+      "outputDescription": "For each query city, print its country.",
+      "examples": [
+        "Example: if India has city Delhi and query is Delhi -> India."
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nstruct City { char name[50]; char country[50]; };\nint main() {\n    int N, Q;\n    // read mapping city->country, then answer queries\n    return 0;\n}\n",
+      "tests": []
     },
     {
       "id": 6,
-      "title": "Mixed: Even Count and Sum",
-      "description": "Read N and N integers in array. Print count of even numbers and their sum separated by space.",
-      "inputDescription": "N and N integers.",
-      "outputDescription": "<count> <sum>",
-      "examples": ["Input:\n5\n1 2 3 4 6\nOutput:\n3 12"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n, arr[200];\n    // count even and sum\n    return 0;\n}\n",
-      "tests": [
-        { "input": "5\n1 2 3 4 6", "expected": "3 12" },
-        { "input": "4\n1 3 5 7", "expected": "0 0" }
-      ]
+      "title": "Word Frequencies Sorted",
+      "description": "Given n lines of text, print all words sorted by descending frequency; words with same frequency should be sorted lexicographically ascending.",
+      "inputDescription": "Integer n followed by n lines.",
+      "outputDescription": "Each word on its own line, sorted by the rule.",
+      "examples": [
+        "Example: 'hi hi what is is' -> hi, is, what (one per line)."
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nstruct Word { char w[50]; int cnt; };\nint main() {\n    int n;\n    // count frequencies and sort by (-cnt, word)\n    return 0;\n}\n",
+      "tests": []
     },
     {
       "id": 7,
-      "title": "String + Number Mix",
-      "description": "Read a name and an age and print: name-age (dash between, no spaces).",
-      "inputDescription": "name and age.",
-      "outputDescription": "name-age",
-      "examples": ["Input:\nRam\n20\nOutput:\nRam-20"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    char name[100]; int age;\n    // read and print name-age\n    return 0;\n}\n",
-      "tests": [
-        { "input": "Ram\n20", "expected": "Ram-20" },
-        { "input": "Kiran\n18", "expected": "Kiran-18" }
-      ]
+      "title": "English-Latin to Latin-English",
+      "description": "You are given an English-Latin dictionary. For each Latin word, build a list of English words that have it as a translation. Print the resulting Latin-English dictionary sorted lexicographically by Latin word.",
+      "inputDescription": "Integer N, then N lines: 'english - latin1,latin2,...'.",
+      "outputDescription": "For each Latin word: 'latin - english1,english2,...' sorted lexicographically.",
+      "examples": [
+        "Example based on Snakify 'Latin-English dictionary' problem."
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nstruct Map { char key[50]; char vals[500]; };\nint main() {\n    int N;\n    // parse pairs, invert mapping, sort and print\n    return 0;\n}\n",
+      "tests": []
     },
     {
       "id": 8,
-      "title": "Struct and Function",
-      "description": "Create a function that takes struct Student and returns 1 if marks >= 50 else 0. Print Pass or Fail.",
-      "inputDescription": "name and marks.",
-      "outputDescription": "Pass | Fail",
-      "examples": ["Input:\nRam\n55\nOutput:\nPass"],
-      "starterCode": "#include <stdio.h>\nstruct Student { char name[100]; int marks; };\nint isPass(struct Student s) {\n    // return 1 or 0\n}\nint main() {\n    struct Student s;\n    // read and print Pass/Fail\n    return 0;\n}\n",
-      "tests": [
-        { "input": "Ram\n55", "expected": "Pass" },
-        { "input": "Kiran\n40", "expected": "Fail" }
-      ]
+      "title": "Country With Most Words",
+      "description": "Given N lines of 'country word' pairs, find the country that appears most often. If tie, print lexicographically smallest country.",
+      "inputDescription": "Integer N followed by N lines: countryName word.",
+      "outputDescription": "One country name.",
+      "examples": [
+        "Example only; similar logic to most frequent word but for countries."
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nstruct Cnt { char name[50]; int cnt; };\nint main() {\n    int N;\n    // count occurrences per country and select\n    return 0;\n}\n",
+      "tests": []
     },
     {
       "id": 9,
-      "title": "Array of Structs - Average Marks",
-      "description": "Read N students with marks and print average marks (integer division allowed).",
-      "inputDescription": "N, then N lines: name marks.",
-      "outputDescription": "Average marks.",
-      "examples": ["Input:\n2\nA\n80\nB\n90\nOutput:\n85"],
-      "starterCode": "#include <stdio.h>\nstruct Student { char name[100]; int marks; };\nint main() {\n    int n; struct Student s[200];\n    // compute average\n    return 0;\n}\n",
-      "tests": [
-        { "input": "2\nA\n80\nB\n90", "expected": "85" },
-        { "input": "3\nA\n60\nB\n60\nC\n60", "expected": "60" }
-      ]
+      "title": "Student Scores Map",
+      "description": "Given N lines of 'name score', sum scores per student and print each student with total score, sorted by name.",
+      "inputDescription": "Integer N followed by N lines: name and integer score.",
+      "outputDescription": "Lines in format 'name totalScore', sorted by name.",
+      "examples": [
+        "Example: Ram 10, Kiran 5, Ram 7 -> Ram 17, Kiran 5."
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nstruct Stu { char name[50]; int sum; };\nint main() {\n    int N;\n    // accumulate scores and sort by name\n    return 0;\n}\n",
+      "tests": []
     },
     {
       "id": 10,
-      "title": "Mix: Struct + Max + Average",
-      "description": "Read N students. Print name of topper and then average marks on next line.",
-      "inputDescription": "N then name & marks.",
-      "outputDescription": "Line1: topper name\nLine2: average marks",
-      "examples": ["Input:\n2\nA\n80\nB\n90\nOutput:\nB\n85"],
-      "starterCode": "#include <stdio.h>\nstruct Student { char name[100]; int marks; };\nint main() {\n    int n; struct Student s[200];\n    // topper + average\n    return 0;\n}\n",
-      "tests": [
-        { "input": "2\nA\n80\nB\n90", "expected": "B\n85" },
-        { "input": "3\nA\n50\nB\n70\nC\n90", "expected": "C\n70" }
-      ]
+      "title": "Word Synonym Replacement",
+      "description": "Given a dictionary of synonym pairs and then a sentence, replace each word in the sentence by its synonym if present, otherwise keep it unchanged.",
+      "inputDescription": "Integer N, then N lines of 'a b' synonyms, then one line sentence.",
+      "outputDescription": "Sentence with synonyms replaced.",
+      "examples": [
+        "Example: synonyms: 'big large'; sentence: 'big cat' -> 'large cat'."
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nstruct Pair { char a[50]; char b[50]; };\nint main() {\n    int N;\n    // read pairs, then sentence, replace words if found in pairs\n    return 0;\n}\n",
+      "tests": []
     }
   ]
 }

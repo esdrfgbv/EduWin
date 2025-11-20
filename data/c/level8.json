@@ -1,136 +1,142 @@
 {
   "level": 8,
-  "title": "Pointers",
-  "concept": "This level introduces pointers in C: pointer declaration, dereferencing, passing by reference to functions, and simple pointer arithmetic with arrays.",
+  "title": "Sets and Membership Checking",
+  "concept": "This level works with set-like operations: unique elements, intersections, and membership tracking, implemented in C using arrays and loops. Problems are adapted from Snakify set tasks.",
   "challenges": [
     {
       "id": 1,
-      "title": "Pointer to Integer",
-      "description": "Use a pointer to read an integer and print it using dereferencing.",
-      "inputDescription": "One integer.",
-      "outputDescription": "Same integer.",
-      "examples": ["Input:\n7\nOutput:\n7"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n; int *p;\n    // use pointer p to read and print\n    return 0;\n}\n",
+      "title": "Distinct Numbers Count",
+      "description": "Given N and a list of N integers, determine how many distinct numbers there are.",
+      "inputDescription": "Integer N followed by N integers.",
+      "outputDescription": "Single integer: number of distinct values.",
+      "examples": [
+        "Input:\n5\n1 2 2 3 1\n\nOutput:\n3"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, a[1000];\n    // count distinct using loops\n    return 0;\n}",
       "tests": [
-        { "input": "7", "expected": "7" },
-        { "input": "25", "expected": "25" }
+        { "input": "5\n1 2 2 3 1", "expected": "3" }
       ]
     },
     {
       "id": 2,
-      "title": "Swap using Pointers",
-      "description": "Write a function swap(int *a, int *b) to swap values. Print a and b after swapping.",
-      "inputDescription": "Two integers.",
-      "outputDescription": "Swapped a and b separated by space.",
-      "examples": ["Input:\n3 9\nOutput:\n9 3"],
-      "starterCode": "#include <stdio.h>\n\nvoid swap(int *a, int *b) {\n    // swap using pointers\n}\n\nint main() {\n    int x, y;\n    // read, call swap, print\n    return 0;\n}\n",
+      "title": "Common Elements Count",
+      "description": "Given two lists, count how many distinct numbers occur in both of them.",
+      "inputDescription": "Integer N and N integers, then integer M and M integers.",
+      "outputDescription": "Single integer: count of distinct elements that appear in both lists.",
+      "examples": [
+        "Input:\n3\n1 2 3\n4\n2 3 4 5\n\nOutput:\n2"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, M, A[1000], B[1000];\n    // count distinct numbers occurring in both arrays\n    return 0;\n}",
       "tests": [
-        { "input": "3 9", "expected": "9 3" },
-        { "input": "10 1", "expected": "1 10" }
+        { "input": "3\n1 2 3\n4\n2 3 4 5", "expected": "2" }
       ]
     },
     {
       "id": 3,
-      "title": "Sum using Pointer to Array",
-      "description": "Calculate sum of array elements using a pointer to traverse.",
-      "inputDescription": "N followed by N integers.",
-      "outputDescription": "Sum of elements.",
-      "examples": ["Input:\n4\n1 2 3 4\nOutput:\n10"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n, arr[200];\n    // use pointer to sum array\n    return 0;\n}\n",
+      "title": "Common Elements Sorted",
+      "description": "Given two lists of numbers, find all numbers that occur in both lists and print them in ascending order without duplicates.",
+      "inputDescription": "Integer N and N integers, then integer M and M integers.",
+      "outputDescription": "Common distinct elements in ascending order.",
+      "examples": [
+        "Input:\n3\n1 2 2\n4\n2 3 1 2\n\nOutput:\n1 2"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, M, A[1000], B[1000];\n    // find intersection and print sorted\n    return 0;\n}",
       "tests": [
-        { "input": "4\n1 2 3 4", "expected": "10" },
-        { "input": "3\n5 5 5", "expected": "15" }
+        { "input": "3\n1 2 2\n4\n2 3 1 2", "expected": "1 2" }
       ]
     },
     {
       "id": 4,
-      "title": "Max of Array using Pointer",
-      "description": "Find maximum element using pointer to array.",
-      "inputDescription": "N and N integers.",
-      "outputDescription": "Maximum element.",
-      "examples": ["Input:\n5\n2 9 1 7 6\nOutput:\n9"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n, arr[200];\n    // pointer to find max\n    return 0;\n}\n",
+      "title": "Seen Before?",
+      "description": "Given a sequence of N integers, for each number print YES if this number has been seen earlier in the sequence, otherwise print NO.",
+      "inputDescription": "Integer N followed by N integers.",
+      "outputDescription": "N lines: YES or NO for each element.",
+      "examples": [
+        "Input:\n6\n1 2 1 2 3 2\n\nOutput:\nNO\nNO\nYES\nYES\nNO\nYES"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, a[1000];\n    // track seen elements and print YES/NO\n    return 0;\n}",
       "tests": [
-        { "input": "5\n2 9 1 7 6", "expected": "9" },
-        { "input": "3\n7 7 7", "expected": "7" }
+        { "input": "6\n1 2 1 2 3 2", "expected": "NO\nNO\nYES\nYES\nNO\nYES" }
       ]
     },
     {
       "id": 5,
-      "title": "Count Even Using Pointer",
-      "description": "Count how many even numbers are there using pointers.",
-      "inputDescription": "N and N integers.",
-      "outputDescription": "Count of even elements.",
-      "examples": ["Input:\n5\n1 2 3 4 6\nOutput:\n3"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n, arr[200];\n    // pointer loop count even\n    return 0;\n}\n",
-      "tests": [
-        { "input": "5\n1 2 3 4 6", "expected": "3" },
-        { "input": "4\n1 3 5 7", "expected": "0" }
-      ]
+      "title": "Alice and Bob Cubes",
+      "description": "Alice has N cubes and Bob has M cubes. Each cube is labeled with a number (color code). Find: (1) numbers present in both sets, (2) only in Alice's set, (3) only in Bob's set. For each set, print its size, then its elements in ascending order.",
+      "inputDescription": "N, then N integers for Alice; M, then M integers for Bob.",
+      "outputDescription": "Three lines: each line begins with count then the sorted elements.",
+      "examples": [
+        "Example description only; exact input/output will depend on values."
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, M, A[1000], B[1000];\n    // compute intersection and differences, print sizes and elements\n    return 0;\n}",
+      "tests": []
     },
     {
       "id": 6,
-      "title": "Pointer Increment Demo",
-      "description": "Given N and N integers, use pointer arithmetic to print every element.",
-      "inputDescription": "N and N integers.",
-      "outputDescription": "Elements separated by space.",
-      "examples": ["Input:\n3\n5 6 7\nOutput:\n5 6 7"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n, arr[200];\n    // print via pointer increment\n    return 0;\n}\n",
-      "tests": [
-        { "input": "3\n5 6 7", "expected": "5 6 7" },
-        { "input": "4\n1 2 3 4", "expected": "1 2 3 4" }
-      ]
+      "title": "Distinct Words in Text",
+      "description": "Given n lines of text, print the number of distinct words that appear. A word is a sequence of non-space characters.",
+      "inputDescription": "Integer n followed by n lines of text.",
+      "outputDescription": "Single integer: distinct word count.",
+      "examples": [
+        "Example: for lines 'hi hi' and 'world', distinct words are {hi, world} -> 2."
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nint main() {\n    int n;\n    // read lines, split into words, count distinct using array of strings\n    return 0;\n}",
+      "tests": []
     },
     {
       "id": 7,
-      "title": "String Length using Pointer",
-      "description": "Find length of a string using char pointer.",
-      "inputDescription": "A string (no spaces).",
-      "outputDescription": "Length as integer.",
-      "examples": ["Input:\nhello\nOutput:\n5"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    char s[200];\n    // use char *p to count length\n    return 0;\n}\n",
+      "title": "Numbers Only in First List",
+      "description": "Given two lists of numbers, print distinct numbers that appear only in the first list and not in the second, in ascending order.",
+      "inputDescription": "Integer N and N integers, then integer M and M integers.",
+      "outputDescription": "Numbers only in first list, sorted ascending.",
+      "examples": [
+        "Input:\n3\n1 2 3\n3\n2 3 4\n\nOutput:\n1"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, M, A[1000], B[1000];\n    // compute set difference A-B\n    return 0;\n}",
       "tests": [
-        { "input": "hello", "expected": "5" },
-        { "input": "abcd", "expected": "4" }
+        { "input": "3\n1 2 3\n3\n2 3 4", "expected": "1" }
       ]
     },
     {
       "id": 8,
-      "title": "Modify via Pointer",
-      "description": "Read integer n and pointer should add 10 to it and print.",
-      "inputDescription": "One integer.",
-      "outputDescription": "n + 10.",
-      "examples": ["Input:\n5\nOutput:\n15"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n; int *p;\n    // use p to add 10\n    return 0;\n}\n",
+      "title": "Numbers Only in Second List",
+      "description": "Given two lists of numbers, print distinct numbers that appear only in the second list and not in the first, in ascending order.",
+      "inputDescription": "Integer N and N integers, then integer M and M integers.",
+      "outputDescription": "Numbers only in second list, sorted ascending.",
+      "examples": [
+        "Input:\n3\n1 2 3\n3\n2 3 4\n\nOutput:\n4"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, M, A[1000], B[1000];\n    // compute set difference B-A\n    return 0;\n}",
       "tests": [
-        { "input": "5", "expected": "15" },
-        { "input": "0", "expected": "10" }
+        { "input": "3\n1 2 3\n3\n2 3 4", "expected": "4" }
       ]
     },
     {
       "id": 9,
-      "title": "Array Element by Address",
-      "description": "Read N and N integers. Then read an index i and print element at that index using pointer arithmetic.",
-      "inputDescription": "N, array, then index i (0-based).",
-      "outputDescription": "arr[i].",
-      "examples": ["Input:\n5\n10 20 30 40 50\n2\nOutput:\n30"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n, arr[200], i;\n    // use pointer to print arr[i]\n    return 0;\n}\n",
+      "title": "Union of Two Lists",
+      "description": "Given two lists of numbers, print all distinct numbers that appear in at least one of them, in ascending order.",
+      "inputDescription": "Integer N and N integers, then integer M and M integers.",
+      "outputDescription": "Distinct union elements in ascending order.",
+      "examples": [
+        "Input:\n3\n1 2 3\n3\n2 3 4\n\nOutput:\n1 2 3 4"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, M, A[1000], B[1000];\n    // compute union and print sorted\n    return 0;\n}",
       "tests": [
-        { "input": "5\n10 20 30 40 50\n2", "expected": "30" },
-        { "input": "3\n7 8 9\n0", "expected": "7" }
+        { "input": "3\n1 2 3\n3\n2 3 4", "expected": "1 2 3 4" }
       ]
     },
     {
       "id": 10,
-      "title": "Swap Array Ends using Pointers",
-      "description": "Swap first and last elements of an array using pointers and print resulting array.",
-      "inputDescription": "N and N integers.",
-      "outputDescription": "Modified array elements.",
-      "examples": ["Input:\n4\n1 2 3 4\nOutput:\n4 2 3 1"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n, arr[200];\n    // swap arr[0] and arr[n-1] using pointers\n    return 0;\n}\n",
+      "title": "Words Seen Before?",
+      "description": "Given one line of text, for each word print how many times it has appeared before it in the text. Words are separated by spaces.",
+      "inputDescription": "One line of text.",
+      "outputDescription": "For each word, an integer count printed on the same line separated by spaces.",
+      "examples": [
+        "Input:\none two one two two\n\nOutput:\n0 0 1 1 2"
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nint main() {\n    // read line, split into words, for each word print previous count\n    return 0;\n}",
       "tests": [
-        { "input": "4\n1 2 3 4", "expected": "4 2 3 1" },
-        { "input": "3\n9 8 7", "expected": "7 8 9" }
+        { "input": "one two one two two", "expected": "0 0 1 1 2" }
       ]
     }
   ]

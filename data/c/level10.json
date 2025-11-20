@@ -1,137 +1,134 @@
 {
   "level": 10,
-  "title": "Mini Projects (Combined Concepts)",
-  "concept": "Final level for C track. These problems combine loops, arrays, strings, functions, and basic logic to build small mini-project style solutions.",
+  "title": "Mini Projects with Combined Concepts",
+  "concept": "Final level. These problems combine loops, arrays, strings, sets and map-like logic into mini-project style tasks, adapted from advanced Snakify problems.",
   "challenges": [
     {
       "id": 1,
-      "title": "Simple Calculator (Loop)",
-      "description": "Repeat reading a, b, op until op is q. For each op +, -, *, / print result on new line. When op is q, stop (no output).",
-      "inputDescription": "Multiple lines of: a b op",
-      "outputDescription": "Results for each operation line.",
-      "examples": ["Input:\n5 3 +\n10 2 *\n0 0 q\nOutput:\n8\n20"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int a, b; char op;\n    // loop until op == 'q'\n    return 0;\n}\n",
-      "tests": [
-        { "input": "5 3 +\n10 2 *\n0 0 q\n", "expected": "8\n20" }
-      ]
+      "title": "8 Queens Check",
+      "description": "On a chessboard, 8 queens are placed (one per line with coordinates x y). Determine whether any two queens attack each other. Print NO if no pair of queens can attack each other, otherwise print YES.",
+      "inputDescription": "8 lines, each with two integers x and y (1..8).",
+      "outputDescription": "YES or NO.",
+      "examples": [
+        "Example based on Snakify '8 queens' problem."
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int x[8], y[8];\n    // check rows, columns and diagonals for conflicts\n    return 0;\n}\n",
+      "tests": []
     },
     {
       "id": 2,
-      "title": "Student Pass Count",
-      "description": "Read N and N marks. Pass mark is 40. Print count of passed and failed students separated by space.",
-      "inputDescription": "N and N integers.",
-      "outputDescription": "passCount failCount",
-      "examples": ["Input:\n5\n30 40 50 10 90\nOutput:\n3 2"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n, marks[200];\n    // count pass and fail\n    return 0;\n}\n",
-      "tests": [
-        { "input": "5\n30 40 50 10 90", "expected": "3 2" },
-        { "input": "3\n10 20 30", "expected": "0 3" }
-      ]
+      "title": "Bowling Pins",
+      "description": "There are N pins initially standing (1..N). Then K balls are rolled; each ball knocks down pins from l to r (inclusive). After all rolls, print a string of length N where 'I' means a pin left standing and '.' means knocked down.",
+      "inputDescription": "Two integers N and K, then K lines: l r for each roll.",
+      "outputDescription": "String of length N with 'I' and '.'.",
+      "examples": [
+        "Example: N=10, K=1, roll 3 6 -> I I . . . . I I I I"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, K;\n    // simulate knocks and print result string\n    return 0;\n}\n",
+      "tests": []
     },
     {
       "id": 3,
-      "title": "Matrix Row Sum",
-      "description": "Read R, C and a RxC matrix. Print sum of each row on separate line.",
-      "inputDescription": "R C, then R lines with C integers.",
-      "outputDescription": "R lines each containing sum of that row.",
-      "examples": ["Input:\n2 3\n1 2 3\n4 5 6\nOutput:\n6\n15"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int r, c, a[50][50];\n    // compute row sums\n    return 0;\n}\n",
-      "tests": [
-        { "input": "2 3\n1 2 3\n4 5 6\n", "expected": "6\n15" },
-        { "input": "1 3\n10 10 10\n", "expected": "30" }
-      ]
+      "title": "Guessing Game Helper",
+      "description": "Augustus thinks of a number from 1 to n. Beatrice gives sets of numbers and Augustus answers YES if his number is in the set, NO otherwise. When Beatrice prints HELP, output all possible numbers Augustus could have chosen.",
+      "inputDescription": "First line: integer n. Following lines: either a line of numbers (a guess set) and then 'YES' or 'NO' on next line, or a single word HELP.",
+      "outputDescription": "Numbers that could still be the secret, separated by spaces.",
+      "examples": [
+        "Example based on Snakify 'Guess the number' helper problem."
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // maintain set of possible numbers and update based on YES/NO lines\n    return 0;\n}\n",
+      "tests": []
     },
     {
       "id": 4,
-      "title": "Matrix Column Sum",
-      "description": "Read R, C and matrix. Print sum of each column on new line.",
-      "inputDescription": "R C, then R lines.",
-      "outputDescription": "C lines each containing sum of that column.",
-      "examples": ["Input:\n2 2\n1 2\n3 4\nOutput:\n4\n6"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int r, c, a[50][50];\n    // compute column sums\n    return 0;\n}\n",
-      "tests": [
-        { "input": "2 2\n1 2\n3 4\n", "expected": "4\n6" },
-        { "input": "1 2\n5 7\n", "expected": "5\n7" }
-      ]
+      "title": "Languages at School",
+      "description": "Each student speaks some languages. Determine which languages are spoken by all students and which by at least one student. Print first: count of languages spoken by all students and their names sorted; then count of languages spoken by at least one student and their names sorted.",
+      "inputDescription": "Integer N (number of students). For each student: integer k, then k lines with language names.",
+      "outputDescription": "Two blocks: common languages, then union languages.",
+      "examples": [
+        "Example based on Snakify 'languages' problem."
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nstruct Lang { char name[50]; int count; };\nint main() {\n    int N;\n    // track frequency of languages and compute intersection and union\n    return 0;\n}\n",
+      "tests": []
     },
     {
       "id": 5,
-      "title": "String Toggle Case",
-      "description": "Given a string, toggle case of each alphabet (lower → upper, upper → lower).",
-      "inputDescription": "One string (no spaces).",
-      "outputDescription": "Toggled string.",
-      "examples": ["Input:\nAbC\nOutput:\naBc"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    char s[200];\n    // toggle case\n    return 0;\n}\n",
+      "title": "Text Word Previous Count",
+      "description": "The text is given in a single line. For each word, print the number of its occurrences before it. Words are separated by spaces (punctuation is part of word).",
+      "inputDescription": "One line of text.",
+      "outputDescription": "For each word, an integer on same line separated by spaces.",
+      "examples": [
+        "Input:\none two one two two\n\nOutput:\n0 0 1 1 2"
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nint main() {\n    // similar to level 8 'Seen Before' but with words\n    return 0;\n}\n",
       "tests": [
-        { "input": "AbC", "expected": "aBc" },
-        { "input": "HELLO", "expected": "hello" }
+        { "input": "one two one two two", "expected": "0 0 1 1 2" }
       ]
     },
     {
       "id": 6,
-      "title": "Armstrong Number Check",
-      "description": "Check if a number is Armstrong (sum of cubes of digits = number). Print Yes or No.",
-      "inputDescription": "One integer n.",
-      "outputDescription": "Yes | No",
-      "examples": ["Input:\n153\nOutput:\nYes"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // check Armstrong\n    return 0;\n}\n",
-      "tests": [
-        { "input": "153", "expected": "Yes" },
-        { "input": "370", "expected": "Yes" },
-        { "input": "10", "expected": "No" }
-      ]
+      "title": "Word Occurrence Ordering",
+      "description": "Given n lines of text, print all words sorted first by descending frequency, then lexicographically. Words are sequences of non-space characters.",
+      "inputDescription": "Integer n followed by n lines.",
+      "outputDescription": "One word per line in sorted order.",
+      "examples": [
+        "Same logic as word frequency problem, but as a full mini-task."
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nstruct Word { char w[50]; int cnt; };\nint main() {\n    int n;\n    // count words and sort by (-cnt, word)\n    return 0;\n}\n",
+      "tests": []
     },
     {
       "id": 7,
-      "title": "Binary to Decimal",
-      "description": "Given a binary number as string (e.g., 1011), convert to decimal integer and print.",
-      "inputDescription": "Binary string.",
-      "outputDescription": "Decimal value.",
-      "examples": ["Input:\n101\nOutput:\n5"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    char s[200];\n    // binary to decimal\n    return 0;\n}\n",
+      "title": "Fibonacci Index",
+      "description": "Given an integer a, determine its index in the Fibonacci sequence (0-based). If a is not a Fibonacci number, print -1.",
+      "inputDescription": "Integer a.",
+      "outputDescription": "Index n where fib(n) = a, or -1.",
+      "examples": [
+        "Input:\n5\n\nOutput:\n5"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int a;\n    // generate Fibonacci numbers until >= a, then check\n    return 0;\n}\n",
       "tests": [
-        { "input": "101", "expected": "5" },
-        { "input": "1111", "expected": "15" }
+        { "input": "5", "expected": "5" },
+        { "input": "4", "expected": "-1" }
       ]
     },
     {
       "id": 8,
-      "title": "Decimal to Binary",
-      "description": "Convert given decimal integer to binary (no leading zeros) and print.",
-      "inputDescription": "One integer n.",
-      "outputDescription": "Binary representation.",
-      "examples": ["Input:\n5\nOutput:\n101"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n;\n    // decimal to binary using array\n    return 0;\n}\n",
+      "title": "Second Largest in Sequence",
+      "description": "The sequence consists of distinct positive integers and ends with 0. Determine the value of the second largest element.",
+      "inputDescription": "Integers, one per line, ending with 0.",
+      "outputDescription": "Single integer: second largest element.",
+      "examples": [
+        "Input:\n1\n7\n9\n0\n\nOutput:\n7"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int x, max1 = 0, max2 = 0;\n    // track largest and second largest until 0\n    return 0;\n}\n",
       "tests": [
-        { "input": "5", "expected": "101" },
-        { "input": "8", "expected": "1008" }
+        { "input": "1\n7\n9\n0", "expected": "7" }
       ]
     },
     {
       "id": 9,
-      "title": "Frequency of Digits",
-      "description": "Read a non-negative integer n. Count frequency of each digit 0–9 and print 10 lines d:count.",
-      "inputDescription": "One integer n.",
-      "outputDescription": "10 lines like 0:x ... 9:y",
-      "examples": ["Input:\n1002\nOutput:\n0:2\n1:1\n2:1\n3:0\n4:0\n5:0\n6:0\n7:0\n8:0\n9:0"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    long long n;\n    int freq[10]={0};\n    // count digit frequency\n    return 0;\n}\n",
-      "tests": [
-        { "input": "1002", "expected": "0:2\n1:1\n2:1\n3:0\n4:0\n5:0\n6:0\n7:0\n8:0\n9:0" },
-        { "input": "0", "expected": "0:1\n1:0\n2:0\n3:0\n4:0\n5:0\n6:0\n7:0\n8:0\n9:0" }
-      ]
+      "title": "Sequence Statistics",
+      "description": "Given a sequence of integers ending with 0, compute and print: total sum, largest element, number of even elements, and number of elements equal to the largest element. Each value on its own line.",
+      "inputDescription": "Integers ending with 0.",
+      "outputDescription": "Four lines: sum, max, evenCount, countMax.",
+      "examples": [
+        "Example only; uses combined sequence properties from Snakify tasks."
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int x, sum = 0, max = 0, evenCount = 0, maxCount = 0;\n    // process sequence until 0\n    return 0;\n}\n",
+      "tests": []
     },
     {
       "id": 10,
-      "title": "Mini Report: Marks Analysis",
-      "description": "Read N and marks of N students. Print highest, lowest and average on separate lines in this order.",
-      "inputDescription": "N and N integers (marks).",
-      "outputDescription": "Line1: highest\nLine2: lowest\nLine3: average (integer division).",
-      "examples": ["Input:\n3\n40 60 80\nOutput:\n80\n40\n60"],
-      "starterCode": "#include <stdio.h>\nint main() {\n    int n, a[200];\n    // compute max, min, average\n    return 0;\n}\n",
-      "tests": [
-        { "input": "3\n40 60 80", "expected": "80\n40\n60" },
-        { "input": "2\n50 50", "expected": "50\n50\n50" }
-      ]
+      "title": "Latin-English Dictionary Builder",
+      "description": "Same as level 9 dictionary inversion, but treat this as a full mini-project: read English-Latin dictionary and build Latin-English dictionary, printing with strict formatting and sorted order.",
+      "inputDescription": "Integer N, then N lines with 'english - latin1,latin2,...'.",
+      "outputDescription": "Latin-English dictionary with each line 'latin - english1,english2,...'.",
+      "examples": [
+        "Full version of 'Latin-English' problem."
+      ],
+      "starterCode": "#include <stdio.h>\n#include <string.h>\nstruct Map { char key[50]; char vals[500]; };\nint main() {\n    int N;\n    // build inverted dictionary with full formatting\n    return 0;\n}\n",
+      "tests": []
     }
   ]
 }

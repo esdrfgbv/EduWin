@@ -1,136 +1,156 @@
 {
   "level": 5,
-  "title": "Arrays",
-  "concept": "This level builds strong understanding of single-dimensional arrays, indexing, traversing using loops, accessing elements, summing values, finding smallest/largest elements, counting occurrences and filtering values. Always avoid extra spaces and print EXACT format expected.",
+  "title": "Arrays and List Processing",
+  "concept": "This level builds understanding of arrays (lists) and element-wise operations: indices, neighbors, maxima, counts and uniqueness. Problems are adapted from Snakify list tasks.",
   "challenges": [
     {
       "id": 1,
-      "title": "Sum of Array",
-      "description": "Read N and an array of N integers. Print their sum.",
-      "inputDescription": "N followed by N integers.",
-      "outputDescription": "Sum of elements.",
-      "examples": ["Input:\n5\n1 2 3 4 5\nOutput:\n15"],
-      "starterCode": "#include <stdio.h>\nint main(){ int n, arr[200]; /* input array and print sum */ return 0; }",
+      "title": "Even Index Elements",
+      "description": "Given N and a list of N integers, print all elements with even indices (0, 2, 4, ...) in order.",
+      "inputDescription": "Integer N followed by N integers.",
+      "outputDescription": "Elements at even indices separated by spaces.",
+      "examples": [
+        "Input:\n6\n4 5 3 4 2 3\n\nOutput:\n4 3 2"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, i, a[1000];\n    // print elements at even indices\n    return 0;\n}",
       "tests": [
-        { "input": "5\n1 2 3 4 5", "expected": "15" },
-        { "input": "3\n10 10 10", "expected": "30" }
+        { "input": "6\n4 5 3 4 2 3", "expected": "4 3 2" },
+        { "input": "1\n7", "expected": "7" }
       ]
     },
     {
       "id": 2,
-      "title": "Maximum Element",
-      "description": "Print the largest number in the array.",
-      "inputDescription": "N followed by N integers.",
-      "outputDescription": "Maximum element.",
-      "examples": ["Input:\n4\n3 9 1 8\nOutput:\n9"],
-      "starterCode": "#include <stdio.h>\nint main(){ int n, arr[200]; /* find max */ return 0; }",
+      "title": "Even Elements Only",
+      "description": "Given N and a list of N integers, print all elements that are even numbers.",
+      "inputDescription": "Integer N followed by N integers.",
+      "outputDescription": "Even elements separated by spaces.",
+      "examples": [
+        "Input:\n6\n4 5 3 4 2 3\n\nOutput:\n4 4 2"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, i, a[1000];\n    // print even elements only\n    return 0;\n}",
       "tests": [
-        { "input": "4\n3 9 1 8", "expected": "9" },
-        { "input": "5\n5 5 5 5 5", "expected": "5" }
+        { "input": "6\n4 5 3 4 2 3", "expected": "4 4 2" },
+        { "input": "3\n1 3 5", "expected": "" }
       ]
     },
     {
       "id": 3,
-      "title": "Minimum Element",
-      "description": "Print the smallest number in the array.",
-      "inputDescription": "N followed by N integers.",
-      "outputDescription": "Minimum element.",
-      "examples": ["Input:\n4\n3 9 1 8 → Output:\n1"],
-      "starterCode": "#include <stdio.h>\nint main(){ int n, arr[200]; /* find min */ return 0; }",
+      "title": "Greater Than Previous",
+      "description": "Given N and N integers, print all elements that are greater than the previous element.",
+      "inputDescription": "Integer N followed by N integers.",
+      "outputDescription": "Elements greater than their previous, separated by spaces.",
+      "examples": [
+        "Input:\n6\n4 5 3 4 2 3\n\nOutput:\n5 4 3"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, i, a[1000];\n    // print a[i] if a[i] > a[i-1]\n    return 0;\n}",
       "tests": [
-        { "input": "4\n3 9 1 8", "expected": "1" },
-        { "input": "3\n5 5 5", "expected": "5" }
+        { "input": "6\n4 5 3 4 2 3", "expected": "5 4 3" },
+        { "input": "1\n10", "expected": "" }
       ]
     },
     {
       "id": 4,
-      "title": "Search the Element",
-      "description": "Search for a given value X in array. If found print Yes else print No.",
-      "inputDescription": "N, array of N integers, then X.",
-      "outputDescription": "Yes | No",
-      "examples": ["Input:\n5\n1 2 3 4 5\n3\nOutput:\nYes"],
-      "starterCode": "#include <stdio.h>\nint main(){ int n, arr[200], x; /* search */ return 0; }",
+      "title": "First Same Sign Pair",
+      "description": "Given N and N integers, find the first pair of adjacent elements with the same sign (both positive or both negative) and print them. If no such pair exists, print nothing.",
+      "inputDescription": "Integer N followed by N integers.",
+      "outputDescription": "Two integers: the first adjacent pair with same sign, or empty output.",
+      "examples": [
+        "Input:\n5\n-1 2 3 -4 -5\n\nOutput:\n2 3"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, i, a[1000];\n    // find first adjacent same sign pair\n    return 0;\n}",
       "tests": [
-        { "input": "5\n1 2 3 4 5\n3", "expected": "Yes" },
-        { "input": "4\n10 20 30 40\n25", "expected": "No" }
+        { "input": "5\n-1 2 3 -4 -5", "expected": "2 3" },
+        { "input": "3\n-1 0 1", "expected": "" }
       ]
     },
     {
       "id": 5,
-      "title": "Count Occurrences",
-      "description": "Count how many times X occurs in the array.",
-      "inputDescription": "N, array of N integers, then X.",
-      "outputDescription": "Count of occurrences.",
-      "examples": ["Input:\n6\n2 3 2 5 2 8\n2 → Output:\n3"],
-      "starterCode": "#include <stdio.h>\nint main(){ int n, arr[200], x; /* count occurrences */ return 0; }",
+      "title": "Greater Than Both Neighbours",
+      "description": "Given N and N integers, count how many elements are greater than both of their neighbours. The first and last elements are not considered.",
+      "inputDescription": "Integer N followed by N integers.",
+      "outputDescription": "Single integer: count of such elements.",
+      "examples": [
+        "Input:\n7\n1 2 3 4 5 4 3\n\nOutput:\n1"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, i, a[1000];\n    // count elements a[i] > a[i-1] and a[i] > a[i+1]\n    return 0;\n}",
       "tests": [
-        { "input": "6\n2 3 2 5 2 8\n2", "expected": "3" },
-        { "input": "5\n1 2 3 4 5\n7", "expected": "0" }
+        { "input": "7\n1 2 3 4 5 4 3", "expected": "1" },
+        { "input": "3\n1 2 3", "expected": "0" }
       ]
     },
     {
       "id": 6,
-      "title": "Sum of Even Numbers in Array",
-      "description": "Sum only the even numbers in the array.",
-      "inputDescription": "N followed by N integers.",
-      "outputDescription": "Sum of all even numbers.",
-      "examples": ["Input:\n5\n1 2 3 4 6 → Output:\n12"],
-      "starterCode": "#include <stdio.h>\nint main(){ int n, arr[200]; /* sum even numbers */ return 0; }",
+      "title": "Max Element and Index",
+      "description": "Given N and an array of N integers, print the maximum value and then its index. If there are several equal maximum elements, print the index of the first one.",
+      "inputDescription": "Integer N followed by N integers.",
+      "outputDescription": "Two integers: max value and index (0-based).",
+      "examples": [
+        "Input:\n6\n1 2 3 2 3 0\n\nOutput:\n3 2"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, i, a[1000];\n    // find max and its first index\n    return 0;\n}",
       "tests": [
-        { "input": "5\n1 2 3 4 6", "expected": "12" },
-        { "input": "4\n1 3 5 7", "expected": "0" }
+        { "input": "6\n1 2 3 2 3 0", "expected": "3 2" },
+        { "input": "1\n5", "expected": "5 0" }
       ]
     },
     {
       "id": 7,
-      "title": "Reverse Array Print",
-      "description": "Print the array elements in reverse order separated by spaces.",
-      "inputDescription": "N followed by N integers.",
-      "outputDescription": "Array in reverse order.",
-      "examples": ["Input:\n4\n10 20 30 40 → Output:\n40 30 20 10"],
-      "starterCode": "#include <stdio.h>\nint main(){ int n, arr[200]; /* print reverse */ return 0; }",
+      "title": "Distinct Count in Sorted List",
+      "description": "Given N and a non-decreasing sequence of N integers, determine the number of distinct elements.",
+      "inputDescription": "Integer N followed by N integers in non-decreasing order.",
+      "outputDescription": "Single integer: number of distinct values.",
+      "examples": [
+        "Input:\n6\n1 1 2 2 2 3\n\nOutput:\n3"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, i, a[1000];\n    // count distinct elements in sorted array\n    return 0;\n}",
       "tests": [
-        { "input": "4\n10 20 30 40", "expected": "40 30 20 10" },
-        { "input": "3\n1 2 3", "expected": "3 2 1" }
+        { "input": "6\n1 1 2 2 2 3", "expected": "3" },
+        { "input": "1\n5", "expected": "1" }
       ]
     },
     {
       "id": 8,
-      "title": "Second Largest",
-      "description": "Print the second largest number in the array.",
-      "inputDescription": "N (N ≥ 2) followed by N integers.",
-      "outputDescription": "Second largest value.",
-      "examples": ["Input:\n5\n8 1 4 9 7 → Output:\n8"],
-      "starterCode": "#include <stdio.h>\nint main(){ int n, arr[200]; /* second largest */ return 0; }",
+      "title": "Swap Min and Max",
+      "description": "Given N and a list of N unique integers, swap the minimal and maximal elements and print the resulting list.",
+      "inputDescription": "Integer N followed by N distinct integers.",
+      "outputDescription": "N integers after swapping min and max.",
+      "examples": [
+        "Input:\n5\n3 2 1 5 4\n\nOutput:\n3 2 5 1 4"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, i, a[1000];\n    // find min and max indices and swap them\n    return 0;\n}",
       "tests": [
-        { "input": "5\n8 1 4 9 7", "expected": "8" },
-        { "input": "4\n10 9 8 7", "expected": "9" }
+        { "input": "5\n3 2 1 5 4", "expected": "3 2 5 1 4" },
+        { "input": "2\n1 2", "expected": "2 1" }
       ]
     },
     {
       "id": 9,
-      "title": "Sorted or Not",
-      "description": "If array elements are in non-decreasing order print Yes else No.",
-      "inputDescription": "N followed by N integers.",
-      "outputDescription": "Yes | No",
-      "examples": ["Input:\n5\n1 2 2 4 5 → Output:\nYes"],
-      "starterCode": "#include <stdio.h>\nint main(){ int n, arr[200]; /* check sorted */ return 0; }",
+      "title": "Equal Pairs",
+      "description": "Given N and N integers, count how many unordered pairs of elements are equal. Each pair of equal values is counted exactly once.",
+      "inputDescription": "Integer N followed by N integers.",
+      "outputDescription": "Single integer: number of equal pairs.",
+      "examples": [
+        "Input:\n5\n1 2 1 1 3\n\nOutput:\n3"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, i, j, a[1000];\n    // count equal pairs (i < j and a[i] == a[j])\n    return 0;\n}",
       "tests": [
-        { "input": "5\n1 2 2 4 5", "expected": "Yes" },
-        { "input": "4\n3 1 4 5", "expected": "No" }
+        { "input": "5\n1 2 1 1 3", "expected": "3" },
+        { "input": "3\n1 2 3", "expected": "0" }
       ]
     },
     {
       "id": 10,
-      "title": "Frequency Table",
-      "description": "Given N and an array of N integers (range 0-9), print frequency of each digit from 0 to 9 on separate lines in format:\n0:x\n1:y\n2:z\n...\n9:k",
-      "inputDescription": "N followed by array of N integers in range 0-9.",
-      "outputDescription": "10 lines of frequencies.",
-      "examples": ["Input:\n5\n1 2 1 3 2\nOutput:\n0:0\n1:2\n2:2\n3:1\n4:0\n5:0\n6:0\n7:0\n8:0\n9:0"],
-      "starterCode": "#include <stdio.h>\nint main(){ int n, arr[200]; int freq[10]={0}; /* frequency count */ return 0; }",
+      "title": "Elements That Appear Once",
+      "description": "Given N and N integers, print elements that appear exactly once in the list, in the order they appear.",
+      "inputDescription": "Integer N followed by N integers.",
+      "outputDescription": "Elements with frequency 1 separated by spaces.",
+      "examples": [
+        "Input:\n6\n4 5 4 5 3 2\n\nOutput:\n3 2"
+      ],
+      "starterCode": "#include <stdio.h>\nint main() {\n    int N, i, j, a[1000];\n    // print elements that appear exactly once\n    return 0;\n}",
       "tests": [
-        { "input": "5\n1 2 1 3 2", "expected": "0:0\n1:2\n2:2\n3:1\n4:0\n5:0\n6:0\n7:0\n8:0\n9:0" },
-        { "input": "3\n0 0 0", "expected": "0:3\n1:0\n2:0\n3:0\n4:0\n5:0\n6:0\n7:0\n8:0\n9:0" }
+        { "input": "6\n4 5 4 5 3 2", "expected": "3 2" },
+        { "input": "3\n1 1 1", "expected": "" }
       ]
     }
   ]
