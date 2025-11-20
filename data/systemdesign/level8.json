@@ -1,28 +1,126 @@
 {
-  "title": "System Design Level 8 — URL Shortener",
-  "concept": "Scenario-based design questions for a URL shortener system.",
-  "challenges": [
+  "title": "System Design Level 8 — Social Systems & Rate Limiting",
+  "concept": "Timelines, follower graphs, fan-out, abuse prevention and rate limiting patterns.",
+  "questions": [
     {
-      "title": "Q1: Requirements & APIs",
-      "description": "Design a basic URL shortener service like bit.ly. List the core functional requirements and sketch simple API endpoints for creating a short URL and redirecting to the original URL.",
-      "inputDescription": "No input. Design question.",
-      "outputDescription": "List of requirements and example API definitions (checked manually).",
-      "examples": [
-        "Think of endpoints like: POST /shorten, GET /:shortCode."
-      ],
-      "starterCode": "// Write your answer as notes or comments.\n// Mention requirements (shorten, redirect, optional analytics) and API paths.",
-      "tests": []
+      "id": 1,
+      "question": "In a Twitter-like system, 'fan-out-on-write' means:",
+      "options": {
+        "A": "Compute feed at read time",
+        "B": "When a user posts, push the tweet into follower timelines",
+        "C": "Never store timelines",
+        "D": "Use only one global feed"
+      },
+      "answer": "B",
+      "explanation": "Fan-out-on-write precomputes timelines when posts are created."
     },
     {
-      "title": "Q2: Data Model & Scaling",
-      "description": "For the same URL shortener, propose a simple data model for storing URL mappings (shortCode -> longURL). Discuss how you would: (a) avoid collisions, and (b) scale the system for read-heavy traffic.",
-      "inputDescription": "No input. Design question.",
-      "outputDescription": "Short explanation of table/schema, hashing/encoding, and use of cache/replicas (checked manually).",
-      "examples": [
-        "You can mention using a key-value store, base62 encoding of IDs, and caching popular links."
-      ],
-      "starterCode": "// Describe schema, collision handling idea, and use of caching/replication.\n",
-      "tests": []
+      "id": 2,
+      "question": "Fan-out-on-read approach for timelines:",
+      "options": {
+        "A": "Stores precomputed feeds",
+        "B": "Generates feed dynamically by querying follow graph and recent posts",
+        "C": "Does not scale",
+        "D": "Eliminates database"
+      },
+      "answer": "B",
+      "explanation": "Fan-out-on-read builds timelines at read time, trading CPU for less storage."
+    },
+    {
+      "id": 3,
+      "question": "Rate limiting helps protect APIs from:",
+      "options": {
+        "A": "Being too fast",
+        "B": "Abuse, DoS attacks, and accidental overload",
+        "C": "Any authentication",
+        "D": "Logging"
+      },
+      "answer": "B",
+      "explanation": "Rate limits defend capacity and prevent abuse/excessive usage."
+    },
+    {
+      "id": 4,
+      "question": "The token bucket algorithm for rate limiting:",
+      "options": {
+        "A": "Only counts errors",
+        "B": "Allows bursts up to bucket size while enforcing average rate",
+        "C": "Rejects all requests",
+        "D": "Does not use tokens"
+      },
+      "answer": "B",
+      "explanation": "Token bucket accrues tokens; requests consume tokens, allowing controlled bursts."
+    },
+    {
+      "id": 5,
+      "question": "To avoid global locking in distributed rate limiting, systems often:",
+      "options": {
+        "A": "Use a centralized single process",
+        "B": "Use sharded counters or approximate algorithms (e.g., leaky bucket, sliding window with Redis)",
+        "C": "Disable rate limiting",
+        "D": "Use only local memory on each node with no coordination"
+      },
+      "answer": "B",
+      "explanation": "Sharding and approximate counters reduce contention and central bottlenecks."
+    },
+    {
+      "id": 6,
+      "question": "Follower graph in a social network is typically represented as:",
+      "options": {
+        "A": "A single table with one row per user only",
+        "B": "Edges between users: follower_id → followee_id",
+        "C": "Only a bitmap",
+        "D": "A time-series log"
+      },
+      "answer": "B",
+      "explanation": "Follow relationships form a directed graph of (follower, followee) edges."
+    },
+    {
+      "id": 7,
+      "question": "Blocking and reporting mechanisms are part of:",
+      "options": {
+        "A": "Consistency model",
+        "B": "Abuse and safety systems in social products",
+        "C": "Database sharding only",
+        "D": "Logging only"
+      },
+      "answer": "B",
+      "explanation": "Safety systems use blocking, reporting and moderation to reduce abuse."
+    },
+    {
+      "id": 8,
+      "question": "Shadow banning or soft limits are sometimes used to:",
+      "options": {
+        "A": "Improve performance only",
+        "B": "Limit impact of abusive users without explicit bans",
+        "C": "Speed up database queries",
+        "D": "Scale caches"
+      },
+      "answer": "B",
+      "explanation": "Soft enforcement can reduce spam/abuse while preserving user experience and reducing evasion."
+    },
+    {
+      "id": 9,
+      "question": "To handle 'celebrity' accounts with millions of followers, one common optimization is:",
+      "options": {
+        "A": "Fan-out-on-write for all followers always",
+        "B": "Handle them specially, e.g., compute timelines on-read or store their posts separately",
+        "C": "Disable posting for them",
+        "D": "Put all their followers on one shard"
+      },
+      "answer": "B",
+      "explanation": "Celeb fan-out can be too expensive; systems use hybrid strategies to handle high-fan-out users."
+    },
+    {
+      "id": 10,
+      "question": "Abuse detection often uses:",
+      "options": {
+        "A": "No logging",
+        "B": "Heuristics and ML models on behavioral and content features",
+        "C": "Random banning",
+        "D": "Only manual moderation"
+      },
+      "answer": "B",
+      "explanation": "Auto-detection uses patterns, features, and machine learning with human review."
     }
   ]
 }

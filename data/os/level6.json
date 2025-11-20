@@ -1,28 +1,126 @@
 {
-  "title": "OS Level 6 — Semaphores & Classic Problems",
-  "concept": "MCQs on semaphores and classical synchronization problems.",
-  "challenges": [
+  "title": "OS Level 6 — Virtual Memory & Paging (Advanced)",
+  "concept": "Demand paging, page faults, TLB, working set, page-replacement and thrashing.",
+  "questions": [
     {
-      "title": "Q1: Semaphore Type",
-      "description": "A binary semaphore can take values:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) 0 and 1\nb) Any positive integer\nc) Only 1 and 2\nd) -1 and 1"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "A page fault occurs when:",
+      "options": {
+        "A": "The requested page is already in main memory",
+        "B": "The requested page is not in main memory",
+        "C": "TLB is full",
+        "D": "Disk is full"
+      },
+      "answer": "B",
+      "explanation": "Page faults trigger loading the missing page from secondary storage."
     },
     {
-      "title": "Q2: Dining Philosophers Problem",
-      "description": "The Dining Philosophers problem is used to illustrate issues of:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) Deadlock and starvation\nb) CPU scheduling only\nc) Memory fragmentation\nd) File system organization"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "Which of the following page replacement algorithms suffers from Belady's anomaly?",
+      "options": {
+        "A": "Optimal",
+        "B": "LRU",
+        "C": "FIFO",
+        "D": "Clock (Second chance)"
+      },
+      "answer": "C",
+      "explanation": "FIFO can show more page faults when more frames are allocated."
+    },
+    {
+      "id": 3,
+      "question": "The working set of a process is:",
+      "options": {
+        "A": "All pages in the system",
+        "B": "Set of pages used in the last Δ time units or references",
+        "C": "Set of pages currently on disk",
+        "D": "Only stack pages"
+      },
+      "answer": "B",
+      "explanation": "Working set approximates the locality of the process over a recent window."
+    },
+    {
+      "id": 4,
+      "question": "Which algorithm is commonly used to approximate LRU in hardware/OS?",
+      "options": {
+        "A": "Random replacement",
+        "B": "Clock (Second chance) algorithm",
+        "C": "FIFO",
+        "D": "LFU only"
+      },
+      "answer": "B",
+      "explanation": "Clock uses a reference bit and circular list to approximate LRU cheaply."
+    },
+    {
+      "id": 5,
+      "question": "Thrashing is most closely associated with:",
+      "options": {
+        "A": "High CPU utilization",
+        "B": "High page-fault rate and low CPU utilization",
+        "C": "Zero page faults",
+        "D": "No context switching"
+      },
+      "answer": "B",
+      "explanation": "Thrashing leads to continuous paging with little real work, lowering CPU utilization."
+    },
+    {
+      "id": 6,
+      "question": "Increasing the degree of multiprogramming too much can:",
+      "options": {
+        "A": "Always improve performance",
+        "B": "Cause thrashing if memory is insufficient",
+        "C": "Remove page faults",
+        "D": "Eliminate need for scheduling"
+      },
+      "answer": "B",
+      "explanation": "Too many active processes can exceed physical memory and trigger thrashing."
+    },
+    {
+      "id": 7,
+      "question": "TLB miss followed by a page hit means:",
+      "options": {
+        "A": "Page is not in memory",
+        "B": "Page is in memory but not in TLB",
+        "C": "TLB and memory both lack the page",
+        "D": "Disk I/O is required"
+      },
+      "answer": "B",
+      "explanation": "On TLB miss, the OS/page-table lookup finds the page in memory and fills TLB."
+    },
+    {
+      "id": 8,
+      "question": "Which of the following is TRUE for demand paging?",
+      "options": {
+        "A": "All pages of a process are loaded at start",
+        "B": "Pages are loaded only when they are first referenced",
+        "C": "Pages are never swapped out",
+        "D": "Virtual memory is disabled"
+      },
+      "answer": "B",
+      "explanation": "Demand paging loads pages lazily on first use, not at process start."
+    },
+    {
+      "id": 9,
+      "question": "Which of the following does the valid/invalid bit in a page table entry indicate?",
+      "options": {
+        "A": "Whether the page is dirty",
+        "B": "Whether the page is present in physical memory",
+        "C": "Whether the page is shared",
+        "D": "Whether the page is read-only"
+      },
+      "answer": "B",
+      "explanation": "Valid/invalid bit marks if the virtual page currently resides in physical memory."
+    },
+    {
+      "id": 10,
+      "question": "Copy-on-write in virtual memory allows:",
+      "options": {
+        "A": "Processes to share pages until one writes, then create a private copy",
+        "B": "Writes to be ignored",
+        "C": "Only reads to proceed",
+        "D": "No sharing at all"
+      },
+      "answer": "A",
+      "explanation": "COW optimizes fork and shared pages; write triggers a page fault and copy."
     }
   ]
 }

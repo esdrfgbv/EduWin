@@ -1,27 +1,65 @@
 {
-  "title": "HTML+CSS Level 1 — Basic Structure",
-  "concept": "Create a simple HTML page with proper skeleton and headings/paragraphs.",
+  "title": "HTML+CSS Level 1 — Basic HTML Structure",
+  "concept": "HTML boilerplate, headings, paragraphs, line breaks and basic text formatting.",
   "challenges": [
     {
-      "title": "Q1: Simple Hello Page",
-      "description": "Create an HTML page with a proper skeleton that displays a main heading 'Welcome to HTML' and a paragraph saying 'This is my first HTML page.'",
+      "id": 1,
+      "title": "Hello Web Page",
+      "description": "Create a minimal HTML page that shows a big heading saying \"Hello, World!\" and a short paragraph below it saying \"This is my first web page.\"",
       "inputDescription": "No input.",
-      "outputDescription": "Browser should show a heading and a paragraph.",
+      "outputDescription": "A page with an H1 heading and a paragraph below it.",
       "examples": [
-        "The page title (on the tab) should be 'My First Page'."
+        "Page shows:\nHeading: Hello, World!\nParagraph: This is my first web page."
       ],
-      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>My First Page</title>\n</head>\n<body>\n    <!-- Add your h1 and p here -->\n</body>\n</html>\n",
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Hello Web Page</title>\n</head>\n<body>\n  <!-- Add your heading and paragraph here -->\n</body>\n</html>\n",
       "tests": []
     },
     {
-      "title": "Q2: Multiple Headings",
-      "description": "Create a page with three headings: an <h1> main title, an <h2> subtitle, and an <h3> small heading. Add at least one paragraph under them.",
+      "id": 2,
+      "title": "About Me Paragraphs",
+      "description": "Create a page with a heading \"About Me\" and two separate paragraphs describing yourself (dummy text is fine).",
       "inputDescription": "No input.",
-      "outputDescription": "Page shows a clear heading hierarchy and a paragraph.",
+      "outputDescription": "A heading and two paragraphs, clearly separated.",
       "examples": [
-        "Example headings: 'My Website', 'About Me', 'Hobbies'."
+        "H1: About Me\nThen two <p> elements with any text."
       ],
-      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Headings Demo</title>\n</head>\n<body>\n    <!-- Add h1, h2, h3 and a paragraph -->\n</body>\n</html>\n",
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>About Me</title>\n</head>\n<body>\n  <!-- Add an H1 and two paragraphs -->\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 3,
+      "title": "Line Breaks and Strong Text",
+      "description": "Create a page with a heading \"My Goals\" and a sentence with line breaks between goals, using <br>. Make one goal bold using <strong>.",
+      "inputDescription": "No input.",
+      "outputDescription": "Text with manual line breaks and one bold fragment.",
+      "examples": [
+        "My Goals:\nGoal 1 (bold)\nGoal 2\nGoal 3"
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>My Goals</title>\n</head>\n<body>\n  <!-- Use <h1>, <p>, <br>, <strong> -->\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 4,
+      "title": "Unordered Hobbies List",
+      "description": "Create a heading \"My Hobbies\" and an unordered list (<ul>) with at least 3 hobbies in <li> items.",
+      "inputDescription": "No input.",
+      "outputDescription": "An H1 heading and a bulleted list of hobbies.",
+      "examples": [
+        "H1: My Hobbies\n• Reading\n• Music\n• Coding"
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Hobbies</title>\n</head>\n<body>\n  <!-- Add a heading and a <ul> with <li> items -->\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 5,
+      "title": "Simple Links Page",
+      "description": "Create a heading \"Useful Links\" and an unordered list where each item is a clickable link (<a>) to some website (Google, YouTube, etc.).",
+      "inputDescription": "No input.",
+      "outputDescription": "A heading and a list of clickable links.",
+      "examples": [
+        "H1: Useful Links\n• Google\n• YouTube"
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Useful Links</title>\n</head>\n<body>\n  <!-- Use <a href=\"...\"></a> inside list items -->\n</body>\n</html>\n",
       "tests": []
     }
   ]

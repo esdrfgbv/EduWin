@@ -1,33 +1,155 @@
 {
   "title": "C++ Level 5 — Arrays & Basic Algorithms",
-  "concept": "Practice traversal, sum, and min/max on arrays.",
+  "concept": "Use arrays to process sequences: indices, neighbors, maxima, uniqueness and counting.",
   "challenges": [
     {
-      "title": "Array Sum",
-      "description": "Given N and an array of N integers, print the sum of all elements.",
+      "id": 1,
+      "title": "Even Index Elements",
+      "description": "Given N and an array of N integers, print all elements with even indices (0, 2, 4, ...).",
       "inputDescription": "First line: N. Second line: N integers.",
-      "outputDescription": "Single integer: sum of array.",
+      "outputDescription": "Elements at even indices separated by single spaces.",
       "examples": [
-        "Input:\n5\n1 2 3 4 5\n\nOutput:\n15"
+        "Input:\n6\n4 5 3 4 2 3\n\nOutput:\n4 3 2"
       ],
-      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int N;\n    // your code here\n    return 0;\n}\n",
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int N;\n    // read N, then array, then print a[i] for even i\n    return 0;\n}\n",
       "tests": [
-        { "input": "5\n1 2 3 4 5", "expected": "15" },
-        { "input": "3\n-1 0 1", "expected": "0" }
+        { "input": "6\n4 5 3 4 2 3", "expected": "4 3 2" },
+        { "input": "1\n7", "expected": "7" }
       ]
     },
     {
-      "title": "Maximum in Array",
-      "description": "Given N and an array of N integers, print the maximum element.",
+      "id": 2,
+      "title": "Even Elements",
+      "description": "Given N and N integers, print only the even elements in the same order.",
       "inputDescription": "First line: N. Second line: N integers.",
-      "outputDescription": "Single integer: maximum value in the array.",
+      "outputDescription": "All even elements separated by spaces or an empty line if none.",
       "examples": [
-        "Input:\n4\n3 7 2 9\n\nOutput:\n9"
+        "Input:\n6\n4 5 3 4 2 3\n\nOutput:\n4 4 2"
       ],
-      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int N;\n    // read N and array, then print maximum\n    return 0;\n}\n",
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int N;\n    // print elements where a[i] % 2 == 0\n    return 0;\n}\n",
       "tests": [
-        { "input": "4\n3 7 2 9", "expected": "9" },
-        { "input": "3\n-5 -2 -10", "expected": "-2" }
+        { "input": "6\n4 5 3 4 2 3", "expected": "4 4 2" },
+        { "input": "3\n1 3 5", "expected": "" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Greater Than Previous",
+      "description": "Given N and a sequence of N integers, print all elements that are strictly greater than the previous element.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Elements that are greater than their previous element, separated by spaces.",
+      "examples": [
+        "Input:\n6\n4 5 3 4 2 3\n\nOutput:\n5 4 3"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int N;\n    // print a[i] when i>0 and a[i] > a[i-1]\n    return 0;\n}\n",
+      "tests": [
+        { "input": "6\n4 5 3 4 2 3", "expected": "5 4 3" },
+        { "input": "1\n10", "expected": "" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "First Same Sign Pair",
+      "description": "Given N and N integers, find the first pair of adjacent elements that have the same sign (both positive or both negative). Print them. If no such pair exists, print nothing.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Two integers: the first such pair, or empty output if none.",
+      "examples": [
+        "Input:\n5\n-1 2 3 -4 -5\n\nOutput:\n2 3"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int N;\n    // find first adjacent pair with same sign (ignore zeros)\n    return 0;\n}\n",
+      "tests": [
+        { "input": "5\n-1 2 3 -4 -5", "expected": "2 3" },
+        { "input": "3\n-1 0 1", "expected": "" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Greater Than Both Neighbours",
+      "description": "Given N and N integers, count how many elements are strictly greater than both their neighbors. The first and last elements are not considered.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Single integer: count of such elements.",
+      "examples": [
+        "Input:\n7\n1 2 3 4 5 4 3\n\nOutput:\n1"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int N;\n    // count i where 0<i<N-1 and a[i]>a[i-1] and a[i]>a[i+1]\n    return 0;\n}\n",
+      "tests": [
+        { "input": "7\n1 2 3 4 5 4 3", "expected": "1" },
+        { "input": "3\n1 2 3", "expected": "0" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Max Element and Index",
+      "description": "Given N and an array, find the maximum value and its index. If there are multiple maxima, print the index of the first one.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Two integers: max_value and index (0-based).",
+      "examples": [
+        "Input:\n6\n1 2 3 2 3 0\n\nOutput:\n3 2"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int N;\n    // find first index of maximum\n    return 0;\n}\n",
+      "tests": [
+        { "input": "6\n1 2 3 2 3 0", "expected": "3 2" },
+        { "input": "1\n5", "expected": "5 0" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Distinct Count in Sorted Array",
+      "description": "Given N and a non-decreasing sequence of N integers, determine how many distinct numbers there are.",
+      "inputDescription": "First line: N. Second line: N integers in non-decreasing order.",
+      "outputDescription": "Single integer: number of distinct values.",
+      "examples": [
+        "Input:\n6\n1 1 2 2 2 3\n\nOutput:\n3"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int N;\n    // count distinct by comparing with previous element\n    return 0;\n}\n",
+      "tests": [
+        { "input": "6\n1 1 2 2 2 3", "expected": "3" },
+        { "input": "1\n5", "expected": "1" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Swap Min and Max",
+      "description": "Given N and an array of N distinct integers, swap the positions of the minimum and maximum elements, then print the resulting array.",
+      "inputDescription": "First line: N. Second line: N distinct integers.",
+      "outputDescription": "N integers after swapping min and max.",
+      "examples": [
+        "Input:\n5\n3 2 1 5 4\n\nOutput:\n3 2 5 1 4"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int N;\n    // find indices of min and max, swap, then print array\n    return 0;\n}\n",
+      "tests": [
+        { "input": "5\n3 2 1 5 4", "expected": "3 2 5 1 4" },
+        { "input": "2\n1 2", "expected": "2 1" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Equal Pairs",
+      "description": "Given N and N integers, count how many unordered pairs (i, j) with i < j have a[i] = a[j].",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Single integer: number of equal pairs.",
+      "examples": [
+        "Input:\n5\n1 2 1 1 3\n\nOutput:\n3"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int N;\n    // check all pairs i<j and count equal ones\n    return 0;\n}\n",
+      "tests": [
+        { "input": "5\n1 2 1 1 3", "expected": "3" },
+        { "input": "3\n1 2 3", "expected": "0" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Elements Appearing Once",
+      "description": "Given N and N integers, print the elements that appear exactly once, in the same order as in the input.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Elements with frequency 1 separated by spaces, or empty output if none.",
+      "examples": [
+        "Input:\n6\n4 5 4 5 3 2\n\nOutput:\n3 2"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int N;\n    // for each element, count occurrences and print if ==1\n    return 0;\n}\n",
+      "tests": [
+        { "input": "6\n4 5 4 5 3 2", "expected": "3 2" },
+        { "input": "3\n1 1 1", "expected": "" }
       ]
     }
   ]

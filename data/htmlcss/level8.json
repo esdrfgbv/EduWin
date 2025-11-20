@@ -1,27 +1,65 @@
 {
-  "title": "HTML+CSS Level 8 — Flexbox Layout",
-  "concept": "Create layouts using flexbox for alignment.",
+  "title": "HTML+CSS Level 8 — Responsive Design & Media Queries",
+  "concept": "Use media queries to adjust layouts on different screen sizes.",
   "challenges": [
     {
-      "title": "Q1: Horizontal Navigation Bar",
-      "description": "Create a horizontal navigation bar with 3–4 links (Home, About, Contact, etc.). Use flexbox to space the items evenly across the width.",
+      "id": 1,
+      "title": "Responsive Two-Column to Single-Column",
+      "description": "Create a two-column layout (sidebar + content) that collapses to a single column (sidebar on top, content below) on small screens.",
       "inputDescription": "No input.",
-      "outputDescription": "A simple nav bar with evenly spaced items.",
+      "outputDescription": "On wide screens: two columns; on narrow screens: stacked.",
       "examples": [
-        "Use display: flex and justify-content: space-around or space-between."
+        "Use @media (max-width: 600px) to switch flex-direction to column."
       ],
-      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Flexbox Navbar</title>\n    <style>\n        /* Add flexbox styles for nav here */\n    </style>\n</head>\n<body>\n    <nav class=\"navbar\">\n        <a href=\"#\">Home</a>\n        <a href=\"#\">About</a>\n        <a href=\"#\">Contact</a>\n    </nav>\n</body>\n</html>\n",
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Responsive Columns</title>\n  <style>\n    /* Base: two columns using flex; media query: column layout */\n  </style>\n</head>\n<body>\n  <div class=\"layout\">\n    <aside class=\"sidebar\">Sidebar</aside>\n    <main class=\"content\">Content</main>\n  </div>\n</body>\n</html>\n",
       "tests": []
     },
     {
-      "title": "Q2: Card Grid with Flexbox",
-      "description": "Create a container with 3 cards inside (divs). Use flexbox so that cards appear in a row on wide screens and wrap to the next line when screen is narrow.",
+      "id": 2,
+      "title": "Responsive Navbar Stack",
+      "description": "Create a navbar with logo and links on a single row for desktop. On small screens, stack the links below the logo vertically.",
       "inputDescription": "No input.",
-      "outputDescription": "Responsive card row using flexbox.",
+      "outputDescription": "Row layout on desktop, column layout on mobile.",
       "examples": [
-        "Use flex-wrap: wrap and a max-width on cards."
+        "Desktop: logo left, links right; Mobile: logo top, links vertical."
       ],
-      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Flexbox Cards</title>\n    <style>\n        /* Style .card-container and .card with flexbox */\n    </style>\n</head>\n<body>\n    <div class=\"card-container\">\n        <div class=\"card\">Card 1</div>\n        <div class=\"card\">Card 2</div>\n        <div class=\"card\">Card 3</div>\n    </div>\n</body>\n</html>\n",
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Responsive Navbar</title>\n  <style>\n    /* Use flexbox and a media query to switch direction */\n  </style>\n</head>\n<body>\n  <header class=\"navbar\">\n    <div class=\"logo\">EduWin</div>\n    <nav class=\"links\">\n      <a href=\"#\">Home</a>\n      <a href=\"#\">Courses</a>\n      <a href=\"#\">Contact</a>\n    </nav>\n  </header>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 3,
+      "title": "Responsive Card Grid",
+      "description": "Create a grid of cards that shows 3 columns on large screens, 2 columns on medium, and 1 column on small screens.",
+      "inputDescription": "No input.",
+      "outputDescription": "Card layout that changes number of columns based on screen width.",
+      "examples": [
+        "Use CSS Grid + multiple @media breakpoints."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Responsive Cards</title>\n  <style>\n    /* Base: 1 column; add breakpoints for 2 and 3 columns */\n  </style>\n</head>\n<body>\n  <section class=\"cards\">\n    <div class=\"card\">Card 1</div>\n    <div class=\"card\">Card 2</div>\n    <div class=\"card\">Card 3</div>\n    <div class=\"card\">Card 4</div>\n    <div class=\"card\">Card 5</div>\n    <div class=\"card\">Card 6</div>\n  </section>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 4,
+      "title": "Responsive Font Sizes",
+      "description": "Create a hero section where the main heading font size becomes smaller on mobile screens for better readability.",
+      "inputDescription": "No input.",
+      "outputDescription": "Large heading on desktop, smaller on mobile via media query.",
+      "examples": [
+        "Desktop: 3rem; Mobile: 2rem or similar."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Responsive Heading</title>\n  <style>\n    /* Adjust h1 font-size in media query */\n  </style>\n</head>\n<body>\n  <section class=\"hero\">\n    <h1>Track Your Progress</h1>\n    <p>See all your grades in one place.</p>\n  </section>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 5,
+      "title": "Hide/Show Element on Mobile",
+      "description": "Create a banner with some text and an extra decorative image that is visible on desktop but hidden on small screens.",
+      "inputDescription": "No input.",
+      "outputDescription": "Image visible on desktop, display:none on mobile viewport.",
+      "examples": [
+        "Use .decor-image { display:block } and @media { display:none }."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Responsive Banner</title>\n  <style>\n    /* Hide .decor-image on small screens using media query */\n  </style>\n</head>\n<body>\n  <section class=\"banner\">\n    <div class=\"text\">\n      <h2>Welcome to EduWin</h2>\n      <p>Smart grade tracking.</p>\n    </div>\n    <img class=\"decor-image\" src=\"https://via.placeholder.com/150\" alt=\"Decoration\">\n  </section>\n</body>\n</html>\n",
       "tests": []
     }
   ]

@@ -1,34 +1,130 @@
 {
-  "title": "C++ Level 9 — Inheritance Basics",
-  "concept": "Use inheritance to reuse and extend behavior from a base class.",
+  "title": "C++ Level 9 — Maps and Frequency Counting",
+  "concept": "Use std::map to build dictionaries, count frequencies, and aggregate values.",
   "challenges": [
     {
-      "title": "Person and Student (Inheritance)",
-      "description": "Create a base class Person with data member name and a member function printName() that prints the name. Create a derived class Student that adds an integer rollNo and a function printDetails() that prints name and rollNo on one line separated by space.",
-      "inputDescription": "First line: name (single word). Second line: rollNo (integer).",
-      "outputDescription": "Print: name rollNo",
+      "id": 1,
+      "title": "Number Frequencies",
+      "description": "Given N and N integers, print the frequency of each distinct number in increasing order of the number. Each line must be: number count.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Multiple lines of 'number count' in sorted order.",
       "examples": [
-        "Input:\nRam\n42\n\nOutput:\nRam 42"
+        "Input:\n5\n1 2 2 3 1\n\nOutput:\n1 2\n2 2\n3 1"
       ],
-      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Person {\npublic:\n    string name;\n    // add printName()\n};\n\nclass Student : public Person {\npublic:\n    int rollNo;\n    // add printDetails()\n};\n\nint main() {\n    // your code here\n    return 0;\n}\n",
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    int N;\n    // use map<int,int> to count frequencies and print\n    return 0;\n}\n",
       "tests": [
-        { "input": "Ram\n42", "expected": "Ram 42" },
-        { "input": "Arya\n1", "expected": "Arya 1" }
+        { "input": "5\n1 2 2 3 1", "expected": "1 2\n2 2\n3 1" }
       ]
     },
     {
-      "title": "Employee Salary (Simple Inheritance)",
-      "description": "Create a base class Employee with a name and a derived class FullTimeEmployee with an additional salary. Read name and salary, and print them in the format: name salary.",
-      "inputDescription": "First line: name (single word). Second line: integer salary.",
-      "outputDescription": "Print: name salary",
+      "id": 2,
+      "title": "Word Frequencies",
+      "description": "Given a single line of text, print words and their frequencies sorted lexicographically by word. Each line: word count.",
+      "inputDescription": "One line of text.",
+      "outputDescription": "Multiple lines: word count in lexicographic order of word.",
       "examples": [
-        "Input:\nRavi\n50000\n\nOutput:\nRavi 50000"
+        "Input:\nhi hi what is hi\n\nOutput:\nhi 3\nis 1\nwhat 1"
       ],
-      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Employee {\npublic:\n    string name;\n};\n\nclass FullTimeEmployee : public Employee {\npublic:\n    int salary;\n};\n\nint main() {\n    // your code here\n    return 0;\n}\n",
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    // split line into words, count in map<string,int>, print\n    return 0;\n}\n",
       "tests": [
-        { "input": "Ravi\n50000", "expected": "Ravi 50000" },
-        { "input": "Teja\n30000", "expected": "Teja 30000" }
+        { "input": "hi hi what is hi", "expected": "hi 3\nis 1\nwhat 1" }
       ]
+    },
+    {
+      "id": 3,
+      "title": "Synonym Dictionary",
+      "description": "You are given N pairs of synonyms (two words each). Then you are given a single word. Print its synonym. It is guaranteed that the word appears in exactly one pair.",
+      "inputDescription": "First line: N. Next N lines: two words per line. Last line: query word.",
+      "outputDescription": "The synonym of the query word.",
+      "examples": [
+        "Input:\n3\nbig large\nsmart clever\nfast quick\nclever\n\nOutput:\nsmart"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    int N;\n    // store both directions in map<string,string> and answer the query\n    return 0;\n}\n",
+      "tests": []
+    },
+    {
+      "id": 4,
+      "title": "Election Results",
+      "description": "You are given records of votes for candidates. Each record has candidate_name and votes (integer). For each candidate, sum total votes and print results sorted by candidate name.",
+      "inputDescription": "First line: N. Next N lines: name votes.",
+      "outputDescription": "Lines of 'name totalVotes' sorted lexicographically by name.",
+      "examples": [
+        "Example: Alice 10, Bob 5, Alice 3 -> Alice 13, Bob 5."
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    int N;\n    // accumulate votes in map<string,long long>, then print\n    return 0;\n}\n",
+      "tests": []
+    },
+    {
+      "id": 5,
+      "title": "Most Frequent Word",
+      "description": "Given n lines of text, find the word that occurs most frequently. If several words have the same highest frequency, print the lexicographically smallest one.",
+      "inputDescription": "First line: n. Next n lines: text.",
+      "outputDescription": "Single word: most frequent (break ties by lexicographic order).",
+      "examples": [
+        "Example: 'hi hi what is hi' -> hi"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    int n;\n    // count words in map<string,int>, then find best\n    return 0;\n}\n",
+      "tests": []
+    },
+    {
+      "id": 6,
+      "title": "File Access Rights",
+      "description": "You are given access rights for files. For each file you know which operations are allowed: 'R' (read), 'W' (write), 'X' (execute). Then you get M queries of operation and file. For each query, print OK if operation is allowed, otherwise Access denied.",
+      "inputDescription": "First line: N. Next N lines: fileName followed by operations. Next line: M. Next M lines: operation fileName.",
+      "outputDescription": "M lines: OK or Access denied.",
+      "examples": [
+        "Example based on standard access rights problem."
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    int N,M;\n    // map<string,set<char>> for permissions, then process queries\n    return 0;\n}\n",
+      "tests": []
+    },
+    {
+      "id": 7,
+      "title": "Cities and Countries",
+      "description": "Given a mapping from countries to their cities, then queries of city names, print the country for each city.",
+      "inputDescription": "First line: N. For each of N lines: countryName k city1 city2 ... cityk. Then line Q, then Q city names.",
+      "outputDescription": "For each query city, print its country.",
+      "examples": [
+        "Example: India 2 Delhi Mumbai\nQ=1, city=Delhi -> India"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    int N,Q;\n    // build map<string,string> city->country, then answer queries\n    return 0;\n}\n",
+      "tests": []
+    },
+    {
+      "id": 8,
+      "title": "Word Frequencies by Popularity",
+      "description": "Given n lines of text, print all distinct words sorted by descending frequency; for equal frequency, sort lexicographically ascending. Print one word per line.",
+      "inputDescription": "First line: n. Next n lines: text.",
+      "outputDescription": "Words, one per line, sorted by (-frequency, word).",
+      "examples": [
+        "Example: hi hi what is is -> hi, is, what (each on its own line)."
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    int n;\n    // map<string,int> to count; then move to vector and sort\n    return 0;\n}\n",
+      "tests": []
+    },
+    {
+      "id": 9,
+      "title": "Student Total Scores",
+      "description": "Given N lines with student name and score, sum scores per student and print 'name totalScore' on separate lines sorted by name.",
+      "inputDescription": "First line: N. Next N lines: string name, int score.",
+      "outputDescription": "Lines 'name totalScore' sorted lexicographically by name.",
+      "examples": [
+        "Example: Ram 10, Kiran 5, Ram 7 -> Kiran 5, Ram 17."
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    int N;\n    // map<string,long long> for totals\n    return 0;\n}\n",
+      "tests": []
+    },
+    {
+      "id": 10,
+      "title": "Replace Words with Synonyms",
+      "description": "Given N synonym pairs (a b). Then a sentence. For each word in the sentence, if it appears as a or b in any pair, replace it with its synonym; otherwise keep it unchanged.",
+      "inputDescription": "First line: N. Next N lines: a b. Last line: sentence.",
+      "outputDescription": "New sentence after replacing words by synonyms.",
+      "examples": [
+        "Example: pair: big large; sentence: big cat -> large cat."
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    int N;\n    // build bidirectional map<string,string>, then transform sentence\n    return 0;\n}\n",
+      "tests": []
     }
   ]
 }

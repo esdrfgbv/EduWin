@@ -1,27 +1,65 @@
 {
-  "title": "HTML+CSS Level 5 — Forms & Inputs",
-  "concept": "Build basic forms with different input types.",
+  "title": "HTML+CSS Level 4 — Forms & Inputs",
+  "concept": "Build and style simple forms with inputs, labels, and buttons.",
   "challenges": [
     {
-      "title": "Q1: Login Form",
-      "description": "Create a simple login form with 'Email' and 'Password' fields and a 'Login' button. Use labels linked to the inputs.",
+      "id": 1,
+      "title": "Simple Login Form",
+      "description": "Create a centered login form with two inputs: email and password, and a submit button. Each input should have a visible label.",
       "inputDescription": "No input.",
-      "outputDescription": "A basic login form appears on the page.",
+      "outputDescription": "A neat login form, vertically stacked, centered on page.",
       "examples": [
-        "Use <form>, <label>, <input type=\"email\">, <input type=\"password\"> and <button>."
+        "Email label + text field, Password label + password field, Login button."
       ],
-      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Login Form</title>\n</head>\n<body>\n    <!-- Create your login form here -->\n</body>\n</html>\n",
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Login Form</title>\n  <style>\n    /* Center form, style labels and inputs */\n  </style>\n</head>\n<body>\n  <form class=\"login-form\">\n    <!-- Add labels and inputs here -->\n  </form>\n</body>\n</html>\n",
       "tests": []
     },
     {
-      "title": "Q2: Feedback Form",
-      "description": "Create a feedback form with fields: Name (text), Email, Rating (1–5 using radio buttons), and a multi-line feedback box. Add a Submit button.",
+      "id": 2,
+      "title": "Contact Form Layout",
+      "description": "Create a contact form with fields: Name, Email, Message (textarea) and a Send button. Make each field full width with some margin between them.",
       "inputDescription": "No input.",
-      "outputDescription": "A feedback form with multiple input types.",
+      "outputDescription": "Vertical form with full-width inputs and textarea.",
       "examples": [
-        "Group radio buttons with the same name attribute for rating."
+        "Name, Email text fields and a larger Message box."
       ],
-      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Feedback Form</title>\n</head>\n<body>\n    <!-- Build your feedback form here -->\n</body>\n</html>\n",
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Contact Form</title>\n  <style>\n    /* Style form, inputs, textarea and button */\n  </style>\n</head>\n<body>\n  <form class=\"contact-form\">\n    <!-- Name, Email, Message, Send button -->\n  </form>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 3,
+      "title": "Styled Checkbox Group",
+      "description": "Create a form with a heading \"Select your interests\" and several checkboxes (e.g., Coding, Music, Sports). Align them nicely in a column.",
+      "inputDescription": "No input.",
+      "outputDescription": "Heading and list of labeled checkboxes.",
+      "examples": [
+        "[ ] Coding\n[ ] Music\n[ ] Sports"
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Interests</title>\n  <style>\n    /* Add spacing between checkbox items */\n  </style>\n</head>\n<body>\n  <h2>Select your interests</h2>\n  <form>\n    <!-- Checkbox inputs with labels -->\n  </form>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 4,
+      "title": "Inline Radio Buttons",
+      "description": "Create a small form asking for gender with three radio buttons: Male, Female, Other. Display them inline horizontally.",
+      "inputDescription": "No input.",
+      "outputDescription": "Label followed by three inline radio options.",
+      "examples": [
+        "Gender: ( ) Male  ( ) Female  ( ) Other"
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Radio Buttons</title>\n  <style>\n    /* Make radio labels inline with spacing */\n  </style>\n</head>\n<body>\n  <form>\n    <!-- Radio buttons for gender -->\n  </form>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 5,
+      "title": "Input Focus Styling",
+      "description": "Create a simple form with one text input and style it so that when focused, the border color changes and a subtle box-shadow appears.",
+      "inputDescription": "No input.",
+      "outputDescription": "Input shows different visual when focused.",
+      "examples": [
+        "Default: gray border; Focused: blue border with glow."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Focus Style</title>\n  <style>\n    /* Style input and input:focus */\n  </style>\n</head>\n<body>\n  <input type=\"text\" placeholder=\"Type something...\">\n</body>\n</html>\n",
       "tests": []
     }
   ]

@@ -1,28 +1,126 @@
 {
-  "title": "OS Level 10 — File Systems, Disk Scheduling & Protection",
-  "concept": "MCQs on files, disk scheduling and protection.",
-  "challenges": [
+  "title": "OS Level 10 — Security & Advanced OS Topics",
+  "concept": "Protection, access control, authentication, virtualization and containers.",
+  "questions": [
     {
-      "title": "Q1: Disk Scheduling Algorithm",
-      "description": "Which of the following is a disk scheduling algorithm?",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) SSTF\nb) FIFO\nc) SJF\nd) Round Robin"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "Which of the following best describes the principle of least privilege?",
+      "options": {
+        "A": "Users should have access to all system resources",
+        "B": "Users should have only the minimal privileges necessary to perform their tasks",
+        "C": "Privileges never change",
+        "D": "Only administrators can have privileges"
+      },
+      "answer": "B",
+      "explanation": "Least privilege reduces damage if an account is compromised or misused."
     },
     {
-      "title": "Q2: File Protection Bits",
-      "description": "In many OSes (like UNIX), file protection is specified using bits for:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) Read, Write, Execute\nb) Open, Close, Delete\nc) Copy, Paste, Move\nd) Create, Remove, Rename"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "Access Control List (ACL) for a file specifies:",
+      "options": {
+        "A": "Which users and groups have what permissions on that object",
+        "B": "Only file size",
+        "C": "CPU scheduling priority",
+        "D": "Network routes"
+      },
+      "answer": "A",
+      "explanation": "ACLs map principals (users/groups) to allowed operations on an object."
+    },
+    {
+      "id": 3,
+      "question": "Authentication answers the question:",
+      "options": {
+        "A": "What can you do?",
+        "B": "Who are you?",
+        "C": "What have you done?",
+        "D": "Where are you?"
+      },
+      "answer": "B",
+      "explanation": "Authentication verifies identity; authorization decides permissions."
+    },
+    {
+      "id": 4,
+      "question": "Which is TRUE about user-mode vs kernel-mode separation?",
+      "options": {
+        "A": "User-mode code can execute all privileged instructions",
+        "B": "Kernel-mode can access all hardware and memory; user-mode is restricted",
+        "C": "Kernel-mode is slower than user-mode",
+        "D": "There is no security benefit"
+      },
+      "answer": "B",
+      "explanation": "Mode separation protects the system by limiting what user applications can do directly."
+    },
+    {
+      "id": 5,
+      "question": "Virtualization at the OS level (containers) typically:",
+      "options": {
+        "A": "Emulates hardware for each VM",
+        "B": "Runs multiple OS kernels simultaneously",
+        "C": "Shares the same kernel while isolating user-space environments",
+        "D": "Requires nested page tables"
+      },
+      "answer": "C",
+      "explanation": "Containers use one kernel and isolate processes via namespaces, cgroups, etc."
+    },
+    {
+      "id": 6,
+      "question": "Hypervisor Type 1 (bare-metal) runs:",
+      "options": {
+        "A": "On top of a host OS as an application",
+        "B": "Directly on the hardware, hosting guest OSes",
+        "C": "Only in user-mode",
+        "D": "Only for containers"
+      },
+      "answer": "B",
+      "explanation": "Type 1 hypervisors sit directly on hardware (e.g., ESXi, Xen)."
+    },
+    {
+      "id": 7,
+      "question": "Address Space Layout Randomization (ASLR) is used to:",
+      "options": {
+        "A": "Improve page replacement",
+        "B": "Randomize memory layout to hinder exploits (e.g., buffer overflow)",
+        "C": "Speed up context switches",
+        "D": "Compress memory"
+      },
+      "answer": "B",
+      "explanation": "ASLR makes it harder for attackers to predict addresses of code and data."
+    },
+    {
+      "id": 8,
+      "question": "Which of the following is a typical OS-level mitigation against buffer overflows?",
+      "options": {
+        "A": "Disabling virtual memory",
+        "B": "Making stack non-executable (NX bit)",
+        "C": "Using only assembly language",
+        "D": "Forcing single-threaded programs"
+      },
+      "answer": "B",
+      "explanation": "NX/DEP marks memory regions as non-executable to prevent injected code from running."
+    },
+    {
+      "id": 9,
+      "question": "Mandatory Access Control (MAC) differs from Discretionary Access Control (DAC) mainly because:",
+      "options": {
+        "A": "In MAC, users can arbitrarily change object permissions",
+        "B": "In MAC, policies are centrally defined and users cannot override them",
+        "C": "MAC uses no policies",
+        "D": "DAC is used only in networks"
+      },
+      "answer": "B",
+      "explanation": "MAC enforces system-wide policies (e.g., SELinux) independent of individual user choices."
+    },
+    {
+      "id": 10,
+      "question": "A sandboxed process is one that:",
+      "options": {
+        "A": "Has unrestricted access to all system resources",
+        "B": "Is isolated and restricted to limit potential damage if compromised",
+        "C": "Runs only in kernel mode",
+        "D": "Cannot perform any computation"
+      },
+      "answer": "B",
+      "explanation": "Sandboxing limits a process’s capabilities via OS isolation and policies."
     }
   ]
 }

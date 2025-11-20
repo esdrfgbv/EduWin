@@ -1,133 +1,126 @@
 {
-  "level": 1,
-  "title": "Python Basics - Printing & Simple I/O",
-  "concept": "In this level you will learn how to print text using print(), read input using input(), and do simple operations. Focus on exact output format, without extra text.",
+  "title": "Python Level 1 — Input, Output & Basic Arithmetic",
+  "concept": "Practice reading input, printing output, and doing basic integer arithmetic in Python.",
   "challenges": [
     {
       "id": 1,
-      "title": "Hello, Python!",
-      "description": "Print exactly: Hello, Python!",
-      "inputDescription": "No input.",
-      "outputDescription": "Hello, Python!",
-      "examples": ["Input:\n(none)\n\nOutput:\nHello, Python!"],
-      "starterCode": "# TODO: print Hello, Python!\n",
-      "tests": [
-        { "input": "", "expected": "Hello, Python!" }
-      ]
+      "title": "Sum of Two Integers",
+      "description": "Read two integers A and B and print their sum A + B.",
+      "inputDescription": "Two integers A and B (on one line or separate lines).",
+      "outputDescription": "Single integer: A + B.",
+      "examples": [
+        "Input:\n3 5\n\nOutput:\n8"
+      ],
+      "starterCode": "def main():\n    import sys\n    data = sys.stdin.read().strip().split()\n    A = int(data[0])\n    B = int(data[1])\n    # TODO: print the sum of A and B\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 2,
-      "title": "Welcome Line",
-      "description": "Print: Welcome to Python",
-      "inputDescription": "No input.",
-      "outputDescription": "Welcome to Python",
-      "examples": ["Output:\nWelcome to Python"],
-      "starterCode": "# print the welcome message\n",
-      "tests": [
-        { "input": "", "expected": "Welcome to Python" }
-      ]
+      "title": "Sum of Three Integers",
+      "description": "Read three integers and print their sum.",
+      "inputDescription": "Three integers, separated by spaces or new lines.",
+      "outputDescription": "Single integer: sum of the three numbers.",
+      "examples": [
+        "Input:\n1 2 3\n\nOutput:\n6"
+      ],
+      "starterCode": "def main():\n    import sys\n    nums = list(map(int, sys.stdin.read().strip().split()))\n    # TODO: compute and print sum of all three integers\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 3,
-      "title": "Print with Quotes",
-      "description": "Print the text including double quotes: \"Learning Python\"",
-      "inputDescription": "No input.",
-      "outputDescription": "\"Learning Python\"",
-      "examples": ["Output:\n\"Learning Python\""],
-      "starterCode": "# output must include the double quotes\n",
-      "tests": [
-        { "input": "", "expected": "\"Learning Python\"" }
-      ]
+      "title": "Next and Previous",
+      "description": "Given an integer N, print two lines. First line: the next integer after N. Second line: the previous integer before N.",
+      "inputDescription": "Single integer N.",
+      "outputDescription": "Two lines: N + 1 on the first line, N - 1 on the second line.",
+      "examples": [
+        "Input:\n10\n\nOutput:\n11\n9"
+      ],
+      "starterCode": "def main():\n    n = int(input().strip())\n    # TODO: print next and previous numbers, each on its own line\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 4,
-      "title": "Two Lines",
-      "description": "Print Hello on first line and Python on second line.",
-      "inputDescription": "No input.",
-      "outputDescription": "Hello\\nPython",
-      "examples": ["Output:\nHello\nPython"],
-      "starterCode": "# print on two lines\n",
-      "tests": [
-        { "input": "", "expected": "Hello\nPython" }
-      ]
+      "title": "Integer Division and Remainder",
+      "description": "Given two positive integers A and B, print the quotient A // B and the remainder A % B on one line separated by a space.",
+      "inputDescription": "Two positive integers A and B, B ≠ 0.",
+      "outputDescription": "Two integers: quotient and remainder.",
+      "examples": [
+        "Input:\n17 5\n\nOutput:\n3 2"
+      ],
+      "starterCode": "def main():\n    A, B = map(int, input().split())\n    # TODO: compute integer division and remainder and print them\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 5,
-      "title": "Greet by Name",
-      "description": "Read a name and print: Hello <name>",
-      "inputDescription": "Single word name.",
-      "outputDescription": "Hello <name>",
-      "examples": ["Input:\nRam\n\nOutput:\nHello Ram"],
-      "starterCode": "name = input().strip()\n# print greeting here\n",
-      "tests": [
-        { "input": "Ram", "expected": "Hello Ram" },
-        { "input": "Krishna", "expected": "Hello Krishna" }
-      ]
+      "title": "Last Digit of a Number",
+      "description": "Given an integer N, print its last digit (in decimal representation).",
+      "inputDescription": "Single integer N (can be negative).",
+      "outputDescription": "Single digit from 0 to 9.",
+      "examples": [
+        "Input:\n1234\n\nOutput:\n4"
+      ],
+      "starterCode": "def main():\n    n = int(input().strip())\n    # TODO: print the last digit of n\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 6,
-      "title": "Add Two Numbers",
-      "description": "Read two integers and print their sum.",
-      "inputDescription": "Two integers separated by space.",
-      "outputDescription": "Sum of the two integers.",
-      "examples": ["Input:\n3 7\nOutput:\n10"],
-      "starterCode": "a, b = map(int, input().split())\n# print sum\n",
-      "tests": [
-        { "input": "3 7", "expected": "10" },
-        { "input": "10 -5", "expected": "5" }
-      ]
+      "title": "School Desks",
+      "description": "Three classes have a, b and c students. Each desk seats two students. Find the minimal number of desks needed.",
+      "inputDescription": "Three integers a, b, c.",
+      "outputDescription": "Single integer: minimal number of desks.",
+      "examples": [
+        "Input:\n20 21 22\n\nOutput:\n32"
+      ],
+      "starterCode": "def main():\n    a, b, c = map(int, input().split())\n    # each class needs (students + 1) // 2 desks\n    # TODO: compute total desks and print\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 7,
-      "title": "Multiply Two Numbers",
-      "description": "Read two integers and print their product.",
-      "inputDescription": "Two integers separated by space.",
-      "outputDescription": "Product of the two integers.",
-      "examples": ["Input:\n4 5\nOutput:\n20"],
-      "starterCode": "a, b = map(int, input().split())\n# print product\n",
-      "tests": [
-        { "input": "4 5", "expected": "20" },
-        { "input": "7 0", "expected": "0" }
-      ]
+      "title": "Minutes to Seconds",
+      "description": "Given an integer M representing minutes, convert it to seconds and print the result.",
+      "inputDescription": "Single integer M (M ≥ 0).",
+      "outputDescription": "Single integer: M * 60.",
+      "examples": [
+        "Input:\n5\n\nOutput:\n300"
+      ],
+      "starterCode": "def main():\n    m = int(input().strip())\n    # TODO: convert minutes to seconds and print\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 8,
-      "title": "Square of a Number",
-      "description": "Read an integer n and print its square.",
-      "inputDescription": "A single integer n.",
-      "outputDescription": "n squared.",
-      "examples": ["Input:\n6\nOutput:\n36"],
-      "starterCode": "n = int(input())\n# print square\n",
-      "tests": [
-        { "input": "6", "expected": "36" },
-        { "input": "10", "expected": "100" }
-      ]
+      "title": "Area of Rectangle",
+      "description": "Given width W and height H of a rectangle, print its area W * H.",
+      "inputDescription": "Two integers W and H.",
+      "outputDescription": "Single integer: W * H.",
+      "examples": [
+        "Input:\n3 4\n\nOutput:\n12"
+      ],
+      "starterCode": "def main():\n    W, H = map(int, input().split())\n    # TODO: print area of rectangle\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 9,
-      "title": "Simple Interest",
-      "description": "Read principal P, rate R and time T (in years), compute simple interest = (P*R*T)/100 and print the value. You can print float or int.",
-      "inputDescription": "Three numbers P R T separated by space.",
-      "outputDescription": "Simple interest.",
-      "examples": ["Input:\n1000 10 2\nOutput:\n200.0"],
-      "starterCode": "P, R, T = map(float, input().split())\n# compute simple interest\n",
-      "tests": [
-        { "input": "1000 10 2", "expected": "200" },
-        { "input": "500 5 1", "expected": "25" }
-      ]
+      "title": "Greeting by Name",
+      "description": "Read a single word name and print a greeting in the format: Hello, <name>!",
+      "inputDescription": "One word: the name.",
+      "outputDescription": "A single line greeting.",
+      "examples": [
+        "Input:\nRam\n\nOutput:\nHello, Ram!"
+      ],
+      "starterCode": "def main():\n    name = input().strip()\n    # TODO: print 'Hello, <name>!'\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 10,
-      "title": "Formatted Message",
-      "description": "Read a name and an integer age, then print exactly: <name> is <age> years old",
-      "inputDescription": "First line: name, second line: age.",
-      "outputDescription": "<name> is <age> years old",
-      "examples": ["Input:\nRam\n20\nOutput:\nRam is 20 years old"],
-      "starterCode": "name = input().strip()\nage = int(input())\n# print formatted message\n",
-      "tests": [
-        { "input": "Ram\n20", "expected": "Ram is 20 years old" },
-        { "input": "Kiran\n18", "expected": "Kiran is 18 years old" }
-      ]
+      "title": "Sum of First N Natural Numbers",
+      "description": "Given an integer N (N ≥ 1), compute the sum 1 + 2 + ... + N and print the result.",
+      "inputDescription": "Single integer N.",
+      "outputDescription": "Single integer: sum from 1 to N.",
+      "examples": [
+        "Input:\n5\n\nOutput:\n15"
+      ],
+      "starterCode": "def main():\n    N = int(input().strip())\n    # TODO: compute sum of 1..N and print (you can use formula)\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     }
   ]
 }

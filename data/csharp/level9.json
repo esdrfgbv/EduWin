@@ -1,0 +1,130 @@
+{
+  "title": "C# Level 9 — Maps and Frequency Counting",
+  "concept": "Use Dictionary<TKey,TValue> to build dictionaries, count frequencies, and aggregate values.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Number Frequencies",
+      "description": "Given N and N integers, print the frequency of each distinct number in increasing order of the number. Each line must be: number count.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Multiple lines of 'number count' in sorted order.",
+      "examples": [
+        "Input:\n5\n1 2 2 3 1\n\nOutput:\n1 2\n2 2\n3 1"
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int N = int.Parse(Console.ReadLine());\n        int[] a = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);\n        // Dictionary<int,int> freq; then sort keys and print\n    }\n}\n",
+      "tests": [
+        { "input": "5\n1 2 2 3 1", "expected": "1 2\n2 2\n3 1" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Word Frequencies",
+      "description": "Given a single line of text, print words and their frequencies sorted lexicographically by word. Each line: word count.",
+      "inputDescription": "One line of text.",
+      "outputDescription": "Multiple lines: word count in lexicographic order of word.",
+      "examples": [
+        "Input:\nhi hi what is hi\n\nOutput:\nhi 3\nis 1\nwhat 1"
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        string[] words = Console.ReadLine().Split(new[]{' '}, StringSplitOptions.RemoveEmptyEntries);\n        // Dictionary<string,int> freq; sort keys; print\n    }\n}\n",
+      "tests": [
+        { "input": "hi hi what is hi", "expected": "hi 3\nis 1\nwhat 1" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Synonym Dictionary",
+      "description": "You are given N pairs of synonyms (two words each). Then you are given a single word. Print its synonym. It is guaranteed that the word appears in exactly one pair.",
+      "inputDescription": "First line: N. Next N lines: two words per line. Last line: query word.",
+      "outputDescription": "The synonym of the query word.",
+      "examples": [
+        "Input:\n3\nbig large\nsmart clever\nfast quick\nclever\n\nOutput:\nsmart"
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int N = int.Parse(Console.ReadLine());\n        var mp = new Dictionary<string,string>();\n        // store both directions, then answer query\n    }\n}\n",
+      "tests": []
+    },
+    {
+      "id": 4,
+      "title": "Election Results",
+      "description": "You are given records of votes for candidates. Each record has candidate_name and votes (integer). For each candidate, sum total votes and print results sorted by candidate name.",
+      "inputDescription": "First line: N. Next N lines: name votes.",
+      "outputDescription": "Lines of 'name totalVotes' sorted lexicographically by name.",
+      "examples": [
+        "Example: Alice 10, Bob 5, Alice 3 -> Alice 13, Bob 5."
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int N = int.Parse(Console.ReadLine());\n        var dict = new Dictionary<string,long>();\n        // accumulate votes and print sorted by name\n    }\n}\n",
+      "tests": []
+    },
+    {
+      "id": 5,
+      "title": "Most Frequent Word",
+      "description": "Given n lines of text, find the word that occurs most frequently. If several words have the same highest frequency, print the lexicographically smallest one.",
+      "inputDescription": "First line: n. Next n lines: text.",
+      "outputDescription": "Single word: most frequent (breaking ties by lexicographic order).",
+      "examples": [
+        "Example: hi hi what is hi -> hi"
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int n = int.Parse(Console.ReadLine());\n        var freq = new Dictionary<string,int>();\n        // read n lines, count words, then pick best\n    }\n}\n",
+      "tests": []
+    },
+    {
+      "id": 6,
+      "title": "File Access Rights",
+      "description": "You are given access rights for files. For each file you know which operations are allowed: 'R' (read), 'W' (write), 'X' (execute). Then you get M queries of operation and file. For each query, print OK if operation is allowed, otherwise Access denied.",
+      "inputDescription": "First line: N. Next N lines: fileName followed by operations. Next line: M. Next M lines: operation fileName.",
+      "outputDescription": "M lines: OK or Access denied.",
+      "examples": [
+        "Classic \"file permissions\" problem."
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int N = int.Parse(Console.ReadLine());\n        var rights = new Dictionary<string,HashSet<string>>();\n        // fill rights; then process M queries\n    }\n}\n",
+      "tests": []
+    },
+    {
+      "id": 7,
+      "title": "Cities and Countries",
+      "description": "Given a mapping from countries to their cities, then queries of city names, print the country for each city.",
+      "inputDescription": "First line: N. For each of N lines: countryName k city1 city2 ... cityk. Then line Q, then Q city names.",
+      "outputDescription": "For each query city, print its country.",
+      "examples": [
+        "Example: India 2 Delhi Mumbai; query Delhi -> India"
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int N = int.Parse(Console.ReadLine());\n        var cityToCountry = new Dictionary<string,string>();\n        // fill dictionary, then handle Q queries\n    }\n}\n",
+      "tests": []
+    },
+    {
+      "id": 8,
+      "title": "Word Frequencies by Popularity",
+      "description": "Given n lines of text, print all distinct words sorted by descending frequency; for equal frequency, sort lexicographically ascending. Print one word per line.",
+      "inputDescription": "First line: n. Next n lines: text.",
+      "outputDescription": "Words, one per line, sorted by (-frequency, word).",
+      "examples": [
+        "Example: hi hi what is is -> hi, is, what (each on its own line)."
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int n = int.Parse(Console.ReadLine());\n        var freq = new Dictionary<string,int>();\n        // count words, then sort using custom comparer\n    }\n}\n",
+      "tests": []
+    },
+    {
+      "id": 9,
+      "title": "Student Total Scores",
+      "description": "Given N lines with student name and score, sum scores per student and print 'name totalScore' on separate lines sorted by name.",
+      "inputDescription": "First line: N. Next N lines: string name, int score.",
+      "outputDescription": "Lines 'name totalScore' sorted lexicographically by name.",
+      "examples": [
+        "Example: Ram 10, Kiran 5, Ram 7 -> Kiran 5, Ram 17."
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int N = int.Parse(Console.ReadLine());\n        var totals = new Dictionary<string,long>();\n        // accumulate scores and print sorted\n    }\n}\n",
+      "tests": []
+    },
+    {
+      "id": 10,
+      "title": "Replace Words with Synonyms",
+      "description": "Given N synonym pairs (a b). Then a sentence. For each word in the sentence, if it appears as a or b in any pair, replace it with its synonym; otherwise keep it unchanged.",
+      "inputDescription": "First line: N. Next N lines: a b. Last line: sentence.",
+      "outputDescription": "New sentence after replacing words by synonyms.",
+      "examples": [
+        "Example: pair: big large; sentence: big cat -> large cat."
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int N = int.Parse(Console.ReadLine());\n        var mp = new Dictionary<string,string>();\n        // build bidirectional map, then transform sentence\n    }\n}\n",
+      "tests": []
+    }
+  ]
+}

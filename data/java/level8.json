@@ -1,106 +1,117 @@
 {
-  "level": 8,
-  "title": "Inheritance & Polymorphism",
-  "concept": "This level introduces parent-child classes, method overriding, super keyword, hierarchical inheritance and runtime polymorphism.",
-  "challenges": [
+  "title": "Java Level 8 — Recursion & Algorithms",
+  "concept": "Recursive functions, backtracking-lite, slightly harder array/string logic.",
+  "language": "java",
+  "problems": [
     {
       "id": 1,
-      "title": "Single Inheritance — Full Name",
-      "description": "Class Person has first and last name. Class Student extends Person. Method fullName() returns first + \" \" + last.",
-      "starterCode": "import java.util.*;\nclass Person{\n  String first, last;\n  Person(String f,String l){ /* store */ }\n}\nclass Student extends Person{\n  Student(String f,String l){ super(f,l); }\n  String fullName(){ /* return full name */ return \"\"; }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String f=sc.next();\n    String l=sc.next();\n    Student s=new Student(f,l);\n    System.out.println(s.fullName());\n  }\n}",
-      "tests": [
-        { "input": "Ram Kumar", "expected": "Ram Kumar" },
-        { "input": "Kiran S", "expected": "Kiran S" }
-      ]
+      "name": "Recursive Factorial",
+      "description": "Implement factorial using recursion and print n!.",
+      "input_format": "Single integer n.",
+      "output_format": "Single long integer.",
+      "constraints": "0 ≤ n ≤ 20",
+      "sample_input": "5",
+      "sample_output": "120",
+      "notes": ""
     },
     {
       "id": 2,
-      "title": "Overriding — Sound",
-      "description": "Base class Animal has method sound() returning \"Animal\". Dog overrides to \"Bark\", Cat overrides to \"Meow\".",
-      "starterCode": "import java.util.*;\nclass Animal{ String sound(){ return \"Animal\"; } }\nclass Dog extends Animal{ String sound(){ return \"Bark\"; } }\nclass Cat extends Animal{ String sound(){ return \"Meow\"; } }\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String t=sc.next();\n    Animal a;\n    if(t.equals(\"dog\")) a=new Dog();\n    else a=new Cat();\n    System.out.println(a.sound());\n  }\n}",
-      "tests": [
-        { "input": "dog", "expected": "Bark" },
-        { "input": "cat", "expected": "Meow" }
-      ]
+      "name": "Recursive Fibonacci",
+      "description": "Implement Fibonacci using recursion (memoization recommended to avoid TLE). Print nth Fibonacci (F1=0, F2=1).",
+      "input_format": "Single integer n.",
+      "output_format": "Single long integer.",
+      "constraints": "1 ≤ n ≤ 50",
+      "sample_input": "6",
+      "sample_output": "5",
+      "notes": "Better to implement iterative or memoized."
     },
     {
       "id": 3,
-      "title": "super Keyword",
-      "description": "Class A has method greet() returning \"Hi\". Class B overrides greet() but still needs to call super.greet() and return \"Hi Hello\".",
-      "starterCode": "class A{ String greet(){ return \"Hi\"; } }\nclass B extends A{ String greet(){ /* call super and return combined */ return \"\"; } }\npublic class Main{\n  public static void main(String[] args){\n    B obj = new B();\n    System.out.println(obj.greet());\n  }\n}",
-      "tests": [
-        { "input": "", "expected": "Hi Hello" }
-      ]
+      "name": "Sum of Digits (Recursion)",
+      "description": "Given non-negative integer n, recursively compute sum of its digits.",
+      "input_format": "Single integer n.",
+      "output_format": "Single integer: sum.",
+      "constraints": "0 ≤ n ≤ 10^9",
+      "sample_input": "1234",
+      "sample_output": "10",
+      "notes": ""
     },
     {
       "id": 4,
-      "title": "Employee → Developer",
-      "description": "Class Employee with name and baseSalary. Developer extends Employee with bonus. Method totalSalary() returns baseSalary + bonus.",
-      "starterCode": "import java.util.*;\nclass Employee{\n  String name;\n  int base;\n  Employee(String n,int b){ /* store */ }\n}\nclass Developer extends Employee{\n  int bonus;\n  Developer(String n,int b,int x){ super(n,b); /* store bonus */ }\n  int totalSalary(){ /* compute */ return 0; }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String n=sc.next();\n    int b=sc.nextInt();\n    int x=sc.nextInt();\n    Developer d=new Developer(n,b,x);\n    System.out.println(d.totalSalary());\n  }\n}",
-      "tests": [
-        { "input": "Ram 20000 5000", "expected": "25000" },
-        { "input": "Kiran 10000 2000", "expected": "12000" }
-      ]
+      "name": "Binary Search (Recursive)",
+      "description": "Given sorted array and value x, implement recursive binary search. Print index (0-based) or -1.",
+      "input_format": "n, array of n sorted ints, then x.",
+      "output_format": "Index or -1.",
+      "constraints": "1 ≤ n ≤ 10^5",
+      "sample_input": "5\n1 3 5 7 9\n7",
+      "sample_output": "3",
+      "notes": ""
     },
     {
       "id": 5,
-      "title": "Runtime Polymorphism — Area",
-      "description": "Parent Shape has area() returning 0. Circle and Rectangle override area(). Print area of shape depending on type.",
-      "starterCode": "import java.util.*;\nclass Shape{ double area(){ return 0; } }\nclass Circle extends Shape{ double r; Circle(double x){ r=x; } double area(){ return 3.14*r*r; } }\nclass Rectangle extends Shape{ double w,h; Rectangle(double a,double b){ w=a; h=b; } double area(){ return w*h; } }\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String t=sc.next();\n    Shape s;\n    if(t.equals(\"circle\")) s=new Circle(sc.nextDouble());\n    else s=new Rectangle(sc.nextDouble(),sc.nextDouble());\n    System.out.println(s.area());\n  }\n}",
-      "tests": [
-        { "input": "circle 2", "expected": "12.56" },
-        { "input": "rectangle 3 4", "expected": "12.0" }
-      ]
+      "name": "Generate All Subsets (Bitmask Count Only)",
+      "description": "Given n (n ≤ 20), count how many subsets of {1..n} have even sum. Use recursion or bitmasks.",
+      "input_format": "Single integer n.",
+      "output_format": "Single integer: count.",
+      "constraints": "1 ≤ n ≤ 20",
+      "sample_input": "3",
+      "sample_output": "4",
+      "notes": "Subsets with even sum: {}, {1,3}, {2}, {2,1,3}."
     },
     {
       "id": 6,
-      "title": "Hierarchical Inheritance — Payment",
-      "description": "Base class Payment has amount. CashPayment prints \"Cash-amount\". CardPayment prints \"Card-amount\".",
-      "starterCode": "import java.util.*;\nclass Payment{ int amt; Payment(int a){ amt=a; } }\nclass CashPayment extends Payment{\n  CashPayment(int x){ super(x); }\n  String pay(){ return \"Cash-\"+amt; }\n}\nclass CardPayment extends Payment{\n  CardPayment(int x){ super(x); }\n  String pay(){ return \"Card-\"+amt; }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String type=sc.next();\n    int a=sc.nextInt();\n    if(type.equals(\"cash\")) System.out.println(new CashPayment(a).pay());\n    else System.out.println(new CardPayment(a).pay());\n  }\n}",
-      "tests": [
-        { "input": "cash 300", "expected": "Cash-300" },
-        { "input": "card 500", "expected": "Card-500" }
-      ]
+      "name": "String Permutation Check",
+      "description": "Given two strings s and t, check if t is a permutation of s (same multiset of characters). Print YES or NO.",
+      "input_format": "Two lines: s, t.",
+      "output_format": "YES or NO.",
+      "constraints": "0 ≤ |s|, |t| ≤ 10^5",
+      "sample_input": "abc\nbca",
+      "sample_output": "YES",
+      "notes": ""
     },
     {
       "id": 7,
-      "title": "Parent → Child Constructor Chain",
-      "description": "Class A takes int x. Class B extends A and takes int x,y. Compute x+y and print.",
-      "starterCode": "import java.util.*;\nclass A{ int x; A(int a){ x=a; } }\nclass B extends A{ int y; B(int a,int b){ super(a); y=b; } int sum(){ return 0; }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    System.out.println(new B(a,b).sum());\n  }\n}",
-      "tests": [
-        { "input": "3 4", "expected": "7" },
-        { "input": "10 20", "expected": "30" }
-      ]
+      "name": "Balanced Parentheses",
+      "description": "Given a string of brackets ()[]{}, check if it is balanced using stack. Print YES or NO.",
+      "input_format": "Single string of characters '()[]{}'.",
+      "output_format": "YES or NO.",
+      "constraints": "0 ≤ |s| ≤ 10^5",
+      "sample_input": "{[()]}",
+      "sample_output": "YES",
+      "notes": ""
     },
     {
       "id": 8,
-      "title": "Final Method Override Restriction",
-      "description": "Parent has final int square(int x). Child has cube(int x). Read n and print square(n) then cube(n) on new line.",
-      "starterCode": "import java.util.*;\nclass A{ final int square(int x){ return x*x; } }\nclass B extends A{ int cube(int x){ return x*x*x; } }\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    B obj=new B();\n    // print square then cube each on new line\n  }\n}",
-      "tests": [
-        { "input": "3", "expected": "9\n27" },
-        { "input": "5", "expected": "25\n125" }
-      ]
+      "name": "Subset Sum Exists",
+      "description": "Given n and n numbers and target S (n ≤ 20), determine recursively if there exists subset whose sum is S. Print YES or NO.",
+      "input_format": "n, then n integers, then S.",
+      "output_format": "YES or NO.",
+      "constraints": "1 ≤ n ≤ 20",
+      "sample_input": "4\n1 2 3 4\n6",
+      "sample_output": "YES",
+      "notes": ""
     },
     {
       "id": 9,
-      "title": "Protected Access",
-      "description": "Parent A has protected int val. Child B adds n to val and prints.",
-      "starterCode": "import java.util.*;\nclass A{ protected int val; A(int v){ val=v; } }\nclass B extends A{ B(int v){ super(v); }\n  int add(int n){ return val+n; }\n}\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int v=sc.nextInt();\n    int n=sc.nextInt();\n    System.out.println(new B(v).add(n));\n  }\n}",
-      "tests": [
-        { "input": "5 7", "expected": "12" },
-        { "input": "10 1", "expected": "11" }
-      ]
+      "name": "String Compression",
+      "description": "Given string s, compress consecutive repeating characters as char followed by count (e.g., aaabb -> a3b2). If compressed string is not shorter, print original.",
+      "input_format": "Single string s.",
+      "output_format": "Compressed or original string.",
+      "constraints": "0 ≤ |s| ≤ 10^5",
+      "sample_input": "aaabb",
+      "sample_output": "a3b2",
+      "notes": ""
     },
     {
       "id": 10,
-      "title": "Dynamic Dispatch — Vehicle",
-      "description": "Vehicle class has drive() returning \"Vehicle\". Bike returns \"Bike\". Car returns \"Car\". Based on input print result.",
-      "starterCode": "import java.util.*;\nclass Vehicle{ String drive(){ return \"Vehicle\"; } }\nclass Bike extends Vehicle{ String drive(){ return \"Bike\"; } }\nclass Car extends Vehicle{ String drive(){ return \"Car\"; } }\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String t=sc.next();\n    Vehicle v;\n    if(t.equals(\"bike\")) v=new Bike();\n    else v=new Car();\n    System.out.println(v.drive());\n  }\n}",
-      "tests": [
-        { "input": "bike", "expected": "Bike" },
-        { "input": "car", "expected": "Car" }
-      ]
+      "name": "Longest Common Prefix",
+      "description": "Given n strings, find the longest common prefix. If none, print \"\" (empty line).",
+      "input_format": "First line: n. Next n lines: strings.",
+      "output_format": "Single line: longest common prefix.",
+      "constraints": "1 ≤ n ≤ 10^5; total length ≤ 10^6",
+      "sample_input": "3\nflower\nflow\nflight",
+      "sample_output": "fl",
+      "notes": ""
     }
   ]
 }

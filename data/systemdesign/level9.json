@@ -1,28 +1,126 @@
 {
-  "title": "System Design Level 9 — News Feed / Timeline",
-  "concept": "Scenario-based design questions for a social media feed.",
-  "challenges": [
+  "title": "System Design Level 9 — Observability, Monitoring & Deployment",
+  "concept": "Logging, metrics, tracing, health checks, rollouts and resiliency patterns.",
+  "questions": [
     {
-      "title": "Q1: Feed Requirements & Data Flow",
-      "description": "Design a simple news feed for a social network. Define what data needs to be stored for posts and follows, and describe how data flows from a user posting something to that post appearing in followers' feeds.",
-      "inputDescription": "No input. Design question.",
-      "outputDescription": "High-level description of entities (User, Post, Follow, Feed) and data flow (checked manually).",
-      "examples": [
-        "Mention that when a user posts, the system may push it to follower feeds (fan-out on write) or compute on read."
-      ],
-      "starterCode": "// Describe entities, relationships, and posting-to-feed flow.\n",
-      "tests": []
+      "id": 1,
+      "question": "Observability in systems generally consists of:",
+      "options": {
+        "A": "Logs, metrics and traces",
+        "B": "Only code comments",
+        "C": "Only unit tests",
+        "D": "Only dashboards"
+      },
+      "answer": "A",
+      "explanation": "Logs, metrics, and distributed traces are core observability pillars."
     },
     {
-      "title": "Q2: Fan-out Choices & Caching",
-      "description": "Explain fan-out on write vs fan-out on read in the context of feeds. Which approach would you pick for: (a) a user with few followers, (b) a celebrity with millions of followers? How would you use caching to speed up feed loading?",
-      "inputDescription": "No input. Design question.",
-      "outputDescription": "Comparison of fan-out strategies and caching plan (checked manually).",
-      "examples": [
-        "Think about precomputing feeds for normal users and dynamic feed generation for celebrities."
-      ],
-      "starterCode": "// Compare fan-out approaches and explain caching strategy (per-user feed cache, etc.).\n",
-      "tests": []
+      "id": 2,
+      "question": "A health check endpoint (e.g., /healthz) is used to:",
+      "options": {
+        "A": "Serve user traffic",
+        "B": "Allow load balancers/orchestrators to detect if an instance is healthy",
+        "C": "Display ads",
+        "D": "Store configuration"
+      },
+      "answer": "B",
+      "explanation": "Health checks drive instance readiness/liveness and routing decisions."
+    },
+    {
+      "id": 3,
+      "question": "Metrics like p95 or p99 latency refer to:",
+      "options": {
+        "A": "Average response time",
+        "B": "Latency experienced by the slowest request only",
+        "C": "Latency percentiles capturing tail behavior",
+        "D": "Disk usage"
+      },
+      "answer": "C",
+      "explanation": "Percentiles show tail latency, critical for user experience."
+    },
+    {
+      "id": 4,
+      "question": "Distributed tracing helps you:",
+      "options": {
+        "A": "Encrypt traffic",
+        "B": "Follow a request across multiple microservices with correlation IDs",
+        "C": "Replace logging",
+        "D": "Avoid rate limiting"
+      },
+      "answer": "B",
+      "explanation": "Tracing tracks a request flow across services, exposing bottlenecks."
+    },
+    {
+      "id": 5,
+      "question": "Blue-green deployment pattern means:",
+      "options": {
+        "A": "Deploy on one environment while the other stays idle, then switch traffic",
+        "B": "Deploy directly to production with no testing",
+        "C": "Only use one environment forever",
+        "D": "Deploy only at night"
+      },
+      "answer": "A",
+      "explanation": "Blue-green keeps a stable (blue) and new (green) environment to switch traffic safely."
+    },
+    {
+      "id": 6,
+      "question": "Canary release pattern is used to:",
+      "options": {
+        "A": "Roll out new versions to 100% of users immediately",
+        "B": "Roll out to a small subset of traffic first to detect issues early",
+        "C": "Disable monitoring",
+        "D": "Only upgrade databases"
+      },
+      "answer": "B",
+      "explanation": "Canarying mitigates risk by testing changes with a small population first."
+    },
+    {
+      "id": 7,
+      "question": "Circuit breaker pattern in microservices:",
+      "options": {
+        "A": "Increases traffic to slow services",
+        "B": "Stops calls to a failing service temporarily to prevent cascading failures",
+        "C": "Disables caching",
+        "D": "Removes rate limiting"
+      },
+      "answer": "B",
+      "explanation": "Circuit breakers open when failure rates are high, short-circuiting requests."
+    },
+    {
+      "id": 8,
+      "question": "Retry logic should typically:",
+      "options": {
+        "A": "Retry infinitely with no delay",
+        "B": "Use bounded retries with exponential backoff and jitter",
+        "C": "Never use backoff",
+        "D": "Be disabled always"
+      },
+      "answer": "B",
+      "explanation": "Backoff with jitter avoids synchronized retry storms and respects capacity."
+    },
+    {
+      "id": 9,
+      "question": "A runbook or playbook is:",
+      "options": {
+        "A": "A unit test report",
+        "B": "A documented set of steps for handling common incidents or operations",
+        "C": "Source code for the service",
+        "D": "A dashboard"
+      },
+      "answer": "B",
+      "explanation": "Runbooks guide engineers during incidents with known procedures."
+    },
+    {
+      "id": 10,
+      "question": "Error budgets in SRE are used to:",
+      "options": {
+        "A": "Measure acceptable level of unreliability given an SLO",
+        "B": "Set engineering salaries",
+        "C": "Design UI",
+        "D": "Control logging volume only"
+      },
+      "answer": "A",
+      "explanation": "An error budget quantifies allowed failure, guiding pace of releases vs reliability."
     }
   ]
 }

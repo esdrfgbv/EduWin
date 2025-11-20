@@ -1,0 +1,152 @@
+{
+  "title": "C# Level 2 — Data Types & Operators",
+  "concept": "Use integers and doubles with arithmetic, time and money calculations.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Fractional Part",
+      "description": "Given a positive real number x, print its fractional part (x minus its integer part).",
+      "inputDescription": "One positive real x.",
+      "outputDescription": "Fractional part of x.",
+      "examples": [
+        "Input:\n3.25\n\nOutput:\n0.25"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static void Main() {\n        // read x, compute x - Math.Floor(x), print\n    }\n}\n",
+      "tests": [
+        { "input": "3.25", "expected": "0.25" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "First Digit After Decimal",
+      "description": "Given a positive real number x, print the first digit to the right of the decimal point.",
+      "inputDescription": "One positive real x.",
+      "outputDescription": "Single digit (0–9).",
+      "examples": [
+        "Input:\n1.79\n\nOutput:\n7"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static void Main() {\n        // multiply fractional part by 10 and take integer part\n    }\n}\n",
+      "tests": [
+        { "input": "1.79", "expected": "7" },
+        { "input": "3.04", "expected": "0" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Car Route Days",
+      "description": "A car travels N kilometers per day. How many days are needed to cover a route of length M kilometers? Use ceiling of M/N.",
+      "inputDescription": "Two integers N and M > 0.",
+      "outputDescription": "Single integer: minimal number of days.",
+      "examples": [
+        "Input:\n700 750\n\nOutput:\n2"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static void Main() {\n        // compute (M + N - 1) / N\n    }\n}\n",
+      "tests": [
+        { "input": "700 700", "expected": "1" },
+        { "input": "700 750", "expected": "2" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Digital Clock",
+      "description": "Given N minutes since midnight, print current time in hours and minutes in 24-hour format.",
+      "inputDescription": "Integer N >= 0.",
+      "outputDescription": "Two integers: hours and minutes separated by a space.",
+      "examples": [
+        "Input:\n150\n\nOutput:\n2 30"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static void Main() {\n        // hours = N / 60, minutes = N % 60\n    }\n}\n",
+      "tests": [
+        { "input": "150", "expected": "2 30" },
+        { "input": "0", "expected": "0 0" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Cupcake Cost",
+      "description": "One cupcake costs A dollars and B cents. Find the total cost of N cupcakes as dollars and cents.",
+      "inputDescription": "Three integers A, B, N.",
+      "outputDescription": "Two integers: total_dollars total_cents.",
+      "examples": [
+        "Input:\n1 50 3\n\nOutput:\n4 50"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static void Main() {\n        // compute total cents then convert to dollars and cents\n    }\n}\n",
+      "tests": [
+        { "input": "1 50 3", "expected": "4 50" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Hour Hand Angle",
+      "description": "H hours, M minutes and S seconds have passed since midnight (0 ≤ H < 12). Compute the angle of the hour hand in degrees.",
+      "inputDescription": "Three integers H, M, S.",
+      "outputDescription": "Real number: angle in degrees.",
+      "examples": [
+        "Input:\n3 0 0\n\nOutput:\n90"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static void Main() {\n        // angle = 30*H + 0.5*M + (0.5/60)*S\n    }\n}\n",
+      "tests": [
+        { "input": "0 0 0", "expected": "0" },
+        { "input": "3 0 0", "expected": "90" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "School Desks",
+      "description": "Three classes have a, b, c students. Each desk seats 2 students. Print the minimum number of desks needed in total.",
+      "inputDescription": "Three integers a, b, c.",
+      "outputDescription": "Single integer: total desks required.",
+      "examples": [
+        "Input:\n20 21 22\n\nOutput:\n32"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static void Main() {\n        // desks = (a+1)/2 + (b+1)/2 + (c+1)/2\n    }\n}\n",
+      "tests": [
+        { "input": "20 21 22", "expected": "32" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Timestamp Difference",
+      "description": "Given two timestamps (h1 m1 s1) and (h2 m2 s2) on the same day, where the second is later, print how many seconds between them.",
+      "inputDescription": "Six integers: h1 m1 s1 h2 m2 s2.",
+      "outputDescription": "Single integer: difference in seconds.",
+      "examples": [
+        "Input:\n1 1 1 1 1 2\n\nOutput:\n1"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static void Main() {\n        // convert both to seconds and subtract\n    }\n}\n",
+      "tests": [
+        { "input": "1 1 1 1 1 2", "expected": "1" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Smaller of Two",
+      "description": "Given two integers, print the smaller one.",
+      "inputDescription": "Two integers a and b.",
+      "outputDescription": "Single integer: min(a, b).",
+      "examples": [
+        "Input:\n3 7\n\nOutput:\n3"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static void Main() {\n        // read two integers and print the smaller\n    }\n}\n",
+      "tests": [
+        { "input": "3 7", "expected": "3" },
+        { "input": "10 -5", "expected": "-5" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Tens Digit",
+      "description": "Given an integer n, print its tens digit (second digit from right, or 0 if n has only one digit).",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Single digit: tens digit.",
+      "examples": [
+        "Input:\n123\n\nOutput:\n2"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static void Main() {\n        // print (Math.Abs(n) / 10) % 10\n    }\n}\n",
+      "tests": [
+        { "input": "123", "expected": "2" },
+        { "input": "5", "expected": "0" }
+      ]
+    }
+  ]
+}

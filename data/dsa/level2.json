@@ -1,107 +1,138 @@
 {
-  "level": 2,
-  "title": "Sorting Algorithms",
-  "concept": "This level teaches how sorting works internally. Focus is on writing logic without library sort functions. Problems include implementing Bubble Sort, Selection Sort, Insertion Sort, checking sorted, sorting strings, sorting pairs and stable sorting logic.",
+  "title": "DSA Level 2 — Arrays, Two-Pointers & Frequency",
+  "concept": "Slightly harder array problems: pairs, frequency counting, two-pointer tricks.",
   "challenges": [
     {
       "id": 1,
-      "title": "Sort Array (Ascending)",
-      "description": "Read N and N integers. Sort the array in ascending order using any sorting logic and print.",
-      "starterCode": "// sort array without using built-in sort",
-      "tests": [
-        { "input": "5\n4 1 3 2 5", "expected": "1 2 3 4 5" },
-        { "input": "3\n10 10 5", "expected": "5 10 10" }
-      ]
+      "title": "Second Largest Element",
+      "description": "Given an array of N distinct integers (no duplicates), find the second largest element. If N < 2, print -1.",
+      "inputDescription": "First line: N. Second line: N distinct integers.",
+      "outputDescription": "Single integer: second largest value, or -1 if not defined.",
+      "examples": [
+        "Input:\n5\n1 5 3 4 2\n\nOutput:\n4"
+      ],
+      "constraints": "1 ≤ N ≤ 10^5",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 2,
-      "title": "Sort Array (Descending)",
-      "description": "Sort given array in descending order and print.",
-      "starterCode": "// descending order sort manually",
-      "tests": [
-        { "input": "4\n1 2 3 4", "expected": "4 3 2 1" },
-        { "input": "3\n5 5 1", "expected": "5 5 1" }
-      ]
+      "title": "Remove Duplicates from Sorted Array",
+      "description": "Given a sorted array of N integers, remove duplicates in-place such that each element appears only once, and print the resulting array.",
+      "inputDescription": "First line: N. Second line: N integers in non-decreasing order.",
+      "outputDescription": "Array after deleting duplicates, in one line.",
+      "examples": [
+        "Input:\n6\n1 1 2 2 2 3\n\nOutput:\n1 2 3"
+      ],
+      "constraints": "1 ≤ N ≤ 10^5",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 3,
-      "title": "Bubble Sort Simulation",
-      "description": "Apply Bubble Sort and print the final sorted array.",
-      "starterCode": "// implement bubble sort loop",
-      "tests": [
-        { "input": "5\n5 1 4 2 3", "expected": "1 2 3 4 5" },
-        { "input": "4\n4 3 2 1", "expected": "1 2 3 4" }
-      ]
+      "title": "Count Distinct Elements",
+      "description": "Given an array of N integers, count the number of distinct elements in the array.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Single integer: number of distinct values.",
+      "examples": [
+        "Input:\n6\n1 2 2 3 3 3\n\nOutput:\n3"
+      ],
+      "constraints": "1 ≤ N ≤ 10^5",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 4,
-      "title": "Selection Sort Simulation",
-      "description": "Apply Selection Sort and print the final sorted array.",
-      "starterCode": "// implement selection sort",
-      "tests": [
-        { "input": "5\n64 25 12 22 11", "expected": "11 12 22 25 64" },
-        { "input": "3\n3 2 1", "expected": "1 2 3" }
-      ]
+      "title": "Pair Sum Exists",
+      "description": "Given N, an array of N integers, and a target value S, determine if there exists a pair of distinct elements whose sum is S. Print \"YES\" if such a pair exists, otherwise \"NO\".",
+      "inputDescription": "First line: N. Second line: N integers. Third line: S.",
+      "outputDescription": "\"YES\" or \"NO\".",
+      "examples": [
+        "Input:\n5\n1 4 45 6 10\n16\n\nOutput:\nYES",
+        "Input:\n3\n1 2 3\n10\n\nOutput:\nNO"
+      ],
+      "constraints": "1 ≤ N ≤ 10^5, use O(N log N) or O(N) approach",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 5,
-      "title": "Insertion Sort Simulation",
-      "description": "Apply Insertion Sort and print the final sorted array.",
-      "starterCode": "// implement insertion sort",
-      "tests": [
-        { "input": "5\n12 11 13 5 6", "expected": "5 6 11 12 13" },
-        { "input": "4\n4 3 2 10", "expected": "2 3 4 10" }
-      ]
+      "title": "Two Sum Indices (Sorted Array)",
+      "description": "Given a sorted array of N integers and a target S, find two indices i and j (1-based, i < j) such that a[i] + a[j] = S. If multiple answers, print any one pair. If none, print -1.",
+      "inputDescription": "First line: N. Second line: N integers in non-decreasing order. Third line: S.",
+      "outputDescription": "Two integers: i j (1-based) or -1.",
+      "examples": [
+        "Input:\n5\n2 3 4 7 11\n9\n\nOutput:\n1 4"
+      ],
+      "constraints": "1 ≤ N ≤ 10^5, expected O(N) two-pointer solution",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 6,
-      "title": "Sort 0s and 1s",
-      "description": "Given array containing only 0 and 1, sort without full sorting (count or two-pointer).",
-      "starterCode": "// rearrange 0s and 1s",
-      "tests": [
-        { "input": "6\n0 1 0 1 1 0", "expected": "0 0 0 1 1 1" },
-        { "input": "5\n1 1 1 0 0", "expected": "0 0 1 1 1" }
-      ]
+      "title": "Move Zeros to End",
+      "description": "Given an array of N integers, move all zeros to the end while keeping the relative order of non-zero elements. Modify in-place and then print the array.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "N integers after moving all zeros to the end.",
+      "examples": [
+        "Input:\n5\n0 1 0 3 12\n\nOutput:\n1 3 12 0 0"
+      ],
+      "constraints": "1 ≤ N ≤ 10^5, O(N) time, O(1) extra space preferred",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 7,
-      "title": "Sort by Absolute Value",
-      "description": "Sort array by absolute values (e.g., -2 before -5 because |-2| < |-5|).",
-      "starterCode": "// compare absolute values while sorting",
-      "tests": [
-        { "input": "5\n-2 -5 4 1 0", "expected": "0 1 -2 4 -5" },
-        { "input": "4\n-1 2 -2 1", "expected": "1 -1 2 -2" }
-      ]
+      "title": "Maximum Subarray Sum (Kadane’s Basics)",
+      "description": "Given an array of N integers (can be negative), find the maximum possible sum of a contiguous subarray.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Single integer: maximum subarray sum.",
+      "examples": [
+        "Input:\n8\n-2 -3 4 -1 -2 1 5 -3\n\nOutput:\n7"
+      ],
+      "constraints": "1 ≤ N ≤ 10^5, use O(N) Kadane’s algorithm",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 8,
-      "title": "Sort Strings (Lexicographically)",
-      "description": "Sort N strings in dictionary order.",
-      "starterCode": "// sort array of strings without builtin sort",
-      "tests": [
-        { "input": "3\ncat bat apple", "expected": "apple bat cat" },
-        { "input": "4\nz b c a", "expected": "a b c z" }
-      ]
+      "title": "Frequency of Each Element (Sorted Output)",
+      "description": "Given an array of N integers, print each distinct element and its frequency. Output should be sorted by the element value in increasing order.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "For each distinct value v, print a separate line: v count.",
+      "examples": [
+        "Input:\n7\n2 3 2 4 3 3 2\n\nOutput:\n2 3\n3 3\n4 1"
+      ],
+      "constraints": "1 ≤ N ≤ 10^5",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 9,
-      "title": "Sort Pairs by First Value",
-      "description": "Given N pairs (x, y), sort in ascending order of x. If x ties, maintain order of input (stable sort).",
-      "starterCode": "// stable sort on first element only",
-      "tests": [
-        { "input": "3\n1 9\n1 5\n2 4", "expected": "1 9\n1 5\n2 4" },
-        { "input": "4\n3 10\n1 2\n3 1\n2 2", "expected": "1 2\n2 2\n3 10\n3 1" }
-      ]
+      "title": "Majority Element (More Than N/2 Times)",
+      "description": "Given an array of N integers, determine if there is an element that appears more than N/2 times. If it exists, print that element; otherwise, print -1.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Majority element value or -1.",
+      "examples": [
+        "Input:\n7\n2 2 1 2 3 2 2\n\nOutput:\n2",
+        "Input:\n4\n1 2 3 4\n\nOutput:\n-1"
+      ],
+      "constraints": "1 ≤ N ≤ 10^5, use Boyer–Moore or frequency counting",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 10,
-      "title": "Kth Smallest",
-      "description": "Given array and K (1-indexed), sort and print the Kth smallest element.",
-      "starterCode": "// sort and print Kth element",
-      "tests": [
-        { "input": "5\n7 10 4 3 20\n4", "expected": "10" },
-        { "input": "6\n12 3 5 7 19 26\n3", "expected": "7" }
-      ]
+      "title": "Longest Subarray of Ones After Flipping K Zeros",
+      "description": "Given a binary array (containing only 0s and 1s) of length N and an integer K, you are allowed to flip at most K zeros to ones. Find the length of the longest contiguous subarray that contains only ones after flips.",
+      "inputDescription": "First line: N K. Second line: N integers (0 or 1).",
+      "outputDescription": "Single integer: maximum length of such subarray.",
+      "examples": [
+        "Input:\n7 1\n1 0 1 1 0 1 0\n\nOutput:\n4"
+      ],
+      "constraints": "1 ≤ N ≤ 10^5, 0 ≤ K ≤ N, sliding window / two-pointer expected",
+      "starterCode": "",
+      "tests": []
     }
   ]
 }

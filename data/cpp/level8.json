@@ -1,34 +1,144 @@
 {
-  "title": "C++ Level 8 — Classes & Objects",
-  "concept": "Define simple classes and create objects to store and process data.",
+  "title": "C++ Level 8 — Sets and Membership",
+  "concept": "Use std::set to track unique values, intersections, and membership checks.",
   "challenges": [
     {
-      "title": "Student Class (Total Marks)",
-      "description": "Create a class Student with data members: name (string), m1, m2, m3 (int). Read these values, compute total marks, and print: name total.",
-      "inputDescription": "First line: name (single word). Next line: three integers m1 m2 m3.",
-      "outputDescription": "Print: name totalMarks",
+      "id": 1,
+      "title": "Distinct Numbers Count",
+      "description": "Given N and N integers, determine how many distinct numbers there are.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Single integer: number of distinct values.",
       "examples": [
-        "Input:\nRam\n80 75 90\n\nOutput:\nRam 245"
+        "Input:\n5\n1 2 2 3 1\n\nOutput:\n3"
       ],
-      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Student {\npublic:\n    string name;\n    int m1, m2, m3;\n    // you can add methods if needed\n};\n\nint main() {\n    // your code here\n    return 0;\n}\n",
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    int N;\n    // read numbers into set<int> and print its size\n    return 0;\n}\n",
       "tests": [
-        { "input": "Ram\n80 75 90", "expected": "Ram 245" },
-        { "input": "Sam\n50 50 50", "expected": "Sam 150" }
+        { "input": "5\n1 2 2 3 1", "expected": "3" }
       ]
     },
     {
-      "title": "Rectangle Class (Area)",
-      "description": "Create a class Rectangle with data members length and breadth. Add a member function area() that returns length * breadth. Read length and breadth, create an object, and print the area.",
-      "inputDescription": "Two integers length and breadth.",
-      "outputDescription": "Single integer: area of the rectangle.",
+      "id": 2,
+      "title": "Common Elements Count",
+      "description": "Given two lists of integers, count how many distinct numbers appear in both lists.",
+      "inputDescription": "N, then N integers, then M, then M integers.",
+      "outputDescription": "Single integer: count of distinct numbers common to both lists.",
       "examples": [
-        "Input:\n4 5\n\nOutput:\n20"
+        "Input:\n3\n1 2 3\n4\n2 3 4 5\n\nOutput:\n2"
       ],
-      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nclass Rectangle {\npublic:\n    int length, breadth;\n    // define area() function here\n};\n\nint main() {\n    // your code here\n    return 0;\n}\n",
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    int N,M;\n    // use two sets and count intersection size\n    return 0;\n}\n",
       "tests": [
-        { "input": "4 5", "expected": "20" },
-        { "input": "2 3", "expected": "6" }
+        { "input": "3\n1 2 3\n4\n2 3 4 5", "expected": "2" }
       ]
+    },
+    {
+      "id": 3,
+      "title": "Common Elements Sorted",
+      "description": "Given two lists, print all distinct numbers that appear in both, in ascending order.",
+      "inputDescription": "N, then N integers, then M, then M integers.",
+      "outputDescription": "Common distinct elements in ascending order separated by spaces.",
+      "examples": [
+        "Input:\n3\n1 2 2\n4\n2 3 1 2\n\nOutput:\n1 2"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    int N,M;\n    // compute intersection of two sets and print\n    return 0;\n}\n",
+      "tests": [
+        { "input": "3\n1 2 2\n4\n2 3 1 2", "expected": "1 2" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Seen Before (Numbers)",
+      "description": "Given N and a sequence of N integers, for each element print YES if this number has appeared earlier in the sequence, otherwise NO.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "N lines: each line YES or NO.",
+      "examples": [
+        "Input:\n6\n1 2 1 2 3 2\n\nOutput:\nNO\nNO\nYES\nYES\nNO\nYES"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    int N;\n    // use set<int> to track seen numbers\n    return 0;\n}\n",
+      "tests": [
+        { "input": "6\n1 2 1 2 3 2", "expected": "NO\nNO\nYES\nYES\nNO\nYES" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Numbers Only in First List",
+      "description": "Print distinct numbers that appear only in the first list and not in the second, in ascending order.",
+      "inputDescription": "N, then N integers, then M, then M integers.",
+      "outputDescription": "Numbers belonging only to first list, sorted ascending, separated by spaces.",
+      "examples": [
+        "Input:\n3\n1 2 3\n3\n2 3 4\n\nOutput:\n1"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    int N,M;\n    // use sets and compute A-B\n    return 0;\n}\n",
+      "tests": [
+        { "input": "3\n1 2 3\n3\n2 3 4", "expected": "1" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Numbers Only in Second List",
+      "description": "Print distinct numbers that appear only in the second list and not in the first, in ascending order.",
+      "inputDescription": "N, then N integers, then M, then M integers.",
+      "outputDescription": "Numbers belonging only to second list, sorted ascending.",
+      "examples": [
+        "Input:\n3\n1 2 3\n3\n2 3 4\n\nOutput:\n4"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    int N,M;\n    // compute B-A using sets\n    return 0;\n}\n",
+      "tests": [
+        { "input": "3\n1 2 3\n3\n2 3 4", "expected": "4" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Union of Two Lists",
+      "description": "Given two lists, print all distinct numbers that appear in at least one list, in ascending order.",
+      "inputDescription": "N, then N integers, then M, then M integers.",
+      "outputDescription": "Distinct union elements in ascending order separated by spaces.",
+      "examples": [
+        "Input:\n3\n1 2 3\n3\n2 3 4\n\nOutput:\n1 2 3 4"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    int N,M;\n    // insert all elements into set and print\n    return 0;\n}\n",
+      "tests": [
+        { "input": "3\n1 2 3\n3\n2 3 4", "expected": "1 2 3 4" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Distinct Words in Text",
+      "description": "Given n lines of text, print the number of distinct words (case-sensitive). Words are separated by spaces.",
+      "inputDescription": "First line: integer n. Next n lines: text.",
+      "outputDescription": "Single integer: distinct word count.",
+      "examples": [
+        "Input:\n2\nhi hi\nworld\n\nOutput:\n2"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    int n;\n    // read n lines, split into words, insert into set<string>, print size\n    return 0;\n}\n",
+      "tests": [
+        { "input": "2\nhi hi\nworld", "expected": "2" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Seen Before (Words)",
+      "description": "Given a line of words, for each word print how many times it has appeared before it in the same line. Words are separated by spaces.",
+      "inputDescription": "One line of text.",
+      "outputDescription": "For each word, print an integer count on the same line separated by spaces.",
+      "examples": [
+        "Input:\none two one two two\n\nOutput:\n0 0 1 1 2"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    // maintain map<string,int> for counts so far and print counts\n    return 0;\n}\n",
+      "tests": [
+        { "input": "one two one two two", "expected": "0 0 1 1 2" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Alice and Bob Cubes",
+      "description": "Alice has N cubes, Bob has M cubes. Each cube has an integer color. Find:\n1) Colors both have,\n2) Colors only Alice has,\n3) Colors only Bob has.\nFor each of the three sets, print on its own line: first the count, then the sorted colors.",
+      "inputDescription": "N, then N integers; M, then M integers.",
+      "outputDescription": "Three lines as described.",
+      "examples": [
+        "Example: if Alice: {1,2,3}, Bob: {2,3,4}, then line1: 2 2 3, line2: 1 1, line3: 1 4."
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main(){\n    int N,M;\n    // use sets and compute intersection and differences, then print counts and elements\n    return 0;\n}\n",
+      "tests": []
     }
   ]
 }

@@ -1,137 +1,117 @@
 {
-  "level": 4,
-  "title": "Arrays",
-  "concept": "This level teaches how to declare, input and iterate through arrays in Java. Concepts include summation, max/min, searching, counting, reversing, sorting and frequency.",
-  "challenges": [
+  "title": "Java Level 4 — Arrays & Basic Strings",
+  "concept": "One-dimensional arrays, traversals, simple string operations.",
+  "language": "java",
+  "problems": [
     {
       "id": 1,
-      "title": "Sum of Array",
-      "description": "Read N and then N integers into array. Print their sum.",
-      "inputDescription": "N then N integers.",
-      "outputDescription": "Sum as integer.",
-      "examples": ["Input:\n5\n1 2 3 4 5\nOutput:\n15"],
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    int[] arr = new int[n];\n    for(int i=0;i<n;i++) arr[i]=sc.nextInt();\n    // find sum\n  }\n}",
-      "tests": [
-        { "input": "5\n1 2 3 4 5", "expected": "15" },
-        { "input": "3\n10 10 10", "expected": "30" }
-      ]
+      "name": "Array Sum",
+      "description": "Given n and an array of n integers, print the sum of all elements.",
+      "input_format": "First line: n. Second line: n integers.",
+      "output_format": "Single integer sum.",
+      "constraints": "1 ≤ n ≤ 10^5; |ai| ≤ 10^9 (use long).",
+      "sample_input": "5\n1 2 3 4 5",
+      "sample_output": "15",
+      "notes": ""
     },
     {
       "id": 2,
-      "title": "Maximum Element",
-      "description": "Print the maximum number in array.",
-      "inputDescription": "N then N integers.",
-      "outputDescription": "Maximum element.",
-      "examples": ["Input:\n4\n3 9 1 8\nOutput:\n9"],
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    int[] arr = new int[n];\n    for(int i=0;i<n;i++) arr[i]=sc.nextInt();\n    // find max\n  }\n}",
-      "tests": [
-        { "input": "4\n3 9 1 8", "expected": "9" },
-        { "input": "3\n7 7 7", "expected": "7" }
-      ]
+      "name": "Array Maximum",
+      "description": "Print the maximum element in the array.",
+      "input_format": "First line: n. Second line: n integers.",
+      "output_format": "Single integer: maximum.",
+      "constraints": "1 ≤ n ≤ 10^5",
+      "sample_input": "4\n-1 -5 3 2",
+      "sample_output": "3",
+      "notes": ""
     },
     {
       "id": 3,
-      "title": "Minimum Element",
-      "description": "Print the minimum number in array.",
-      "inputDescription": "N then N integers.",
-      "outputDescription": "Minimum element.",
-      "examples": ["Input:\n4\n3 9 1 8\nOutput:\n1"],
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    int[] arr = new int[n];\n    // store input and find min\n  }\n}",
-      "tests": [
-        { "input": "4\n3 9 1 8", "expected": "1" },
-        { "input": "3\n5 5 5", "expected": "5" }
-      ]
+      "name": "Count Positives",
+      "description": "Count how many elements in the array are strictly positive.",
+      "input_format": "First line: n. Second line: n integers.",
+      "output_format": "Single integer: count of positive elements.",
+      "constraints": "1 ≤ n ≤ 10^5",
+      "sample_input": "5\n-1 0 2 3 -5",
+      "sample_output": "2",
+      "notes": ""
     },
     {
       "id": 4,
-      "title": "Search Element",
-      "description": "Read N array elements & X. Print Yes if X is present else No.",
-      "inputDescription": "N, N integers, integer X.",
-      "outputDescription": "Yes | No",
-      "examples": ["Input:\n5\n1 2 3 4 5\n3\nOutput:\nYes"],
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    int n=sc.nextInt();\n    int[] arr=new int[n];\n    for(int i=0;i<n;i++) arr[i]=sc.nextInt();\n    int x=sc.nextInt();\n    // search x\n  }\n}",
-      "tests": [
-        { "input": "5\n1 2 3 4 5\n3", "expected": "Yes" },
-        { "input": "4\n10 20 30 40\n25", "expected": "No" }
-      ]
+      "name": "Array Reverse Print",
+      "description": "Given an array, print its elements in reverse order on one line.",
+      "input_format": "First line: n. Second line: n integers.",
+      "output_format": "n integers in reverse order separated by space.",
+      "constraints": "1 ≤ n ≤ 10^5",
+      "sample_input": "3\n1 2 3",
+      "sample_output": "3 2 1",
+      "notes": ""
     },
     {
       "id": 5,
-      "title": "Count Occurrences",
-      "description": "Print count of how many times X occurs in array.",
-      "inputDescription": "N, N integers, X.",
-      "outputDescription": "Count of X.",
-      "examples": ["Input:\n6\n2 3 2 5 2 8\n2\nOutput:\n3"],
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    int[] arr=new int[n];\n    for(int i=0;i<n;i++) arr[i]=sc.nextInt();\n    int x=sc.nextInt();\n    // count occurrences\n  }\n}",
-      "tests": [
-        { "input": "6\n2 3 2 5 2 8\n2", "expected": "3" },
-        { "input": "5\n1 2 3 4 5\n6", "expected": "0" }
-      ]
+      "name": "Linear Search",
+      "description": "Given n, array of n integers and a value x, print the index (0-based) of first occurrence of x, or -1 if not found.",
+      "input_format": "First line: n. Second line: n integers. Third line: x.",
+      "output_format": "Single integer index or -1.",
+      "constraints": "1 ≤ n ≤ 10^5",
+      "sample_input": "5\n1 2 3 2 5\n2",
+      "sample_output": "1",
+      "notes": ""
     },
     {
       "id": 6,
-      "title": "Sum of Even Numbers",
-      "description": "Sum only the even numbers in array.",
-      "inputDescription": "N and N integers.",
-      "outputDescription": "Sum of even integers.",
-      "examples": ["Input:\n5\n1 2 3 4 6\nOutput:\n12"],
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    int[] arr=new int[n];\n    // read and sum even values\n  }\n}",
-      "tests": [
-        { "input": "5\n1 2 3 4 6", "expected": "12" },
-        { "input": "4\n1 3 5 7", "expected": "0" }
-      ]
+      "name": "String Length",
+      "description": "Given a single line string S (may contain spaces), print its length.",
+      "input_format": "Single line string S.",
+      "output_format": "Single integer: length of S.",
+      "constraints": "0 ≤ |S| ≤ 10^5",
+      "sample_input": "Hello",
+      "sample_output": "5",
+      "notes": "Use S.length()."
     },
     {
       "id": 7,
-      "title": "Reverse Print",
-      "description": "Print array elements in reverse order separated by spaces.",
-      "inputDescription": "N and N integers.",
-      "outputDescription": "Elements reversed separated by spaces.",
-      "examples": ["Input:\n4\n10 20 30 40\nOutput:\n40 30 20 10"],
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    int[] arr=new int[n];\n    // reverse print\n  }\n}",
-      "tests": [
-        { "input": "4\n10 20 30 40", "expected": "40 30 20 10" },
-        { "input": "3\n1 2 3", "expected": "3 2 1" }
-      ]
+      "name": "Count Vowels",
+      "description": "Given lowercase string S, count the vowels (a, e, i, o, u).",
+      "input_format": "Single string S without spaces.",
+      "output_format": "Single integer: number of vowels.",
+      "constraints": "0 ≤ |S| ≤ 10^5",
+      "sample_input": "hello",
+      "sample_output": "2",
+      "notes": ""
     },
     {
       "id": 8,
-      "title": "Second Largest",
-      "description": "Find the second largest distinct element.",
-      "inputDescription": "N and N integers.",
-      "outputDescription": "Second largest value.",
-      "examples": ["Input:\n5\n8 1 4 9 7\nOutput:\n8"],
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    int[] arr=new int[n];\n    // find 2nd largest\n  }\n}",
-      "tests": [
-        { "input": "5\n8 1 4 9 7", "expected": "8" },
-        { "input": "4\n10 9 8 7", "expected": "9" }
-      ]
+      "name": "String Reverse",
+      "description": "Given string S, print its reverse.",
+      "input_format": "Single string S without spaces.",
+      "output_format": "Reversed string.",
+      "constraints": "0 ≤ |S| ≤ 10^5",
+      "sample_input": "abcd",
+      "sample_output": "dcba",
+      "notes": ""
     },
     {
       "id": 9,
-      "title": "Sorted or Not",
-      "description": "If array is sorted in non-decreasing order print Yes, else No.",
-      "inputDescription": "N and N integers.",
-      "outputDescription": "Yes | No",
-      "examples": ["Input:\n5\n1 2 2 4 5\nOutput:\nYes"],
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    int[] arr=new int[n];\n    // check sorted or not\n  }\n}",
-      "tests": [
-        { "input": "5\n1 2 2 4 5", "expected": "Yes" },
-        { "input": "4\n3 1 4 5", "expected": "No" }
-      ]
+      "name": "Palindrome String",
+      "description": "Check if the given string S is a palindrome. Print YES or NO.",
+      "input_format": "Single string S without spaces, case-sensitive.",
+      "output_format": "YES or NO.",
+      "constraints": "0 ≤ |S| ≤ 10^5",
+      "sample_input": "level",
+      "sample_output": "YES",
+      "notes": ""
     },
     {
       "id": 10,
-      "title": "Digit Frequency (0–9)",
-      "description": "Given N digits (0–9), count frequency of each digit and print in 10 lines: d:count for 0 to 9.",
-      "inputDescription": "N then N digits 0–9.",
-      "outputDescription": "Print frequency lines for 0 to 9.",
-      "examples": ["Input:\n5\n1 2 1 3 2\nOutput:\n0:0\n1:2\n2:2\n3:1\n4:0\n5:0\n6:0\n7:0\n8:0\n9:0"],
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    int[] arr=new int[n];\n    // build frequency and print 0–9\n  }\n}",
-      "tests": [
-        { "input": "5\n1 2 1 3 2", "expected": "0:0\n1:2\n2:2\n3:1\n4:0\n5:0\n6:0\n7:0\n8:0\n9:0" },
-        { "input": "3\n0 0 0", "expected": "0:3\n1:0\n2:0\n3:0\n4:0\n5:0\n6:0\n7:0\n8:0\n9:0" }
-      ]
+      "name": "Count Occurrences in Array",
+      "description": "Count how many times x appears in the array.",
+      "input_format": "First line: n. Second line: n integers. Third line: x.",
+      "output_format": "Single integer: count.",
+      "constraints": "1 ≤ n ≤ 10^5",
+      "sample_input": "5\n1 2 3 2 2\n2",
+      "sample_output": "3",
+      "notes": ""
     }
   ]
 }

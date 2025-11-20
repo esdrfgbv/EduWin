@@ -1,27 +1,65 @@
 {
-  "title": "HTML+CSS Level 6 — CSS Basics",
-  "concept": "Apply simple CSS styles using classes and IDs.",
+  "title": "HTML+CSS Level 6 — Flexbox Layouts",
+  "concept": "Use CSS Flexbox to arrange elements in rows and columns with proper alignment.",
   "challenges": [
     {
-      "title": "Q1: Styled Heading & Paragraph",
-      "description": "Create a heading and a paragraph. Use CSS to make the heading blue and center aligned, and the paragraph with a gray text color and font-size 18px.",
+      "id": 1,
+      "title": "Centered Flex Container",
+      "description": "Create a page where a single card is perfectly centered both vertically and horizontally using flexbox on the body.",
       "inputDescription": "No input.",
-      "outputDescription": "Styled text as per description.",
+      "outputDescription": "A card in the center of the viewport with some text inside.",
       "examples": [
-        "Use a <style> tag in <head> or an external stylesheet."
+        "Body uses display:flex with justify-content and align-items set to center."
       ],
-      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>CSS Basics</title>\n    <style>\n        /* Add your CSS here */\n    </style>\n</head>\n<body>\n    <!-- Add heading and paragraph here -->\n</body>\n</html>\n",
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Centered Card</title>\n  <style>\n    /* Make body full-height flex container and center .card */\n  </style>\n</head>\n<body>\n  <div class=\"card\">\n    <h2>Welcome Back</h2>\n    <p>This card is centered using flexbox.</p>\n  </div>\n</body>\n</html>\n",
       "tests": []
     },
     {
-      "title": "Q2: Button with Class",
-      "description": "Create a button with class 'primary-btn'. Style it using CSS to have a background color, white text, some padding, and rounded corners.",
+      "id": 2,
+      "title": "Flexbox Navbar",
+      "description": "Create a top navigation bar using flexbox with a logo on the left and navigation links on the right.",
       "inputDescription": "No input.",
-      "outputDescription": "A visually styled button appears.",
+      "outputDescription": "Horizontal bar with logo text aligned left and links aligned right.",
       "examples": [
-        "Use .primary-btn selector and properties like padding, border-radius."
+        "EduWin logo on left, Home/About/Contact aligned right."
       ],
-      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Button Styling</title>\n    <style>\n        /* Style .primary-btn here */\n    </style>\n</head>\n<body>\n    <!-- Add your button with class=\"primary-btn\" -->\n</body>\n</html>\n",
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Flex Navbar</title>\n  <style>\n    /* Use display:flex on .navbar and space-between for children */\n  </style>\n</head>\n<body>\n  <header class=\"navbar\">\n    <div class=\"logo\">EduWin</div>\n    <nav class=\"nav-links\">\n      <a href=\"#\">Home</a>\n      <a href=\"#\">Courses</a>\n      <a href=\"#\">Contact</a>\n    </nav>\n  </header>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 3,
+      "title": "Three Feature Cards in a Row",
+      "description": "Create three 'feature' cards placed in a row using flexbox. Each card should have equal width and space between them.",
+      "inputDescription": "No input.",
+      "outputDescription": "Three evenly spaced boxes on one row on desktop.",
+      "examples": [
+        "Cards: \"Track Marks\", \"Smart Analytics\", \"Share Reports\"."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Feature Cards</title>\n  <style>\n    /* Use display:flex on .features and give flex:1 to .card */\n  </style>\n</head>\n<body>\n  <section class=\"features\">\n    <div class=\"card\">Track Marks</div>\n    <div class=\"card\">Smart Analytics</div>\n    <div class=\"card\">Share Reports</div>\n  </section>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 4,
+      "title": "Sidebar + Content Flex Layout",
+      "description": "Use flexbox to create a layout with a vertical sidebar on the left and main content area on the right. The sidebar should have a fixed width, and content should expand.",
+      "inputDescription": "No input.",
+      "outputDescription": "Two-column layout using flexbox, not floats.",
+      "examples": [
+        "Sidebar 250px, content fills remaining width."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Sidebar Layout</title>\n  <style>\n    /* .layout as flex container; .sidebar fixed width; .content flex:1 */\n  </style>\n</head>\n<body>\n  <div class=\"layout\">\n    <aside class=\"sidebar\">\n      <h2>Menu</h2>\n      <ul>\n        <li>Dashboard</li>\n        <li>Students</li>\n        <li>Settings</li>\n      </ul>\n    </aside>\n    <main class=\"content\">\n      <h1>Dashboard</h1>\n      <p>Welcome to the admin panel.</p>\n    </main>\n  </div>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 5,
+      "title": "Flexbox Centered Button Row",
+      "description": "Create a row of three buttons centered horizontally with equal spacing between them using flexbox.",
+      "inputDescription": "No input.",
+      "outputDescription": "Three buttons in a centered row with gaps.",
+      "examples": [
+        "Buttons: \"Day\", \"Week\", \"Month\" centered with gap between."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Button Row</title>\n  <style>\n    /* Use flexbox with justify-content:center and gap */\n  </style>\n</head>\n<body>\n  <div class=\"btn-group\">\n    <button>Day</button>\n    <button>Week</button>\n    <button>Month</button>\n  </div>\n</body>\n</html>\n",
       "tests": []
     }
   ]

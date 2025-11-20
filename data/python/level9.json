@@ -1,137 +1,116 @@
 {
-  "level": 9,
-  "title": "Classes & Objects",
-  "concept": "This level introduces object-oriented programming in Python: defining classes, instance attributes, methods, constructors (__init__), and simple encapsulation of logic inside objects.",
+  "title": "Python Level 9 — Dicts & Frequency Counting",
+  "concept": "Use dict and collections.Counter to build dictionaries, count frequencies, and aggregate values.",
   "challenges": [
     {
       "id": 1,
-      "title": "Rectangle Class",
-      "description": "Create a class Rectangle with attributes width and height. It should have a method area() that returns width * height. Read width and height, create object, print its area.",
-      "inputDescription": "Two integers w and h.",
-      "outputDescription": "Area as integer.",
-      "examples": ["Input:\n4 5\nOutput:\n20"],
-      "starterCode": "class Rectangle:\n    def __init__(self, width, height):\n        # store attributes\n        pass\n\n    def area(self):\n        # return area\n        pass\n\nw, h = map(int, input().split())\n# create object and print its area\n",
-      "tests": [
-        { "input": "4 5", "expected": "20" },
-        { "input": "3 7", "expected": "21" }
-      ]
+      "title": "Number Frequencies",
+      "description": "Given N and N integers, print the frequency of each distinct number in increasing order of the number. Each line must be: number count.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Multiple lines of 'number count' in sorted order.",
+      "examples": [
+        "Input:\n5\n1 2 2 3 1\n\nOutput:\n1 2\n2 2\n3 1"
+      ],
+      "starterCode": "def main():\n    from collections import Counter\n    N = int(input().strip())\n    arr = list(map(int, input().split()))\n    # TODO: use Counter, sort keys, print number and count\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 2,
-      "title": "Student Class - Average",
-      "description": "Create a class Student with name and three marks. It should have a method average() that returns average of marks. Read name and three integers, print integer average.",
-      "inputDescription": "First line: name, second line: three integers.",
-      "outputDescription": "Average marks as integer (floor).",
-      "examples": ["Input:\nRam\n80 90 100\nOutput:\n90"],
-      "starterCode": "class Student:\n    def __init__(self, name, m1, m2, m3):\n        # store attributes\n        pass\n\n    def average(self):\n        # return average\n        pass\n\nname = input().strip()\nm1, m2, m3 = map(int, input().split())\n# create object and print average\n",
-      "tests": [
-        { "input": "Ram\n80 90 100", "expected": "90" },
-        { "input": "Kiran\n60 60 60", "expected": "60" }
-      ]
+      "title": "Word Frequencies",
+      "description": "Given a single line of text, print words and their frequencies sorted lexicographically by word. Each line: word count.",
+      "inputDescription": "One line of text.",
+      "outputDescription": "Multiple lines: word count in lexicographic order of word.",
+      "examples": [
+        "Input:\nhi hi what is hi\n\nOutput:\nhi 3\nis 1\nwhat 1"
+      ],
+      "starterCode": "def main():\n    from collections import Counter\n    words = input().split()\n    # TODO: build Counter, sort keys, print word and count\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 3,
-      "title": "Bank Account",
-      "description": "Create a class Account with attributes holder (string) and balance (integer). It has methods deposit(x) and withdraw(y). After performing operations, print final balance.",
-      "inputDescription": "First line: name, second line: initial balance, third line: deposit amount, fourth line: withdraw amount.",
-      "outputDescription": "Final balance as integer.",
-      "examples": ["Input:\nRam\n1000\n500\n200\nOutput:\n1300"],
-      "starterCode": "class Account:\n    def __init__(self, holder, balance):\n        # initialize\n        pass\n\n    def deposit(self, x):\n        # add to balance\n        pass\n\n    def withdraw(self, y):\n        # subtract from balance\n        pass\n\nname = input().strip()\nbal = int(input())\nd = int(input())\nw = int(input())\n# create object, perform operations, print final balance\n",
-      "tests": [
-        { "input": "Ram\n1000\n500\n200", "expected": "1300" },
-        { "input": "Kiran\n0\n100\n50", "expected": "50" }
-      ]
+      "title": "Synonym Dictionary",
+      "description": "You are given N pairs of synonyms (two words each). Then you are given a single word. Print its synonym. It is guaranteed that the word appears in exactly one pair.",
+      "inputDescription": "First line: N. Next N lines: two words per line. Last line: query word.",
+      "outputDescription": "The synonym of the query word.",
+      "examples": [
+        "Input:\n3\nbig large\nsmart clever\nfast quick\nclever\n\nOutput:\nsmart"
+      ],
+      "starterCode": "def main():\n    N = int(input().strip())\n    d = {}\n    for _ in range(N):\n        a, b = input().split()\n        d[a] = b\n        d[b] = a\n    query = input().strip()\n    # TODO: print synonym of query\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 4,
-      "title": "Counter Class",
-      "description": "Create a class Counter with initial value 0. Methods: inc() increases by 1, dec() decreases by 1. Read N operations (inc/dec), apply on object and print final value.",
-      "inputDescription": "First line: N, next N lines: inc or dec.",
-      "outputDescription": "Final integer value of counter.",
-      "examples": ["Input:\n3\ninc\ninc\ndec\nOutput:\n1"],
-      "starterCode": "class Counter:\n    def __init__(self):\n        # start from 0\n        pass\n\n    def inc(self):\n        # increment\n        pass\n\n    def dec(self):\n        # decrement\n        pass\n\nn = int(input())\n# read operations and print final value\n",
-      "tests": [
-        { "input": "3\ninc\ninc\ndec", "expected": "1" },
-        { "input": "4\ninc\ndec\ndec\ninc", "expected": "0" }
-      ]
+      "title": "Election Results",
+      "description": "You are given records of votes for candidates. Each record has candidate_name and votes (integer). For each candidate, sum total votes and print results sorted by candidate name.",
+      "inputDescription": "First line: N. Next N lines: name votes.",
+      "outputDescription": "Lines of 'name totalVotes' sorted lexicographically by name.",
+      "examples": [
+        "Example: Alice 10, Bob 5, Alice 3 -> Alice 13, Bob 5."
+      ],
+      "starterCode": "def main():\n    N = int(input().strip())\n    totals = {}\n    for _ in range(N):\n        name, v = input().split()\n        v = int(v)\n        # TODO: add v to totals[name]\n    # TODO: print sorted by name\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 5,
-      "title": "Point Distance",
-      "description": "Create class Point with x, y integers. Add method distance_from_origin() that returns distance from (0,0) as float (you can use (x**2 + y**2)**0.5). Read x,y and print distance.",
-      "inputDescription": "Two integers x y.",
-      "outputDescription": "Distance as float (you can print default Python float).",
-      "examples": ["Input:\n3 4\nOutput:\n5.0"],
-      "starterCode": "class Point:\n    def __init__(self, x, y):\n        # store x and y\n        pass\n\n    def distance_from_origin(self):\n        # return distance\n        pass\n\nx, y = map(int, input().split())\n# create object and print distance_from_origin()\n",
-      "tests": [
-        { "input": "3 4", "expected": "5.0" },
-        { "input": "0 0", "expected": "0.0" }
-      ]
+      "title": "Most Frequent Word",
+      "description": "Given n lines of text, find the word that occurs most frequently. If several words have the same highest frequency, print the lexicographically smallest one.",
+      "inputDescription": "First line: n. Next n lines: text.",
+      "outputDescription": "Single word: most frequent (breaking ties lexicographically).",
+      "examples": [
+        "Example: hi hi what is hi -> hi"
+      ],
+      "starterCode": "def main():\n    from collections import Counter\n    n = int(input().strip())\n    counter = Counter()\n    for _ in range(n):\n        counter.update(input().split())\n    # TODO: find word with max freq, ties broken by smallest word\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 6,
-      "title": "Book Class - Info",
-      "description": "Create class Book with title (string), author (string), price (int). Method info() returns string \"title-by-author-price\" (with hyphens). Read fields and print info().",
-      "inputDescription": "Three lines: title, author, price.",
-      "outputDescription": "title-by-author-price",
-      "examples": ["Input:\nC Programming\nDennis Ritchie\n500\nOutput:\nC Programming-by-Dennis Ritchie-500"],
-      "starterCode": "class Book:\n    def __init__(self, title, author, price):\n        # store details\n        pass\n\n    def info(self):\n        # return formatted string\n        pass\n\ntitle = input().strip()\nauthor = input().strip()\nprice = int(input())\n# create object and print info()\n",
-      "tests": [
-        { "input": "C Programming\nDennis Ritchie\n500", "expected": "C Programming-by-Dennis Ritchie-500" },
-        { "input": "Python\nGuido\n1000", "expected": "Python-by-Guido-1000" }
-      ]
+      "title": "File Access Rights",
+      "description": "You are given access rights for files. For each file you know which operations are allowed: 'R' (read), 'W' (write), 'X' (execute). Then you get M queries of operation and file. For each query, print OK if operation is allowed, otherwise Access denied.",
+      "inputDescription": "First line: N. Next N lines: fileName followed by operations. Next line: M. Next M lines: operation fileName.",
+      "outputDescription": "M lines: OK or Access denied.",
+      "examples": [],
+      "starterCode": "def main():\n    N = int(input().strip())\n    rights = {}\n    for _ in range(N):\n        parts = input().split()\n        name = parts[0]\n        ops = set(parts[1:])\n        rights[name] = ops\n    M = int(input().strip())\n    for _ in range(M):\n        op, fname = input().split()\n        # TODO: print OK if op in rights[fname], else Access denied\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 7,
-      "title": "Employee Salary Hike",
-      "description": "Create class Employee with name and salary. Method hike(percent) increases salary by given percent. After applying hike, print new salary as integer.",
-      "inputDescription": "Name, initial salary, hike percent.",
-      "outputDescription": "New salary after hike.",
-      "examples": ["Input:\nRam\n10000\n10\nOutput:\n11000"],
-      "starterCode": "class Employee:\n    def __init__(self, name, salary):\n        # store\n        pass\n\n    def hike(self, percent):\n        # increase salary\n        pass\n\nname = input().strip()\nsalary = int(input())\npercent = int(input())\n# create object, apply hike, print salary\n",
-      "tests": [
-        { "input": "Ram\n10000\n10", "expected": "11000" },
-        { "input": "Kiran\n5000\n20", "expected": "6000" }
-      ]
+      "title": "Cities and Countries",
+      "description": "Given a mapping from countries to their cities, then queries of city names, print the country for each city.",
+      "inputDescription": "First line: N. For each of N lines: countryName k city1 city2 ... cityk. Then line Q, then Q city names.",
+      "outputDescription": "For each query city, print its country.",
+      "examples": [],
+      "starterCode": "def main():\n    N = int(input().strip())\n    city_to_country = {}\n    for _ in range(N):\n        parts = input().split()\n        country = parts[0]\n        k = int(parts[1])\n        cities = parts[2:2+k]\n        for c in cities:\n            city_to_country[c] = country\n    Q = int(input().strip())\n    for _ in range(Q):\n        city = input().strip()\n        # TODO: print country for this city\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 8,
-      "title": "Static Method - Add",
-      "description": "Create class MathOps with a static method add(a, b) that returns a+b. Read a,b and print MathOps.add(a,b).",
-      "inputDescription": "Two integers a b.",
-      "outputDescription": "Sum as integer.",
-      "examples": ["Input:\n3 7\nOutput:\n10"],
-      "starterCode": "class MathOps:\n    @staticmethod\n    def add(a, b):\n        # return a+b\n        pass\n\na, b = map(int, input().split())\n# print MathOps.add(a, b)\n",
-      "tests": [
-        { "input": "3 7", "expected": "10" },
-        { "input": "10 -5", "expected": "5" }
-      ]
+      "title": "Word Frequencies by Popularity",
+      "description": "Given n lines of text, print all distinct words sorted by descending frequency; for equal frequency, sort lexicographically ascending. Print one word per line.",
+      "inputDescription": "First line: n. Next n lines: text.",
+      "outputDescription": "Words, one per line, sorted by (-frequency, word).",
+      "examples": [],
+      "starterCode": "def main():\n    from collections import Counter\n    n = int(input().strip())\n    counter = Counter()\n    for _ in range(n):\n        counter.update(input().split())\n    items = list(counter.items())\n    # TODO: sort by (-count, word) and print words\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 9,
-      "title": "Circle Class - Area",
-      "description": "Create class Circle with radius. Method area() returns area using pi = 3.14. Read radius and print area.",
-      "inputDescription": "Single float/integer radius.",
-      "outputDescription": "Area as float.",
-      "examples": ["Input:\n2\nOutput:\n12.56"],
-      "starterCode": "class Circle:\n    def __init__(self, r):\n        # store r\n        pass\n\n    def area(self):\n        # return 3.14 * r * r\n        pass\n\nr = float(input())\n# create object and print area\n",
-      "tests": [
-        { "input": "2", "expected": "12.56" },
-        { "input": "1", "expected": "3.14" }
-      ]
+      "title": "Student Total Scores",
+      "description": "Given N lines with student name and score, sum scores per student and print 'name totalScore' on separate lines sorted by name.",
+      "inputDescription": "First line: N. Next N lines: string name, int score.",
+      "outputDescription": "Lines 'name totalScore' sorted lexicographically by name.",
+      "examples": [],
+      "starterCode": "def main():\n    N = int(input().strip())\n    totals = {}\n    for _ in range(N):\n        name, s = input().split()\n        s = int(s)\n        # TODO: accumulate in totals\n    for name in sorted(totals):\n        print(name, totals[name])\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 10,
-      "title": "Library of Books",
-      "description": "Create class Book with title and pages. Create class Library that stores a list of Book objects. After reading N books, print total pages of all books.",
-      "inputDescription": "First line N, then N lines with title and pages (title has no spaces).",
-      "outputDescription": "Total pages as integer.",
-      "examples": ["Input:\n2\nC 200\nPython 300\nOutput:\n500"],
-      "starterCode": "class Book:\n    def __init__(self, title, pages):\n        # store\n        pass\n\nclass Library:\n    def __init__(self):\n        self.books = []\n\n    def add_book(self, book):\n        # add to list\n        pass\n\n    def total_pages(self):\n        # return sum of pages\n        pass\n\nn = int(input())\n# read books, add to library, print total pages\n",
-      "tests": [
-        { "input": "2\nC 200\nPython 300", "expected": "500" },
-        { "input": "1\nDSA 450", "expected": "450" }
-      ]
+      "title": "Replace Words with Synonyms",
+      "description": "Given N synonym pairs (a b). Then a sentence. For each word in the sentence, if it appears as a or b in any pair, replace it with its synonym; otherwise keep it unchanged.",
+      "inputDescription": "First line: N. Next N lines: a b. Last line: sentence.",
+      "outputDescription": "New sentence after replacing words by synonyms.",
+      "examples": [],
+      "starterCode": "def main():\n    N = int(input().strip())\n    mp = {}\n    for _ in range(N):\n        a, b = input().split()\n        mp[a] = b\n        mp[b] = a\n    sentence = input().split()\n    # TODO: replace each word if in mp\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     }
   ]
 }

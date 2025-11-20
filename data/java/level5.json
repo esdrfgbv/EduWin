@@ -1,143 +1,117 @@
 {
-  "level": 5,
-  "title": "Strings",
-  "concept": "This level teaches Java string manipulation: length, charAt, counting vowels & consonants, reversing, palindrome checking, substring search, frequency and splitting words.",
-  "challenges": [
+  "title": "Java Level 5 — Arrays & Sorting",
+  "concept": "Basic sorting, frequency, simple 2D arrays.",
+  "language": "java",
+  "problems": [
     {
       "id": 1,
-      "title": "String Length",
-      "description": "Read a string and print its length.",
-      "inputDescription": "A single line string.",
-      "outputDescription": "Length as integer.",
-      "examples": ["Input:\nhello\nOutput:\n5"],
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    String s = sc.nextLine();\n    // print length\n  }\n}",
-      "tests": [
-        { "input": "hello", "expected": "5" },
-        { "input": "abc def", "expected": "7" }
-      ]
+      "name": "Sort Array Ascending",
+      "description": "Given n and an array, sort elements in non-decreasing order and print them.",
+      "input_format": "First line: n. Second line: n integers.",
+      "output_format": "Sorted array in one line.",
+      "constraints": "1 ≤ n ≤ 10^5",
+      "sample_input": "5\n3 1 4 1 5",
+      "sample_output": "1 1 3 4 5",
+      "notes": "Use Arrays.sort."
     },
     {
       "id": 2,
-      "title": "Count Vowels",
-      "description": "Count number of vowels (a,e,i,o,u in both cases) and print the count.",
-      "inputDescription": "A string.",
-      "outputDescription": "Number of vowels.",
-      "examples": ["Input:\nprogram\nOutput:\n2"],
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String s=sc.nextLine();\n    // count vowels\n  }\n}",
-      "tests": [
-        { "input": "program", "expected": "2" },
-        { "input": "AEIOU", "expected": "5" }
-      ]
+      "name": "Second Largest Element",
+      "description": "Print second largest distinct element in the array. If it does not exist (all equal), print -1.",
+      "input_format": "First line: n. Second line: n integers.",
+      "output_format": "Single integer: second largest or -1.",
+      "constraints": "2 ≤ n ≤ 10^5",
+      "sample_input": "5\n1 2 3 4 5",
+      "sample_output": "4",
+      "notes": ""
     },
     {
       "id": 3,
-      "title": "Count Consonants",
-      "description": "Count consonants (alphabet but not vowels) and print number. Ignore digits and symbols.",
-      "inputDescription": "A string.",
-      "outputDescription": "Number of consonants.",
-      "examples": ["Input:\ncode\nOutput:\n2"],
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String s=sc.nextLine();\n    // count consonants\n  }\n}",
-      "tests": [
-        { "input": "code", "expected": "2" },
-        { "input": "xyz", "expected": "3" }
-      ]
+      "name": "Count Distinct Elements",
+      "description": "Given an array, count number of distinct values.",
+      "input_format": "First line: n. Second line: n integers.",
+      "output_format": "Single integer: count of distinct values.",
+      "constraints": "1 ≤ n ≤ 10^5",
+      "sample_input": "5\n1 2 2 3 3",
+      "sample_output": "3",
+      "notes": "Use HashSet."
     },
     {
       "id": 4,
-      "title": "Reverse String",
-      "description": "Print the reverse of the string.",
-      "inputDescription": "A string.",
-      "outputDescription": "Reversed string.",
-      "examples": ["Input:\nhello\nOutput:\nolleh"],
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String s=sc.nextLine();\n    // print reverse\n  }\n}",
-      "tests": [
-        { "input": "hello", "expected": "olleh" },
-        { "input": "abc", "expected": "cba" }
-      ]
+      "name": "Matrix Row Sum",
+      "description": "Given matrix of size n x m, print sum of each row on separate line.",
+      "input_format": "First line: n m. Next n lines: m integers each.",
+      "output_format": "n lines, ith line is sum of ith row.",
+      "constraints": "1 ≤ n, m ≤ 500",
+      "sample_input": "2 3\n1 2 3\n4 5 6",
+      "sample_output": "6\n15",
+      "notes": ""
     },
     {
       "id": 5,
-      "title": "Palindrome Check",
-      "description": "Check if string is palindrome. Print Yes if palindrome else No.",
-      "inputDescription": "A string without spaces.",
-      "outputDescription": "Yes | No",
-      "examples": ["Input:\nmadam\nOutput:\nYes"],
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String s=sc.next();\n    // check palindrome\n  }\n}",
-      "tests": [
-        { "input": "madam", "expected": "Yes" },
-        { "input": "hello", "expected": "No" }
-      ]
+      "name": "Matrix Transpose",
+      "description": "Given matrix n x m, print its transpose (m x n).",
+      "input_format": "First line: n m. Next n lines: m integers.",
+      "output_format": "Transpose: m lines, each with n integers.",
+      "constraints": "1 ≤ n, m ≤ 200",
+      "sample_input": "2 3\n1 2 3\n4 5 6",
+      "sample_output": "1 4\n2 5\n3 6",
+      "notes": ""
     },
     {
       "id": 6,
-      "title": "Copy String",
-      "description": "Read S and print a copy of S (simply print S).",
-      "inputDescription": "A string.",
-      "outputDescription": "Same string.",
-      "examples": ["Input:\nhello\nOutput:\nhello"],
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String s=sc.nextLine();\n    // print copy of s\n  }\n}",
-      "tests": [
-        { "input": "hello", "expected": "hello" },
-        { "input": "coding", "expected": "coding" }
-      ]
+      "name": "Pair with Given Sum (Exists?)",
+      "description": "Given array and value S, determine if there exists a pair (i, j) with ai + aj = S (i != j). Print YES or NO.",
+      "input_format": "First line: n. Second line: n integers. Third line: S.",
+      "output_format": "YES or NO.",
+      "constraints": "1 ≤ n ≤ 10^5",
+      "sample_input": "4\n1 4 5 3\n7",
+      "sample_output": "YES",
+      "notes": "Use two-pointer after sorting or HashSet."
     },
     {
       "id": 7,
-      "title": "Concatenate Strings",
-      "description": "Read S1 and S2 and print S1S2 (no space between).",
-      "inputDescription": "Two strings on separate lines.",
-      "outputDescription": "Concatenated output.",
-      "examples": ["Input:\nHello\nWorld\nOutput:\nHelloWorld"],
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String s1=sc.nextLine();\n    String s2=sc.nextLine();\n    // concatenate\n  }\n}",
-      "tests": [
-        { "input": "Hello\nWorld", "expected": "HelloWorld" },
-        { "input": "abc\nxyz", "expected": "abcxyz" }
-      ]
+      "name": "Rotate Array by K",
+      "description": "Right-rotate array by k positions and print result.",
+      "input_format": "First line: n k. Second line: n integers.",
+      "output_format": "Rotated array.",
+      "constraints": "1 ≤ n ≤ 10^5; 0 ≤ k ≤ 10^9",
+      "sample_input": "5 2\n1 2 3 4 5",
+      "sample_output": "4 5 1 2 3",
+      "notes": "Use k = k % n."
     },
     {
       "id": 8,
-      "title": "First Occurrence",
-      "description": "Print the index of first occurrence of character X in string S. If not found print -1.",
-      "inputDescription": "S then X on new line.",
-      "outputDescription": "Index or -1.",
-      "examples": ["Input:\nbanana\na\nOutput:\n1"],
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String s=sc.nextLine();\n    char x=sc.next().charAt(0);\n    // find first index\n  }\n}",
-      "tests": [
-        { "input": "banana\na", "expected": "1" },
-        { "input": "hello\nx", "expected": "-1" }
-      ]
+      "name": "Merge Two Sorted Arrays",
+      "description": "Given two sorted arrays, merge them into a single sorted array.",
+      "input_format": "First line: n. Second line: n integers sorted. Third line: m. Fourth line: m integers sorted.",
+      "output_format": "Merged sorted array in one line.",
+      "constraints": "1 ≤ n, m ≤ 10^5",
+      "sample_input": "3\n1 3 5\n3\n2 4 6",
+      "sample_output": "1 2 3 4 5 6",
+      "notes": "Use two-pointer merge."
     },
     {
       "id": 9,
-      "title": "Word Count",
-      "description": "Count and print number of words in a sentence. Words separated by spaces.",
-      "inputDescription": "A full sentence.",
-      "outputDescription": "Word count.",
-      "examples": ["Input:\nHello world from Java\nOutput:\n4"],
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String s=sc.nextLine();\n    // count words\n  }\n}",
-      "tests": [
-        { "input": "Hello world from Java", "expected": "4" },
-        { "input": "One", "expected": "1" }
-      ]
+      "name": "Longest Non-Negative Segment",
+      "description": "Given an array, find length of the longest contiguous segment consisting of non-negative numbers.",
+      "input_format": "First line: n. Second line: n integers.",
+      "output_format": "Single integer length.",
+      "constraints": "1 ≤ n ≤ 10^5",
+      "sample_input": "7\n1 2 -3 4 5 6 -1",
+      "sample_output": "3",
+      "notes": ""
     },
     {
       "id": 10,
-      "title": "Character Frequency a–z",
-      "description": "Print frequency of each lowercase letter a–z. Output 26 lines in format: a:x, b:x, c:x … z:x",
-      "inputDescription": "A string.",
-      "outputDescription": "26 lines.",
-      "examples": ["Input:\napple\nOutput:\na:1\nb:0\nc:0\n...\nz:0 (with correct counts)"],
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String s=sc.nextLine().toLowerCase();\n    // count a–z and print\n  }\n}",
-      "tests": [
-        {
-          "input": "apple",
-          "expected": "a:1\nb:0\nc:0\nd:0\ne:1\nf:0\ng:0\nh:0\ni:0\nj:0\nk:0\nl:1\nm:0\nn:0\no:0\np:2\nq:0\nr:0\ns:0\nt:0\nu:0\nv:0\nw:0\nx:0\ny:0\nz:0"
-        },
-        {
-          "input": "aaa",
-          "expected": "a:3\nb:0\nc:0\nd:0\ne:0\nf:0\ng:0\nh:0\ni:0\nj:0\nk:0\nl:0\nm:0\nn:0\no:0\np:0\nq:0\nr:0\ns:0\nt:0\nu:0\nv:0\nw:0\nx:0\ny:0\nz:0"
-        }
-      ]
+      "name": "Frequency of Each Element",
+      "description": "Given n and n integers, print each distinct value and its frequency sorted by value ascending.",
+      "input_format": "First line: n. Second line: n integers.",
+      "output_format": "For each distinct value v, print: v freq, in separate lines, sorted by v.",
+      "constraints": "1 ≤ n ≤ 10^5",
+      "sample_input": "5\n2 1 2 3 1",
+      "sample_output": "1 2\n2 2\n3 1",
+      "notes": "Use Map + sorting keys."
     }
   ]
 }

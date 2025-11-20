@@ -1,0 +1,144 @@
+{
+  "title": "C# Level 8 — Sets and Membership",
+  "concept": "Use HashSet<T> to track unique values, intersections, and membership checks.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Distinct Numbers Count",
+      "description": "Given N and N integers, determine how many distinct numbers there are.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Single integer: number of distinct values.",
+      "examples": [
+        "Input:\n5\n1 2 2 3 1\n\nOutput:\n3"
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int N = int.Parse(Console.ReadLine());\n        int[] a = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);\n        // use HashSet<int> and print Count\n    }\n}\n",
+      "tests": [
+        { "input": "5\n1 2 2 3 1", "expected": "3" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Common Elements Count",
+      "description": "Given two lists of integers, count how many distinct numbers appear in both lists.",
+      "inputDescription": "N, then N integers, then M, then M integers.",
+      "outputDescription": "Single integer: count of distinct numbers common to both lists.",
+      "examples": [
+        "Input:\n3\n1 2 3\n4\n2 3 4 5\n\nOutput:\n2"
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int N = int.Parse(Console.ReadLine());\n        int[] a = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);\n        int M = int.Parse(Console.ReadLine());\n        int[] b = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);\n        // build sets and count intersection\n    }\n}\n",
+      "tests": [
+        { "input": "3\n1 2 3\n4\n2 3 4 5", "expected": "2" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Common Elements Sorted",
+      "description": "Given two lists, print all distinct numbers that appear in both, in ascending order.",
+      "inputDescription": "N, then N integers, then M, then M integers.",
+      "outputDescription": "Common distinct elements in ascending order separated by spaces.",
+      "examples": [
+        "Input:\n3\n1 2 2\n4\n2 3 1 2\n\nOutput:\n1 2"
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int N = int.Parse(Console.ReadLine());\n        int[] a = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);\n        int M = int.Parse(Console.ReadLine());\n        int[] b = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);\n        // compute intersection of sets, sort, print\n    }\n}\n",
+      "tests": [
+        { "input": "3\n1 2 2\n4\n2 3 1 2", "expected": "1 2" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Seen Before (Numbers)",
+      "description": "Given N and a sequence of N integers, for each element print YES if this number has appeared earlier in the sequence, otherwise NO.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "N lines: each line YES or NO.",
+      "examples": [
+        "Input:\n6\n1 2 1 2 3 2\n\nOutput:\nNO\nNO\nYES\nYES\nNO\nYES"
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int N = int.Parse(Console.ReadLine());\n        int[] a = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);\n        // HashSet<int> seen; for each element, check and add\n    }\n}\n",
+      "tests": [
+        { "input": "6\n1 2 1 2 3 2", "expected": "NO\nNO\nYES\nYES\nNO\nYES" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Numbers Only in First List",
+      "description": "Print distinct numbers that appear only in the first list and not in the second, in ascending order.",
+      "inputDescription": "N, then N integers, then M, then M integers.",
+      "outputDescription": "Numbers belonging only to first list, sorted ascending, separated by spaces.",
+      "examples": [
+        "Input:\n3\n1 2 3\n3\n2 3 4\n\nOutput:\n1"
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int N = int.Parse(Console.ReadLine());\n        int[] a = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);\n        int M = int.Parse(Console.ReadLine());\n        int[] b = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);\n        // compute A-B using sets\n    }\n}\n",
+      "tests": [
+        { "input": "3\n1 2 3\n3\n2 3 4", "expected": "1" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Numbers Only in Second List",
+      "description": "Print distinct numbers that appear only in the second list and not in the first, in ascending order.",
+      "inputDescription": "N, then N integers, then M, then M integers.",
+      "outputDescription": "Numbers belonging only to second list, sorted ascending.",
+      "examples": [
+        "Input:\n3\n1 2 3\n3\n2 3 4\n\nOutput:\n4"
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int N = int.Parse(Console.ReadLine());\n        int[] a = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);\n        int M = int.Parse(Console.ReadLine());\n        int[] b = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);\n        // compute B-A\n    }\n}\n",
+      "tests": [
+        { "input": "3\n1 2 3\n3\n2 3 4", "expected": "4" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Union of Two Lists",
+      "description": "Given two lists, print all distinct numbers that appear in at least one list, in ascending order.",
+      "inputDescription": "N, then N integers, then M, then M integers.",
+      "outputDescription": "Distinct union elements in ascending order separated by spaces.",
+      "examples": [
+        "Input:\n3\n1 2 3\n3\n2 3 4\n\nOutput:\n1 2 3 4"
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int N = int.Parse(Console.ReadLine());\n        int[] a = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);\n        int M = int.Parse(Console.ReadLine());\n        int[] b = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);\n        // insert all into HashSet<int>, sort list, print\n    }\n}\n",
+      "tests": [
+        { "input": "3\n1 2 3\n3\n2 3 4", "expected": "1 2 3 4" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Distinct Words in Text",
+      "description": "Given n lines of text, print the number of distinct words (case-sensitive). Words are separated by spaces.",
+      "inputDescription": "First line: integer n. Next n lines: text.",
+      "outputDescription": "Single integer: distinct word count.",
+      "examples": [
+        "Input:\n2\nhi hi\nworld\n\nOutput:\n2"
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int n = int.Parse(Console.ReadLine());\n        HashSet<string> set = new HashSet<string>();\n        // read n lines, split into words, add to set\n    }\n}\n",
+      "tests": [
+        { "input": "2\nhi hi\nworld", "expected": "2" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Seen Before (Words)",
+      "description": "Given a line of words, for each word print how many times it has appeared before it in the same line. Words are separated by spaces.",
+      "inputDescription": "One line of text.",
+      "outputDescription": "For each word, print an integer count on the same line separated by spaces.",
+      "examples": [
+        "Input:\none two one two two\n\nOutput:\n0 0 1 1 2"
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        string[] words = Console.ReadLine().Split(new[]{' '}, StringSplitOptions.RemoveEmptyEntries);\n        // Dictionary<string,int> counts; print previous count for each\n    }\n}\n",
+      "tests": [
+        { "input": "one two one two two", "expected": "0 0 1 1 2" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Alice and Bob Cubes",
+      "description": "Alice has N cubes, Bob has M cubes. Each cube has an integer color. Find:\n1) Colors both have,\n2) Colors only Alice has,\n3) Colors only Bob has.\nFor each of the three sets, print on its own line: first the count, then the sorted colors.",
+      "inputDescription": "N, then N integers; M, then M integers.",
+      "outputDescription": "Three lines as described.",
+      "examples": [
+        "Example: Alice: {1,2,3}, Bob: {2,3,4} ->\n2 2 3\n1 1\n1 4"
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int N = int.Parse(Console.ReadLine());\n        int[] a = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);\n        int M = int.Parse(Console.ReadLine());\n        int[] b = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);\n        // build sets and compute intersection and differences; sort, then print count and elements\n    }\n}\n",
+      "tests": []
+    }
+  ]
+}

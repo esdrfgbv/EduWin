@@ -1,137 +1,127 @@
 {
-  "level": 7,
-  "title": "Tuples & Dictionaries",
-  "concept": "This level teaches storing and accessing key–value data using dictionaries and using tuples as immutable collections. You will practice counting, mapping, searching, sorting and frequency-based tasks.",
+  "title": "Python Level 7 — Functions & Recursion",
+  "concept": "Write helper functions and recursive functions in Python.",
   "challenges": [
     {
       "id": 1,
-      "title": "Tuple Sum",
-      "description": "Read N integers and store them in a tuple. Print their sum.",
-      "inputDescription": "N then N integers separated by space.",
-      "outputDescription": "Sum of all numbers.",
-      "examples": ["Input:\n4\n1 2 3 4\nOutput:\n10"],
-      "starterCode": "n = int(input())\nt = tuple(map(int, input().split()))\n# print sum of tuple\n",
-      "tests": [
-        { "input": "4\n1 2 3 4", "expected": "10" },
-        { "input": "3\n5 5 5", "expected": "15" }
-      ]
+      "title": "Distance Between Two Points",
+      "description": "Write a helper function distance(x1, y1, x2, y2) that returns the Euclidean distance between points (x1, y1) and (x2, y2). In main, read four floats, call the function and print the result.",
+      "inputDescription": "Four real numbers x1, y1, x2, y2.",
+      "outputDescription": "One real number: distance between the two points.",
+      "examples": [
+        "Input:\n0 0 3 4\n\nOutput:\n5.0"
+      ],
+      "starterCode": "import math\n\ndef distance(x1, y1, x2, y2):\n    # TODO: compute and return distance\n    pass\n\ndef main():\n    x1, y1, x2, y2 = map(float, input().split())\n    d = distance(x1, y1, x2, y2)\n    print(d)\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 2,
-      "title": "Tuple Max & Min",
-      "description": "Print maximum and minimum elements from tuple separated by space.",
-      "inputDescription": "N then N integers.",
-      "outputDescription": "max min",
-      "examples": ["Input:\n5\n1 9 3 8 6\nOutput:\n9 1"],
-      "starterCode": "n = int(input())\nt = tuple(map(int, input().split()))\n# print max and min\n",
-      "tests": [
-        { "input": "5\n1 9 3 8 6", "expected": "9 1" },
-        { "input": "3\n7 7 7", "expected": "7 7" }
-      ]
+      "title": "Power Function (Iterative)",
+      "description": "Write a function power(a, n) that returns a^n for integer n (n can be negative, zero, or positive). Use a loop inside the function. In main, read a and n, call power and print the result.",
+      "inputDescription": "Real a and integer n.",
+      "outputDescription": "Real number: a^n.",
+      "examples": [
+        "Input:\n2 3\n\nOutput:\n8.0"
+      ],
+      "starterCode": "def power(a, n):\n    # TODO: implement iterative power, including negative n\n    pass\n\ndef main():\n    a, n = input().split()\n    a = float(a)\n    n = int(n)\n    print(power(a, n))\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 3,
-      "title": "Dictionary Lookup",
-      "description": "Given N key:value pairs and a key K, print its value or Not Found.",
-      "inputDescription": "N lines each key value, then a key K.",
-      "outputDescription": "Value | Not Found",
-      "examples": ["Input:\n3\napple 10\norange 20\nbanana 15\norange\nOutput:\n20"],
-      "starterCode": "n = int(input())\nd = {}\n# read pairs and lookup key\n",
-      "tests": [
-        { "input": "3\napple 10\norange 20\nbanana 15\norange", "expected": "20" },
-        { "input": "2\naaa 1\nbbb 2\nccc", "expected": "Not Found" }
-      ]
+      "title": "Capitalize Words",
+      "description": "Write a function capitalize(sentence) that makes the first letter of each word uppercase. Words are separated by single spaces. In main, read a line, call capitalize, then print the result.",
+      "inputDescription": "One line in lowercase.",
+      "outputDescription": "Same sentence with each word capitalized.",
+      "examples": [
+        "Input:\nhello world from python\n\nOutput:\nHello World From Python"
+      ],
+      "starterCode": "def capitalize(sentence: str) -> str:\n    # TODO: make first letter of each word uppercase\n    pass\n\ndef main():\n    s = input().rstrip('\\n')\n    print(capitalize(s))\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 4,
-      "title": "Character Frequency (Dictionary)",
-      "description": "Read a string and count frequency of each character using a dictionary. Print only keys that appear in ascending order of character.",
-      "inputDescription": "A string.",
-      "outputDescription": "char:count lines sorted by char.",
-      "examples": ["Input:\nbanana\nOutput:\na:3\nb:1\nn:2"],
-      "starterCode": "s = input()\nfreq = {}\n# fill dictionary and print sorted by key\n",
-      "tests": [
-        { "input": "banana", "expected": "a:3\nb:1\nn:2" },
-        { "input": "aab", "expected": "a:2\nb:1" }
-      ]
+      "title": "Recursive Power (Non-Negative n)",
+      "description": "Write a recursive function power_rec(a, n) to compute a^n for n >= 0. In main, read a and n, call power_rec, and print the result.",
+      "inputDescription": "Real a and integer n >= 0.",
+      "outputDescription": "Real number: a^n.",
+      "examples": [
+        "Input:\n3 2\n\nOutput:\n9.0"
+      ],
+      "starterCode": "def power_rec(a, n):\n    # TODO: recursive definition with base case n == 0\n    pass\n\ndef main():\n    a, n = input().split()\n    a = float(a)\n    n = int(n)\n    print(power_rec(a, n))\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 5,
-      "title": "Word Frequency",
-      "description": "Count frequency of each word in a sentence and print in alphabetical order of words.",
-      "inputDescription": "Sentence of words.",
-      "outputDescription": "word:count on new lines sorted by word.",
-      "examples": ["Input:\nthis is a test this is\nOutput:\na:1\nis:2\ntest:1\nthis:2"],
-      "starterCode": "s = input()\nwords = s.split()\nfreq = {}\n# fill and print word counts sorted alphabetically\n",
-      "tests": [
-        { "input": "this is a test this is", "expected": "a:1\nis:2\ntest:1\nthis:2" },
-        { "input": "hello hello world", "expected": "hello:2\nworld:1" }
-      ]
+      "title": "Recursive Fibonacci",
+      "description": "Write a function fib(n) that returns the n-th Fibonacci number using recursion. fib(0)=0, fib(1)=1. Assume n <= 30. In main, read n, print fib(n).",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "n-th Fibonacci number.",
+      "examples": [
+        "Input:\n7\n\nOutput:\n13"
+      ],
+      "starterCode": "def fib(n: int) -> int:\n    # TODO: recursive Fibonacci\n    pass\n\ndef main():\n    n = int(input().strip())\n    print(fib(n))\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 6,
-      "title": "Dictionary Swap Key Value",
-      "description": "Given N key:value pairs, swap them to value:key pairs and print entries sorted by key.",
-      "inputDescription": "N lines key value.",
-      "outputDescription": "value:key sorted by value.",
-      "examples": ["Input:\n3\na 1\nb 2\nc 3\nOutput:\n1:a\n2:b\n3:c"],
-      "starterCode": "n = int(input())\nd = {}\n# read input, swap and print sorted\n",
-      "tests": [
-        { "input": "3\na 1\nb 2\nc 3", "expected": "1:a\n2:b\n3:c" },
-        { "input": "2\nx 5\ny 1", "expected": "1:y\n5:x" }
-      ]
+      "title": "Reverse Sequence Recursively",
+      "description": "Given a sequence of integers ending with 0, print all numbers (except the final 0) in reverse order using recursion and without using lists.",
+      "inputDescription": "Integers, one per line, ending with 0.",
+      "outputDescription": "Same numbers in reverse order, each on its own line.",
+      "examples": [
+        "Input:\n1\n2\n3\n0\n\nOutput:\n3\n2\n1"
+      ],
+      "starterCode": "import sys\n\nsys.setrecursionlimit(10**7)\n\n\ndef reverse_seq():\n    # TODO: read next int, recurse until 0, then print in reverse\n    pass\n\ndef main():\n    reverse_seq()\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 7,
-      "title": "Second Most Frequent Character",
-      "description": "Print the second most frequent character in string. If tie choose lexicographically smaller. If not possible print -1.",
-      "inputDescription": "A string.",
-      "outputDescription": "Character or -1.",
-      "examples": ["Input:\nbanana\nOutput:\nn"],
-      "starterCode": "s = input()\n# build freq dict and determine second most frequent\n",
-      "tests": [
-        { "input": "banana", "expected": "n" },
-        { "input": "aaaa", "expected": "-1" }
-      ]
+      "title": "Iterative Fibonacci",
+      "description": "Write a function fib_iter(n) that computes the n-th Fibonacci number using a loop. In main, read n and print fib_iter(n).",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "n-th Fibonacci number.",
+      "examples": [
+        "Input:\n10\n\nOutput:\n55"
+      ],
+      "starterCode": "def fib_iter(n: int) -> int:\n    # TODO: iterative Fibonacci\n    pass\n\ndef main():\n    n = int(input().strip())\n    print(fib_iter(n))\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 8,
-      "title": "Phonebook",
-      "description": "Given N entries (name number), then Q queries (names). For each query print number or Not Found.",
-      "inputDescription": "N entries followed by Q names.",
-      "outputDescription": "Number or Not Found each on new line.",
-      "examples": ["Input:\n3\nRam 999\nKiran 888\nShyam 777\n2\nKiran\nAmit\nOutput:\n888\nNot Found"],
-      "starterCode": "n = int(input())\nd = {}\n# store dictionary and respond to queries\n",
-      "tests": [
-        { "input": "3\nRam 999\nKiran 888\nShyam 777\n2\nKiran\nAmit", "expected": "888\nNot Found" },
-        { "input": "1\nA 111\n1\nA", "expected": "111" }
-      ]
+      "title": "Count Distinct (Function)",
+      "description": "Write a function count_distinct(arr) that returns the number of distinct integers in the list. In main, read n, then n integers into a list, call the function and print the result.",
+      "inputDescription": "First line: n. Second line: n integers.",
+      "outputDescription": "Single integer: number of distinct values.",
+      "examples": [
+        "Input:\n5\n1 2 2 3 1\n\nOutput:\n3"
+      ],
+      "starterCode": "def count_distinct(arr):\n    # TODO: use set\n    pass\n\ndef main():\n    n = int(input().strip())\n    arr = list(map(int, input().split()))\n    print(count_distinct(arr))\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 9,
-      "title": "Marks Dictionary",
-      "description": "Given student names and marks, print name with highest marks.",
-      "inputDescription": "N then N lines name marks.",
-      "outputDescription": "Name with highest marks.",
-      "examples": ["Input:\n3\nRam 50\nKiran 80\nAkhil 70\nOutput:\nKiran"],
-      "starterCode": "n = int(input())\nd = {}\n# keep track of highest\n",
-      "tests": [
-        { "input": "3\nRam 50\nKiran 80\nAkhil 70", "expected": "Kiran" },
-        { "input": "2\nX 10\nY 10", "expected": "X" }
-      ]
+      "title": "Max of List (Function)",
+      "description": "Write a function max_list(arr) that returns the largest element. In main, read n, the elements, and print the maximum.",
+      "inputDescription": "First line: n. Second line: n integers.",
+      "outputDescription": "Single integer: maximum element.",
+      "examples": [
+        "Input:\n4\n3 9 1 8\n\nOutput:\n9"
+      ],
+      "starterCode": "def max_list(arr):\n    # TODO: iterate and track maximum\n    pass\n\ndef main():\n    n = int(input().strip())\n    arr = list(map(int, input().split()))\n    print(max_list(arr))\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 10,
-      "title": "Tuple Pair Sorting",
-      "description": "Given N pair tuples (a, b), sort them by a, and if tie by b. Print sorted pairs in format (a,b) separated by space.",
-      "inputDescription": "N then N pairs a b.",
-      "outputDescription": "(a,b) (a,b) ...",
-      "examples": ["Input:\n3\n1 3\n1 2\n0 4\nOutput:\n(0,4) (1,2) (1,3)"],
-      "starterCode": "n = int(input())\narr = []\n# store tuples and sort then print same format\n",
-      "tests": [
-        { "input": "3\n1 3\n1 2\n0 4", "expected": "(0,4) (1,2) (1,3)" },
-        { "input": "2\n5 3\n5 1", "expected": "(5,1) (5,3)" }
-      ]
+      "title": "Contains Element (Function)",
+      "description": "Write a function contains(arr, x) that returns True if x appears in the list. In main, read n, the elements, then x, and print YES if found, otherwise NO.",
+      "inputDescription": "First line: n. Second line: n integers. Third line: x.",
+      "outputDescription": "YES or NO.",
+      "examples": [
+        "Input:\n5\n1 2 3 4 5\n3\n\nOutput:\nYES",
+        "Input:\n3\n1 2 3\n4\n\nOutput:\nNO"
+      ],
+      "starterCode": "def contains(arr, x):\n    # TODO: search for x\n    pass\n\ndef main():\n    n = int(input().strip())\n    arr = list(map(int, input().split()))\n    x = int(input().strip())\n    print('YES' if contains(arr, x) else 'NO')\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     }
   ]
 }

@@ -1,28 +1,126 @@
 {
-  "title": "System Design Level 4 — Databases & Replication",
-  "concept": "MCQs on SQL vs NoSQL and replication ideas.",
-  "challenges": [
+  "title": "System Design Level 4 — Databases & Storage Choices",
+  "concept": "Choosing between SQL/NoSQL, indexing, partitioning, and data modeling trade-offs.",
+  "questions": [
     {
-      "title": "Q1: SQL vs NoSQL",
-      "description": "Which of the following is generally true about NoSQL databases compared to relational databases?",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\\na) NoSQL databases never support indexing\\nb) NoSQL databases are always slower\\nc) NoSQL databases often provide flexible schemas and horizontal scaling\\nd) NoSQL databases do not store large amounts of data"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "Which workload is generally best suited to a relational (SQL) database?",
+      "options": {
+        "A": "Highly interconnected graph traversal queries",
+        "B": "Key-value caching only",
+        "C": "Complex transactions with strong consistency and joins",
+        "D": "Log-only append with no updates"
+      },
+      "answer": "C",
+      "explanation": "RDBMS supports ACID transactions and complex relational queries."
     },
     {
-      "title": "Q2: Replication",
-      "description": "Database replication is mainly used to:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\\na) Reduce number of tables\\nb) Improve read availability and fault tolerance\\nc) Remove backup needs completely\\nd) Convert SQL database to NoSQL database"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "A document database (e.g., MongoDB) is particularly suitable when:",
+      "options": {
+        "A": "Schema must be rigid and fixed",
+        "B": "Data is semi-structured and schema can evolve over time",
+        "C": "You need strong relational joins across many tables",
+        "D": "You only store large binary files"
+      },
+      "answer": "B",
+      "explanation": "Document stores handle flexible, nested structures with evolving schemas."
+    },
+    {
+      "id": 3,
+      "question": "For write-heavy logs with sequential appends and infrequent updates, a common choice is:",
+      "options": {
+        "A": "Relational DB with many complex joins",
+        "B": "Append-only log store or time-series database",
+        "C": "In-memory cache only",
+        "D": "Graph database"
+      },
+      "answer": "B",
+      "explanation": "Log/time-series stores are optimized for high-throughput appends and time-based queries."
+    },
+    {
+      "id": 4,
+      "question": "Denormalization in system design is often used to:",
+      "options": {
+        "A": "Reduce data redundancy at all costs",
+        "B": "Optimize read performance by duplicating data",
+        "C": "Always reduce storage size",
+        "D": "Eliminate indexes"
+      },
+      "answer": "B",
+      "explanation": "Denormalization trades extra storage and write complexity for faster reads."
+    },
+    {
+      "id": 5,
+      "question": "Which indexing strategy is best for equality lookups on a unique key?",
+      "options": {
+        "A": "Full table scan",
+        "B": "Hash index",
+        "C": "B-tree index on unrelated attribute",
+        "D": "No index"
+      },
+      "answer": "B",
+      "explanation": "Hash indexes are efficient for exact key lookups."
+    },
+    {
+      "id": 6,
+      "question": "A global secondary index in a distributed database:",
+      "options": {
+        "A": "Is always stored on the same shard as the base row",
+        "B": "May be stored on different nodes and can become a hotspot if not designed carefully",
+        "C": "Is just a local cache",
+        "D": "Cannot be partitioned"
+      },
+      "answer": "B",
+      "explanation": "Global indexes span partitions and can cause skew/hot partitions if key distribution is poor."
+    },
+    {
+      "id": 7,
+      "question": "When choosing a sharding key, it is important to:",
+      "options": {
+        "A": "Always use auto-increment integer IDs",
+        "B": "Use a key that evenly distributes traffic and data",
+        "C": "Use a key that puts all hot users on the same shard",
+        "D": "Ignore access patterns"
+      },
+      "answer": "B",
+      "explanation": "Good sharding keys avoid hotspots and balance load across nodes."
+    },
+    {
+      "id": 8,
+      "question": "Using a monotonically increasing key (like timestamp) as shard key can lead to:",
+      "options": {
+        "A": "Even load distribution",
+        "B": "All new writes going to the same shard (hotspot)",
+        "C": "No need for replication",
+        "D": "Automatic caching"
+      },
+      "answer": "B",
+      "explanation": "Monotonic keys cause all new data to land on a few shards if partitioned naively."
+    },
+    {
+      "id": 9,
+      "question": "For large binary files (images, videos), best practice is usually to:",
+      "options": {
+        "A": "Store them directly in relational DB rows",
+        "B": "Store them in object storage (e.g., S3) and keep URLs/metadata in DB",
+        "C": "Store them only in cache",
+        "D": "Store them in logs"
+      },
+      "answer": "B",
+      "explanation": "Object stores are optimized for large blobs; DB stores metadata and references."
+    },
+    {
+      "id": 10,
+      "question": "A write-ahead log (WAL) in a database is used to:",
+      "options": {
+        "A": "Implement caching",
+        "B": "Record changes before applying them to data files for durability and recovery",
+        "C": "Enforce rate limiting",
+        "D": "Balance read load"
+      },
+      "answer": "B",
+      "explanation": "WAL ensures durability and allows crash recovery by replaying or undoing logged operations."
     }
   ]
 }

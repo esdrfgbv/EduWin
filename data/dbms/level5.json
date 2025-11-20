@@ -1,28 +1,126 @@
 {
-  "title": "DBMS Level 5 — SQL SELECT & WHERE",
-  "concept": "MCQs on SELECT, WHERE and ORDER BY.",
-  "challenges": [
+  "title": "DBMS Level 5 — Advanced SQL, Views & Triggers",
+  "concept": "Subqueries, correlated queries, views, triggers, set operations and constraints.",
+  "questions": [
     {
-      "title": "Q1: Select All Columns",
-      "description": "Which SQL query selects all columns from table EMPLOYEE?",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) SELECT * FROM EMPLOYEE;\nb) GET ALL EMPLOYEE;\nc) DISPLAY EMPLOYEE;\nd) SHOW COLUMNS EMPLOYEE;"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "Which SQL feature allows using the result of one query as input to another within the same statement?",
+      "options": {
+        "A": "JOIN",
+        "B": "Subquery",
+        "C": "VIEW",
+        "D": "CURSOR"
+      },
+      "answer": "B",
+      "explanation": "Subqueries are nested SELECT statements whose results are used by outer queries."
     },
     {
-      "title": "Q2: WHERE Clause Usage",
-      "description": "To select students with branch = 'CSE' from STUDENT table, which condition is correct?",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) WHERE branch == 'CSE'\nb) WHERE branch = 'CSE'\nc) WHERE branch := 'CSE'\nd) WHERE branch LIKE = 'CSE'"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "A correlated subquery is one that:",
+      "options": {
+        "A": "Does not reference any table from the outer query",
+        "B": "Is executed only once",
+        "C": "References columns from the outer query and is evaluated per-row",
+        "D": "Only works in the FROM clause"
+      },
+      "answer": "C",
+      "explanation": "Correlated subqueries depend on each row of the outer query, so they are re-evaluated for each row."
+    },
+    {
+      "id": 3,
+      "question": "Which SQL clause is used to create a named, stored query that can be treated like a virtual table?",
+      "options": {
+        "A": "CREATE TABLE",
+        "B": "CREATE VIEW",
+        "C": "CREATE INDEX",
+        "D": "CREATE TRIGGER"
+      },
+      "answer": "B",
+      "explanation": "CREATE VIEW defines a logical view over existing base tables."
+    },
+    {
+      "id": 4,
+      "question": "Which of the following is TRUE about views?",
+      "options": {
+        "A": "Views always store a separate copy of the data",
+        "B": "Views are always updatable",
+        "C": "Views can provide a security layer by exposing limited columns/rows",
+        "D": "Views cannot use joins"
+      },
+      "answer": "C",
+      "explanation": "Views can hide underlying schema details and restrict access to specific data."
+    },
+    {
+      "id": 5,
+      "question": "A trigger in SQL is best described as:",
+      "options": {
+        "A": "A scheduled backup job",
+        "B": "A stored procedure that runs automatically when certain events occur on a table",
+        "C": "A constraint that checks values",
+        "D": "A type of index"
+      },
+      "answer": "B",
+      "explanation": "Triggers automatically execute in response to INSERT/UPDATE/DELETE or other events."
+    },
+    {
+      "id": 6,
+      "question": "Which SQL operation returns all distinct rows from two queries (like union of sets)?",
+      "options": {
+        "A": "UNION",
+        "B": "UNION ALL",
+        "C": "INTERSECT",
+        "D": "EXCEPT"
+      },
+      "answer": "A",
+      "explanation": "UNION removes duplicates; UNION ALL keeps them."
+    },
+    {
+      "id": 7,
+      "question": "To find rows that appear in the first result but not in the second, which operator is used in standard SQL?",
+      "options": {
+        "A": "UNION",
+        "B": "UNION ALL",
+        "C": "INTERSECT",
+        "D": "EXCEPT (or MINUS)"
+      },
+      "answer": "D",
+      "explanation": "EXCEPT (or MINUS in some DBMSs) subtracts one result set from another."
+    },
+    {
+      "id": 8,
+      "question": "Which of the following can make a view non-updatable?",
+      "options": {
+        "A": "The view is defined over a single base table with no joins",
+        "B": "The view contains an aggregate function and GROUP BY",
+        "C": "The view directly references a primary key column",
+        "D": "The view has a WHERE clause"
+      },
+      "answer": "B",
+      "explanation": "Aggregations and GROUP BY often prevent mapping updates back to base rows, making views non-updatable."
+    },
+    {
+      "id": 9,
+      "question": "Which clause is used to give a temporary name to a result in the FROM clause (subquery factoring)?",
+      "options": {
+        "A": "ALIAS",
+        "B": "AS",
+        "C": "WITH",
+        "D": "TEMP TABLE"
+      },
+      "answer": "C",
+      "explanation": "WITH (common table expression) names a subquery that can be reused within the same statement."
+    },
+    {
+      "id": 10,
+      "question": "CHECK constraints in SQL are used to:",
+      "options": {
+        "A": "Ensure referential integrity between tables",
+        "B": "Enforce a boolean condition on values in a column or row",
+        "C": "Encrypt data in a column",
+        "D": "Create an index automatically"
+      },
+      "answer": "B",
+      "explanation": "CHECK constraints enforce arbitrary logical conditions (e.g., salary > 0)."
     }
   ]
 }

@@ -1,34 +1,144 @@
 {
-  "title": "JavaScript Level 8 — Strings & Methods",
-  "concept": "Use basic string operations and methods like length and toUpperCase.",
+  "title": "JavaScript Level 8 — Sets and Membership",
+  "concept": "Use Set and Map to track unique values, intersections, and membership checks.",
   "challenges": [
     {
-      "title": "Length of String",
-      "description": "Read a line of text and print its length.",
-      "inputDescription": "A single line string (may contain spaces).",
-      "outputDescription": "Single integer: length of the string.",
+      "id": 1,
+      "title": "Distinct Numbers Count",
+      "description": "Given N and N integers, determine how many distinct numbers there are.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Single integer: number of distinct values.",
       "examples": [
-        "Input:\nHello\n\nOutput:\n5"
+        "Input:\n5\n1 2 2 3 1\n\nOutput:\n3"
       ],
-      "starterCode": "const fs = require('fs');\nconst str = fs.readFileSync(0, 'utf8').replace(/\\r?\\n$/, \"\");\n// Print the length of the string\n",
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const input = fs.readFileSync(0, 'utf8').trim().split(/\\s+/).map(Number);\n  const N = input[0];\n  const arr = input.slice(1, 1 + N);\n  // use Set and print size\n}\n\nmain();\n",
       "tests": [
-        { "input": "Hello", "expected": "5" },
-        { "input": "JS", "expected": "2" }
+        { "input": "5\n1 2 2 3 1", "expected": "3" }
       ]
     },
     {
-      "title": "Uppercase String",
-      "description": "Read a line of text and print the same string in uppercase.",
-      "inputDescription": "A single line string.",
-      "outputDescription": "The same string converted to uppercase.",
+      "id": 2,
+      "title": "Common Elements Count",
+      "description": "Given two lists of integers, count how many distinct numbers appear in both lists.",
+      "inputDescription": "N, then N integers, then M, then M integers.",
+      "outputDescription": "Single integer: count of distinct numbers common to both lists.",
       "examples": [
-        "Input:\nhello js\n\nOutput:\nHELLO JS"
+        "Input:\n3\n1 2 3\n4\n2 3 4 5\n\nOutput:\n2"
       ],
-      "starterCode": "const fs = require('fs');\nconst str = fs.readFileSync(0, 'utf8').replace(/\\r?\\n$/, \"\");\n// Convert to uppercase and print\n",
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const data = fs.readFileSync(0, 'utf8').trim().split(/\\s+/).map(Number);\n  let idx = 0;\n  const N = data[idx++];\n  const a = data.slice(idx, idx + N); idx += N;\n  const M = data[idx++];\n  const b = data.slice(idx, idx + M);\n  // build sets and count intersection\n}\n\nmain();\n",
       "tests": [
-        { "input": "hello", "expected": "HELLO" },
-        { "input": "Hello Js", "expected": "HELLO JS" }
+        { "input": "3\n1 2 3\n4\n2 3 4 5", "expected": "2" }
       ]
+    },
+    {
+      "id": 3,
+      "title": "Common Elements Sorted",
+      "description": "Given two lists, print all distinct numbers that appear in both, in ascending order.",
+      "inputDescription": "N, then N integers, then M, then M integers.",
+      "outputDescription": "Common distinct elements in ascending order separated by spaces.",
+      "examples": [
+        "Input:\n3\n1 2 2\n4\n2 3 1 2\n\nOutput:\n1 2"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const data = fs.readFileSync(0, 'utf8').trim().split(/\\s+/).map(Number);\n  let idx = 0;\n  const N = data[idx++];\n  const a = data.slice(idx, idx + N); idx += N;\n  const M = data[idx++];\n  const b = data.slice(idx, idx + M);\n  // compute intersection using Set, sort, print\n}\n\nmain();\n",
+      "tests": [
+        { "input": "3\n1 2 2\n4\n2 3 1 2", "expected": "1 2" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Seen Before (Numbers)",
+      "description": "Given N and a sequence of N integers, for each element print YES if this number has appeared earlier in the sequence, otherwise NO.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "N lines: each line YES or NO.",
+      "examples": [
+        "Input:\n6\n1 2 1 2 3 2\n\nOutput:\nNO\nNO\nYES\nYES\nNO\nYES"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const data = fs.readFileSync(0, 'utf8').trim().split(/\\s+/).map(Number);\n  const N = data[0];\n  const arr = data.slice(1, 1 + N);\n  // maintain Set seen; print YES/NO per element\n}\n\nmain();\n",
+      "tests": [
+        { "input": "6\n1 2 1 2 3 2", "expected": "NO\nNO\nYES\nYES\nNO\nYES" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Numbers Only in First List",
+      "description": "Print distinct numbers that appear only in the first list and not in the second, in ascending order.",
+      "inputDescription": "N, then N integers, then M, then M integers.",
+      "outputDescription": "Numbers belonging only to first list, sorted ascending, separated by spaces.",
+      "examples": [
+        "Input:\n3\n1 2 3\n3\n2 3 4\n\nOutput:\n1"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const data = fs.readFileSync(0, 'utf8').trim().split(/\\s+/).map(Number);\n  let idx = 0;\n  const N = data[idx++];\n  const a = data.slice(idx, idx + N); idx += N;\n  const M = data[idx++];\n  const b = data.slice(idx, idx + M);\n  // compute A-B using sets\n}\n\nmain();\n",
+      "tests": [
+        { "input": "3\n1 2 3\n3\n2 3 4", "expected": "1" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Numbers Only in Second List",
+      "description": "Print distinct numbers that appear only in the second list and not in the first, in ascending order.",
+      "inputDescription": "N, then N integers, then M, then M integers.",
+      "outputDescription": "Numbers belonging only to second list, sorted ascending.",
+      "examples": [
+        "Input:\n3\n1 2 3\n3\n2 3 4\n\nOutput:\n4"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const data = fs.readFileSync(0, 'utf8').trim().split(/\\s+/).map(Number);\n  let idx = 0;\n  const N = data[idx++];\n  const a = data.slice(idx, idx + N); idx += N;\n  const M = data[idx++];\n  const b = data.slice(idx, idx + M);\n  // compute B-A using sets\n}\n\nmain();\n",
+      "tests": [
+        { "input": "3\n1 2 3\n3\n2 3 4", "expected": "4" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Union of Two Lists",
+      "description": "Given two lists, print all distinct numbers that appear in at least one list, in ascending order.",
+      "inputDescription": "N, then N integers, then M, then M integers.",
+      "outputDescription": "Distinct union elements in ascending order separated by spaces.",
+      "examples": [
+        "Input:\n3\n1 2 3\n3\n2 3 4\n\nOutput:\n1 2 3 4"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const data = fs.readFileSync(0, 'utf8').trim().split(/\\s+/).map(Number);\n  let idx = 0;\n  const N = data[idx++];\n  const a = data.slice(idx, idx + N); idx += N;\n  const M = data[idx++];\n  const b = data.slice(idx, idx + M);\n  // insert all into Set, sort, print\n}\n\nmain();\n",
+      "tests": [
+        { "input": "3\n1 2 3\n3\n2 3 4", "expected": "1 2 3 4" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Distinct Words in Text",
+      "description": "Given n lines of text, print the number of distinct words (case-sensitive). Words are separated by spaces.",
+      "inputDescription": "First line: integer n. Next n lines: text.",
+      "outputDescription": "Single integer: distinct word count.",
+      "examples": [
+        "Input:\n2\nhi hi\nworld\n\nOutput:\n2"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const raw = fs.readFileSync(0, 'utf8').split(/\\r?\\n/);\n  const n = parseInt(raw[0].trim(), 10);\n  const set = new Set();\n  // read next n lines, split into words, add to set\n}\n\nmain();\n",
+      "tests": [
+        { "input": "2\nhi hi\nworld", "expected": "2" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Seen Before (Words)",
+      "description": "Given a line of words, for each word print how many times it has appeared before it in the same line. Words are separated by spaces.",
+      "inputDescription": "One line of text.",
+      "outputDescription": "For each word, print an integer count on the same line separated by spaces.",
+      "examples": [
+        "Input:\none two one two two\n\nOutput:\n0 0 1 1 2"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const words = fs.readFileSync(0, 'utf8').trim().split(/\\s+/);\n  const freq = new Map();\n  // for each word, print previous count then increment\n}\n\nmain();\n",
+      "tests": [
+        { "input": "one two one two two", "expected": "0 0 1 1 2" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Alice and Bob Cubes",
+      "description": "Alice has N cubes, Bob has M cubes. Each cube has an integer color. Find:\n1) Colors both have,\n2) Colors only Alice has,\n3) Colors only Bob has.\nFor each of the three sets, print on its own line: first the count, then the sorted colors.",
+      "inputDescription": "N, then N integers; M, then M integers.",
+      "outputDescription": "Three lines as described.",
+      "examples": [
+        "Example: Alice: {1,2,3}, Bob: {2,3,4} ->\n2 2 3\n1 1\n1 4"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const data = fs.readFileSync(0, 'utf8').trim().split(/\\s+/).map(Number);\n  let idx = 0;\n  const N = data[idx++];\n  const a = data.slice(idx, idx + N); idx += N;\n  const M = data[idx++];\n  const b = data.slice(idx, idx + M);\n  // build sets, compute intersection and differences; sort and print\n}\n\nmain();\n",
+      "tests": []
     }
   ]
 }

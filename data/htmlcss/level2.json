@@ -1,27 +1,65 @@
 {
-  "title": "HTML+CSS Level 2 — Text & Links",
-  "concept": "Practice basic formatting tags and hyperlinks.",
+  "title": "HTML+CSS Level 2 — Basic CSS Styling",
+  "concept": "Inline and internal CSS, colors, fonts, text alignment and simple backgrounds.",
   "challenges": [
     {
-      "title": "Q1: Profile Text Formatting",
-      "description": "Create a small profile section with your name in bold, your role in italics, and a short description in a paragraph. Use <strong> and <em> instead of <b> and <i>.",
+      "id": 1,
+      "title": "Colorful Heading",
+      "description": "Create a page with a heading centered on the page and colored blue. Use a <style> tag in the <head>.",
       "inputDescription": "No input.",
-      "outputDescription": "Styled text using semantic formatting tags.",
+      "outputDescription": "An H1 centered and in blue color.",
       "examples": [
-        "E.g., 'My name is <strong>Ram</strong> and I am an <em>Engineering Student</em>.'"
+        "Blue centered heading: \"Welcome\"."
       ],
-      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Profile Formatting</title>\n</head>\n<body>\n    <!-- Use strong, em and p here -->\n</body>\n</html>\n",
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Colorful Heading</title>\n  <style>\n    /* Add styles for the h1 element */\n  </style>\n</head>\n<body>\n  <h1>Welcome</h1>\n</body>\n</html>\n",
       "tests": []
     },
     {
-      "title": "Q2: External Link",
-      "description": "Create a link to 'https://www.google.com' with the text 'Open Google' that opens in a new tab.",
+      "id": 2,
+      "title": "Custom Font and Paragraph Styles",
+      "description": "Create a page with one heading and one paragraph. Set a sans-serif font for the page, make the paragraph text gray and increase its line height.",
       "inputDescription": "No input.",
-      "outputDescription": "Clickable link that opens Google in a new tab.",
+      "outputDescription": "Body uses sans-serif, paragraph is gray and nicely spaced.",
       "examples": [
-        "Use target=\"_blank\" and a proper href."
+        "Body font: Arial / sans-serif.\nParagraph: gray #555 with more line height."
       ],
-      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Links Demo</title>\n</head>\n<body>\n    <!-- Add a link to Google here -->\n</body>\n</html>\n",
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Typography</title>\n  <style>\n    /* Style body and p */\n  </style>\n</head>\n<body>\n  <h1>My Article</h1>\n  <p>Lorem ipsum text here...</p>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 3,
+      "title": "Background Color Section",
+      "description": "Create a section (a <div>) with a light background color and padding around the text inside it.",
+      "inputDescription": "No input.",
+      "outputDescription": "A div that looks like a highlighted box with background and padding.",
+      "examples": [
+        "A pale yellow box with text inside, not touching the edges."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Highlight Box</title>\n  <style>\n    /* Add class .highlight with background-color and padding */\n  </style>\n</head>\n<body>\n  <div class=\"highlight\">\n    This is important information.\n  </div>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 4,
+      "title": "Styled Links",
+      "description": "Create a list of links and use CSS to remove the underline, change their color, and add an underline back on hover.",
+      "inputDescription": "No input.",
+      "outputDescription": "Links without underline normally but underlined on hover.",
+      "examples": [
+        "Default: blue text, no underline; On hover: underline appears."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Styled Links</title>\n  <style>\n    /* Style a elements and a:hover */\n  </style>\n</head>\n<body>\n  <a href=\"https://example.com\">Example</a>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 5,
+      "title": "Simple Card Component",
+      "description": "Create a 'card' using a <div> with a white background, light gray border, rounded corners and some padding. Put a title and a paragraph inside.",
+      "inputDescription": "No input.",
+      "outputDescription": "A centered card that looks like a basic UI component.",
+      "examples": [
+        "A white card with border-radius and padding, containing text."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Card Component</title>\n  <style>\n    /* Add .card class with border, border-radius, padding, width */\n  </style>\n</head>\n<body>\n  <div class=\"card\">\n    <h2>Card Title</h2>\n    <p>This is a simple card description.</p>\n  </div>\n</body>\n</html>\n",
       "tests": []
     }
   ]

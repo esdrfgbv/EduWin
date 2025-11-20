@@ -1,28 +1,126 @@
 {
-  "title": "OS Level 7 — Deadlocks",
-  "concept": "MCQs on deadlock definition, conditions and handling.",
-  "challenges": [
+  "title": "OS Level 7 — Synchronization & Classical Problems",
+  "concept": "Critical sections, race conditions, semaphores, monitors and classical synchronization problems.",
+  "questions": [
     {
-      "title": "Q1: Deadlock Definition",
-      "description": "Deadlock is a situation where:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) CPU remains idle all the time\nb) A set of processes are blocked, each waiting for a resource held by another\nc) Memory is full but CPU is idle\nd) Only I/O devices are busy"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "A race condition occurs when:",
+      "options": {
+        "A": "Two threads always execute in the same order",
+        "B": "The outcome depends on the non-deterministic interleaving of operations",
+        "C": "Only one thread accesses data",
+        "D": "Processes run sequentially"
+      },
+      "answer": "B",
+      "explanation": "Race conditions appear when the result changes based on timing of concurrent operations."
     },
     {
-      "title": "Q2: Coffman Conditions",
-      "description": "Which of the following is NOT one of the necessary conditions for deadlock?",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) Mutual exclusion\nb) Hold and wait\nc) No preemption\nd) Priority scheduling"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "Which is NOT a requirement for a good critical section solution?",
+      "options": {
+        "A": "Mutual exclusion",
+        "B": "Progress (no deadlock)",
+        "C": "Bounded waiting",
+        "D": "High CPU temperature"
+      },
+      "answer": "D",
+      "explanation": "Critical-section solutions want mutual exclusion, progress, and bounded waiting."
+    },
+    {
+      "id": 3,
+      "question": "Which of the following is a busy-waiting lock?",
+      "options": {
+        "A": "Semaphore with blocking wait",
+        "B": "Spinlock",
+        "C": "Monitor with condition variables",
+        "D": "Message queue"
+      },
+      "answer": "B",
+      "explanation": "Spinlocks repeatedly test a variable, consuming CPU cycles while waiting."
+    },
+    {
+      "id": 4,
+      "question": "In the producer-consumer problem, which synchronization constructs are typically used?",
+      "options": {
+        "A": "Semaphores or monitors for mutual exclusion and counting",
+        "B": "File locks only",
+        "C": "Page tables",
+        "D": "Disk scheduling"
+      },
+      "answer": "A",
+      "explanation": "Semaphores/monitors coordinate buffer access and resource counts between producers and consumers."
+    },
+    {
+      "id": 5,
+      "question": "In readers-writers problem (first readers-writers), the goal is to:",
+      "options": {
+        "A": "Allow only one reader at a time",
+        "B": "Allow multiple readers but ensure exclusive access for writers",
+        "C": "Allow only writers",
+        "D": "Avoid starvation completely in all versions"
+      },
+      "answer": "B",
+      "explanation": "Multiple readers can share access; writers need exclusive access."
+    },
+    {
+      "id": 6,
+      "question": "Dining philosophers problem is mainly about:",
+      "options": {
+        "A": "Process scheduling fairness",
+        "B": "Deadlock and starvation with resource allocation",
+        "C": "Page replacement strategies",
+        "D": "Disk scheduling"
+      },
+      "answer": "B",
+      "explanation": "Dining philosophers models deadlock/starvation due to circular resource dependencies."
+    },
+    {
+      "id": 7,
+      "question": "Monitors differ from semaphores in that monitors:",
+      "options": {
+        "A": "Are lower-level primitives",
+        "B": "Encapsulate shared data and operations with implicit mutual exclusion",
+        "C": "Cannot provide condition synchronization",
+        "D": "Are always implemented in hardware"
+      },
+      "answer": "B",
+      "explanation": "Monitors are higher-level constructs packaging data and synchronization (with condition variables)."
+    },
+    {
+      "id": 8,
+      "question": "Which operation on a counting semaphore decreases its value and may block the caller?",
+      "options": {
+        "A": "signal()",
+        "B": "post()",
+        "C": "wait() / P()",
+        "D": "unlock()"
+      },
+      "answer": "C",
+      "explanation": "wait/P decrements and may block when the semaphore value is zero."
+    },
+    {
+      "id": 9,
+      "question": "Priority inversion occurs when:",
+      "options": {
+        "A": "High-priority tasks always preempt low-priority tasks correctly",
+        "B": "A low-priority task holds a resource needed by a high-priority task, and a medium-priority task preempts the low-priority one",
+        "C": "Priorities are ignored",
+        "D": "Only one priority level exists"
+      },
+      "answer": "B",
+      "explanation": "Priority inversion effectively inverts priorities unless mitigated (e.g., priority inheritance)."
+    },
+    {
+      "id": 10,
+      "question": "A barrier synchronization primitive is used to:",
+      "options": {
+        "A": "Protect shared memory",
+        "B": "Make a group of threads wait until all reach the same point",
+        "C": "Replace semaphores",
+        "D": "Schedule disk I/O"
+      },
+      "answer": "B",
+      "explanation": "Barriers force all participating threads to wait until the entire group arrives."
     }
   ]
 }

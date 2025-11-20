@@ -1,146 +1,126 @@
 {
-  "level": 2,
-  "title": "Conditions & Basic Logic",
-  "concept": "This level focuses on decision making in Python using if, elif and else. You will practice comparisons, simple maths and printing specific messages based on conditions.",
+  "title": "Python Level 2 — Conditions & Comparisons",
+  "concept": "Use if, elif, else to compare numbers, classify values, and solve simple conditional tasks.",
   "challenges": [
     {
       "id": 1,
-      "title": "Positive, Negative or Zero",
-      "description": "Read an integer and print Positive if n > 0, Negative if n < 0, and Zero otherwise.",
-      "inputDescription": "Single integer n.",
-      "outputDescription": "Positive | Negative | Zero",
-      "examples": ["Input:\n5\nOutput:\nPositive", "Input:\n-3\nOutput:\nNegative"],
-      "starterCode": "n = int(input())\n# write your if-elif-else here\n",
-      "tests": [
-        { "input": "5", "expected": "Positive" },
-        { "input": "-3", "expected": "Negative" },
-        { "input": "0", "expected": "Zero" }
-      ]
+      "title": "Maximum of Two Numbers",
+      "description": "Given two integers A and B, print the larger of the two.",
+      "inputDescription": "Two integers A and B.",
+      "outputDescription": "Single integer: max(A, B).",
+      "examples": [
+        "Input:\n4 7\n\nOutput:\n7"
+      ],
+      "starterCode": "def main():\n    A, B = map(int, input().split())\n    # TODO: print the larger number\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 2,
-      "title": "Even or Odd",
-      "description": "Print Even if the number is divisible by 2, otherwise print Odd.",
-      "inputDescription": "Single integer n.",
-      "outputDescription": "Even | Odd",
-      "examples": ["Input:\n7\nOutput:\nOdd"],
-      "starterCode": "n = int(input())\n# check n % 2\n",
-      "tests": [
-        { "input": "7", "expected": "Odd" },
-        { "input": "12", "expected": "Even" }
-      ]
+      "title": "Sign of a Number",
+      "description": "Given an integer N, print 1 if it is positive, -1 if it is negative, and 0 if it is zero.",
+      "inputDescription": "Single integer N.",
+      "outputDescription": "One of: 1, -1 or 0.",
+      "examples": [
+        "Input:\n-5\n\nOutput:\n-1"
+      ],
+      "starterCode": "def main():\n    n = int(input().strip())\n    # TODO: use if/elif/else to print sign\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 3,
-      "title": "Maximum of Two",
-      "description": "Read two integers and print the larger one.",
-      "inputDescription": "Two integers a and b separated by space.",
-      "outputDescription": "The larger integer.",
-      "examples": ["Input:\n3 9\nOutput:\n9"],
-      "starterCode": "a, b = map(int, input().split())\n# print the maximum\n",
-      "tests": [
-        { "input": "3 9", "expected": "9" },
-        { "input": "10 7", "expected": "10" }
-      ]
+      "title": "Equal or Not",
+      "description": "Given two integers A and B, print YES if they are equal, otherwise NO.",
+      "inputDescription": "Two integers A and B.",
+      "outputDescription": "YES or NO.",
+      "examples": [
+        "Input:\n5 5\n\nOutput:\nYES"
+      ],
+      "starterCode": "def main():\n    A, B = map(int, input().split())\n    # TODO: print YES if equal else NO\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 4,
-      "title": "Minimum of Three",
-      "description": "Read three integers and print the smallest one.",
-      "inputDescription": "Three integers separated by space.",
-      "outputDescription": "The smallest integer.",
-      "examples": ["Input:\n4 1 9\nOutput:\n1"],
-      "starterCode": "a, b, c = map(int, input().split())\n# find and print minimum\n",
-      "tests": [
-        { "input": "4 1 9", "expected": "1" },
-        { "input": "7 7 5", "expected": "5" }
-      ]
+      "title": "Even or Odd",
+      "description": "Given an integer N, print EVEN if it is even, otherwise print ODD.",
+      "inputDescription": "Single integer N.",
+      "outputDescription": "EVEN or ODD.",
+      "examples": [
+        "Input:\n8\n\nOutput:\nEVEN"
+      ],
+      "starterCode": "def main():\n    n = int(input().strip())\n    # TODO: print EVEN or ODD\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 5,
-      "title": "Pass or Fail",
-      "description": "Read marks (0–100). If marks >= 40 print Pass, else print Fail.",
-      "inputDescription": "Single integer marks.",
-      "outputDescription": "Pass | Fail",
-      "examples": ["Input:\n55\nOutput:\nPass"],
-      "starterCode": "marks = int(input())\n# check pass or fail\n",
-      "tests": [
-        { "input": "55", "expected": "Pass" },
-        { "input": "39", "expected": "Fail" }
-      ]
+      "title": "Minimum of Three Numbers",
+      "description": "Given three integers A, B and C, print the smallest one.",
+      "inputDescription": "Three integers A, B, C.",
+      "outputDescription": "Single integer: minimum of the three.",
+      "examples": [
+        "Input:\n5 2 7\n\nOutput:\n2"
+      ],
+      "starterCode": "def main():\n    A, B, C = map(int, input().split())\n    # TODO: print minimum of A, B, C\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 6,
-      "title": "Grade Calculator",
-      "description": "Given percentage p, print grade: A if p>=90, B if p>=75, C if p>=60, D if p>=40, else Fail.",
-      "inputDescription": "Single integer p.",
-      "outputDescription": "A | B | C | D | Fail",
-      "examples": ["Input:\n78\nOutput:\nB"],
-      "starterCode": "p = int(input())\n# use if-elif ladder\n",
-      "tests": [
-        { "input": "95", "expected": "A" },
-        { "input": "78", "expected": "B" },
-        { "input": "63", "expected": "C" },
-        { "input": "41", "expected": "D" },
-        { "input": "30", "expected": "Fail" }
-      ]
+      "title": "Leap Year Check",
+      "description": "Given a year Y, determine if it is a leap year. Use the Gregorian rules: divisible by 400 → leap; divisible by 100 → not leap; divisible by 4 → leap; otherwise not leap. Print YES or NO.",
+      "inputDescription": "Single integer Y.",
+      "outputDescription": "YES if leap year, otherwise NO.",
+      "examples": [
+        "Input:\n2000\n\nOutput:\nYES"
+      ],
+      "starterCode": "def main():\n    Y = int(input().strip())\n    # TODO: implement leap year rules and print YES/NO\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 7,
-      "title": "Divisible by 5 and 11",
-      "description": "Print Yes if the number is divisible by BOTH 5 and 11, otherwise print No.",
-      "inputDescription": "Single integer n.",
-      "outputDescription": "Yes | No",
-      "examples": ["Input:\n55\nOutput:\nYes"],
-      "starterCode": "n = int(input())\n# check divisibility\n",
-      "tests": [
-        { "input": "55", "expected": "Yes" },
-        { "input": "22", "expected": "No" }
-      ]
+      "title": "Chessboard Square Color",
+      "description": "Chessboard squares are labeled (x1, y1) and (x2, y2) with 1 ≤ x, y ≤ 8. Print YES if they are the same color, otherwise NO.",
+      "inputDescription": "Four integers x1 y1 x2 y2.",
+      "outputDescription": "YES or NO.",
+      "examples": [
+        "Input:\n1 1 2 2\n\nOutput:\nYES"
+      ],
+      "starterCode": "def main():\n    x1, y1, x2, y2 = map(int, input().split())\n    # Hint: sum of coordinates even → one color, odd → other color\n    # TODO: compare colors and print YES/NO\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 8,
-      "title": "Leap Year",
-      "description": "Check if a year is leap year: divisible by 400 OR (divisible by 4 AND not divisible by 100). Print Yes or No.",
-      "inputDescription": "Year as integer.",
-      "outputDescription": "Yes | No",
-      "examples": ["Input:\n2020\nOutput:\nYes"],
-      "starterCode": "year = int(input())\n# apply leap year logic\n",
-      "tests": [
-        { "input": "2020", "expected": "Yes" },
-        { "input": "1900", "expected": "No" },
-        { "input": "2000", "expected": "Yes" }
-      ]
+      "title": "Exactly One Positive",
+      "description": "Given three integers, check if exactly one of them is positive. Print YES if exactly one is > 0, otherwise NO.",
+      "inputDescription": "Three integers.",
+      "outputDescription": "YES or NO.",
+      "examples": [
+        "Input:\n1 -2 -3\n\nOutput:\nYES"
+      ],
+      "starterCode": "def main():\n    a, b, c = map(int, input().split())\n    # TODO: count positives and print YES if count == 1 else NO\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 9,
-      "title": "Character Type",
-      "description": "Read a single character c. If it is uppercase letter print Uppercase, if lowercase letter print Lowercase, if digit print Digit, else print Symbol.",
-      "inputDescription": "One character.",
-      "outputDescription": "Uppercase | Lowercase | Digit | Symbol",
-      "examples": ["Input:\nG\nOutput:\nUppercase"],
-      "starterCode": "c = input().strip()\n# classify character\n",
-      "tests": [
-        { "input": "G", "expected": "Uppercase" },
-        { "input": "p", "expected": "Lowercase" },
-        { "input": "7", "expected": "Digit" },
-        { "input": "@", "expected": "Symbol" }
-      ]
+      "title": "Increasing Sequence of Three",
+      "description": "Given three integers a, b, c, print YES if they form a strictly increasing sequence (a < b < c), otherwise NO.",
+      "inputDescription": "Three integers a, b, c.",
+      "outputDescription": "YES or NO.",
+      "examples": [
+        "Input:\n1 2 3\n\nOutput:\nYES"
+      ],
+      "starterCode": "def main():\n    a, b, c = map(int, input().split())\n    # TODO: check if strictly increasing\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 10,
-      "title": "Simple Calculator",
-      "description": "Read two integers a, b and an operator op (+, -, *, /). Perform the operation and print the result. Use integer division for /.",
-      "inputDescription": "a b op (space separated).",
-      "outputDescription": "Result of the operation.",
-      "examples": ["Input:\n5 3 +\nOutput:\n8"],
-      "starterCode": "data = input().split()\na = int(data[0])\nb = int(data[1])\nop = data[2]\n# perform operation based on op\n",
-      "tests": [
-        { "input": "5 3 +", "expected": "8" },
-        { "input": "10 4 -", "expected": "6" },
-        { "input": "7 8 *", "expected": "56" },
-        { "input": "8 2 /", "expected": "4" }
-      ]
+      "title": "Units Digit is 3?",
+      "description": "Given an integer N, print YES if its last digit is 3, otherwise NO.",
+      "inputDescription": "Single integer N.",
+      "outputDescription": "YES or NO.",
+      "examples": [
+        "Input:\n123\n\nOutput:\nYES"
+      ],
+      "starterCode": "def main():\n    n = int(input().strip())\n    # TODO: check last digit and print YES/NO\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     }
   ]
 }

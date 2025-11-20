@@ -1,28 +1,126 @@
 {
-  "title": "System Design Level 2 — Architecture & Components",
-  "concept": "MCQs on basic components in a web architecture.",
-  "challenges": [
+  "title": "System Design Level 2 — Data, Caching & Reliability",
+  "concept": "CAP theorem, consistency, replication, sharding and message queues.",
+  "questions": [
     {
-      "title": "Q1: API Gateway",
-      "description": "The main role of an API Gateway is to:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\\na) Store data permanently\\nb) Distribute traffic to multiple microservices and handle cross-cutting concerns\\nc) Render HTML pages directly on client browser\\nd) Act as a replacement for the database"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "CAP theorem states that in a distributed system, you can guarantee at most:",
+      "options": {
+        "A": "Consistency, Availability, Performance",
+        "B": "Consistency, Availability, Partition Tolerance",
+        "C": "Concurrency, Accuracy, Portability",
+        "D": "Caching, Authentication, Persistence"
+      },
+      "answer": "B",
+      "explanation": "CAP is about Consistency, Availability, Partition tolerance."
     },
     {
-      "title": "Q2: Stateless Service",
-      "description": "A stateless service is one where:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\\na) Server stores user session data in local memory\\nb) Server does not store any per-session data; each request is independent\\nc) Server stores all user data in files\\nd) Server does not use any database at all"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "In an AP (Available and Partition-tolerant) system, you typically sacrifice:",
+      "options": {
+        "A": "Availability",
+        "B": "Partition tolerance",
+        "C": "Strong consistency",
+        "D": "Network connectivity"
+      },
+      "answer": "C",
+      "explanation": "AP systems favor availability over strict consistency under partitions."
+    },
+    {
+      "id": 3,
+      "question": "Replication in a database cluster is mainly used for:",
+      "options": {
+        "A": "Reducing latency and improving read scalability",
+        "B": "Compressing data",
+        "C": "Reducing code complexity",
+        "D": "Encrypting data"
+      },
+      "answer": "A",
+      "explanation": "Replication allows reads from replicas, reducing latency and distributing traffic."
+    },
+    {
+      "id": 4,
+      "question": "Sharding (partitioning) a database means:",
+      "options": {
+        "A": "Creating backups",
+        "B": "Splitting data across multiple nodes based on a key",
+        "C": "Creating indexes",
+        "D": "Encrypting sensitive rows"
+      },
+      "answer": "B",
+      "explanation": "Sharding distributes rows by some shard key across machines."
+    },
+    {
+      "id": 5,
+      "question": "Which of the following is a good candidate for a cache key?",
+      "options": {
+        "A": "Random UUID for each request",
+        "B": "Function of request parameters that uniquely identifies the response",
+        "C": "Current timestamp",
+        "D": "Server hostname"
+      },
+      "answer": "B",
+      "explanation": "Cache keys should map deterministically from request inputs to cached outputs."
+    },
+    {
+      "id": 6,
+      "question": "A write-through cache:",
+      "options": {
+        "A": "Writes only to cache and not to database",
+        "B": "Writes to cache and database at the same time",
+        "C": "Writes only when cache is full",
+        "D": "Never writes to database"
+      },
+      "answer": "B",
+      "explanation": "Write-through updates both cache and backing store synchronously."
+    },
+    {
+      "id": 7,
+      "question": "A message queue between microservices is mainly used to:",
+      "options": {
+        "A": "Increase coupling",
+        "B": "Ensure synchronous RPC calls",
+        "C": "Decouple producers and consumers and enable async processing",
+        "D": "Store binary files"
+      },
+      "answer": "C",
+      "explanation": "Queues decouple services and support asynchronous, reliable communication."
+    },
+    {
+      "id": 8,
+      "question": "Which consistency model guarantees that once a value is written, all subsequent reads will eventually see it, but not necessarily immediately?",
+      "options": {
+        "A": "Strong consistency",
+        "B": "Eventual consistency",
+        "C": "Linearizability",
+        "D": "Causal consistency"
+      },
+      "answer": "B",
+      "explanation": "Eventual consistency converges to the latest value but allows temporary divergence."
+    },
+    {
+      "id": 9,
+      "question": "A write-heavy workload with strict transactional guarantees is usually best suited to:",
+      "options": {
+        "A": "Distributed cache only",
+        "B": "Relational database with ACID properties",
+        "C": "Simple key-value cache without persistence",
+        "D": "Static file storage (CDN)"
+      },
+      "answer": "B",
+      "explanation": "RDBMS with ACID properties fits strict transactional correctness."
+    },
+    {
+      "id": 10,
+      "question": "Which is a downside of synchronous replication between primary and replica?",
+      "options": {
+        "A": "Data can be lost on failures",
+        "B": "Writes have higher latency due to waiting for replicas",
+        "C": "Reads become slower",
+        "D": "It makes strong consistency impossible"
+      },
+      "answer": "B",
+      "explanation": "Synchronous replication increases write latency but provides stronger durability/consistency."
     }
   ]
 }

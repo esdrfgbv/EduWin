@@ -1,28 +1,126 @@
 {
-  "title": "System Design Level 7 — Reliability & Monitoring",
-  "concept": "MCQs on fault tolerance and observability.",
-  "challenges": [
+  "title": "System Design Level 7 — Search, Ranking & Recommendation",
+  "concept": "Inverted indexes, relevance ranking, autocomplete, recommendation and personalized feeds.",
+  "questions": [
     {
-      "title": "Q1: Circuit Breaker Pattern",
-      "description": "Circuit breaker pattern is used to:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\\na) Control access to files\\nb) Prevent repeated calls to a failing downstream service\\nc) Encrypt network traffic\\nd) Balance load between servers"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "A search engine’s inverted index maps:",
+      "options": {
+        "A": "Documents to terms",
+        "B": "Terms to lists of documents containing them",
+        "C": "URLs to IP addresses",
+        "D": "Users to sessions"
+      },
+      "answer": "B",
+      "explanation": "Inverted index term → postings list of documents."
     },
     {
-      "title": "Q2: Health Check",
-      "description": "Health checks in system design are primarily used to:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\\na) Delete faulty instances automatically\\nb) Allow load balancers to route traffic only to healthy instances\\nc) Compress API responses\\nd) Scale database storage up or down"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "Which data structure is commonly used for implementing prefix-based autocomplete suggestions?",
+      "options": {
+        "A": "Hash table only",
+        "B": "Trie (prefix tree)",
+        "C": "Stack",
+        "D": "Single linked list"
+      },
+      "answer": "B",
+      "explanation": "Tries efficiently store and search by prefixes."
+    },
+    {
+      "id": 3,
+      "question": "A BM25 or TF-IDF scoring function is used to:",
+      "options": {
+        "A": "Compress documents",
+        "B": "Rank documents by relevance to a query",
+        "C": "Shard the index",
+        "D": "Encrypt queries"
+      },
+      "answer": "B",
+      "explanation": "TF-IDF/BM25 are classic ranking functions using term frequency and inverse document frequency."
+    },
+    {
+      "id": 4,
+      "question": "Collaborative filtering in recommendations mainly uses:",
+      "options": {
+        "A": "Only item content metadata",
+        "B": "User-item interaction patterns (e.g., similar users/items)",
+        "C": "Only random suggestions",
+        "D": "IP addresses"
+      },
+      "answer": "B",
+      "explanation": "Collaborative filtering finds similarities in user-item interactions."
+    },
+    {
+      "id": 5,
+      "question": "Content-based recommendation focuses on:",
+      "options": {
+        "A": "Similar users",
+        "B": "Similar items based on item features/metadata",
+        "C": "Random sampling",
+        "D": "Network geolocation"
+      },
+      "answer": "B",
+      "explanation": "Content-based uses item attributes (e.g., genres, tags) to suggest similar items."
+    },
+    {
+      "id": 6,
+      "question": "A typical newsfeed system often combines:",
+      "options": {
+        "A": "Only chronological ordering",
+        "B": "Fan-out-on-write or fan-out-on-read plus relevance ranking",
+        "C": "Only random ordering",
+        "D": "Only per-user databases"
+      },
+      "answer": "B",
+      "explanation": "Feeds are often precomputed or fetched dynamically, then ranked by engagement signals."
+    },
+    {
+      "id": 7,
+      "question": "To personalize search results for a logged-in user, the system might use:",
+      "options": {
+        "A": "Only the raw query",
+        "B": "User’s past behavior, location, and preferences",
+        "C": "Only timestamp",
+        "D": "Random ranking"
+      },
+      "answer": "B",
+      "explanation": "Personalization uses user signals in addition to query text."
+    },
+    {
+      "id": 8,
+      "question": "A/B testing in recommendation systems is used to:",
+      "options": {
+        "A": "Randomly break the system",
+        "B": "Compare performance of two ranking models or changes on real users",
+        "C": "Test only UI colors",
+        "D": "Avoid user feedback"
+      },
+      "answer": "B",
+      "explanation": "A/B tests objectively measure impact of changes on metrics (CTR, retention, etc.)."
+    },
+    {
+      "id": 9,
+      "question": "Cold-start problem in recommendations refers to:",
+      "options": {
+        "A": "Server boot time",
+        "B": "Lack of data for new users or new items",
+        "C": "Database restart",
+        "D": "High network latency"
+      },
+      "answer": "B",
+      "explanation": "New users/items have little interaction history, making recommendations harder."
+    },
+    {
+      "id": 10,
+      "question": "To scale search over billions of documents, you typically:",
+      "options": {
+        "A": "Keep a single index on one server",
+        "B": "Partition the index across shards and replicate for fault tolerance",
+        "C": "Use no indexing",
+        "D": "Store everything in RAM on one machine"
+      },
+      "answer": "B",
+      "explanation": "Distributed search partitions index (sharding) and adds replicas for throughput and reliability."
     }
   ]
 }

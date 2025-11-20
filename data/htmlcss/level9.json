@@ -1,27 +1,65 @@
 {
-  "title": "HTML+CSS Level 9 — Responsive Design",
-  "concept": "Use media queries to adjust layout on small screens.",
+  "title": "HTML+CSS Level 9 — Transitions & Hover Effects",
+  "concept": "Use CSS transitions, transforms, and hover states for interactive UI.",
   "challenges": [
     {
-      "title": "Q1: Responsive Two-Column to One-Column",
-      "description": "Create two content sections side by side (two columns) on desktop. Using a media query, make them stack vertically (one column) when the screen width is less than 600px.",
+      "id": 1,
+      "title": "Button Hover Transition",
+      "description": "Create a button that smoothly changes background color and scales up slightly when hovered.",
       "inputDescription": "No input.",
-      "outputDescription": "Layout changes from two columns to one column on small screens.",
+      "outputDescription": "On hover, the button animates instead of snapping.",
       "examples": [
-        "Use @media (max-width: 600px) and change flex-direction or width."
+        "Use transition on background-color and transform: scale(1.05) on hover."
       ],
-      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Responsive Columns</title>\n    <style>\n        /* Base styles + media query here */\n    </style>\n</head>\n<body>\n    <div class=\"container\">\n        <section class=\"left\">Left content</section>\n        <section class=\"right\">Right content</section>\n    </div>\n</body>\n</html>\n",
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Hover Button</title>\n  <style>\n    /* Add transition to .btn and transform on .btn:hover */\n  </style>\n</head>\n<body>\n  <button class=\"btn\">Submit</button>\n</body>\n</html>\n",
       "tests": []
     },
     {
-      "title": "Q2: Responsive Navbar",
-      "description": "Create a simple navbar that displays menu items in a row on desktop. On small screens (width < 600px), increase font size and add more vertical padding to make links easier to tap.",
+      "id": 2,
+      "title": "Card Lift on Hover",
+      "description": "Create a card that appears to \"lift\" off the page on hover with a shadow and slight upward movement.",
       "inputDescription": "No input.",
-      "outputDescription": "Navbar looks comfortable on both desktop and mobile widths.",
+      "outputDescription": "Card with box-shadow and translateY on hover, animated smoothly.",
       "examples": [
-        "Use media query to change font-size and padding."
+        "Default: flat; Hover: bigger shadow, move up by a few pixels."
       ],
-      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Responsive Navbar</title>\n    <style>\n        /* Base navbar styles + media query here */\n    </style>\n</head>\n<body>\n    <nav class=\"navbar\">\n        <a href=\"#\">Home</a>\n        <a href=\"#\">Services</a>\n        <a href=\"#\">Contact</a>\n    </nav>\n</body>\n</html>\n",
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Hover Card</title>\n  <style>\n    /* Add transition, box-shadow and transform in hover state */\n  </style>\n</head>\n<body>\n  <div class=\"card\">\n    <h3>Course</h3>\n    <p>Click to view details.</p>\n  </div>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 3,
+      "title": "Link Underline Animation",
+      "description": "Create a navigation link with a custom underline that animates from left to right on hover using ::after pseudo-element.",
+      "inputDescription": "No input.",
+      "outputDescription": "Link appears normal; on hover, underline slides in.",
+      "examples": [
+        "Use position:relative on a, and ::after with width transition."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Animated Underline</title>\n  <style>\n    /* Use a::after with transition on width */\n  </style>\n</head>\n<body>\n  <a href=\"#\" class=\"nav-link\">Dashboard</a>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 4,
+      "title": "Rotating Icon on Hover",
+      "description": "Create an icon (you can use emoji or an <i> element) that rotates 180 degrees when hovered, with a smooth animation.",
+      "inputDescription": "No input.",
+      "outputDescription": "Icon rotates with transform: rotate(); and transition.",
+      "examples": [
+        "Use transform: rotate(180deg) on hover."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Rotating Icon</title>\n  <style>\n    /* Add transition and transform rotation on hover */\n  </style>\n</head>\n<body>\n  <span class=\"icon\">⏷</span>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 5,
+      "title": "Image Zoom on Hover",
+      "description": "Create an image container where the image slightly zooms in on hover but stays within rounded corners (use overflow:hidden).",
+      "inputDescription": "No input.",
+      "outputDescription": "Card-like image that zooms in without overflowing.",
+      "examples": [
+        "Container has border-radius and overflow:hidden; img scales on hover."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Image Zoom</title>\n  <style>\n    /* Container with overflow hidden; img with transform scale on hover */\n  </style>\n</head>\n<body>\n  <div class=\"image-card\">\n    <img src=\"https://via.placeholder.com/300x180\" alt=\"Banner\">\n  </div>\n</body>\n</html>\n",
       "tests": []
     }
   ]

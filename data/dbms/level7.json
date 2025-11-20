@@ -1,28 +1,126 @@
 {
-  "title": "DBMS Level 7 — Aggregation & GROUP BY",
-  "concept": "MCQs on aggregate functions and grouping.",
-  "challenges": [
+  "title": "DBMS Level 6 — Indexing & Query Processing",
+  "concept": "Index types, B+ trees, hash indexes, query evaluation and cost estimation.",
+  "questions": [
     {
-      "title": "Q1: Aggregate Function",
-      "description": "Which of the following is NOT an aggregate function in SQL?",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) COUNT\nb) SUM\nc) AVG\nd) WHERE"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "The main purpose of an index in a database is to:",
+      "options": {
+        "A": "Compress data on disk",
+        "B": "Speed up query processing by faster lookup",
+        "C": "Encrypt data",
+        "D": "Guarantee ACID properties"
+      },
+      "answer": "B",
+      "explanation": "Indexes accelerate data retrieval, especially for selective queries."
     },
     {
-      "title": "Q2: GROUP BY Usage",
-      "description": "GROUP BY clause is used in SQL to:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) Filter rows before selection\nb) Group rows that have the same values in specified columns\nc) Sort rows in ascending order\nd) Remove duplicate rows"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "Which of the following statements about clustered indexes is TRUE?",
+      "options": {
+        "A": "They store index entries in random order",
+        "B": "They determine the physical order of rows in the table",
+        "C": "They cannot be used with primary keys",
+        "D": "They are always hash-based"
+      },
+      "answer": "B",
+      "explanation": "Clustered indexes define the physical ordering of table records."
+    },
+    {
+      "id": 3,
+      "question": "Hash indexes are generally NOT suitable for:",
+      "options": {
+        "A": "Equality searches (WHERE id = 10)",
+        "B": "Range queries (WHERE id BETWEEN 5 AND 20)",
+        "C": "Point lookups by primary key",
+        "D": "Probing by exact key"
+      },
+      "answer": "B",
+      "explanation": "Hash indexes do not preserve ordering, so range scans are inefficient."
+    },
+    {
+      "id": 4,
+      "question": "In a B+ tree of order m, each internal node (except possibly root) has:",
+      "options": {
+        "A": "At most m children and at least 2 children",
+        "B": "Exactly m children",
+        "C": "At least ceil(m/2) children and at most m children",
+        "D": "At most 2 children"
+      },
+      "answer": "C",
+      "explanation": "B+ tree internal nodes (non-root) have between ceil(m/2) and m children."
+    },
+    {
+      "id": 5,
+      "question": "Which component of a DBMS is mainly responsible for choosing an efficient query execution plan?",
+      "options": {
+        "A": "Query optimizer",
+        "B": "Buffer manager",
+        "C": "Transaction manager",
+        "D": "Recovery manager"
+      },
+      "answer": "A",
+      "explanation": "The optimizer explores alternative plans and chooses the one with lowest estimated cost."
+    },
+    {
+      "id": 6,
+      "question": "A covering index for a query is an index that:",
+      "options": {
+        "A": "Exists on all columns in the database",
+        "B": "Includes all columns referenced in the query, so table lookup is not needed",
+        "C": "Covers multiple tables at once",
+        "D": "Always uses hash functions"
+      },
+      "answer": "B",
+      "explanation": "If all needed columns are in the index, the DBMS can avoid accessing the base table."
+    },
+    {
+      "id": 7,
+      "question": "Selectivity of an index refers to:",
+      "options": {
+        "A": "The number of columns indexed",
+        "B": "The fraction of rows that satisfy a predicate",
+        "C": "The cost of creating an index",
+        "D": "The ordering of index keys"
+      },
+      "answer": "B",
+      "explanation": "High selectivity = predicate matches a small fraction, making the index more useful."
+    },
+    {
+      "id": 8,
+      "question": "Which join algorithm is often preferred when both input relations are large but there is an equality condition and indexes are not available?",
+      "options": {
+        "A": "Nested-loop join (simple)",
+        "B": "Index nested-loop join",
+        "C": "Sort-merge join or hash join",
+        "D": "Cross join without condition"
+      },
+      "answer": "C",
+      "explanation": "Sort-merge or hash joins handle large inputs efficiently for equi-joins."
+    },
+    {
+      "id": 9,
+      "question": "The buffer manager in a DBMS is mainly responsible for:",
+      "options": {
+        "A": "Scheduling transactions",
+        "B": "Caching disk pages in main memory",
+        "C": "Optimizing queries",
+        "D": "Managing user authentication"
+      },
+      "answer": "B",
+      "explanation": "The buffer manager decides which disk pages to keep in memory and which to evict."
+    },
+    {
+      "id": 10,
+      "question": "Which of the following is TRUE about cost-based query optimization?",
+      "options": {
+        "A": "It ignores indexes and always scans tables fully",
+        "B": "It uses statistics (like histograms) to estimate cost of different plans",
+        "C": "It simply chooses the lexicographically smallest plan",
+        "D": "It only works for SELECT queries without joins"
+      },
+      "answer": "B",
+      "explanation": "Cost-based optimizers rely on statistics about data distribution and table sizes."
     }
   ]
 }

@@ -1,28 +1,126 @@
 {
-  "title": "DBMS Level 9 — Normalization & FDs",
-  "concept": "MCQs on functional dependencies and normal forms.",
-  "challenges": [
+  "title": "DBMS Level 9 — Distributed Databases & NoSQL",
+  "concept": "Replication, partitioning, distributed transactions, and NoSQL data models.",
+  "questions": [
     {
-      "title": "Q1: Functional Dependency",
-      "description": "In a relation R, X → Y means:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) X uniquely determines Y\nb) Y uniquely determines X\nc) X and Y are always primary keys\nd) X and Y cannot be attributes of the same table"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "Horizontal partitioning (sharding) in a distributed database means:",
+      "options": {
+        "A": "Splitting a table into multiple tables with different columns",
+        "B": "Splitting a table into subsets of rows across multiple nodes",
+        "C": "Storing all data on a single powerful server",
+        "D": "Partitioning by type of queries"
+      },
+      "answer": "B",
+      "explanation": "Horizontal partitioning divides rows across machines; each shard holds a subset of rows."
     },
     {
-      "title": "Q2: 1NF Condition",
-      "description": "A relation is in First Normal Form (1NF) if:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) It has no partial dependencies\nb) It has no transitive dependencies\nc) It has only atomic (indivisible) attributes\nd) It has at least one candidate key"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "Synchronous replication is characterized by:",
+      "options": {
+        "A": "Primary does not wait for replicas before commit",
+        "B": "Primary waits for replica(s) to acknowledge writes before commit",
+        "C": "Replicas pull data periodically without coordination",
+        "D": "Replication is disabled during peak load"
+      },
+      "answer": "B",
+      "explanation": "Synchronous replication ensures replicas have the update before the transaction is considered committed."
+    },
+    {
+      "id": 3,
+      "question": "Eventual consistency guarantees that:",
+      "options": {
+        "A": "All replicas are always in sync",
+        "B": "Replicas may diverge temporarily but converge if no new updates occur",
+        "C": "Writes are always rejected in case of conflicts",
+        "D": "Strong serializable isolation is enforced"
+      },
+      "answer": "B",
+      "explanation": "Eventual consistency allows temporary inconsistency but convergence over time."
+    },
+    {
+      "id": 4,
+      "question": "A key-value store like Redis or Dynamo-style systems primarily support:",
+      "options": {
+        "A": "Complex joins and foreign keys",
+        "B": "Simple get/put operations by key",
+        "C": "Only relational queries",
+        "D": "Only offline analytics"
+      },
+      "answer": "B",
+      "explanation": "Key-value stores focus on simple key-based access with high throughput."
+    },
+    {
+      "id": 5,
+      "question": "Which NoSQL model is most suitable for storing documents with flexible schema (e.g., JSON)?",
+      "options": {
+        "A": "Column-family store",
+        "B": "Graph database",
+        "C": "Document store",
+        "D": "Time-series database"
+      },
+      "answer": "C",
+      "explanation": "Document stores (MongoDB, CouchDB, etc.) store semi-structured documents like JSON."
+    },
+    {
+      "id": 6,
+      "question": "Two-phase commit (2PC) is used mainly to:",
+      "options": {
+        "A": "Optimize SELECT queries",
+        "B": "Coordinate commit/abort of a distributed transaction across multiple nodes",
+        "C": "Replace logging",
+        "D": "Perform load balancing"
+      },
+      "answer": "B",
+      "explanation": "2PC ensures all participants in a distributed transaction either commit or abort together."
+    },
+    {
+      "id": 7,
+      "question": "A major drawback of two-phase commit is:",
+      "options": {
+        "A": "It cannot ensure atomicity",
+        "B": "It can block if the coordinator fails",
+        "C": "It does not support distributed transactions",
+        "D": "It does not work over networks"
+      },
+      "answer": "B",
+      "explanation": "2PC can block participants waiting for decision if the coordinator crashes at certain points."
+    },
+    {
+      "id": 8,
+      "question": "In a consistent hashing scheme, adding a new node to the cluster:",
+      "options": {
+        "A": "Requires remapping all keys",
+        "B": "Requires remapping only a small fraction of keys",
+        "C": "Does not affect key distribution",
+        "D": "Is not supported"
+      },
+      "answer": "B",
+      "explanation": "Consistent hashing minimizes key movement when the set of nodes changes."
+    },
+    {
+      "id": 9,
+      "question": "Graph databases like Neo4j are particularly strong at:",
+      "options": {
+        "A": "Tabular analytics with heavy joins",
+        "B": "Storing large binary files",
+        "C": "Modeling and querying highly connected data with complex relationships",
+        "D": "Time-series sensor data"
+      },
+      "answer": "C",
+      "explanation": "Graph DBs efficiently represent nodes and edges with rich relationships (social graphs, recommendations)."
+    },
+    {
+      "id": 10,
+      "question": "A column-family store (e.g., Cassandra, HBase) organizes data primarily by:",
+      "options": {
+        "A": "Tables, rows and variable sets of columns grouped into families",
+        "B": "Pure key-value pairs only",
+        "C": "Edges and nodes",
+        "D": "Strict SQL with joins"
+      },
+      "answer": "A",
+      "explanation": "Column-family stores group related columns for efficient wide-row storage and retrieval."
     }
   ]
 }

@@ -1,28 +1,126 @@
 {
-  "title": "DBMS Level 2 — Data Models & ER Basics",
-  "concept": "MCQs on data models, entities and relationships.",
-  "challenges": [
+  "title": "DBMS Level 2 — SQL & Normalization",
+  "concept": "Joins, aggregations, functional dependencies and normal forms.",
+  "questions": [
     {
-      "title": "Q1: Entity in ER Model",
-      "description": "In an ER diagram, an Entity is:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) A real-world object that can be uniquely identified\nb) A set of all attributes in a database\nc) A many-to-many relationship\nd) A primary key of any table"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "Which JOIN returns only the matching rows from both tables?",
+      "options": {
+        "A": "LEFT OUTER JOIN",
+        "B": "RIGHT OUTER JOIN",
+        "C": "FULL OUTER JOIN",
+        "D": "INNER JOIN"
+      },
+      "answer": "D",
+      "explanation": "INNER JOIN returns rows with matching keys in both tables."
     },
     {
-      "title": "Q2: Relational Model Type",
-      "description": "The relational model represents data using:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) Trees\nb) Graphs\nc) Tables (relations)\nd) Files and folders"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "Which SQL clause is used to filter rows after grouping?",
+      "options": {
+        "A": "WHERE",
+        "B": "HAVING",
+        "C": "GROUP BY",
+        "D": "ORDER BY"
+      },
+      "answer": "B",
+      "explanation": "HAVING filters groups created by GROUP BY; WHERE filters individual rows before grouping."
+    },
+    {
+      "id": 3,
+      "question": "A functional dependency X → Y in a relation R means:",
+      "options": {
+        "A": "X and Y are keys",
+        "B": "For each X value, there is exactly one Y value",
+        "C": "X is a subset of Y",
+        "D": "Y uniquely identifies X"
+      },
+      "answer": "B",
+      "explanation": "Functional dependency means X determines Y."
+    },
+    {
+      "id": 4,
+      "question": "Which normal form eliminates partial dependencies on a candidate key?",
+      "options": {
+        "A": "1NF",
+        "B": "2NF",
+        "C": "3NF",
+        "D": "BCNF"
+      },
+      "answer": "B",
+      "explanation": "2NF removes partial dependency on any candidate key."
+    },
+    {
+      "id": 5,
+      "question": "Transitive dependency is removed in which normal form?",
+      "options": {
+        "A": "1NF",
+        "B": "2NF",
+        "C": "3NF",
+        "D": "BCNF"
+      },
+      "answer": "C",
+      "explanation": "3NF removes transitive dependencies (A→B, B→C implies A→C)."
+    },
+    {
+      "id": 6,
+      "question": "Which aggregation function returns the number of rows?",
+      "options": {
+        "A": "SUM",
+        "B": "COUNT",
+        "C": "AVG",
+        "D": "MAX"
+      },
+      "answer": "B",
+      "explanation": "COUNT returns the number of rows (or non-null values for a column)."
+    },
+    {
+      "id": 7,
+      "question": "Consider: SELECT dept, COUNT(*) FROM Employee GROUP BY dept; What does this query return?",
+      "options": {
+        "A": "Total employees in each department",
+        "B": "Total departments",
+        "C": "Average salary per department",
+        "D": "Employees who belong to multiple departments"
+      },
+      "answer": "A",
+      "explanation": "Grouping by dept and counting rows gives number of employees in each dept."
+    },
+    {
+      "id": 8,
+      "question": "BCNF (Boyce–Codd Normal Form) can be informally described as:",
+      "options": {
+        "A": "Every determinant is a candidate key",
+        "B": "No partial dependencies",
+        "C": "No repeating groups",
+        "D": "No multivalued dependencies"
+      },
+      "answer": "A",
+      "explanation": "In BCNF, for every non-trivial FD X→Y, X must be a superkey (candidate key or superset)."
+    },
+    {
+      "id": 9,
+      "question": "Which of the following is a disadvantage of higher normalization (like BCNF) in practice?",
+      "options": {
+        "A": "Data redundancy increases",
+        "B": "Update anomalies increase",
+        "C": "More joins may be required, impacting performance",
+        "D": "Data integrity cannot be enforced"
+      },
+      "answer": "C",
+      "explanation": "Highly normalized designs can require many joins to reconstruct data, impacting performance."
+    },
+    {
+      "id": 10,
+      "question": "Which SQL constraint is used to enforce referential integrity?",
+      "options": {
+        "A": "PRIMARY KEY",
+        "B": "FOREIGN KEY",
+        "C": "UNIQUE",
+        "D": "CHECK"
+      },
+      "answer": "B",
+      "explanation": "FOREIGN KEY ensures values correspond to existing primary key values in the referenced table."
     }
   ]
 }

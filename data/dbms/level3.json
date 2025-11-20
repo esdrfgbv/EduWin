@@ -1,28 +1,126 @@
 {
-  "title": "DBMS Level 3 — Keys & Relational Model",
-  "concept": "MCQs on super key, candidate key, primary key and foreign key.",
-  "challenges": [
+  "title": "DBMS Level 3 — Transactions, Indexing & Concurrency",
+  "concept": "ACID properties, isolation, serializability, indexing and query optimization.",
+  "questions": [
     {
-      "title": "Q1: Primary Key",
-      "description": "Which of the following is true about a Primary Key?",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) It can have duplicate values\nb) It uniquely identifies a row and cannot be NULL\nc) It is always a combination of two attributes\nd) It must be a numeric attribute"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "Which property of a transaction ensures that either all operations are performed or none are?",
+      "options": {
+        "A": "Atomicity",
+        "B": "Consistency",
+        "C": "Isolation",
+        "D": "Durability"
+      },
+      "answer": "A",
+      "explanation": "Atomicity = all-or-nothing execution of a transaction."
     },
     {
-      "title": "Q2: Foreign Key",
-      "description": "A Foreign Key is used to:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) Enforce referential integrity between two tables\nb) Store backup copy of primary key\nc) Speed up search operations\nd) Encrypt sensitive columns in a table"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "Which isolation level is most prone to 'dirty reads'?",
+      "options": {
+        "A": "READ UNCOMMITTED",
+        "B": "READ COMMITTED",
+        "C": "REPEATABLE READ",
+        "D": "SERIALIZABLE"
+      },
+      "answer": "A",
+      "explanation": "READ UNCOMMITTED allows reading uncommitted (dirty) data."
+    },
+    {
+      "id": 3,
+      "question": "A schedule is conflict-serializable if:",
+      "options": {
+        "A": "It has no conflicts",
+        "B": "It can be transformed into a serial schedule by swapping non-conflicting operations",
+        "C": "All transactions are read-only",
+        "D": "It does not contain any aborts"
+      },
+      "answer": "B",
+      "explanation": "Conflict-serializable schedules can be transformed to a serial schedule through swap of non-conflicting actions."
+    },
+    {
+      "id": 4,
+      "question": "Which indexing structure is most commonly used in relational databases for range queries?",
+      "options": {
+        "A": "Hash index",
+        "B": "B+ tree index",
+        "C": "Bitmap index",
+        "D": "Array index"
+      },
+      "answer": "B",
+      "explanation": "B+ trees support efficient range queries (>=, <=, BETWEEN)."
+    },
+    {
+      "id": 5,
+      "question": "In a B+ tree index, actual data records are usually:",
+      "options": {
+        "A": "Stored only in internal nodes",
+        "B": "Stored only in leaf nodes",
+        "C": "Stored in both root and leaves",
+        "D": "Not stored; only keys are stored"
+      },
+      "answer": "B",
+      "explanation": "B+ trees keep data pointers (or records) in leaf nodes; internal nodes store keys for navigation."
+    },
+    {
+      "id": 6,
+      "question": "Which anomaly occurs when a transaction reads the same row twice and gets different values because another transaction updated it in between?",
+      "options": {
+        "A": "Dirty read",
+        "B": "Non-repeatable read",
+        "C": "Phantom read",
+        "D": "Lost update"
+      },
+      "answer": "B",
+      "explanation": "Non-repeatable read: re-reading a row yields different data due to another committed update."
+    },
+    {
+      "id": 7,
+      "question": "Phantom reads occur when:",
+      "options": {
+        "A": "A row disappears due to delete",
+        "B": "Previously read row changes value",
+        "C": "New rows satisfying the query appear between two reads",
+        "D": "The transaction aborts unexpectedly"
+      },
+      "answer": "C",
+      "explanation": "Phantom reads: new rows appear in a repeated range query due to other transactions' inserts."
+    },
+    {
+      "id": 8,
+      "question": "Which of the following is NOT a typical responsibility of the DBMS query optimizer?",
+      "options": {
+        "A": "Choosing join order",
+        "B": "Selecting appropriate indexes",
+        "C": "Generating low-level execution plan",
+        "D": "Encrypting data stored on disk"
+      },
+      "answer": "D",
+      "explanation": "Encryption is a storage/security concern, not part of query optimization."
+    },
+    {
+      "id": 9,
+      "question": "Two-phase locking (2PL) protocol guarantees:",
+      "options": {
+        "A": "Deadlock freedom",
+        "B": "Conflict serializability",
+        "C": "Strict serializability",
+        "D": "No need for locks"
+      },
+      "answer": "B",
+      "explanation": "Standard 2PL ensures conflict-serializable schedules but does not prevent deadlocks."
+    },
+    {
+      "id": 10,
+      "question": "Durability in transactions is typically implemented using:",
+      "options": {
+        "A": "In-memory caches only",
+        "B": "Write-ahead logging and stable storage",
+        "C": "Randomized algorithms",
+        "D": "Query optimization"
+      },
+      "answer": "B",
+      "explanation": "Write-ahead logs and stable storage ensure committed changes survive failures."
     }
   ]
 }

@@ -1,107 +1,112 @@
 {
-  "level": 7,
-  "title": "Trees",
-  "concept": "This level focuses on binary trees and BSTs — construction from input, traversals, height/depth, leaf counting, searching, insertion in BST, LCA, diameter, and level order traversal.",
+  "title": "DSA Level 6 — Recursion & Backtracking",
+  "concept": "Recursion techniques: permutations, subsets, n-Queens, Sudoku, backtracking search.",
   "challenges": [
     {
       "id": 1,
-      "title": "Inorder Traversal",
-      "description": "Given binary tree input in form of N nodes: each line 'value left_index right_index' where -1 means no child. Print inorder traversal.",
-      "starterCode": "// store nodes, recursively do left-root-right",
-      "tests": [
-        { "input": "5\n1 1 2\n2 -1 -1\n3 3 4\n4 -1 -1\n5 -1 -1", "expected": "2 1 4 3 5" },
-        { "input": "1\n10 -1 -1", "expected": "10" }
-      ]
+      "title": "Factorial Using Recursion",
+      "description": "Compute n! using recursion.",
+      "inputDescription": "Integer n.",
+      "outputDescription": "Single integer: factorial value.",
+      "examples": [
+        "Input:\n5\n\nOutput:\n120"
+      ],
+      "constraints": "0 ≤ n ≤ 20",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 2,
-      "title": "Preorder Traversal",
-      "description": "Print preorder traversal: root-left-right.",
-      "starterCode": "// recursive preorder",
-      "tests": [
-        { "input": "3\n1 1 2\n2 -1 -1\n3 -1 -1", "expected": "1 2 3" },
-        { "input": "1\n7 -1 -1", "expected": "7" }
-      ]
+      "title": "Fibonacci (Memoization)",
+      "description": "Print the nth Fibonacci number using recursion with memoization.",
+      "inputDescription": "Integer n.",
+      "outputDescription": "Single integer: Fib(n).",
+      "examples": [],
+      "constraints": "0 ≤ n ≤ 10^5 (memoization required)",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 3,
-      "title": "Postorder Traversal",
-      "description": "Print postorder traversal: left-right-root.",
-      "starterCode": "// recursive postorder",
-      "tests": [
-        { "input": "3\n1 1 2\n2 -1 -1\n3 -1 -1", "expected": "2 3 1" },
-        { "input": "1\n8 -1 -1", "expected": "8" }
-      ]
+      "title": "Generate Subsets",
+      "description": "Given an array of integers, generate all subsets (power set) in lexicographic order.",
+      "inputDescription": "N and N integers.",
+      "outputDescription": "Print each subset on a new line.",
+      "examples": [],
+      "constraints": "N ≤ 15",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 4,
-      "title": "Count Leaf Nodes",
-      "description": "Count and print number of leaf nodes in the tree (nodes with no children).",
-      "starterCode": "// leaf if left==-1 & right==-1",
-      "tests": [
-        { "input": "3\n1 1 2\n2 -1 -1\n3 -1 -1", "expected": "2" },
-        { "input": "1\n10 -1 -1", "expected": "1" }
-      ]
+      "title": "Generate Permutations",
+      "description": "Given an array of distinct integers, print all permutations in lexicographic order.",
+      "inputDescription": "N and N integers.",
+      "outputDescription": "Each permutation on a new line.",
+      "constraints": "N ≤ 10",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 5,
-      "title": "Height of Binary Tree",
-      "description": "Height = max height of subtrees + 1. Height of leaf = 1.",
-      "starterCode": "// recursive height function",
-      "tests": [
-        { "input": "5\n1 1 2\n2 -1 -1\n3 3 4\n4 -1 -1\n5 -1 -1", "expected": "3" },
-        { "input": "1\n99 -1 -1", "expected": "1" }
-      ]
+      "title": "N-Queens",
+      "description": "Place N queens on an NxN chessboard. Print total number of valid arrangements.",
+      "inputDescription": "Integer N.",
+      "outputDescription": "Integer: count of valid configurations.",
+      "constraints": "1 ≤ N ≤ 12",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 6,
-      "title": "Search in BST",
-      "description": "Insert values in BST in given order then search X. Print Yes or No.",
-      "starterCode": "// build BST using compare logic",
-      "tests": [
-        { "input": "5\n5 3 7 1 4\n7", "expected": "Yes" },
-        { "input": "4\n8 4 2 10\n5", "expected": "No" }
-      ]
+      "title": "Rat in a Maze",
+      "description": "Given an N×N maze of 0s and 1s, count the paths from (0,0) to (N-1,N-1) moving only right or down.",
+      "constraints": "All paths must stay inside maze and only go through 1s.",
+      "inputDescription": "N and N×N grid.",
+      "outputDescription": "Single integer: number of possible paths.",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 7,
-      "title": "Insert in BST & Print Inorder",
-      "description": "Insert all given N integers into BST then print inorder traversal.",
-      "starterCode": "// insert recursively, then inorder print",
-      "tests": [
-        { "input": "5\n5 3 7 1 4", "expected": "1 3 4 5 7" },
-        { "input": "3\n2 1 3", "expected": "1 2 3" }
-      ]
+      "title": "Sudoku Solver",
+      "description": "Fill a 9×9 grid so each row/column/subgrid has digits 1–9 exactly once.",
+      "inputDescription": "9×9 matrix with 0 for blanks.",
+      "outputDescription": "Print solved Sudoku grid.",
+      "examples": [],
+      "constraints": "Backtracking expected",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 8,
-      "title": "Lowest Common Ancestor (LCA) in BST",
-      "description": "Build BST with N values then find LCA of a and b. Print the LCA value.",
-      "starterCode": "// while root not null, if a and b < root go left, etc.",
-      "tests": [
-        { "input": "6\n6 2 8 1 4 7\n2 8", "expected": "6" },
-        { "input": "6\n6 2 8 1 4 7\n1 4", "expected": "2" }
-      ]
+      "title": "Word Search Grid",
+      "description": "Given a grid of letters and a target word, return YES if the word exists by moving adjacent cells (cannot reuse the same cell twice).",
+      "inputDescription": "Grid + word.",
+      "outputDescription": "\"YES\" or \"NO\".",
+      "constraints": "m,n ≤ 10, word length ≤ 100",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 9,
-      "title": "Diameter of Binary Tree",
-      "description": "Diameter = longest path between any two nodes (in terms of number of nodes). Print diameter.",
-      "starterCode": "// compute height + diameter recursively",
-      "tests": [
-        { "input": "5\n1 1 2\n2 -1 -1\n3 3 4\n4 -1 -1\n5 -1 -1", "expected": "4" },
-        { "input": "1\n10 -1 -1", "expected": "1" }
-      ]
+      "title": "Print All Balanced Parentheses",
+      "description": "Given N, print all valid combinations of N pairs of parentheses.",
+      "inputDescription": "Integer N.",
+      "outputDescription": "Each combination in new line.",
+      "constraints": "1 ≤ N ≤ 12",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 10,
-      "title": "Level Order Traversal (BFS)",
-      "description": "Print nodes level by level using queue (root → next level → next).",
-      "starterCode": "// queue push root, pop and push children",
-      "tests": [
-        { "input": "3\n1 1 2\n2 -1 -1\n3 -1 -1", "expected": "1 2 3" },
-        { "input": "1\n9 -1 -1", "expected": "9" }
-      ]
+      "title": "Knight’s Tour",
+      "description": "Count possible knight’s tours in an NxN chessboard starting from (0,0).",
+      "inputDescription": "Integer N.",
+      "outputDescription": "Single integer: count of tours.",
+      "constraints": "1 ≤ N ≤ 8",
+      "starterCode": "",
+      "tests": []
     }
   ]
 }

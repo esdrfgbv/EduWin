@@ -1,137 +1,116 @@
 {
-  "level": 10,
-  "title": "Mini Projects (Combined Concepts)",
-  "concept": "Final level for Python track. These problems combine input/output, conditions, loops, lists, strings, functions, dictionaries and basic classes into mini-project style tasks.",
+  "title": "Python Level 9 — Dicts & Frequency Counting",
+  "concept": "Use dict and collections.Counter to build dictionaries, count frequencies, and aggregate values.",
   "challenges": [
     {
       "id": 1,
-      "title": "Student Marks Report",
-      "description": "Read N and then N marks. Print three lines: highest mark, lowest mark, and average (integer division).",
-      "inputDescription": "N then N integers (marks).",
-      "outputDescription": "Line1: highest\nLine2: lowest\nLine3: average",
-      "examples": ["Input:\n3\n40 60 80\nOutput:\n80\n40\n60"],
-      "starterCode": "n = int(input())\nmarks = list(map(int, input().split()))\n# print highest, lowest, average\n",
-      "tests": [
-        { "input": "3\n40 60 80", "expected": "80\n40\n60" },
-        { "input": "2\n50 50", "expected": "50\n50\n50" }
-      ]
+      "title": "Number Frequencies",
+      "description": "Given N and N integers, print the frequency of each distinct number in increasing order of the number. Each line must be: number count.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Multiple lines of 'number count' in sorted order.",
+      "examples": [
+        "Input:\n5\n1 2 2 3 1\n\nOutput:\n1 2\n2 2\n3 1"
+      ],
+      "starterCode": "def main():\n    from collections import Counter\n    N = int(input().strip())\n    arr = list(map(int, input().split()))\n    # TODO: use Counter, sort keys, print number and count\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 2,
-      "title": "Pass & Fail Count",
-      "description": "Pass mark is 40. Read N and N marks. Print two integers: pass_count and fail_count separated by space.",
-      "inputDescription": "N and N integers.",
-      "outputDescription": "pass_count fail_count",
-      "examples": ["Input:\n5\n30 40 50 10 90\nOutput:\n3 2"],
-      "starterCode": "n = int(input())\nmarks = list(map(int, input().split()))\n# count pass (>=40) and fail\n",
-      "tests": [
-        { "input": "5\n30 40 50 10 90", "expected": "3 2" },
-        { "input": "3\n10 20 30", "expected": "0 3" }
-      ]
+      "title": "Word Frequencies",
+      "description": "Given a single line of text, print words and their frequencies sorted lexicographically by word. Each line: word count.",
+      "inputDescription": "One line of text.",
+      "outputDescription": "Multiple lines: word count in lexicographic order of word.",
+      "examples": [
+        "Input:\nhi hi what is hi\n\nOutput:\nhi 3\nis 1\nwhat 1"
+      ],
+      "starterCode": "def main():\n    from collections import Counter\n    words = input().split()\n    # TODO: build Counter, sort keys, print word and count\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 3,
-      "title": "String Analyzer",
-      "description": "Read a sentence and print three lines: number of characters (including spaces), number of words, and number of vowels (a,e,i,o,u in both cases).",
-      "inputDescription": "One line sentence.",
-      "outputDescription": "Line1: char_count\nLine2: word_count\nLine3: vowel_count",
-      "examples": ["Input:\nHello world\nOutput:\n11\n2\n3"],
-      "starterCode": "s = input()\n# compute char count, word count, vowel count\n",
-      "tests": [
-        { "input": "Hello world", "expected": "11\n2\n3" },
-        { "input": "a e i o u", "expected": "9\n5\n5" }
-      ]
+      "title": "Synonym Dictionary",
+      "description": "You are given N pairs of synonyms (two words each). Then you are given a single word. Print its synonym. It is guaranteed that the word appears in exactly one pair.",
+      "inputDescription": "First line: N. Next N lines: two words per line. Last line: query word.",
+      "outputDescription": "The synonym of the query word.",
+      "examples": [
+        "Input:\n3\nbig large\nsmart clever\nfast quick\nclever\n\nOutput:\nsmart"
+      ],
+      "starterCode": "def main():\n    N = int(input().strip())\n    d = {}\n    for _ in range(N):\n        a, b = input().split()\n        d[a] = b\n        d[b] = a\n    query = input().strip()\n    # TODO: print synonym of query\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 4,
-      "title": "Matrix Addition",
-      "description": "Read R, C and two matrices A and B of size R x C. Print matrix (A+B) with each row in one line and elements separated by space.",
-      "inputDescription": "R C, then R lines of A, then R lines of B.",
-      "outputDescription": "R lines of result matrix.",
-      "examples": ["Input:\n2 2\n1 2\n3 4\n5 6\n7 8\nOutput:\n6 8\n10 12"],
-      "starterCode": "r, c = map(int, input().split())\nA = [list(map(int, input().split())) for _ in range(r)]\nB = [list(map(int, input().split())) for _ in range(r)]\n# compute and print A+B\n",
-      "tests": [
-        { "input": "2 2\n1 2\n3 4\n5 6\n7 8\n", "expected": "6 8\n10 12" },
-        { "input": "1 3\n1 2 3\n4 5 6\n", "expected": "5 7 9" }
-      ]
+      "title": "Election Results",
+      "description": "You are given records of votes for candidates. Each record has candidate_name and votes (integer). For each candidate, sum total votes and print results sorted by candidate name.",
+      "inputDescription": "First line: N. Next N lines: name votes.",
+      "outputDescription": "Lines of 'name totalVotes' sorted lexicographically by name.",
+      "examples": [
+        "Example: Alice 10, Bob 5, Alice 3 -> Alice 13, Bob 5."
+      ],
+      "starterCode": "def main():\n    N = int(input().strip())\n    totals = {}\n    for _ in range(N):\n        name, v = input().split()\n        v = int(v)\n        # TODO: add v to totals[name]\n    # TODO: print sorted by name\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 5,
-      "title": "Matrix Transpose",
-      "description": "Read R, C and an R x C matrix. Print its transpose (C x R) with each row on new line.",
-      "inputDescription": "R C followed by R lines.",
-      "outputDescription": "Transpose matrix lines.",
-      "examples": ["Input:\n2 3\n1 2 3\n4 5 6\nOutput:\n1 4\n2 5\n3 6"],
-      "starterCode": "r, c = map(int, input().split())\nA = [list(map(int, input().split())) for _ in range(r)]\n# compute transpose and print\n",
-      "tests": [
-        { "input": "2 3\n1 2 3\n4 5 6\n", "expected": "1 4\n2 5\n3 6" },
-        { "input": "1 2\n7 8\n", "expected": "7\n8" }
-      ]
+      "title": "Most Frequent Word",
+      "description": "Given n lines of text, find the word that occurs most frequently. If several words have the same highest frequency, print the lexicographically smallest one.",
+      "inputDescription": "First line: n. Next n lines: text.",
+      "outputDescription": "Single word: most frequent (breaking ties lexicographically).",
+      "examples": [
+        "Example: hi hi what is hi -> hi"
+      ],
+      "starterCode": "def main():\n    from collections import Counter\n    n = int(input().strip())\n    counter = Counter()\n    for _ in range(n):\n        counter.update(input().split())\n    # TODO: find word with max freq, ties broken by smallest word\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 6,
-      "title": "Binary to Decimal",
-      "description": "Read a binary string (e.g., 1011) and convert it to decimal integer.",
-      "inputDescription": "Binary string.",
-      "outputDescription": "Decimal integer.",
-      "examples": ["Input:\n101\nOutput:\n5"],
-      "starterCode": "b = input().strip()\n# convert binary string to decimal\n",
-      "tests": [
-        { "input": "101", "expected": "5" },
-        { "input": "1111", "expected": "15" }
-      ]
+      "title": "File Access Rights",
+      "description": "You are given access rights for files. For each file you know which operations are allowed: 'R' (read), 'W' (write), 'X' (execute). Then you get M queries of operation and file. For each query, print OK if operation is allowed, otherwise Access denied.",
+      "inputDescription": "First line: N. Next N lines: fileName followed by operations. Next line: M. Next M lines: operation fileName.",
+      "outputDescription": "M lines: OK or Access denied.",
+      "examples": [],
+      "starterCode": "def main():\n    N = int(input().strip())\n    rights = {}\n    for _ in range(N):\n        parts = input().split()\n        name = parts[0]\n        ops = set(parts[1:])\n        rights[name] = ops\n    M = int(input().strip())\n    for _ in range(M):\n        op, fname = input().split()\n        # TODO: print OK if op in rights[fname], else Access denied\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 7,
-      "title": "Decimal to Binary",
-      "description": "Read a non-negative integer n and print its binary representation (no leading zeros).",
-      "inputDescription": "Single integer n.",
-      "outputDescription": "Binary string.",
-      "examples": ["Input:\n5\nOutput:\n101"],
-      "starterCode": "n = int(input())\n# convert decimal to binary (string) and print\n",
-      "tests": [
-        { "input": "5", "expected": "101" },
-        { "input": "8", "expected": "1000" }
-      ]
+      "title": "Cities and Countries",
+      "description": "Given a mapping from countries to their cities, then queries of city names, print the country for each city.",
+      "inputDescription": "First line: N. For each of N lines: countryName k city1 city2 ... cityk. Then line Q, then Q city names.",
+      "outputDescription": "For each query city, print its country.",
+      "examples": [],
+      "starterCode": "def main():\n    N = int(input().strip())\n    city_to_country = {}\n    for _ in range(N):\n        parts = input().split()\n        country = parts[0]\n        k = int(parts[1])\n        cities = parts[2:2+k]\n        for c in cities:\n            city_to_country[c] = country\n    Q = int(input().strip())\n    for _ in range(Q):\n        city = input().strip()\n        # TODO: print country for this city\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 8,
-      "title": "Digit Frequency Report",
-      "description": "Read a non-negative integer n. Count frequency of each digit 0–9 and print 10 lines in format d:count.",
-      "inputDescription": "Single integer n.",
-      "outputDescription": "10 lines from 0:.. to 9:..",
-      "examples": ["Input:\n1002\nOutput:\n0:2\n1:1\n2:1\n3:0\n4:0\n5:0\n6:0\n7:0\n8:0\n9:0"],
-      "starterCode": "n = input().strip()\n# count digit frequency\n",
-      "tests": [
-        { "input": "1002", "expected": "0:2\n1:1\n2:1\n3:0\n4:0\n5:0\n6:0\n7:0\n8:0\n9:0" },
-        { "input": "0", "expected": "0:1\n1:0\n2:0\n3:0\n4:0\n5:0\n6:0\n7:0\n8:0\n9:0" }
-      ]
+      "title": "Word Frequencies by Popularity",
+      "description": "Given n lines of text, print all distinct words sorted by descending frequency; for equal frequency, sort lexicographically ascending. Print one word per line.",
+      "inputDescription": "First line: n. Next n lines: text.",
+      "outputDescription": "Words, one per line, sorted by (-frequency, word).",
+      "examples": [],
+      "starterCode": "def main():\n    from collections import Counter\n    n = int(input().strip())\n    counter = Counter()\n    for _ in range(n):\n        counter.update(input().split())\n    items = list(counter.items())\n    # TODO: sort by (-count, word) and print words\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 9,
-      "title": "Mini Phonebook (Dict + Loop)",
-      "description": "First read N. Then read N lines with name and number. Then read Q and Q query names. For each query, print the number if present else Not Found.",
-      "inputDescription": "N, then N lines name number, then Q, then Q names.",
-      "outputDescription": "Q lines: number or Not Found.",
-      "examples": ["Input:\n2\nRam 999\nKiran 888\n3\nKiran\nAmit\nRam\nOutput:\n888\nNot Found\n999"],
-      "starterCode": "n = int(input())\nphone = {}\n# read n entries\nq = int(input())\n# handle q queries\n",
-      "tests": [
-        { "input": "2\nRam 999\nKiran 888\n3\nKiran\nAmit\nRam\n", "expected": "888\nNot Found\n999" },
-        { "input": "1\nA 111\n1\nB\n", "expected": "Not Found" }
-      ]
+      "title": "Student Total Scores",
+      "description": "Given N lines with student name and score, sum scores per student and print 'name totalScore' on separate lines sorted by name.",
+      "inputDescription": "First line: N. Next N lines: string name, int score.",
+      "outputDescription": "Lines 'name totalScore' sorted lexicographically by name.",
+      "examples": [],
+      "starterCode": "def main():\n    N = int(input().strip())\n    totals = {}\n    for _ in range(N):\n        name, s = input().split()\n        s = int(s)\n        # TODO: accumulate in totals\n    for name in sorted(totals):\n        print(name, totals[name])\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 10,
-      "title": "Student Result Summary",
-      "description": "Build a mini result system. Read N. For each student, read name and 3 subject marks. Pass mark is 40 in each subject. Finally print three lines: total_students, pass_students, fail_students. A student passes only if all three marks >= 40.",
-      "inputDescription": "N, then N lines: name m1 m2 m3.",
-      "outputDescription": "Line1: total\nLine2: pass\nLine3: fail",
-      "examples": ["Input:\n3\nRam 50 60 70\nKiran 40 39 80\nAkhil 90 90 90\nOutput:\n3\n2\n1"],
-      "starterCode": "n = int(input())\n# read students, apply rule, count pass/fail\n",
-      "tests": [
-        { "input": "3\nRam 50 60 70\nKiran 40 39 80\nAkhil 90 90 90\n", "expected": "3\n2\n1" },
-        { "input": "1\nX 10 20 30\n", "expected": "1\n0\n1" }
-      ]
+      "title": "Replace Words with Synonyms",
+      "description": "Given N synonym pairs (a b). Then a sentence. For each word in the sentence, if it appears as a or b in any pair, replace it with its synonym; otherwise keep it unchanged.",
+      "inputDescription": "First line: N. Next N lines: a b. Last line: sentence.",
+      "outputDescription": "New sentence after replacing words by synonyms.",
+      "examples": [],
+      "starterCode": "def main():\n    N = int(input().strip())\n    mp = {}\n    for _ in range(N):\n        a, b = input().split()\n        mp[a] = b\n        mp[b] = a\n    sentence = input().split()\n    # TODO: replace each word if in mp\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     }
   ]
 }

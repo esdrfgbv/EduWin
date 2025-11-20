@@ -1,28 +1,126 @@
 {
-  "title": "OS Level 9 — Virtual Memory & Page Replacement",
-  "concept": "MCQs on virtual memory, page faults and page replacement algorithms.",
-  "challenges": [
+  "title": "OS Level 9 — Distributed & Real-Time Operating Systems",
+  "concept": "Distributed OS concepts, clock synchronization, real-time scheduling and characteristics.",
+  "questions": [
     {
-      "title": "Q1: Virtual Memory",
-      "description": "Virtual memory is a technique that:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) Uses only RAM for execution\nb) Allows execution of processes that may not be completely in memory\nc) Avoids use of secondary storage\nd) Eliminates need for page replacement"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "A distributed operating system primarily aims to:",
+      "options": {
+        "A": "Run only on a single machine",
+        "B": "Make a collection of networked machines appear as a single coherent system",
+        "C": "Replace the network hardware",
+        "D": "Only support real-time tasks"
+      },
+      "answer": "B",
+      "explanation": "Distributed OS abstracts multiple nodes into a unified system view."
     },
     {
-      "title": "Q2: Page Replacement Algorithm",
-      "description": "Which of the following is a page replacement algorithm?",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) FCFS\nb) Round Robin\nc) LRU\nd) Multilevel Queue"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "In distributed systems, clock synchronization protocols (like NTP) are needed because:",
+      "options": {
+        "A": "All machines share the same hardware clock",
+        "B": "Different machines have independent clocks that drift over time",
+        "C": "Time does not matter",
+        "D": "Only for power saving"
+      },
+      "answer": "B",
+      "explanation": "Each machine’s clock drifts; synchronization keeps them roughly aligned."
+    },
+    {
+      "id": 3,
+      "question": "Which of the following is TRUE about a hard real-time system?",
+      "options": {
+        "A": "Missing a deadline occasionally is acceptable",
+        "B": "Missing a deadline is considered a system failure",
+        "C": "No deadlines are specified",
+        "D": "Only average response time matters"
+      },
+      "answer": "B",
+      "explanation": "Hard real-time requires strict deadline guarantees; misses are failures."
+    },
+    {
+      "id": 4,
+      "question": "A soft real-time system:",
+      "options": {
+        "A": "Does not use priorities",
+        "B": "Allows occasional deadline misses but optimizes for low latency",
+        "C": "Never misses deadlines",
+        "D": "Is the same as a batch system"
+      },
+      "answer": "B",
+      "explanation": "Soft real-time treats deadlines as important but not absolutely strict."
+    },
+    {
+      "id": 5,
+      "question": "Rate Monotonic Scheduling (RMS) assigns priorities based on:",
+      "options": {
+        "A": "Shortest execution time",
+        "B": "Longest period gets highest priority",
+        "C": "Shortest period (highest frequency) gets highest priority",
+        "D": "Random selection"
+      },
+      "answer": "C",
+      "explanation": "In RMS, tasks with shorter periods run more frequently and get higher priority."
+    },
+    {
+      "id": 6,
+      "question": "In distributed systems, a remote procedure call (RPC) allows:",
+      "options": {
+        "A": "Local function calls only",
+        "B": "Calling a procedure on a remote machine as if it were local",
+        "C": "Only one-way messages",
+        "D": "Disabling the network"
+      },
+      "answer": "B",
+      "explanation": "RPC abstracts network communication behind a function-call interface."
+    },
+    {
+      "id": 7,
+      "question": "Which is a common issue in distributed systems but not in single-machine systems?",
+      "options": {
+        "A": "Process scheduling",
+        "B": "Network partition and partial failures",
+        "C": "Memory allocation",
+        "D": "File permissions"
+      },
+      "answer": "B",
+      "explanation": "Distributed systems must handle network partitions and partial failures where some nodes are unreachable."
+    },
+    {
+      "id": 8,
+      "question": "In real-time scheduling, 'jitter' refers to:",
+      "options": {
+        "A": "Average response time",
+        "B": "Variation in response or completion times",
+        "C": "Number of tasks",
+        "D": "CPU utilization"
+      },
+      "answer": "B",
+      "explanation": "Jitter is variability in timing; low jitter is desirable for predictable behavior."
+    },
+    {
+      "id": 9,
+      "question": "A key design goal of real-time OS kernels is:",
+      "options": {
+        "A": "Maximize average throughput only",
+        "B": "Provide deterministic, bounded response times",
+        "C": "Eliminate interrupts",
+        "D": "Only support batch jobs"
+      },
+      "answer": "B",
+      "explanation": "Real-time systems prioritize determinism and bounded latency over raw throughput."
+    },
+    {
+      "id": 10,
+      "question": "In a distributed file system, client-side caching can:",
+      "options": {
+        "A": "Never cause consistency issues",
+        "B": "Improve performance but introduce cache coherence challenges",
+        "C": "Replace servers entirely",
+        "D": "Be used only for writes"
+      },
+      "answer": "B",
+      "explanation": "Caching reduces latency but requires coherence policies to handle concurrent updates."
     }
   ]
 }

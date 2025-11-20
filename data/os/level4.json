@@ -1,28 +1,126 @@
 {
-  "title": "OS Level 4 — Threads & Multithreading",
-  "concept": "MCQs on threads, processes and advantages of multithreading.",
-  "challenges": [
+  "title": "OS Level 4 — File Systems",
+  "concept": "File concepts, directory structures, allocation methods, FAT/inode, mounting and protection.",
+  "questions": [
     {
-      "title": "Q1: Process vs Thread",
-      "description": "Which statement about threads is TRUE?",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) Threads have their own separate address space like processes\nb) Threads of a process share the same address space\nc) Threads cannot run in parallel\nd) Threads cannot communicate with each other"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "Which of the following is NOT a typical file attribute?",
+      "options": {
+        "A": "File name",
+        "B": "File size",
+        "C": "File owner",
+        "D": "CPU clock speed"
+      },
+      "answer": "D",
+      "explanation": "File metadata includes name, size, type, owner, permissions, timestamps, etc., but not hardware properties."
     },
     {
-      "title": "Q2: Advantage of Multithreading",
-      "description": "Which of the following is NOT an advantage of multithreading?",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) Improved responsiveness\nb) Better resource sharing\nc) Reduced context-switch overhead in all cases\nd) Better utilization of multiprocessor systems"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "In UNIX-like systems, an inode primarily stores:",
+      "options": {
+        "A": "File data contents",
+        "B": "File metadata and block pointers",
+        "C": "Only file name",
+        "D": "Only access control list"
+      },
+      "answer": "B",
+      "explanation": "Inodes hold metadata and pointers to data blocks; names live in directories."
+    },
+    {
+      "id": 3,
+      "question": "Which directory structure naturally allows the same file to appear in multiple directories using links?",
+      "options": {
+        "A": "Single-level directory",
+        "B": "Two-level directory",
+        "C": "Tree-structured directory",
+        "D": "Acyclic graph directory"
+      },
+      "answer": "D",
+      "explanation": "Acyclic graph directory allows sharing files via links while avoiding cycles."
+    },
+    {
+      "id": 4,
+      "question": "Contiguous allocation of file blocks suffers mainly from:",
+      "options": {
+        "A": "Poor read performance",
+        "B": "External fragmentation and difficulty growing files",
+        "C": "Inability to seek",
+        "D": "Lack of sequential access"
+      },
+      "answer": "B",
+      "explanation": "Contiguous allocation needs contiguous free space; growing a file may require relocation."
+    },
+    {
+      "id": 5,
+      "question": "Linked allocation of file blocks has which disadvantage?",
+      "options": {
+        "A": "Cannot support sequential access",
+        "B": "Pointer overhead and poor random access",
+        "C": "Requires external fragmentation",
+        "D": "Needs fixed-size files"
+      },
+      "answer": "B",
+      "explanation": "Following a linked list is fine for sequential access but slow for random indexing."
+    },
+    {
+      "id": 6,
+      "question": "Indexed allocation (using an index block) mainly aims to:",
+      "options": {
+        "A": "Disallow random access",
+        "B": "Combine benefits of contiguous and linked allocation",
+        "C": "Remove need for directories",
+        "D": "Store only small files"
+      },
+      "answer": "B",
+      "explanation": "Index blocks store block pointers in one place, supporting random access without contiguous storage."
+    },
+    {
+      "id": 7,
+      "question": "Which of these file types is typically executable by the OS?",
+      "options": {
+        "A": "Regular file",
+        "B": "Directory file",
+        "C": "Symbolic link",
+        "D": "Pipe"
+      },
+      "answer": "A",
+      "explanation": "Regular files can hold program binaries or scripts; directories and special files are not executed directly."
+    },
+    {
+      "id": 8,
+      "question": "Mounting a file system means:",
+      "options": {
+        "A": "Copying it to RAM",
+        "B": "Linking a file system into the existing directory tree",
+        "C": "Encrypting a disk",
+        "D": "Formatting a partition"
+      },
+      "answer": "B",
+      "explanation": "Mount makes the file system accessible at some directory mount point."
+    },
+    {
+      "id": 9,
+      "question": "Access control in UNIX file systems is typically represented by:",
+      "options": {
+        "A": "Only ACLs",
+        "B": "Owner-group-others + rwx bits",
+        "C": "Checksum bits",
+        "D": "File labels only"
+      },
+      "answer": "B",
+      "explanation": "Classic UNIX permissions use rwx bits for owner, group and others."
+    },
+    {
+      "id": 10,
+      "question": "Which of the following is a journaling file system feature?",
+      "options": {
+        "A": "Avoiding any metadata writes",
+        "B": "Recording changes in a log before applying them to main structures",
+        "C": "Storing files only in contiguous blocks",
+        "D": "Disabling crash recovery"
+      },
+      "answer": "B",
+      "explanation": "Journaling logs updates so the file system can recover quickly after a crash."
     }
   ]
 }

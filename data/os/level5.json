@@ -1,28 +1,126 @@
 {
-  "title": "OS Level 5 — Process Synchronization & Critical Section",
-  "concept": "MCQs on race conditions, critical section and properties.",
-  "challenges": [
+  "title": "OS Level 5 — I/O Systems & Device Management",
+  "concept": "I/O hardware, device drivers, interrupts, polling, DMA and buffering.",
+  "questions": [
     {
-      "title": "Q1: Race Condition",
-      "description": "Race condition occurs when:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) Two processes use different variables\nb) Final result depends on the order of execution of processes\nc) Only one process is running in the system\nd) Processes are in blocked state"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "Which component typically acts as the software interface between device controller and OS?",
+      "options": {
+        "A": "System call",
+        "B": "Device driver",
+        "C": "Compiler",
+        "D": "Linker"
+      },
+      "answer": "B",
+      "explanation": "Device drivers hide device specifics and provide a standard interface to the OS."
     },
     {
-      "title": "Q2: Critical Section Requirement",
-      "description": "Which of the following is NOT a requirement of a good critical section solution?",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) Mutual exclusion\nb) Progress\nc) Bounded waiting\nd) Maximum CPU utilization"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "Compared to polling, interrupts are generally preferred because they:",
+      "options": {
+        "A": "Increase busy-waiting",
+        "B": "Reduce CPU time wasted waiting for I/O",
+        "C": "Disable context switching",
+        "D": "Avoid hardware support"
+      },
+      "answer": "B",
+      "explanation": "Interrupts notify CPU only when needed, reducing busy waiting."
+    },
+    {
+      "id": 3,
+      "question": "DMA (Direct Memory Access) is used to:",
+      "options": {
+        "A": "Allow devices to transfer data directly to/from memory without CPU for each byte",
+        "B": "Increase CPU clock speed",
+        "C": "Replace all interrupts",
+        "D": "Store page tables"
+      },
+      "answer": "A",
+      "explanation": "DMA controllers handle bulk data transfer, freeing CPU from byte-by-byte I/O."
+    },
+    {
+      "id": 4,
+      "question": "Which of the following is an example of a block device?",
+      "options": {
+        "A": "Keyboard",
+        "B": "Mouse",
+        "C": "Hard disk",
+        "D": "Serial port"
+      },
+      "answer": "C",
+      "explanation": "Block devices support random access in fixed-size blocks (disk, SSD)."
+    },
+    {
+      "id": 5,
+      "question": "Which is typically a character device?",
+      "options": {
+        "A": "SSD",
+        "B": "Monitor/terminal",
+        "C": "Flash drive",
+        "D": "RAID array"
+      },
+      "answer": "B",
+      "explanation": "Character devices (e.g., terminals, serial ports) are accessed as streams of characters."
+    },
+    {
+      "id": 6,
+      "question": "Double buffering in I/O is used to:",
+      "options": {
+        "A": "Reduce memory usage",
+        "B": "Overlap I/O and computation, improving throughput",
+        "C": "Eliminate interrupts",
+        "D": "Avoid buffering entirely"
+      },
+      "answer": "B",
+      "explanation": "Double buffering allows one buffer to be filled while another is processed."
+    },
+    {
+      "id": 7,
+      "question": "Spooling (Simultaneous Peripheral Operation On-Line) is commonly used with:",
+      "options": {
+        "A": "CPU scheduling",
+        "B": "Printer systems",
+        "C": "Virtual memory",
+        "D": "Network routing"
+      },
+      "answer": "B",
+      "explanation": "Print jobs are spooled to disk before being sent to printers sequentially."
+    },
+    {
+      "id": 8,
+      "question": "Which statement about device independence is TRUE?",
+      "options": {
+        "A": "Applications must know exact device details",
+        "B": "OS provides a common interface so apps need not care about device specifics",
+        "C": "It applies only to network devices",
+        "D": "It prevents new devices from being added"
+      },
+      "answer": "B",
+      "explanation": "Device independence lets the same I/O calls work for different devices."
+    },
+    {
+      "id": 9,
+      "question": "Which of these is a valid reason to use caching at the I/O subsystem?",
+      "options": {
+        "A": "Increase device wear",
+        "B": "Reduce average access time by keeping frequently used data in memory",
+        "C": "Disable virtual memory",
+        "D": "Force all writes directly to disk without buffering"
+      },
+      "answer": "B",
+      "explanation": "I/O caching improves performance by avoiding repeated slow device accesses."
+    },
+    {
+      "id": 10,
+      "question": "Which of the following is an I/O scheduling goal?",
+      "options": {
+        "A": "Maximize seek time on disks",
+        "B": "Minimize response time and maximize throughput",
+        "C": "Disable buffering",
+        "D": "Increase CPU busy waiting"
+      },
+      "answer": "B",
+      "explanation": "I/O scheduling aims to reduce latency and increase throughput fairly."
     }
   ]
 }

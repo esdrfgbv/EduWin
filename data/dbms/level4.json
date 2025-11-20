@@ -1,28 +1,126 @@
 {
-  "title": "DBMS Level 4 — SQL DDL & Simple DML",
-  "concept": "MCQs on SQL create/alter/drop and insert/update/delete.",
-  "challenges": [
+  "title": "DBMS Level 4 — ER Modeling & Relational Design",
+  "concept": "Entity–Relationship model, mapping ER to relational schema, keys, participation and relationship types.",
+  "questions": [
     {
-      "title": "Q1: DDL Command",
-      "description": "Which of the following is a DDL (Data Definition Language) command in SQL?",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) SELECT\nb) INSERT\nc) UPDATE\nd) CREATE"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "In an ER diagram, rectangles typically represent:",
+      "options": {
+        "A": "Relationships",
+        "B": "Entities",
+        "C": "Attributes",
+        "D": "Keys"
+      },
+      "answer": "B",
+      "explanation": "Rectangles denote entity sets; diamonds denote relationships, ovals denote attributes."
     },
     {
-      "title": "Q2: Insert Record",
-      "description": "To insert a new row into a table STUDENT, which command is used?",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) ADD INTO STUDENT\nb) INSERT INTO STUDENT\nc) NEW ROW STUDENT\nd) PUSH INTO STUDENT"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "A weak entity set is one that:",
+      "options": {
+        "A": "Does not have any attributes",
+        "B": "Cannot be represented in a database",
+        "C": "Does not have a primary key and depends on another entity",
+        "D": "Has only multivalued attributes"
+      },
+      "answer": "C",
+      "explanation": "Weak entities lack a key of their own and are identified by a strong (owner) entity plus a partial key."
+    },
+    {
+      "id": 3,
+      "question": "A multivalued attribute in ER modeling is represented by:",
+      "options": {
+        "A": "Double rectangle",
+        "B": "Dashed oval",
+        "C": "Double oval",
+        "D": "Diamond"
+      },
+      "answer": "C",
+      "explanation": "Multivalued attributes are shown as double ovals connected to their entity."
+    },
+    {
+      "id": 4,
+      "question": "Which of the following best describes total participation of entity A in relationship R?",
+      "options": {
+        "A": "Some A entities may not participate in R",
+        "B": "Every A entity must participate in at least one R",
+        "C": "No A entity is allowed to participate in R",
+        "D": "Only weak entities can have total participation"
+      },
+      "answer": "B",
+      "explanation": "Total participation means each A must be related via R (represented by double line from A to R)."
+    },
+    {
+      "id": 5,
+      "question": "A 1:N (one-to-many) relationship between A and B is usually implemented in the relational model by:",
+      "options": {
+        "A": "Adding a foreign key in table A referencing B",
+        "B": "Adding a foreign key in table B referencing A",
+        "C": "Creating a separate relationship table only",
+        "D": "Storing both tables as a single file"
+      },
+      "answer": "B",
+      "explanation": "For 1:N from A to B, the 'many' side (B) gets a foreign key referencing the 'one' side (A)."
+    },
+    {
+      "id": 6,
+      "question": "A many-to-many (M:N) relationship between Students and Courses is typically mapped to:",
+      "options": {
+        "A": "A single table with all attributes of both",
+        "B": "Two tables only (Student, Course)",
+        "C": "A separate intersection table with foreign keys to Student and Course",
+        "D": "A view only, not a table"
+      },
+      "answer": "C",
+      "explanation": "M:N relationships are represented by a new relation whose primary key usually includes the FKs to both entities."
+    },
+    {
+      "id": 7,
+      "question": "Which of the following is TRUE about composite attributes?",
+      "options": {
+        "A": "They cannot be stored in relational tables",
+        "B": "They are attributes that can be further divided into sub-attributes",
+        "C": "They must always be multivalued",
+        "D": "They always act as primary keys"
+      },
+      "answer": "B",
+      "explanation": "Composite attributes (e.g., Address) can be split into simpler attributes like street, city, pin."
+    },
+    {
+      "id": 8,
+      "question": "In ER to relational mapping, a multivalued attribute of entity E is usually:",
+      "options": {
+        "A": "Ignored during mapping",
+        "B": "Stored in the same table as E as repeated columns",
+        "C": "Mapped to a separate table with a foreign key to E",
+        "D": "Stored only as a JSON string"
+      },
+      "answer": "C",
+      "explanation": "Multivalued attributes are mapped to a separate relation referencing the owner entity."
+    },
+    {
+      "id": 9,
+      "question": "An identifying relationship is one in which:",
+      "options": {
+        "A": "Both entities are strong entities",
+        "B": "The primary key of the child entity includes the primary key of the parent entity",
+        "C": "No foreign keys are used",
+        "D": "Entities do not share attributes"
+      },
+      "answer": "B",
+      "explanation": "Identifying relationships are used for weak entities whose PK includes the PK of the owner entity."
+    },
+    {
+      "id": 10,
+      "question": "Specialization / generalization in ER modeling is used to:",
+      "options": {
+        "A": "Merge entities with identical attributes",
+        "B": "Represent IS-A relationships (superclass/subclass)",
+        "C": "Eliminate transitive dependencies",
+        "D": "Optimize disk usage directly"
+      },
+      "answer": "B",
+      "explanation": "Specialization/generalization captures inheritance-like IS-A relationships between entity sets."
     }
   ]
 }

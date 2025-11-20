@@ -1,107 +1,112 @@
 {
-  "level": 6,
-  "title": "Stacks & Queues",
-  "concept": "This level teaches implementation and problem-solving using stacks and queues — push/pop/top operations, balanced parentheses, reversing, min-stack logic, queue operations, circular queue simulation and queue-based problems.",
+  "title": "DSA Level 6 — Recursion & Backtracking",
+  "concept": "Recursion techniques: permutations, subsets, n-Queens, Sudoku, backtracking search.",
   "challenges": [
     {
       "id": 1,
-      "title": "Implement Stack",
-      "description": "Perform push/pop/top operations on stack based on given commands and print final stack (top to bottom). If pop on empty → ignore.",
-      "starterCode": "// maintain array/vector and top pointer",
-      "tests": [
-        { "input": "5\npush 1\npush 2\npush 3\npop\npush 4", "expected": "4 2 1" },
-        { "input": "3\npop\npush 9\npop", "expected": "" }
-      ]
+      "title": "Factorial Using Recursion",
+      "description": "Compute n! using recursion.",
+      "inputDescription": "Integer n.",
+      "outputDescription": "Single integer: factorial value.",
+      "examples": [
+        "Input:\n5\n\nOutput:\n120"
+      ],
+      "constraints": "0 ≤ n ≤ 20",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 2,
-      "title": "Balanced Parentheses",
-      "description": "Given string of brackets (), {}, [], print Yes if balanced else No.",
-      "starterCode": "// push opening and pop on matching closing",
-      "tests": [
-        { "input": "{}()[]", "expected": "Yes" },
-        { "input": "{(})", "expected": "No" }
-      ]
+      "title": "Fibonacci (Memoization)",
+      "description": "Print the nth Fibonacci number using recursion with memoization.",
+      "inputDescription": "Integer n.",
+      "outputDescription": "Single integer: Fib(n).",
+      "examples": [],
+      "constraints": "0 ≤ n ≤ 10^5 (memoization required)",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 3,
-      "title": "Next Greater Element",
-      "description": "For each element in array print next greater element on right, else -1. Use stack (traverse from right).",
-      "starterCode": "// maintain decreasing stack",
-      "tests": [
-        { "input": "4\n4 5 2 25", "expected": "5 25 25 -1" },
-        { "input": "4\n13 7 6 12", "expected": "-1 12 12 -1" }
-      ]
+      "title": "Generate Subsets",
+      "description": "Given an array of integers, generate all subsets (power set) in lexicographic order.",
+      "inputDescription": "N and N integers.",
+      "outputDescription": "Print each subset on a new line.",
+      "examples": [],
+      "constraints": "N ≤ 15",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 4,
-      "title": "Min Stack",
-      "description": "For push/pop commands maintain stack and also print minimum element after each operation. If empty print -1.",
-      "starterCode": "// maintain additional stack for minimums",
-      "tests": [
-        { "input": "5\npush 3\npush 5\npush 2\npop\npop", "expected": "3\n3\n2\n3\n3" },
-        { "input": "3\npush 1\npop\npop", "expected": "1\n-1\n-1" }
-      ]
+      "title": "Generate Permutations",
+      "description": "Given an array of distinct integers, print all permutations in lexicographic order.",
+      "inputDescription": "N and N integers.",
+      "outputDescription": "Each permutation on a new line.",
+      "constraints": "N ≤ 10",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 5,
-      "title": "Reverse String Using Stack",
-      "description": "Using stack only, reverse the given string.",
-      "starterCode": "// push all chars then pop to build reverse",
-      "tests": [
-        { "input": "hello", "expected": "olleh" },
-        { "input": "abc", "expected": "cba" }
-      ]
+      "title": "N-Queens",
+      "description": "Place N queens on an NxN chessboard. Print total number of valid arrangements.",
+      "inputDescription": "Integer N.",
+      "outputDescription": "Integer: count of valid configurations.",
+      "constraints": "1 ≤ N ≤ 12",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 6,
-      "title": "Implement Queue",
-      "description": "Perform enqueue/dequeue/front operations. On dequeue if empty ignore. On front if empty print -1.",
-      "starterCode": "// maintain array with front/rear pointer",
-      "tests": [
-        { "input": "4\nenq 10\nenq 20\ndeq\nenq 30", "expected": "20 30" },
-        { "input": "3\ndeq\nenq 5\ndeq", "expected": "" }
-      ]
+      "title": "Rat in a Maze",
+      "description": "Given an N×N maze of 0s and 1s, count the paths from (0,0) to (N-1,N-1) moving only right or down.",
+      "constraints": "All paths must stay inside maze and only go through 1s.",
+      "inputDescription": "N and N×N grid.",
+      "outputDescription": "Single integer: number of possible paths.",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 7,
-      "title": "Circular Queue Simulation",
-      "description": "Given size N and Q queries (ENQ X / DEQ), simulate circular queue and print final elements from front to rear.",
-      "starterCode": "// use modulo for next position",
-      "tests": [
-        { "input": "5 5\nENQ 1\nENQ 2\nENQ 3\nDEQ\nENQ 4", "expected": "2 3 4" },
-        { "input": "3 4\nENQ 1\nENQ 2\nENQ 3\nENQ 4", "expected": "1 2 3" }
-      ]
+      "title": "Sudoku Solver",
+      "description": "Fill a 9×9 grid so each row/column/subgrid has digits 1–9 exactly once.",
+      "inputDescription": "9×9 matrix with 0 for blanks.",
+      "outputDescription": "Print solved Sudoku grid.",
+      "examples": [],
+      "constraints": "Backtracking expected",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 8,
-      "title": "First Non-Repeating Character in Stream",
-      "description": "Given a stream of lowercase characters, after each char print first non-repeating so far, else -1. Use queue + freq array.",
-      "starterCode": "// push to queue, check front until freq==1",
-      "tests": [
-        { "input": "aabc", "expected": "a -1 b b" },
-        { "input": "zz", "expected": "z -1" }
-      ]
+      "title": "Word Search Grid",
+      "description": "Given a grid of letters and a target word, return YES if the word exists by moving adjacent cells (cannot reuse the same cell twice).",
+      "inputDescription": "Grid + word.",
+      "outputDescription": "\"YES\" or \"NO\".",
+      "constraints": "m,n ≤ 10, word length ≤ 100",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 9,
-      "title": "Queue Using Two Stacks",
-      "description": "Implement queue where enqueue pushes to stack1 and dequeue pops from stack2 (transfer when needed). Print final queue elements.",
-      "starterCode": "// classic queue using two stacks",
-      "tests": [
-        { "input": "5\nenq 1\nenq 2\ndeq\nenq 3\nenq 4", "expected": "2 3 4" },
-        { "input": "3\ndeq\nenq 10\ndeq", "expected": "" }
-      ]
+      "title": "Print All Balanced Parentheses",
+      "description": "Given N, print all valid combinations of N pairs of parentheses.",
+      "inputDescription": "Integer N.",
+      "outputDescription": "Each combination in new line.",
+      "constraints": "1 ≤ N ≤ 12",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 10,
-      "title": "Remove Consecutive Duplicates",
-      "description": "Given a string, repeatedly remove adjacent duplicate pairs using stack. Return final string.",
-      "starterCode": "// push characters, if stack top matches pop else push",
-      "tests": [
-        { "input": "abbaca", "expected": "ca" },
-        { "input": "azxxzy", "expected": "ay" }
-      ]
+      "title": "Knight’s Tour",
+      "description": "Count possible knight’s tours in an NxN chessboard starting from (0,0).",
+      "inputDescription": "Integer N.",
+      "outputDescription": "Single integer: count of tours.",
+      "constraints": "1 ≤ N ≤ 8",
+      "starterCode": "",
+      "tests": []
     }
   ]
 }

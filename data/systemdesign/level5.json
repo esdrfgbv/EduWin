@@ -1,28 +1,126 @@
 {
-  "title": "System Design Level 5 — CAP & Consistency",
-  "concept": "MCQs on CAP theorem and consistency trade-offs.",
-  "challenges": [
+  "title": "System Design Level 5 — Caching & Performance Patterns",
+  "concept": "Cache patterns, invalidation strategies, cache stampede, and performance tuning.",
+  "questions": [
     {
-      "title": "Q1: CAP Trade-off",
-      "description": "According to CAP theorem, in presence of a network partition, a system must choose between:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\\na) Consistency and Availability\\nb) Consistency and Partition tolerance\\nc) Availability and Partition tolerance\\nd) Scalability and Latency"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "Which is a common cache placement for improving database read performance?",
+      "options": {
+        "A": "Client-side only",
+        "B": "Between application and database as a distributed cache (e.g., Redis, Memcached)",
+        "C": "Only in the browser",
+        "D": "On tape drives"
+      },
+      "answer": "B",
+      "explanation": "A distributed cache layer is often used to offload reads from the DB."
     },
     {
-      "title": "Q2: Eventual Consistency",
-      "description": "Eventual consistency means:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\\na) All replicas always have exactly the same data at any moment\\nb) Reads may see stale data for a while, but will become consistent if no new updates happen\\nc) System never guarantees consistency\\nd) Only the leader node has correct data"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "Cache-aside (lazy loading) pattern means:",
+      "options": {
+        "A": "Application reads from cache first, on miss loads from DB and populates cache",
+        "B": "Cache always writes to DB automatically",
+        "C": "DB pushes data into cache proactively",
+        "D": "Cache is never invalidated"
+      },
+      "answer": "A",
+      "explanation": "Cache-aside logic is implemented by the app: check cache, then DB, then fill cache."
+    },
+    {
+      "id": 3,
+      "question": "Write-back (write-behind) caching:",
+      "options": {
+        "A": "Writes to DB first, then cache",
+        "B": "Writes to cache and delays writing to DB",
+        "C": "Never writes to DB",
+        "D": "Is the same as write-through"
+      },
+      "answer": "B",
+      "explanation": "Write-back reduces write latency but risks data loss if cache fails before flush."
+    },
+    {
+      "id": 4,
+      "question": "A cache stampede (thundering herd) problem occurs when:",
+      "options": {
+        "A": "Cache is empty and no one reads",
+        "B": "Many clients simultaneously miss the same key and hit the DB at once",
+        "C": "Cache eviction never happens",
+        "D": "Network is offline"
+      },
+      "answer": "B",
+      "explanation": "Simultaneous misses on a hot key can overload the backing store."
+    },
+    {
+      "id": 5,
+      "question": "One mitigation for cache stampede is:",
+      "options": {
+        "A": "Disable caching",
+        "B": "Use mutex/locking per key so only one client recomputes and others wait",
+        "C": "Reduce TTL to 0",
+        "D": "Avoid sharding"
+      },
+      "answer": "B",
+      "explanation": "Per-key locks or request coalescing ensure only one recomputation on expiry."
+    },
+    {
+      "id": 6,
+      "question": "Cache invalidation is hard because:",
+      "options": {
+        "A": "Caches never evict items",
+        "B": "You must keep cached data consistent with the source of truth while optimizing performance",
+        "C": "Caches cannot be distributed",
+        "D": "Caches cannot be monitored"
+      },
+      "answer": "B",
+      "explanation": "Balancing correctness and performance makes invalidation tricky."
+    },
+    {
+      "id": 7,
+      "question": "Time-based cache invalidation typically uses:",
+      "options": {
+        "A": "LRU only",
+        "B": "TTL (time-to-live) per key or per cache",
+        "C": "Manual deletes only",
+        "D": "Disk checkpoints"
+      },
+      "answer": "B",
+      "explanation": "TTL automatically expires entries after a given duration."
+    },
+    {
+      "id": 8,
+      "question": "A hot key in a cache is:",
+      "options": {
+        "A": "A key that is never accessed",
+        "B": "A key that receives disproportionally high traffic",
+        "C": "A key that expires immediately",
+        "D": "A key that cannot be sharded"
+      },
+      "answer": "B",
+      "explanation": "Hot keys can overload a single cache node and often need special handling."
+    },
+    {
+      "id": 9,
+      "question": "To reduce tail latency (p99) in a replicated service, a common technique is:",
+      "options": {
+        "A": "Retry the same replica always",
+        "B": "Send hedged/duplicate requests to multiple replicas and accept the first response",
+        "C": "Disable load balancing",
+        "D": "Lower overall capacity"
+      },
+      "answer": "B",
+      "explanation": "Hedged requests trade some extra load for lower tail latency."
+    },
+    {
+      "id": 10,
+      "question": "A CDN mainly caches:",
+      "options": {
+        "A": "Dynamic per-user DB rows",
+        "B": "Static content like images, videos, and static HTML",
+        "C": "Only logs",
+        "D": "Only configuration files"
+      },
+      "answer": "B",
+      "explanation": "CDNs cache static or semi-static assets to reduce latency and origin load."
     }
   ]
 }

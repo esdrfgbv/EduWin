@@ -1,139 +1,126 @@
 {
-  "level": 6,
-  "title": "Functions",
-  "concept": "This level teaches how to define and call functions in Python, return values, pass parameters, compute using functions, and structure programs modularly.",
+  "title": "Python Level 6 — Strings & Character Operations",
+  "concept": "Use strings to index, slice, count, replace and modify characters.",
   "challenges": [
     {
       "id": 1,
-      "title": "Square using Function",
-      "description": "Write a function square(n) that returns n*n. Read n and print result.",
-      "inputDescription": "Single integer n.",
-      "outputDescription": "n squared.",
-      "examples": ["Input:\n5\nOutput:\n25"],
-      "starterCode": "def square(n):\n    # return n*n\n    pass\n\nn = int(input())\n# call square and print result\n",
-      "tests": [
-        { "input": "5", "expected": "25" },
-        { "input": "10", "expected": "100" }
-      ]
+      "title": "String Properties",
+      "description": "Given a string s, print:\n1) the 3rd character,\n2) the second-last character,\n3) the first 5 characters,\n4) all but the last 2 characters,\n5) characters with even indices,\n6) characters with odd indices,\n7) the string in reverse,\n8) every second character in reverse starting from the last,\n9) the length of the string.\nEach item must be printed on its own line.",
+      "inputDescription": "One line: string s (length >= 5).",
+      "outputDescription": "Nine lines as described.",
+      "examples": [
+        "Input:\nabcdef\n\nOutput:\nc\ne\nabcde\nabcd\nace\nbdf\nfedcba\nfdb\n6"
+      ],
+      "starterCode": "def main():\n    s = input().rstrip(\"\\n\")\n    # TODO: print all required slices and length, each on own line\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 2,
-      "title": "Max of Two",
-      "description": "Write a function max2(a, b) that returns the larger of the two.",
-      "inputDescription": "Two integers a and b.",
-      "outputDescription": "Maximum of the two.",
-      "examples": ["Input:\n3 9\nOutput:\n9"],
-      "starterCode": "def max2(a, b):\n    # return larger\n    pass\n\na, b = map(int, input().split())\n# print max2(a, b)\n",
-      "tests": [
-        { "input": "3 9", "expected": "9" },
-        { "input": "10 7", "expected": "10" }
-      ]
+      "title": "Word Count",
+      "description": "Given a line of text, count how many words it has. Words are separated by spaces (multiple spaces may appear).",
+      "inputDescription": "One line of text.",
+      "outputDescription": "Single integer: number of words.",
+      "examples": [
+        "Input:\nHello world from Python\n\nOutput:\n4"
+      ],
+      "starterCode": "def main():\n    line = input().strip()\n    if not line:\n        print(0)\n        return\n    words = line.split()\n    # TODO: print number of words\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 3,
-      "title": "Factorial Function",
-      "description": "Write factorial(n) that returns n!. Use loop inside function.",
-      "inputDescription": "Single integer n.",
-      "outputDescription": "n factorial.",
-      "examples": ["Input:\n4\nOutput:\n24"],
-      "starterCode": "def factorial(n):\n    # loop and compute\n    pass\n\nn = int(input())\n# print factorial(n)\n",
-      "tests": [
-        { "input": "4", "expected": "24" },
-        { "input": "5", "expected": "120" }
-      ]
+      "title": "Swap Two Words",
+      "description": "Given a string that contains exactly two words separated by a single space, swap the words.",
+      "inputDescription": "One line: two words separated by a space.",
+      "outputDescription": "The two words in reversed order, separated by a single space.",
+      "examples": [
+        "Input:\nhello world\n\nOutput:\nworld hello"
+      ],
+      "starterCode": "def main():\n    s = input().strip()\n    a, b = s.split(\" \")\n    # TODO: print them in reversed order\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 4,
-      "title": "Prime Check",
-      "description": "Write isPrime(n) that returns True if n is prime else False. Print Yes or No.",
-      "inputDescription": "Single integer n.",
-      "outputDescription": "Yes | No",
-      "examples": ["Input:\n7\nOutput:\nYes"],
-      "starterCode": "def isPrime(n):\n    # check prime\n    pass\n\nn = int(input())\n# print Yes/No based on isPrime(n)\n",
-      "tests": [
-        { "input": "7", "expected": "Yes" },
-        { "input": "9", "expected": "No" },
-        { "input": "1", "expected": "No" }
-      ]
+      "title": "First and Last f",
+      "description": "Given a string, print the index of the first and the last occurrence of the letter 'f'. Indices are 0-based. If 'f' occurs only once, print its index once. If it does not occur, print nothing.",
+      "inputDescription": "One line: string s.",
+      "outputDescription": "Either one or two integers separated by a space, or empty output.",
+      "examples": [
+        "Input:\ncoffee\n\nOutput:\n1 4"
+      ],
+      "starterCode": "def main():\n    s = input().strip()\n    first = s.find('f')\n    if first == -1:\n        return\n    last = s.rfind('f')\n    if first == last:\n        print(first)\n    else:\n        print(first, last)\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 5,
-      "title": "Sum of List using Function",
-      "description": "Write sumList(arr) that returns sum of elements.",
-      "inputDescription": "N and N integers.",
-      "outputDescription": "Sum of list.",
-      "examples": ["Input:\n5\n1 2 3 4 5\nOutput:\n15"],
-      "starterCode": "def sumList(arr):\n    # return total\n    pass\n\nn = int(input())\narr = list(map(int, input().split()))\n# print sumList(arr)\n",
-      "tests": [
-        { "input": "5\n1 2 3 4 5", "expected": "15" },
-        { "input": "3\n10 10 10", "expected": "30" }
-      ]
+      "title": "Second Occurrence of f",
+      "description": "Given a string, print the index of the second occurrence of 'f'. If the string contains 'f' only once, print -1; if it does not contain 'f', print -2.",
+      "inputDescription": "One line: string s.",
+      "outputDescription": "Single integer: index or -1 or -2.",
+      "examples": [
+        "Input:\ncoffee\n\nOutput:\n4"
+      ],
+      "starterCode": "def main():\n    s = input().strip()\n    first = s.find('f')\n    if first == -1:\n        print(-2)\n        return\n    second = s.find('f', first+1)\n    if second == -1:\n        print(-1)\n    else:\n        print(second)\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 6,
-      "title": "Reverse Number using Function",
-      "description": "Write reverseNum(n) that returns integer reversed.",
-      "inputDescription": "Single integer n.",
-      "outputDescription": "Reversed integer.",
-      "examples": ["Input:\n123\nOutput:\n321"],
-      "starterCode": "def reverseNum(n):\n    # reverse digits and return\n    pass\n\nn = int(input())\n# print reverseNum(n)\n",
-      "tests": [
-        { "input": "123", "expected": "321" },
-        { "input": "500", "expected": "5" }
-      ]
+      "title": "Remove Between First and Last h",
+      "description": "Given a string containing at least two 'h' characters, remove the first 'h', the last 'h' and all characters between them. Print the result.",
+      "inputDescription": "One line: string s with at least two 'h'.",
+      "outputDescription": "Modified string.",
+      "examples": [
+        "Input:\nabchxyzha\n\nOutput:\naba"
+      ],
+      "starterCode": "def main():\n    s = input().strip()\n    first = s.find('h')\n    last = s.rfind('h')\n    # TODO: remove substring from first to last inclusive\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 7,
-      "title": "GCD Function",
-      "description": "Write gcd(a, b) using Euclidean algorithm and print result.",
-      "inputDescription": "Two integers a, b.",
-      "outputDescription": "GCD of a and b.",
-      "examples": ["Input:\n12 18\nOutput:\n6"],
-      "starterCode": "def gcd(a, b):\n    # Euclidean algorithm\n    pass\n\na, b = map(int, input().split())\n# print gcd(a, b)\n",
-      "tests": [
-        { "input": "12 18", "expected": "6" },
-        { "input": "7 13", "expected": "1" }
-      ]
+      "title": "Reverse Between First and Last h",
+      "description": "Given a string containing at least two 'h' characters, reverse the characters between the first and last 'h'. Keep all 'h' and other characters in place.",
+      "inputDescription": "One line: string s with at least two 'h'.",
+      "outputDescription": "New string with middle segment reversed.",
+      "examples": [
+        "Input:\nahbcdefhg\n\nOutput:\nahfedcbhg"
+      ],
+      "starterCode": "def main():\n    s = input().strip()\n    first = s.find('h')\n    last = s.rfind('h')\n    middle = s[first+1:last]\n    # TODO: reverse middle and rebuild string\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 8,
-      "title": "LCM using Function",
-      "description": "Write lcm(a, b) that uses gcd(a, b) and returns LCM.",
-      "inputDescription": "Two integers a and b.",
-      "outputDescription": "LCM of a and b.",
-      "examples": ["Input:\n4 6\nOutput:\n12"],
-      "starterCode": "def gcd(a, b):\n    pass\n\ndef lcm(a, b):\n    # return LCM using gcd\n    pass\n\na, b = map(int, input().split())\n# print lcm(a, b)\n",
-      "tests": [
-        { "input": "4 6", "expected": "12" },
-        { "input": "3 5", "expected": "15" }
-      ]
+      "title": "Replace 1 With one",
+      "description": "Given a string, replace every digit character '1' with the word \"one\".",
+      "inputDescription": "One line: string s.",
+      "outputDescription": "Modified string.",
+      "examples": [
+        "Input:\nI have 1 apple\n\nOutput:\nI have one apple"
+      ],
+      "starterCode": "def main():\n    s = input().rstrip('\\n')\n    # TODO: build new string replacing '1' with 'one'\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 9,
-      "title": "isPalindrome Number",
-      "description": "Write isPal(n) that returns True if number is palindrome else False. Print Yes or No.",
-      "inputDescription": "Single integer n.",
-      "outputDescription": "Yes | No",
-      "examples": ["Input:\n121\nOutput:\nYes"],
-      "starterCode": "def isPal(n):\n    # return True/False\n    pass\n\nn = int(input())\n# print Yes/No\n",
-      "tests": [
-        { "input": "121", "expected": "Yes" },
-        { "input": "123", "expected": "No" }
-      ]
+      "title": "Remove @ Characters",
+      "description": "Given a string, remove all '@' characters from it and print the result.",
+      "inputDescription": "One line: string s.",
+      "outputDescription": "String without '@'.",
+      "examples": [
+        "Input:\na@b@c\n\nOutput:\nabc"
+      ],
+      "starterCode": "def main():\n    s = input().rstrip('\\n')\n    # TODO: copy all chars except '@' into a new string\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 10,
-      "title": "Mini Calculator (Functions)",
-      "description": "Write functions add, sub, mul, divi and perform operation based on operator.",
-      "inputDescription": "a b op",
-      "outputDescription": "Result of operation (integer division for /).",
-      "examples": ["Input:\n8 4 *\nOutput:\n32"],
-      "starterCode": "def add(a, b): pass\n\ndef sub(a, b): pass\n\ndef mul(a, b): pass\n\ndef divi(a, b): pass\n\n# read input, choose function and print\n",
-      "tests": [
-        { "input": "8 4 *", "expected": "32" },
-        { "input": "10 3 -", "expected": "7" },
-        { "input": "9 3 /", "expected": "3" }
-      ]
+      "title": "Replace Middle h With H",
+      "description": "Given a string with at least two 'h' characters, replace every 'h' between the first and last 'h' (not including them) with 'H'. The first and last 'h' remain lowercase.",
+      "inputDescription": "One line: string s with at least two 'h'.",
+      "outputDescription": "Modified string.",
+      "examples": [
+        "Input:\nhihhih\n\nOutput:\nhiHHih"
+      ],
+      "starterCode": "def main():\n    s = input().strip()\n    first = s.find('h')\n    last = s.rfind('h')\n    # TODO: replace 'h' with 'H' in middle part only\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     }
   ]
 }

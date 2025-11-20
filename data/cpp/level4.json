@@ -1,34 +1,157 @@
 {
   "title": "C++ Level 4 — Loops & Counting",
-  "concept": "Use for and while loops to perform repeated tasks.",
+  "concept": "Use for/while loops to print ranges, compute sums, factorials, and simple numeric properties.",
   "challenges": [
     {
-      "title": "Print 1 to N",
-      "description": "Given an integer N, print numbers from 1 to N each on a new line.",
-      "inputDescription": "Single integer N.",
-      "outputDescription": "Numbers from 1 to N on separate lines.",
+      "id": 1,
+      "title": "From A to B",
+      "description": "Given two integers A and B, print all numbers from A to B inclusive. If A <= B, print in ascending order; otherwise in descending order. All numbers must be on a single line separated by one space.",
+      "inputDescription": "Two integers A and B.",
+      "outputDescription": "Sequence of integers separated by single spaces on one line.",
       "examples": [
-        "Input:\n3\n\nOutput:\n1\n2\n3"
+        "Input:\n3 7\n\nOutput:\n3 4 5 6 7",
+        "Input:\n7 3\n\nOutput:\n7 6 5 4 3"
       ],
-      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int N;\n    // your code here\n    return 0;\n}\n",
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int A, B;\n    // print from A to B in correct order\n    return 0;\n}\n",
       "tests": [
-        { "input": "3", "expected": "1\n2\n3" },
+        { "input": "3 7", "expected": "3 4 5 6 7" },
+        { "input": "7 3", "expected": "7 6 5 4 3" },
+        { "input": "5 5", "expected": "5" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Squares Not Exceeding N",
+      "description": "Given an integer N (N >= 1), print all perfect squares (1, 4, 9, ...) that are less than or equal to N. Print them on one line separated by single spaces.",
+      "inputDescription": "Single integer N.",
+      "outputDescription": "All squares i*i <= N in ascending order.",
+      "examples": [
+        "Input:\n15\n\nOutput:\n1 4 9"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int N;\n    // print i*i for i>=1 while i*i <= N\n    return 0;\n}\n",
+      "tests": [
+        { "input": "15", "expected": "1 4 9" },
         { "input": "1", "expected": "1" }
       ]
     },
     {
-      "title": "Sum of First N Natural Numbers",
-      "description": "Given N, compute the sum 1 + 2 + ... + N.",
-      "inputDescription": "Single integer N.",
-      "outputDescription": "Single integer: sum of first N natural numbers.",
+      "id": 3,
+      "title": "Sum of 10 Numbers",
+      "description": "Read exactly 10 integers and print their sum.",
+      "inputDescription": "10 integers (separated by space or newline).",
+      "outputDescription": "Single integer: sum of the 10 numbers.",
       "examples": [
-        "Input:\n5\n\nOutput:\n15"
+        "Input:\n1 2 3 4 5 6 7 8 9 10\n\nOutput:\n55"
       ],
-      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int N;\n    // read N and compute sum using a loop\n    return 0;\n}\n",
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int x, sum = 0;\n    // read 10 numbers and add to sum\n    return 0;\n}\n",
       "tests": [
-        { "input": "5", "expected": "15" },
-        { "input": "1", "expected": "1" },
-        { "input": "3", "expected": "6" }
+        { "input": "1 2 3 4 5 6 7 8 9 10", "expected": "55" },
+        { "input": "0 0 0 0 0 0 0 0 0 0", "expected": "0" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Sum of N Numbers",
+      "description": "The first input line contains integer N. Then follow N integers. Print their sum.",
+      "inputDescription": "First line: N. Second line (or following): N integers.",
+      "outputDescription": "Single integer: sum of the N integers.",
+      "examples": [
+        "Input:\n3\n10 20 30\n\nOutput:\n60"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int N;\n    long long sum = 0;\n    // read N, then N numbers and add to sum\n    return 0;\n}\n",
+      "tests": [
+        { "input": "3\n10 20 30", "expected": "60" },
+        { "input": "1\n5", "expected": "5" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Sum of Cubes",
+      "description": "Given integer N (N >= 1), compute 1^3 + 2^3 + ... + N^3 and print the result.",
+      "inputDescription": "Single integer N.",
+      "outputDescription": "Single integer: sum of cubes from 1 to N.",
+      "examples": [
+        "Input:\n3\n\nOutput:\n36"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int N;\n    long long sum = 0;\n    // use loop: sum += i*i*i\n    return 0;\n}\n",
+      "tests": [
+        { "input": "3", "expected": "36" },
+        { "input": "1", "expected": "1" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Factorial",
+      "description": "Given integer n (n >= 0), compute n! = 1 * 2 * ... * n. Define 0! = 1.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Single integer: n! (fits in 64-bit for test data).",
+      "examples": [
+        "Input:\n4\n\nOutput:\n24"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int n;\n    long long fact = 1;\n    // compute factorial in a loop\n    return 0;\n}\n",
+      "tests": [
+        { "input": "4", "expected": "24" },
+        { "input": "0", "expected": "1" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Count Zeros",
+      "description": "First read integer N. Then read N integers. Count how many of them are equal to zero and print that count.",
+      "inputDescription": "First line: N. Next N integers.",
+      "outputDescription": "Single integer: number of zeros.",
+      "examples": [
+        "Input:\n5\n1 0 2 0 3\n\nOutput:\n2"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int N;\n    int x, cnt = 0;\n    // read N numbers and increment cnt when x == 0\n    return 0;\n}\n",
+      "tests": [
+        { "input": "5\n1 0 2 0 3", "expected": "2" },
+        { "input": "3\n0 0 0", "expected": "3" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Sum of Factorials",
+      "description": "Given integer n (n >= 1), compute 1! + 2! + ... + n! and print the sum.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Single integer: sum of factorials.",
+      "examples": [
+        "Input:\n3\n\nOutput:\n9"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int n;\n    long long sum = 0;\n    // accumulate factorials efficiently\n    return 0;\n}\n",
+      "tests": [
+        { "input": "3", "expected": "9" },
+        { "input": "1", "expected": "1" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Smallest Divisor",
+      "description": "Given an integer n >= 2, find its smallest divisor greater than 1 and print it.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Smallest integer d > 1 that divides n.",
+      "examples": [
+        "Input:\n15\n\nOutput:\n3"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int n;\n    // try divisors from 2 upwards, print first that divides n\n    return 0;\n}\n",
+      "tests": [
+        { "input": "15", "expected": "3" },
+        { "input": "17", "expected": "17" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Largest Power of Two",
+      "description": "Given integer N >= 1, find the largest integer x such that 2^x <= N. Print x and 2^x separated by a space.",
+      "inputDescription": "Single integer N.",
+      "outputDescription": "Two integers: x and 2^x.",
+      "examples": [
+        "Input:\n5\n\nOutput:\n2 4"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int N;\n    // repeatedly multiply by 2 until exceeding N\n    return 0;\n}\n",
+      "tests": [
+        { "input": "5", "expected": "2 4" },
+        { "input": "1", "expected": "0 1" }
       ]
     }
   ]

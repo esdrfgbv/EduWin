@@ -1,28 +1,126 @@
 {
-  "title": "DBMS Level 1 — Introduction to Databases",
-  "concept": "MCQs on basic database and DBMS concepts.",
-  "challenges": [
+  "title": "DBMS Level 1 — Fundamentals",
+  "concept": "Basic terminology, relational model, keys and simple SQL.",
+  "questions": [
     {
-      "title": "Q1: What is a Database?",
-      "description": "Which of the following best describes a database?",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) A collection of programs that manage hardware\nb) A collection of interrelated data stored together\nc) A single text file with random data\nd) A backup copy of operating system files"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "Which of the following best describes a Database Management System (DBMS)?",
+      "options": {
+        "A": "A collection of unrelated files stored on disk",
+        "B": "A software system to create, manage, and access databases",
+        "C": "A programming language for building GUIs",
+        "D": "A hardware device to store large data"
+      },
+      "answer": "B",
+      "explanation": "A DBMS is software that allows users and applications to create, manage, and access databases."
     },
     {
-      "title": "Q2: What is a DBMS?",
-      "description": "DBMS stands for:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) Database Managing System\nb) Data Backup Management System\nc) Database Management System\nd) Data Base Main Storage"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "In the relational model, data is organized in which of the following structures?",
+      "options": {
+        "A": "Trees",
+        "B": "Graphs",
+        "C": "Tables (relations)",
+        "D": "Files"
+      },
+      "answer": "C",
+      "explanation": "Relational databases store data in relations, commonly represented as tables."
+    },
+    {
+      "id": 3,
+      "question": "Which key uniquely identifies a record within a table?",
+      "options": {
+        "A": "Foreign key",
+        "B": "Primary key",
+        "C": "Candidate key",
+        "D": "Composite key"
+      },
+      "answer": "B",
+      "explanation": "A primary key is chosen from candidate keys to uniquely identify tuples in a table."
+    },
+    {
+      "id": 4,
+      "question": "Which SQL command is used to retrieve data from a database?",
+      "options": {
+        "A": "INSERT",
+        "B": "UPDATE",
+        "C": "SELECT",
+        "D": "DELETE"
+      },
+      "answer": "C",
+      "explanation": "SELECT is used to query and retrieve data."
+    },
+    {
+      "id": 5,
+      "question": "Which of the following is NOT a DDL (Data Definition Language) command?",
+      "options": {
+        "A": "CREATE",
+        "B": "ALTER",
+        "C": "DROP",
+        "D": "INSERT"
+      },
+      "answer": "D",
+      "explanation": "INSERT is a DML command; it manipulates data, not the schema."
+    },
+    {
+      "id": 6,
+      "question": "Which constraint ensures that a column cannot have NULL values?",
+      "options": {
+        "A": "UNIQUE",
+        "B": "NOT NULL",
+        "C": "CHECK",
+        "D": "FOREIGN KEY"
+      },
+      "answer": "B",
+      "explanation": "NOT NULL enforces that every row must have a non-null value in that column."
+    },
+    {
+      "id": 7,
+      "question": "Foreign key in a table is used to:",
+      "options": {
+        "A": "Ensure each row is unique within the table",
+        "B": "Link two tables and enforce referential integrity",
+        "C": "Improve query performance",
+        "D": "Store encrypted data"
+      },
+      "answer": "B",
+      "explanation": "Foreign keys reference primary keys in another table to represent relationships and maintain referential integrity."
+    },
+    {
+      "id": 8,
+      "question": "Which SQL clause is used to specify the table(s) from which to retrieve data?",
+      "options": {
+        "A": "FROM",
+        "B": "WHERE",
+        "C": "GROUP BY",
+        "D": "ORDER BY"
+      },
+      "answer": "A",
+      "explanation": "FROM indicates the source table(s) in a SELECT query."
+    },
+    {
+      "id": 9,
+      "question": "Which SQL keyword is used to remove duplicate rows from the result set?",
+      "options": {
+        "A": "UNIQUE",
+        "B": "DISTINCT",
+        "C": "FILTER",
+        "D": "ALL"
+      },
+      "answer": "B",
+      "explanation": "DISTINCT returns only unique rows in the query result."
+    },
+    {
+      "id": 10,
+      "question": "What does the term 'tuple' refer to in a relational database?",
+      "options": {
+        "A": "A column",
+        "B": "A row",
+        "C": "A constraint",
+        "D": "A schema"
+      },
+      "answer": "B",
+      "explanation": "A tuple is a single row (record) in a table."
     }
   ]
 }

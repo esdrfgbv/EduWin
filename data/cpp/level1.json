@@ -1,36 +1,154 @@
 {
   "title": "C++ Level 1 — Basics & I/O",
-  "concept": "Introduction to basic input-output operations in C++ using cout and cin.",
+  "concept": "Basic cout/cin usage and simple integer arithmetic.",
   "challenges": [
     {
-      "title": "Print Hello C++",
-      "description": "Write a program that prints the exact text: Hello C++",
-      "inputDescription": "No input.",
-      "outputDescription": "Output must be exactly: Hello C++",
+      "id": 1,
+      "title": "Sum of Three Integers",
+      "description": "Read three integers and print their sum.",
+      "inputDescription": "Three integers a, b, c on separate lines.",
+      "outputDescription": "Single integer: a + b + c.",
       "examples": [
-        "Input:\n<no input>\n\nOutput:\nHello C++"
+        "Input:\n2\n3\n4\n\nOutput:\n9"
       ],
-      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    // print Hello C++\n    return 0;\n}\n",
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int a, b, c;\n    // read a, b, c and print their sum\n    return 0;\n}\n",
+      "tests": [
+        { "input": "2\n3\n4", "expected": "9" },
+        { "input": "0\n0\n0", "expected": "0" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Hi Name",
+      "description": "Read a name and print: Hi <name>",
+      "inputDescription": "Single word: the name.",
+      "outputDescription": "Exactly: Hi <name>",
+      "examples": [
+        "Input:\nRam\n\nOutput:\nHi Ram"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    string name;\n    // read name and print Hi <name>\n    return 0;\n}\n",
+      "tests": [
+        { "input": "Ram", "expected": "Hi Ram" },
+        { "input": "Kiran", "expected": "Hi Kiran" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Square of a Number",
+      "description": "Read an integer n and print its square.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Single integer: n * n.",
+      "examples": [
+        "Input:\n5\n\nOutput:\n25"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int n;\n    // read n and print n*n\n    return 0;\n}\n",
+      "tests": [
+        { "input": "5", "expected": "25" },
+        { "input": "-4", "expected": "16" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Area of Right Triangle",
+      "description": "Read base and height of a right triangle and print its area using formula 0.5 * base * height.",
+      "inputDescription": "Two real numbers b and h on separate lines.",
+      "outputDescription": "Area as a real number.",
+      "examples": [
+        "Input:\n3\n4\n\nOutput:\n6"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    double b, h;\n    // read b, h and print 0.5*b*h\n    return 0;\n}\n",
+      "tests": [
+        { "input": "3\n4", "expected": "6" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Hello, Name!",
+      "description": "Read a name and print: Hello, <name>! (no space before the exclamation mark)",
+      "inputDescription": "Single word: the name.",
+      "outputDescription": "Exactly: Hello, <name>!",
+      "examples": [
+        "Input:\nRam\n\nOutput:\nHello, Ram!"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    string name;\n    // read name and print Hello, <name>!\n    return 0;\n}\n",
+      "tests": [
+        { "input": "Ram", "expected": "Hello, Ram!" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Sum of Two Integers",
+      "description": "Read two integers a and b, and print their sum.",
+      "inputDescription": "Two integers a and b separated by space or newline.",
+      "outputDescription": "Single integer: a + b.",
+      "examples": [
+        "Input:\n3 5\n\nOutput:\n8"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int a, b;\n    // read a and b, then print their sum\n    return 0;\n}\n",
+      "tests": [
+        { "input": "3 5", "expected": "8" },
+        { "input": "-2 7", "expected": "5" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Apples Per Student",
+      "description": "N students share K apples equally. Print how many apples each student gets and how many remain, separated by a space.",
+      "inputDescription": "Two integers N and K.",
+      "outputDescription": "Two integers: K / N and K % N.",
+      "examples": [
+        "Input:\n3 14\n\nOutput:\n4 2"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int N, K;\n    // compute and print K/N and K%N\n    return 0;\n}\n",
+      "tests": [
+        { "input": "3 14", "expected": "4 2" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Previous and Next",
+      "description": "Given integer n, print two lines:\nThe next number for the number n is <n+1>.\nThe previous number for the number n is <n-1>.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Two lines in the exact format.",
+      "examples": [
+        "Input:\n10\n\nOutput:\nThe next number for the number 10 is 11.\nThe previous number for the number 10 is 9."
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int n;\n    // print previous and next with exact formatting\n    return 0;\n}\n",
       "tests": [
         {
-          "input": "",
-          "expected": "Hello C++"
+          "input": "10",
+          "expected": "The next number for the number 10 is 11.\nThe previous number for the number 10 is 9."
         }
       ]
     },
     {
-      "title": "Sum of Two Integers",
-      "description": "Read two integers a and b, and print their sum.",
-      "inputDescription": "Two integers a and b separated by space.",
-      "outputDescription": "Single integer which is a + b.",
+      "id": 9,
+      "title": "Last Digit",
+      "description": "Given an integer n, print its last digit.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Single digit: last decimal digit of n.",
       "examples": [
-        "Input:\n3 5\n\nOutput:\n8"
+        "Input:\n123\n\nOutput:\n3"
       ],
-      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int a, b;\n    // read a and b, then print their sum\n    return 0;\n}\n",
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int n;\n    // print last digit of n\n    return 0;\n}\n",
       "tests": [
-        { "input": "3 5", "expected": "8" },
-        { "input": "10 20", "expected": "30" },
-        { "input": "-2 7", "expected": "5" }
+        { "input": "123", "expected": "3" },
+        { "input": "-98", "expected": "8" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Sum of Three-Digit Digits",
+      "description": "Given a three-digit integer n, print the sum of its digits.",
+      "inputDescription": "Integer n with |n| in [100, 999].",
+      "outputDescription": "Single integer: sum of digits of |n|.",
+      "examples": [
+        "Input:\n123\n\nOutput:\n6"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int n;\n    // sum digits of absolute value of n\n    return 0;\n}\n",
+      "tests": [
+        { "input": "123", "expected": "6" },
+        { "input": "-501", "expected": "6" }
       ]
     }
   ]

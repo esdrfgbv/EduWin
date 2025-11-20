@@ -1,25 +1,64 @@
 {
-  "title": "CN Level 4 — Network Layer & IP",
-  "concept": "MCQs on IP addressing and routing.",
+  "level": 4,
+  "title": "CN Level 4 — Network Layer & IP Addressing",
+  "concept": "IP addressing, subnets, routing basics and ICMP.",
   "challenges": [
     {
-      "title": "Q1: IPv4 Length",
+      "id": 1,
+      "title": "Q1: IPv4 Address Length",
       "description": "An IPv4 address is of length:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "inputDescription": "No input. MCQ.",
+      "outputDescription": "Choose the correct option.",
       "examples": [
-        "Options:\\na) 16 bits\\nb) 32 bits\\nc) 48 bits\\nd) 64 bits"
+        "Options:\n a) 16 bits\n b) 32 bits\n c) 48 bits\n d) 64 bits"
       ],
       "starterCode": "// Answer: a / b / c / d",
       "tests": []
     },
     {
+      "id": 2,
       "title": "Q2: Router Role",
       "description": "The main function of a router is to:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "inputDescription": "No input. MCQ.",
+      "outputDescription": "Choose the correct option.",
       "examples": [
-        "Options:\\na) Connect devices within a single LAN segment only\\nb) Route packets between different networks\\nc) Convert digital signals to analog only\\nd) Provide only Wi-Fi access to clients"
+        "Options:\n a) Connect devices within a single LAN segment only\n b) Route packets between different networks\n c) Convert digital signals to analog only\n d) Provide only Wi-Fi access to clients"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "id": 3,
+      "title": "Q3: Private IP Range",
+      "description": "Which of the following is a private IPv4 address range?",
+      "inputDescription": "No input. MCQ.",
+      "outputDescription": "Choose the correct option.",
+      "examples": [
+        "Options:\n a) 8.8.8.0/24\n b) 10.0.0.0/8\n c) 100.64.0.0/10\n d) 172.0.0.0/8"
+      ],
+      "starterCode": "// Note: multiple private ranges exist; choose the best correct one among options.\n// Answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "id": 4,
+      "title": "Q4: Default Gateway",
+      "description": "The default gateway in a host's IP configuration is typically:",
+      "inputDescription": "No input. MCQ.",
+      "outputDescription": "Choose the correct option.",
+      "examples": [
+        "Options:\n a) DNS server IP address\n b) IP address of the local switch\n c) IP address of the router interface in the local network\n d) IP address of any device in the Internet"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "id": 5,
+      "title": "Q5: ICMP Use",
+      "description": "Which of the following protocols is mainly used by the 'ping' command to test reachability?",
+      "inputDescription": "No input. MCQ.",
+      "outputDescription": "Choose the correct option.",
+      "examples": [
+        "Options:\n a) TCP\n b) UDP\n c) ICMP\n d) ARP"
       ],
       "starterCode": "// Answer: a / b / c / d",
       "tests": []

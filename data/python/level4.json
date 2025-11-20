@@ -1,137 +1,127 @@
 {
-  "level": 4,
-  "title": "Lists (Arrays)",
-  "concept": "This level focuses on handling lists in Python: indexing, iteration, summing values, filtering even/odd, searching, counting occurrences, reversing and frequency operations.",
+  "title": "Python Level 4 — Loops & Number Sequences",
+  "concept": "Use loops to print ranges, compute sums, factorials, and simple numeric properties.",
   "challenges": [
     {
       "id": 1,
-      "title": "Sum of List",
-      "description": "Read N and then N integers. Print their sum.",
-      "inputDescription": "N then N integers separated by space.",
-      "outputDescription": "Sum as integer.",
-      "examples": ["Input:\n5\n1 2 3 4 5\nOutput:\n15"],
-      "starterCode": "n = int(input())\narr = list(map(int, input().split()))\n# compute and print sum\n",
-      "tests": [
-        { "input": "5\n1 2 3 4 5", "expected": "15" },
-        { "input": "3\n10 10 10", "expected": "30" }
-      ]
+      "title": "From A to B",
+      "description": "Given two integers A and B, print all numbers from A to B inclusive. If A <= B, print in ascending order; otherwise in descending order. All numbers must be on a single line separated by one space.",
+      "inputDescription": "Two integers A and B.",
+      "outputDescription": "Sequence of integers separated by spaces.",
+      "examples": [
+        "Input:\n3 7\n\nOutput:\n3 4 5 6 7",
+        "Input:\n7 3\n\nOutput:\n7 6 5 4 3"
+      ],
+      "starterCode": "def main():\n    A, B = map(int, input().split())\n    # TODO: print numbers from A to B in correct order\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 2,
-      "title": "Maximum Element",
-      "description": "Read N and a list of N integers. Print the largest element.",
-      "inputDescription": "N then N integers.",
-      "outputDescription": "Maximum element.",
-      "examples": ["Input:\n4\n3 9 1 8\nOutput:\n9"],
-      "starterCode": "n = int(input())\narr = list(map(int, input().split()))\n# print max\n",
-      "tests": [
-        { "input": "4\n3 9 1 8", "expected": "9" },
-        { "input": "3\n7 7 7", "expected": "7" }
-      ]
+      "title": "Squares Not Exceeding N",
+      "description": "Given an integer N (N >= 1), print all perfect squares (1, 4, 9, ...) that are less than or equal to N, in ascending order.",
+      "inputDescription": "Single integer N.",
+      "outputDescription": "All i*i <= N in ascending order, separated by spaces.",
+      "examples": [
+        "Input:\n15\n\nOutput:\n1 4 9"
+      ],
+      "starterCode": "def main():\n    N = int(input().strip())\n    # TODO: print squares not exceeding N\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 3,
-      "title": "Minimum Element",
-      "description": "Print the smallest number in the list.",
-      "inputDescription": "N then N integers.",
-      "outputDescription": "Minimum element.",
-      "examples": ["Input:\n4\n3 9 1 8\nOutput:\n1"],
-      "starterCode": "n = int(input())\narr = list(map(int, input().split()))\n# find minimum\n",
-      "tests": [
-        { "input": "4\n3 9 1 8", "expected": "1" },
-        { "input": "3\n5 5 5", "expected": "5" }
-      ]
+      "title": "Sum of 10 Numbers",
+      "description": "Read exactly 10 integers and print their sum.",
+      "inputDescription": "10 integers (separated by spaces or newlines).",
+      "outputDescription": "Single integer: sum of the 10 numbers.",
+      "examples": [
+        "Input:\n1 2 3 4 5 6 7 8 9 10\n\nOutput:\n55"
+      ],
+      "starterCode": "def main():\n    import sys\n    data = list(map(int, sys.stdin.read().strip().split()))\n    # TODO: sum first 10 integers and print\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 4,
-      "title": "Search Element",
-      "description": "Read N list elements and X. Print Yes if X is present, else No.",
-      "inputDescription": "N, list of N integers, and integer X.",
-      "outputDescription": "Yes | No",
-      "examples": ["Input:\n5\n1 2 3 4 5\n3\nOutput:\nYes"],
-      "starterCode": "n = int(input())\narr = list(map(int, input().split()))\nx = int(input())\n# search x\n",
-      "tests": [
-        { "input": "5\n1 2 3 4 5\n3", "expected": "Yes" },
-        { "input": "4\n10 20 30 40\n25", "expected": "No" }
-      ]
+      "title": "Sum of N Numbers",
+      "description": "The first input value is an integer N. Then follow N integers. Print their sum.",
+      "inputDescription": "First: N, then N integers.",
+      "outputDescription": "Single integer: sum of the N integers.",
+      "examples": [
+        "Input:\n3\n10 20 30\n\nOutput:\n60"
+      ],
+      "starterCode": "def main():\n    import sys\n    data = list(map(int, sys.stdin.read().strip().split()))\n    N = data[0]\n    nums = data[1:1+N]\n    # TODO: compute sum of nums and print\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 5,
-      "title": "Count Occurrences",
-      "description": "Print how many times X occurs in the list.",
-      "inputDescription": "N, list of N integers, then X.",
-      "outputDescription": "Count of occurrences.",
-      "examples": ["Input:\n6\n2 3 2 5 2 8\n2\nOutput:\n3"],
-      "starterCode": "n = int(input())\narr = list(map(int, input().split()))\nx = int(input())\n# count x\n",
-      "tests": [
-        { "input": "6\n2 3 2 5 2 8\n2", "expected": "3" },
-        { "input": "5\n1 2 3 4 5\n6", "expected": "0" }
-      ]
+      "title": "Sum of Cubes",
+      "description": "Given integer N (N >= 1), compute 1^3 + 2^3 + ... + N^3 and print the result.",
+      "inputDescription": "Single integer N.",
+      "outputDescription": "Single integer: sum of cubes from 1 to N.",
+      "examples": [
+        "Input:\n3\n\nOutput:\n36"
+      ],
+      "starterCode": "def main():\n    N = int(input().strip())\n    # TODO: loop i from 1..N and sum i**3\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 6,
-      "title": "Sum of Even Numbers",
-      "description": "Sum only the even numbers in the list.",
-      "inputDescription": "N then N integers.",
-      "outputDescription": "Sum of even elements.",
-      "examples": ["Input:\n5\n1 2 3 4 6\nOutput:\n12"],
-      "starterCode": "n = int(input())\narr = list(map(int, input().split()))\n# sum evens\n",
-      "tests": [
-        { "input": "5\n1 2 3 4 6", "expected": "12" },
-        { "input": "4\n1 3 5 7", "expected": "0" }
-      ]
+      "title": "Factorial",
+      "description": "Given integer n (n >= 0), compute n! = 1 * 2 * ... * n. Define 0! = 1.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Single integer: n!.",
+      "examples": [
+        "Input:\n4\n\nOutput:\n24"
+      ],
+      "starterCode": "def main():\n    n = int(input().strip())\n    fact = 1\n    # TODO: multiply fact by 1..n\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 7,
-      "title": "Reverse Print",
-      "description": "Print the list elements in reverse order separated by spaces.",
-      "inputDescription": "N then N integers.",
-      "outputDescription": "Elements reversed in one line.",
-      "examples": ["Input:\n4\n10 20 30 40\nOutput:\n40 30 20 10"],
-      "starterCode": "n = int(input())\narr = list(map(int, input().split()))\n# print in reverse\n",
-      "tests": [
-        { "input": "4\n10 20 30 40", "expected": "40 30 20 10" },
-        { "input": "3\n1 2 3", "expected": "3 2 1" }
-      ]
+      "title": "Count Zeros",
+      "description": "First read integer N. Then read N integers. Count how many of them are equal to zero and print that count.",
+      "inputDescription": "First line: N. Second line (or many lines): N integers.",
+      "outputDescription": "Single integer: number of zeros.",
+      "examples": [
+        "Input:\n5\n1 0 2 0 3\n\nOutput:\n2"
+      ],
+      "starterCode": "def main():\n    N = int(input().strip())\n    nums = list(map(int, input().split()))\n    # TODO: count zeros in nums\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 8,
-      "title": "Second Largest",
-      "description": "Print the second largest distinct number.",
-      "inputDescription": "N then N integers.",
-      "outputDescription": "Second largest value.",
-      "examples": ["Input:\n5\n8 1 4 9 7\nOutput:\n8"],
-      "starterCode": "n = int(input())\narr = list(map(int, input().split()))\n# find 2nd largest\n",
-      "tests": [
-        { "input": "5\n8 1 4 9 7", "expected": "8" },
-        { "input": "4\n10 9 8 7", "expected": "9" }
-      ]
+      "title": "Sum of Factorials",
+      "description": "Given integer n (n >= 1), compute 1! + 2! + ... + n! and print the sum.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Single integer: sum of factorials.",
+      "examples": [
+        "Input:\n3\n\nOutput:\n9"
+      ],
+      "starterCode": "def main():\n    n = int(input().strip())\n    # TODO: accumulate factorials efficiently (reuse previous factorial)\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 9,
-      "title": "Sorted or Not",
-      "description": "If the list is sorted in non-decreasing order print Yes else No.",
-      "inputDescription": "N then list of N integers.",
-      "outputDescription": "Yes | No",
-      "examples": ["Input:\n5\n1 2 2 4 5\nOutput:\nYes"],
-      "starterCode": "n = int(input())\narr = list(map(int, input().split()))\n# check if sorted\n",
-      "tests": [
-        { "input": "5\n1 2 2 4 5", "expected": "Yes" },
-        { "input": "4\n3 1 4 5", "expected": "No" }
-      ]
+      "title": "Smallest Divisor",
+      "description": "Given an integer n >= 2, find its smallest divisor greater than 1 and print it.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Smallest integer d > 1 that divides n.",
+      "examples": [
+        "Input:\n15\n\nOutput:\n3"
+      ],
+      "starterCode": "def main():\n    n = int(input().strip())\n    # TODO: try divisors from 2 upward, print first that divides n\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 10,
-      "title": "Digit Frequency (0-9)",
-      "description": "Given N numbers (each 0–9), count frequency of each digit and print in format d:x for 0 to 9.",
-      "inputDescription": "N then N numbers 0–9.",
-      "outputDescription": "10 lines of digit frequencies.",
-      "examples": ["Input:\n5\n1 2 1 3 2\nOutput:\n0:0\n1:2\n2:2\n3:1\n4:0\n5:0\n6:0\n7:0\n8:0\n9:0"],
-      "starterCode": "n = int(input())\narr = list(map(int, input().split()))\n# freq count 0-9\n",
-      "tests": [
-        { "input": "5\n1 2 1 3 2", "expected": "0:0\n1:2\n2:2\n3:1\n4:0\n5:0\n6:0\n7:0\n8:0\n9:0" },
-        { "input": "3\n0 0 0", "expected": "0:3\n1:0\n2:0\n3:0\n4:0\n5:0\n6:0\n7:0\n8:0\n9:0" }
-      ]
+      "title": "Largest Power of Two",
+      "description": "Given integer N >= 1, find the largest integer x such that 2^x <= N. Print x and 2^x separated by a space.",
+      "inputDescription": "Single integer N.",
+      "outputDescription": "Two integers: x and 2^x.",
+      "examples": [
+        "Input:\n5\n\nOutput:\n2 4"
+      ],
+      "starterCode": "def main():\n    N = int(input().strip())\n    # TODO: repeatedly multiply by 2 or use bit logic to find largest power of 2 <= N\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     }
   ]
 }

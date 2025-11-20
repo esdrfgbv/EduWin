@@ -1,25 +1,64 @@
 {
+  "level": 2,
   "title": "CN Level 2 — OSI & TCP/IP Models",
-  "concept": "MCQs on layered models and protocol placement.",
+  "concept": "Layered architecture, OSI 7-layer model, TCP/IP model and mapping protocols to layers.",
   "challenges": [
     {
+      "id": 1,
       "title": "Q1: OSI Layers Count",
       "description": "The OSI reference model has:",
-      "inputDescription": "No input. This is an MCQ.",
+      "inputDescription": "No input. MCQ.",
       "outputDescription": "Choose the correct option (a/b/c/d).",
       "examples": [
-        "Options:\\na) 4 layers\\nb) 5 layers\\nc) 7 layers\\nd) 8 layers"
+        "Options:\n a) 4 layers\n b) 5 layers\n c) 7 layers\n d) 8 layers"
       ],
       "starterCode": "// Answer: a / b / c / d",
       "tests": []
     },
     {
-      "title": "Q2: HTTP Layer",
-      "description": "In the OSI or TCP/IP model, HTTP is considered an example of a protocol at the:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "id": 2,
+      "title": "Q2: TCP/IP Layers",
+      "description": "The TCP/IP reference model typically has:",
+      "inputDescription": "No input. MCQ.",
+      "outputDescription": "Choose the correct option.",
       "examples": [
-        "Options:\\na) Physical layer\\nb) Network layer\\nc) Transport layer\\nd) Application layer"
+        "Options:\n a) 2 layers\n b) 3 layers\n c) 4 layers\n d) 7 layers"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "id": 3,
+      "title": "Q3: HTTP Layer",
+      "description": "In the OSI/TCP-IP models, HTTP is considered an example of a protocol at the:",
+      "inputDescription": "No input. MCQ.",
+      "outputDescription": "Choose the correct option.",
+      "examples": [
+        "Options:\n a) Physical layer\n b) Network layer\n c) Transport layer\n d) Application layer"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "id": 4,
+      "title": "Q4: Layer Ordering",
+      "description": "Which of the following lists OSI layers in the correct order from bottom (closest to hardware) to top (closest to user)?",
+      "inputDescription": "No input. MCQ.",
+      "outputDescription": "Choose the correct option.",
+      "examples": [
+        "Options:\n a) Physical, Data Link, Network, Transport, Session, Presentation, Application\n b) Application, Presentation, Session, Transport, Network, Data Link, Physical\n c) Data Link, Physical, Network, Transport, Session, Presentation, Application\n d) Network, Data Link, Physical, Transport, Session, Presentation, Application"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "id": 5,
+      "title": "Q5: Service of Transport Layer",
+      "description": "Which service is primarily provided by the transport layer to the upper layers?",
+      "inputDescription": "No input. MCQ.",
+      "outputDescription": "Choose the correct option.",
+      "examples": [
+        "Options:\n a) Routing between networks\n b) End-to-end process-to-process communication\n c) Physical signalling over the medium\n d) Name to IP address resolution"
       ],
       "starterCode": "// Answer: a / b / c / d",
       "tests": []

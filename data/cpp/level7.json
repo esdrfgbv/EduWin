@@ -1,33 +1,147 @@
 {
-  "title": "C++ Level 7 — Functions & References",
-  "concept": "Use functions and pass arguments by reference.",
+  "title": "C++ Level 7 — Functions & Recursion",
+  "concept": "Define and use functions with parameters and return values, including recursive functions.",
   "challenges": [
     {
-      "title": "Swap Two Numbers (By Reference)",
-      "description": "Write a function swapNumbers(int &a, int &b) that swaps two integers using references. In main, read a and b, call the function, and print the swapped values.",
-      "inputDescription": "Two integers a and b.",
-      "outputDescription": "Two integers after swapping: b and a, separated by space.",
+      "id": 1,
+      "title": "Distance Between Two Points",
+      "description": "Write a function double distance(double x1, double y1, double x2, double y2) that returns the distance between points (x1, y1) and (x2, y2). In main, read four doubles, call the function and print the result.",
+      "inputDescription": "Four real numbers x1, y1, x2, y2.",
+      "outputDescription": "One real number: distance between the two points.",
       "examples": [
-        "Input:\n3 5\n\nOutput:\n5 3"
+        "Input:\n0 0 3 4\n\nOutput:\n5"
       ],
-      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nvoid swapNumbers(int &a, int &b) {\n    // your code here\n}\n\nint main() {\n    int a, b;\n    // read a and b, call swapNumbers, then print\n    return 0;\n}\n",
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\ndouble distance(double x1, double y1, double x2, double y2) {\n    // compute and return distance\n}\n\nint main() {\n    double x1, y1, x2, y2;\n    // read, call distance, print\n    return 0;\n}\n",
       "tests": [
-        { "input": "3 5", "expected": "5 3" },
-        { "input": "10 20", "expected": "20 10" }
+        { "input": "0 0 3 4", "expected": "5" }
       ]
     },
     {
-      "title": "Increment by Function",
-      "description": "Write a function increment(int &x) that increases x by 1. In main, read n, call increment(n), and print the result.",
-      "inputDescription": "Single integer n.",
-      "outputDescription": "Single integer: n + 1.",
+      "id": 2,
+      "title": "Power Function (Iterative)",
+      "description": "Write a function double power(double a, int n) that returns a^n for integer n (n can be negative, zero, or positive). Use a loop inside the function. In main, read a and n, call power and print the result.",
+      "inputDescription": "Real a and integer n.",
+      "outputDescription": "Real number: a^n.",
       "examples": [
-        "Input:\n7\n\nOutput:\n8"
+        "Input:\n2 3\n\nOutput:\n8"
       ],
-      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nvoid increment(int &x) {\n    // your code here\n}\n\nint main() {\n    int n;\n    // read n, call increment, print n\n    return 0;\n}\n",
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\ndouble power(double a, int n) {\n    // implement iterative power\n}\n\nint main() {\n    double a; int n;\n    // read, call power, print\n    return 0;\n}\n",
       "tests": [
-        { "input": "7", "expected": "8" },
-        { "input": "0", "expected": "1" }
+        { "input": "2 3", "expected": "8" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Capitalize Words",
+      "description": "Write a function void capitalize(string &s) that makes the first letter of each word uppercase. Words are separated by single spaces. In main, read a line into s, call capitalize, then print s.",
+      "inputDescription": "One line in lowercase.",
+      "outputDescription": "Same sentence with each word capitalized.",
+      "examples": [
+        "Input:\nhello world from c++\n\nOutput:\nHello World From C++"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nvoid capitalize(string &s) {\n    // make first letter of each word uppercase\n}\n\nint main() {\n    string s;\n    // read line using getline, call capitalize, print\n    return 0;\n}\n",
+      "tests": [
+        { "input": "hello world from c++", "expected": "Hello World From C++" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Recursive Power (Non-Negative n)",
+      "description": "Write a recursive function double powerRec(double a, int n) to compute a^n for n >= 0. In main, read a and n, call powerRec, and print the result.",
+      "inputDescription": "Real a and integer n >= 0.",
+      "outputDescription": "Real number: a^n.",
+      "examples": [
+        "Input:\n3 2\n\nOutput:\n9"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\ndouble powerRec(double a, int n) {\n    // recursive definition with base case n==0\n}\n\nint main() {\n    double a; int n;\n    // read, call powerRec, print\n    return 0;\n}\n",
+      "tests": [
+        { "input": "3 2", "expected": "9" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Recursive Fibonacci",
+      "description": "Write a function long long fib(int n) that returns the n-th Fibonacci number using recursion. fib(0)=0, fib(1)=1. Assume n <= 30. In main, read n, print fib(n).",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "n-th Fibonacci number.",
+      "examples": [
+        "Input:\n7\n\nOutput:\n13"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nlong long fib(int n) {\n    // recursive Fibonacci\n}\n\nint main() {\n    int n;\n    // read n, print fib(n)\n    return 0;\n}\n",
+      "tests": [
+        { "input": "7", "expected": "13" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Reverse Sequence Recursively",
+      "description": "Given a sequence of integers ending with 0, print all numbers (except the final 0) in reverse order using recursion and without using arrays.",
+      "inputDescription": "Integers, one per line, ending with 0.",
+      "outputDescription": "Same numbers in reverse order, each on its own line.",
+      "examples": [
+        "Input:\n1\n2\n3\n0\n\nOutput:\n3\n2\n1"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nvoid reverseSeq() {\n    // read number, recurse if not 0, then print\n}\n\nint main() {\n    reverseSeq();\n    return 0;\n}\n",
+      "tests": [
+        { "input": "1\n2\n3\n0", "expected": "3\n2\n1" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Iterative Fibonacci",
+      "description": "Write a function long long fibIter(int n) that computes the n-th Fibonacci number using a loop. In main, read n and print fibIter(n).",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "n-th Fibonacci number.",
+      "examples": [
+        "Input:\n10\n\nOutput:\n55"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nlong long fibIter(int n) {\n    // iterative Fibonacci\n}\n\nint main() {\n    int n;\n    // read, call fibIter, print\n    return 0;\n}\n",
+      "tests": [
+        { "input": "10", "expected": "55" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Count Distinct (Function)",
+      "description": "Write a function int countDistinct(const vector<int> &a) that returns the number of distinct integers in the vector. In main, read n, then n integers into a vector, call the function and print the result.",
+      "inputDescription": "First line: n. Second line: n integers.",
+      "outputDescription": "Single integer: number of distinct values.",
+      "examples": [
+        "Input:\n5\n1 2 2 3 1\n\nOutput:\n3"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint countDistinct(const vector<int> &a) {\n    // use nested loops or a set to count distinct\n}\n\nint main() {\n    int n;\n    // read vector, call countDistinct, print\n    return 0;\n}\n",
+      "tests": [
+        { "input": "5\n1 2 2 3 1", "expected": "3" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Max of Array (Function)",
+      "description": "Write a function int maxArray(const vector<int> &a) that returns the largest element. In main, read n, the elements, and print the maximum.",
+      "inputDescription": "First line: n. Second line: n integers.",
+      "outputDescription": "Single integer: maximum array element.",
+      "examples": [
+        "Input:\n4\n3 9 1 8\n\nOutput:\n9"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint maxArray(const vector<int> &a) {\n    // iterate and track maximum\n}\n\nint main() {\n    int n;\n    // read, call maxArray, print\n    return 0;\n}\n",
+      "tests": [
+        { "input": "4\n3 9 1 8", "expected": "9" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Contains Element (Function)",
+      "description": "Write a function bool contains(const vector<int> &a, int x) that returns true if x appears in the vector. In main, read n, the elements, then x, and print YES if found, otherwise NO.",
+      "inputDescription": "First line: n. Second line: n integers. Third line: x.",
+      "outputDescription": "YES or NO.",
+      "examples": [
+        "Input:\n5\n1 2 3 4 5\n3\n\nOutput:\nYES",
+        "Input:\n3\n1 2 3\n4\n\nOutput:\nNO"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nbool contains(const vector<int> &a, int x) {\n    // search for x\n}\n\nint main() {\n    int n, x;\n    // read vector and x, print YES/NO\n    return 0;\n}\n",
+      "tests": [
+        { "input": "5\n1 2 3 4 5\n3", "expected": "YES" },
+        { "input": "3\n1 2 3\n4", "expected": "NO" }
       ]
     }
   ]

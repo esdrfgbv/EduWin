@@ -1,33 +1,147 @@
 {
-  "title": "JavaScript Level 7 — Objects",
-  "concept": "Use objects to store related key-value data.",
+  "title": "JavaScript Level 7 — Functions & Recursion",
+  "concept": "Write helper functions and recursive functions in JavaScript.",
   "challenges": [
     {
-      "title": "Person Object (Name and Age)",
-      "description": "Read a name and an age, create an object with these values and print: Name is <name> and age is <age>",
-      "inputDescription": "First line: name (single word). Second line: age (integer).",
-      "outputDescription": "Single line: Name is <name> and age is <age>",
+      "id": 1,
+      "title": "Distance Between Two Points",
+      "description": "Write a helper function distance(x1, y1, x2, y2) that returns the distance between points (x1, y1) and (x2, y2). In main, read four doubles, call the function and print the result.",
+      "inputDescription": "Four real numbers x1, y1, x2, y2.",
+      "outputDescription": "One real number: distance between the two points.",
       "examples": [
-        "Input:\nRam\n20\n\nOutput:\nName is Ram and age is 20"
+        "Input:\n0 0 3 4\n\nOutput:\n5"
       ],
-      "starterCode": "const fs = require('fs');\nconst lines = fs.readFileSync(0, 'utf8').trim().split(/\\s+/);\n// lines[0] = name, lines[1] = age\n// Create an object and print as required\n",
+      "starterCode": "const fs = require('fs');\n\nfunction distance(x1, y1, x2, y2) {\n  // compute and return distance\n}\n\nfunction main() {\n  const p = fs.readFileSync(0, 'utf8').trim().split(/\\s+/).map(Number);\n  const [x1,y1,x2,y2] = p;\n  // call distance and print\n}\n\nmain();\n",
       "tests": [
-        { "input": "Ram\n20", "expected": "Name is Ram and age is 20" },
-        { "input": "Teja\n19", "expected": "Name is Teja and age is 19" }
+        { "input": "0 0 3 4", "expected": "5" }
       ]
     },
     {
-      "title": "Student Total Marks (Object)",
-      "description": "Read a student's name and three subject marks. Store them in an object and print: <name> <total>",
-      "inputDescription": "First line: name (single word). Second line: three integers m1 m2 m3.",
-      "outputDescription": "Single line: name followed by total marks.",
+      "id": 2,
+      "title": "Power Function (Iterative)",
+      "description": "Write a function power(a, n) that returns a^n for integer n (n can be negative, zero, or positive). Use a loop inside the function. In main, read a and n, call power and print the result.",
+      "inputDescription": "Real a and integer n.",
+      "outputDescription": "Real number: a^n.",
       "examples": [
-        "Input:\nSam\n50 60 70\n\nOutput:\nSam 180"
+        "Input:\n2 3\n\nOutput:\n8"
       ],
-      "starterCode": "const fs = require('fs');\nconst data = fs.readFileSync(0, 'utf8').trim().split(/\\s+/);\n// data[0] = name, data[1..3] = marks\n// Use an object to store and print\n",
+      "starterCode": "const fs = require('fs');\n\nfunction power(a, n) {\n  // implement iterative power, including negative n\n}\n\nfunction main() {\n  const [aStr, nStr] = fs.readFileSync(0, 'utf8').trim().split(/\\s+/);\n  const a = parseFloat(aStr);\n  const n = parseInt(nStr, 10);\n  // call power and print\n}\n\nmain();\n",
       "tests": [
-        { "input": "Sam\n50 60 70", "expected": "Sam 180" },
-        { "input": "Aki\n10 20 30", "expected": "Aki 60" }
+        { "input": "2 3", "expected": "8" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Capitalize Words",
+      "description": "Write a function capitalize(sentence) that makes the first letter of each word uppercase. Words are separated by single spaces. In main, read a line, call capitalize, then print the result.",
+      "inputDescription": "One line in lowercase.",
+      "outputDescription": "Same sentence with each word capitalized.",
+      "examples": [
+        "Input:\nhello world from js\n\nOutput:\nHello World From Js"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction capitalize(s) {\n  // make first letter of each word uppercase\n}\n\nfunction main() {\n  const s = fs.readFileSync(0, 'utf8').trim();\n  console.log(capitalize(s));\n}\n\nmain();\n",
+      "tests": [
+        { "input": "hello world from js", "expected": "Hello World From Js" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Recursive Power (Non-Negative n)",
+      "description": "Write a recursive function powerRec(a, n) to compute a^n for n >= 0. In main, read a and n, call powerRec, and print the result.",
+      "inputDescription": "Real a and integer n >= 0.",
+      "outputDescription": "Real number: a^n.",
+      "examples": [
+        "Input:\n3 2\n\nOutput:\n9"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction powerRec(a, n) {\n  // recursive definition with base case n===0\n}\n\nfunction main() {\n  const [aStr, nStr] = fs.readFileSync(0, 'utf8').trim().split(/\\s+/);\n  const a = parseFloat(aStr);\n  const n = parseInt(nStr, 10);\n  console.log(powerRec(a, n));\n}\n\nmain();\n",
+      "tests": [
+        { "input": "3 2", "expected": "9" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Recursive Fibonacci",
+      "description": "Write a function fib(n) that returns the n-th Fibonacci number using recursion. fib(0)=0, fib(1)=1. Assume n <= 30. In main, read n, print fib(n).",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "n-th Fibonacci number.",
+      "examples": [
+        "Input:\n7\n\nOutput:\n13"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction fib(n) {\n  // recursive Fibonacci\n}\n\nfunction main() {\n  const n = parseInt(fs.readFileSync(0, 'utf8').trim(), 10);\n  console.log(fib(n));\n}\n\nmain();\n",
+      "tests": [
+        { "input": "7", "expected": "13" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Reverse Sequence Recursively",
+      "description": "Given a sequence of integers ending with 0, print all numbers (except the final 0) in reverse order using recursion and without using arrays.",
+      "inputDescription": "Integers, one per line, ending with 0.",
+      "outputDescription": "Same numbers in reverse order, each on its own line.",
+      "examples": [
+        "Input:\n1\n2\n3\n0\n\nOutput:\n3\n2\n1"
+      ],
+      "starterCode": "const fs = require('fs');\nconst data = fs.readFileSync(0, 'utf8').trim().split(/\\s+/).map(Number);\nlet idx = 0;\n\nfunction reverseSeq() {\n  // use data[idx] and recursion until value is 0\n}\n\nfunction main() {\n  reverseSeq();\n}\n\nmain();\n",
+      "tests": [
+        { "input": "1\n2\n3\n0", "expected": "3\n2\n1" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Iterative Fibonacci",
+      "description": "Write a function fibIter(n) that computes the n-th Fibonacci number using a loop. In main, read n and print fibIter(n).",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "n-th Fibonacci number.",
+      "examples": [
+        "Input:\n10\n\nOutput:\n55"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction fibIter(n) {\n  // iterative Fibonacci\n}\n\nfunction main() {\n  const n = parseInt(fs.readFileSync(0, 'utf8').trim(), 10);\n  console.log(fibIter(n));\n}\n\nmain();\n",
+      "tests": [
+        { "input": "10", "expected": "55" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Count Distinct (Function)",
+      "description": "Write a function countDistinct(arr) that returns the number of distinct integers in the array. In main, read n, then n integers into an array, call the function and print the result.",
+      "inputDescription": "First line: n. Second line: n integers.",
+      "outputDescription": "Single integer: number of distinct values.",
+      "examples": [
+        "Input:\n5\n1 2 2 3 1\n\nOutput:\n3"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction countDistinct(arr) {\n  // use Set\n}\n\nfunction main() {\n  const input = fs.readFileSync(0, 'utf8').trim().split(/\\s+/).map(Number);\n  const n = input[0];\n  const arr = input.slice(1, 1 + n);\n  console.log(countDistinct(arr));\n}\n\nmain();\n",
+      "tests": [
+        { "input": "5\n1 2 2 3 1", "expected": "3" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Max of Array (Function)",
+      "description": "Write a function maxArray(arr) that returns the largest element. In main, read n, the elements, and print the maximum.",
+      "inputDescription": "First line: n. Second line: n integers.",
+      "outputDescription": "Single integer: maximum array element.",
+      "examples": [
+        "Input:\n4\n3 9 1 8\n\nOutput:\n9"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction maxArray(arr) {\n  // iterate and track maximum\n}\n\nfunction main() {\n  const input = fs.readFileSync(0, 'utf8').trim().split(/\\s+/).map(Number);\n  const n = input[0];\n  const arr = input.slice(1, 1 + n);\n  console.log(maxArray(arr));\n}\n\nmain();\n",
+      "tests": [
+        { "input": "4\n3 9 1 8", "expected": "9" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Contains Element (Function)",
+      "description": "Write a function contains(arr, x) that returns true if x appears in the array. In main, read n, the elements, then x, and print YES if found, otherwise NO.",
+      "inputDescription": "First line: n. Second line: n integers. Third line: x.",
+      "outputDescription": "YES or NO.",
+      "examples": [
+        "Input:\n5\n1 2 3 4 5\n3\n\nOutput:\nYES",
+        "Input:\n3\n1 2 3\n4\n\nOutput:\nNO"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction contains(arr, x) {\n  // search for x\n}\n\nfunction main() {\n  const input = fs.readFileSync(0, 'utf8').trim().split(/\\s+/).map(Number);\n  const n = input[0];\n  const arr = input.slice(1, 1 + n);\n  const x = input[1 + n];\n  console.log(contains(arr, x) ? 'YES' : 'NO');\n}\n\nmain();\n",
+      "tests": [
+        { "input": "5\n1 2 3 4 5\n3", "expected": "YES" },
+        { "input": "3\n1 2 3\n4", "expected": "NO" }
       ]
     }
   ]

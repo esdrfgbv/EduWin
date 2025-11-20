@@ -1,28 +1,126 @@
 {
-  "title": "OS Level 3 — CPU Scheduling",
-  "concept": "MCQs on scheduling types and basic algorithms.",
-  "challenges": [
+  "title": "OS Level 3 — Scheduling, I/O & Advanced Concepts",
+  "concept": "Advanced scheduling, disk scheduling, multithreading models and RAID basics.",
+  "questions": [
     {
-      "title": "Q1: Round Robin Scheduling",
-      "description": "Round Robin scheduling is mainly designed for:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) Batch systems\nb) Real-time systems only\nc) Time-sharing systems\nd) Single-user systems only"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "Which scheduling algorithm aims to minimize average waiting time (assuming all jobs are known in advance)?",
+      "options": {
+        "A": "FCFS",
+        "B": "SJF",
+        "C": "Round Robin",
+        "D": "Priority (random)"
+      },
+      "answer": "B",
+      "explanation": "SJF is provably optimal for minimizing average waiting time given complete knowledge."
     },
     {
-      "title": "Q2: Preemptive Algorithm",
-      "description": "Which of the following is a preemptive CPU scheduling algorithm?",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) FCFS\nb) Non-preemptive SJF\nc) Round Robin\nd) Non-preemptive Priority"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "In multithreading models, the 'many-to-one' model has which major drawback?",
+      "options": {
+        "A": "High context-switch overhead",
+        "B": "If one thread blocks, the entire process blocks",
+        "C": "Threads cannot share data",
+        "D": "Requires hardware support"
+      },
+      "answer": "B",
+      "explanation": "Many-to-one maps all user threads onto one kernel thread, so blocking affects all."
+    },
+    {
+      "id": 3,
+      "question": "The SCAN disk scheduling algorithm is also known as:",
+      "options": {
+        "A": "Elevator algorithm",
+        "B": "Circular algorithm",
+        "C": "Random algorithm",
+        "D": "Shortest Seek First"
+      },
+      "answer": "A",
+      "explanation": "SCAN moves like an elevator, servicing in one direction then reversing."
+    },
+    {
+      "id": 4,
+      "question": "RAID 1 (Mirroring) primarily provides:",
+      "options": {
+        "A": "Higher write performance only",
+        "B": "Fault tolerance via data duplication",
+        "C": "No redundancy",
+        "D": "Striping without redundancy"
+      },
+      "answer": "B",
+      "explanation": "RAID 1 mirrors data across disks to survive disk failures."
+    },
+    {
+      "id": 5,
+      "question": "Which of the following is an advantage of microkernel design?",
+      "options": {
+        "A": "All services run in kernel mode for speed",
+        "B": "Better modularity and easier to maintain/extend",
+        "C": "No context switches required",
+        "D": "No need for message passing"
+      },
+      "answer": "B",
+      "explanation": "Microkernels move services to user space, improving modularity and reliability."
+    },
+    {
+      "id": 6,
+      "question": "Which of the following is used for asynchronous event handling from hardware?",
+      "options": {
+        "A": "System call",
+        "B": "Polling",
+        "C": "Interrupts",
+        "D": "Threads"
+      },
+      "answer": "C",
+      "explanation": "Hardware interrupts notify the CPU/OS about external events."
+    },
+    {
+      "id": 7,
+      "question": "Copy-on-write is an optimization technique used mainly for:",
+      "options": {
+        "A": "File compression",
+        "B": "Efficient process creation (e.g., fork)",
+        "C": "Network routing",
+        "D": "Page replacement"
+      },
+      "answer": "B",
+      "explanation": "COW lets parent and child share pages until one writes to them."
+    },
+    {
+      "id": 8,
+      "question": "Which disk scheduling algorithm always chooses the request closest to the current head position?",
+      "options": {
+        "A": "FCFS",
+        "B": "SSTF",
+        "C": "SCAN",
+        "D": "C-SCAN"
+      },
+      "answer": "B",
+      "explanation": "SSTF = Shortest Seek Time First."
+    },
+    {
+      "id": 9,
+      "question": "In demand paging, a page fault occurs when:",
+      "options": {
+        "A": "Disk is full",
+        "B": "Requested page is not in main memory",
+        "C": "CPU cache misses",
+        "D": "TLB is full"
+      },
+      "answer": "B",
+      "explanation": "Page fault triggers loading the page from secondary storage into memory."
+    },
+    {
+      "id": 10,
+      "question": "TLB (Translation Lookaside Buffer) is:",
+      "options": {
+        "A": "A disk scheduling algorithm",
+        "B": "A cache for page table entries",
+        "C": "A page replacement policy",
+        "D": "A network buffer"
+      },
+      "answer": "B",
+      "explanation": "TLB stores recent translations from virtual to physical addresses."
     }
   ]
 }

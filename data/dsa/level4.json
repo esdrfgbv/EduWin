@@ -1,113 +1,136 @@
 {
-  "level": 4,
-  "title": "Recursion",
-  "concept": "This level teaches how to solve problems using recursive functions — base case, recursive case, tree recursion, recursion on arrays, strings, and basic backtracking.",
+  "title": "DSA Level 4 — Linked Lists",
+  "concept": "Singly and doubly linked list creation, insertion, deletion, searching and reversing.",
   "challenges": [
     {
       "id": 1,
-      "title": "Print 1 to N",
-      "description": "Using recursion, print numbers from 1 to N (space separated).",
-      "starterCode": "// define recursive print function from 1 to N",
-      "tests": [
-        { "input": "5", "expected": "1 2 3 4 5" },
-        { "input": "3", "expected": "1 2 3" }
-      ]
+      "title": "Search Value in Singly Linked List",
+      "description": "Given a singly linked list and a value X, determine whether X exists in the list. Print 1 if found, otherwise 0.",
+      "inputDescription": "First line: integer N. Second line: N integers representing list nodes. Third line: X.",
+      "outputDescription": "1 if X exists, otherwise 0.",
+      "examples": [
+        "Input:\n5\n1 4 7 9 3\n7\n\nOutput:\n1",
+        "Input:\n5\n1 4 7 9 3\n5\n\nOutput:\n0"
+      ],
+      "constraints": "0 ≤ N ≤ 10^5",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 2,
-      "title": "Factorial",
-      "description": "Write a recursive function fact(n) that returns n!.",
-      "starterCode": "// base case: n==0 return 1; recursive: n * fact(n-1)",
-      "tests": [
-        { "input": "5", "expected": "120" },
-        { "input": "3", "expected": "6" }
-      ]
+      "title": "Insert at Beginning",
+      "description": "Given a linked list and a value X, insert X at the beginning of the list and print the updated list.",
+      "inputDescription": "First line: N. Second line: N integers. Third line: X.",
+      "outputDescription": "List after inserting X at the beginning.",
+      "examples": [
+        "Input:\n3\n2 3 4\n1\n\nOutput:\n1 2 3 4"
+      ],
+      "constraints": "0 ≤ N ≤ 10^5",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 3,
-      "title": "Fibonacci Number",
-      "description": "Using recursion, print the nth Fibonacci number where fib(0)=0 and fib(1)=1.",
-      "starterCode": "// use fib(n-1)+fib(n-2)",
-      "tests": [
-        { "input": "6", "expected": "8" },
-        { "input": "0", "expected": "0" }
-      ]
+      "title": "Insert at End",
+      "description": "Insert a new value X at the end of the linked list and print the updated list.",
+      "inputDescription": "First line: N. Second line: N integers. Third line: X.",
+      "outputDescription": "List after inserting at the end.",
+      "examples": [
+        "Input:\n3\n1 2 3\n5\n\nOutput:\n1 2 3 5"
+      ],
+      "constraints": "0 ≤ N ≤ 10^5",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 4,
-      "title": "Sum of Digits",
-      "description": "Given integer N, recursively compute sum of its digits.",
-      "starterCode": "// sumDigits(n/10) + (n%10)",
-      "tests": [
-        { "input": "12345", "expected": "15" },
-        { "input": "99", "expected": "18" }
-      ]
+      "title": "Insert at Position",
+      "description": "Insert X at index K (0-based). If K > N, print \"Invalid\".",
+      "inputDescription": "First line: N. Second line: N integers. Third line: K X.",
+      "outputDescription": "List after insertion or \"Invalid\".",
+      "examples": [
+        "Input:\n4\n10 20 30 40\n2 25\n\nOutput:\n10 20 25 30 40"
+      ],
+      "constraints": "0 ≤ N ≤ 10^5",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 5,
-      "title": "Power Function",
-      "description": "Using recursion, compute a^b.",
-      "starterCode": "// if b==0 return 1 else a*pow(a,b-1)",
-      "tests": [
-        { "input": "2 5", "expected": "32" },
-        { "input": "3 3", "expected": "27" }
-      ]
+      "title": "Delete First Occurrence",
+      "description": "Delete the first occurrence of X from the linked list. If X does not exist, print the list unchanged.",
+      "inputDescription": "First line: N. Second line: N integers. Third line: X.",
+      "outputDescription": "Updated list after deletion.",
+      "examples": [
+        "Input:\n5\n1 2 3 2 4\n2\n\nOutput:\n1 3 2 4"
+      ],
+      "constraints": "0 ≤ N ≤ 10^5",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 6,
-      "title": "Reverse String Recursively",
-      "description": "Given a string S, print its reverse recursively.",
-      "starterCode": "// return reverse(s.substring(1)) + s.charAt(0)",
-      "tests": [
-        { "input": "hello", "expected": "olleh" },
-        { "input": "abc", "expected": "cba" }
-      ]
+      "title": "Delete at Position",
+      "description": "Delete the node at index K (0-based). If K ≥ N, print \"Invalid\".",
+      "inputDescription": "First line: N. Second line: N integers. Third line: K.",
+      "outputDescription": "Updated list or \"Invalid\".",
+      "examples": [
+        "Input:\n4\n5 6 7 8\n1\n\nOutput:\n5 7 8"
+      ],
+      "constraints": "0 ≤ N ≤ 10^5",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 7,
-      "title": "Count Occurrences of X",
-      "description": "Given N and array of N integers and X, count recursively how many times X appears.",
-      "starterCode": "// recursive count by index",
-      "tests": [
-        { "input": "5\n1 2 2 3 2\n2", "expected": "3" },
-        { "input": "4\n1 1 1 1\n1", "expected": "4" }
-      ]
+      "title": "Reverse Linked List",
+      "description": "Reverse a singly linked list and print the result.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Reversed list.",
+      "examples": [
+        "Input:\n4\n1 2 3 4\n\nOutput:\n4 3 2 1"
+      ],
+      "constraints": "0 ≤ N ≤ 10^5 (in-place expected)",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 8,
-      "title": "First Index of X",
-      "description": "Recursively find the first index of X in the array. If not found print -1.",
-      "starterCode": "// check current index then recursive call for next",
-      "tests": [
-        { "input": "5\n9 8 7 8 6\n8", "expected": "1" },
-        { "input": "5\n1 2 3 4 5\n9", "expected": "-1" }
-      ]
+      "title": "Middle of Linked List",
+      "description": "Find the middle element of a singly linked list. If even length, print the second middle.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Single integer: middle value.",
+      "examples": [
+        "Input:\n5\n1 2 3 4 5\n\nOutput:\n3",
+        "Input:\n4\n1 2 3 4\n\nOutput:\n3"
+      ],
+      "constraints": "1 ≤ N ≤ 10^5 (fast-slow pointer expected)",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 9,
-      "title": "Subset Sum (Recursive)",
-      "description": "Given N, array and target K, print Yes if a subset sums to K else No. Use recursion (include/exclude).",
-      "starterCode": "// try include current element OR exclude",
-      "tests": [
-        { "input": "4\n1 2 3 4\n6", "expected": "Yes" },
-        { "input": "4\n2 4 6 8\n5", "expected": "No" }
-      ]
+      "title": "Detect Cycle (Floyd)",
+      "description": "Given a linked list, detect whether a cycle exists. Print \"YES\" or \"NO\".",
+      "inputDescription": "Representing input format depends on language, but assume connections can create a cycle.",
+      "outputDescription": "\"YES\" if cycle exists, else \"NO\".",
+      "examples": [],
+      "constraints": "Fast-slow pointer expected, O(1) memory",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 10,
-      "title": "Generate All Subsets (Power Set)",
-      "description": "Given N integers, recursively print all subsets (order doesn't matter). Each subset must be printed on a new line with elements space-separated. Empty subset should be represented by an empty line.",
-      "starterCode": "// recursive: include element / exclude element",
-      "tests": [
-        {
-          "input": "2\n1 2",
-          "expected": "\n1\n2\n1 2"
-        },
-        {
-          "input": "1\n5",
-          "expected": "\n5"
-        }
-      ]
+      "title": "Merge Two Sorted Linked Lists",
+      "description": "Given two sorted linked lists, merge them into one sorted list and print the result.",
+      "inputDescription": "First list: N and N integers. Second list: M and M integers.",
+      "outputDescription": "Merged sorted list.",
+      "examples": [
+        "Input:\n3\n1 3 5\n3\n2 4 6\n\nOutput:\n1 2 3 4 5 6"
+      ],
+      "constraints": "0 ≤ N, M ≤ 10^5",
+      "starterCode": "",
+      "tests": []
     }
   ]
 }

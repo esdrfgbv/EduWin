@@ -1,28 +1,126 @@
 {
   "title": "System Design Level 1 — Fundamentals",
-  "concept": "MCQs on basic system design terms and goals.",
-  "challenges": [
+  "concept": "Basic scalability concepts, latency vs throughput, monolith vs microservices, caching and load balancing.",
+  "questions": [
     {
-      "title": "Q1: Scalability",
-      "description": "In system design, scalability mainly refers to:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\\na) Ability to run without any bugs\\nb) Ability to handle increasing load by adding resources\\nc) Ability to have a beautiful UI\\nd) Ability to store data permanently on disk"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "Scalability of a system refers to:",
+      "options": {
+        "A": "How secure the system is",
+        "B": "How easily the system can handle increased load",
+        "C": "How many features the system has",
+        "D": "How fast the CPU is"
+      },
+      "answer": "B",
+      "explanation": "Scalability is about handling more traffic/data by adding resources."
     },
     {
-      "title": "Q2: Latency vs Throughput",
-      "description": "Latency and throughput are best described as:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\\na) Latency = requests per second, Throughput = time per request\\nb) Latency = time per request, Throughput = requests per second\\nc) Both mean the same thing\\nd) Latency is only about database, throughput is only about network"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "Latency is best defined as:",
+      "options": {
+        "A": "Number of requests processed per second",
+        "B": "Time taken for a single request/operation",
+        "C": "Amount of data stored on disk",
+        "D": "CPU utilization percentage"
+      },
+      "answer": "B",
+      "explanation": "Latency is the response time for an individual request."
+    },
+    {
+      "id": 3,
+      "question": "Throughput is best defined as:",
+      "options": {
+        "A": "Time taken per request",
+        "B": "Number of requests handled per unit time",
+        "C": "Network bandwidth in Mbps",
+        "D": "Disk seek time"
+      },
+      "answer": "B",
+      "explanation": "Throughput = requests/operations per second (RPS)."
+    },
+    {
+      "id": 4,
+      "question": "Horizontal scaling usually means:",
+      "options": {
+        "A": "Upgrading a single machine with more CPU/RAM",
+        "B": "Adding more machines to the system",
+        "C": "Reducing number of servers",
+        "D": "Decreasing latency to zero"
+      },
+      "answer": "B",
+      "explanation": "Horizontal scaling = scale out by adding nodes."
+    },
+    {
+      "id": 5,
+      "question": "Which component distributes incoming requests across multiple servers?",
+      "options": {
+        "A": "Database index",
+        "B": "Cache",
+        "C": "Load balancer",
+        "D": "Message queue"
+      },
+      "answer": "C",
+      "explanation": "Load balancer spreads load across backend instances."
+    },
+    {
+      "id": 6,
+      "question": "A cache is mainly used to:",
+      "options": {
+        "A": "Persist data permanently",
+        "B": "Store frequently accessed data for faster reads",
+        "C": "Balance network traffic",
+        "D": "Encrypt data"
+      },
+      "answer": "B",
+      "explanation": "Caches keep hot data in faster storage (e.g., memory) to reduce latency."
+    },
+    {
+      "id": 7,
+      "question": "Which of the following is a drawback of a monolithic architecture?",
+      "options": {
+        "A": "Simple deployment",
+        "B": "Easy local development",
+        "C": "Tight coupling and difficult independent scaling",
+        "D": "Single codebase"
+      },
+      "answer": "C",
+      "explanation": "Monoliths can become large and hard to scale/maintain in parts."
+    },
+    {
+      "id": 8,
+      "question": "Which is typically TRUE about microservices?",
+      "options": {
+        "A": "All services share the same database schema",
+        "B": "Each service is independently deployable",
+        "C": "No network communication is needed",
+        "D": "They must run on the same machine"
+      },
+      "answer": "B",
+      "explanation": "Microservices emphasize independent deployment and ownership."
+    },
+    {
+      "id": 9,
+      "question": "A CDN (Content Delivery Network) primarily helps with:",
+      "options": {
+        "A": "Reducing server memory usage",
+        "B": "Accelerating content delivery by caching near users",
+        "C": "Encrypting application data",
+        "D": "Balancing write traffic in databases"
+      },
+      "answer": "B",
+      "explanation": "CDNs replicate static content across geographically distributed edge servers."
+    },
+    {
+      "id": 10,
+      "question": "Which of the following is an example of stateless service design?",
+      "options": {
+        "A": "Session stored in application memory on one server",
+        "B": "Session stored only on client (e.g., JWT) or shared store",
+        "C": "Critical state stored in RAM only",
+        "D": "Using local files for user sessions"
+      },
+      "answer": "B",
+      "explanation": "Stateless service keeps client/session state outside the server instance."
     }
   ]
 }

@@ -1,109 +1,117 @@
 {
-  "level": 9,
-  "title": "Exception Handling",
-  "concept": "This level focuses on try–catch, multiple catch blocks, finally block, throwing exceptions manually with 'throw new', and custom exception classes. All questions are designed to work inside standard online compilers without real file I/O.",
-  "challenges": [
+  "title": "Java Level 9 — Advanced OOP & Exceptions",
+  "concept": "Inheritance, interfaces, overriding, basic exception handling (still stdin/stdout based problems).",
+  "language": "java",
+  "problems": [
     {
       "id": 1,
-      "title": "Handle Divide by Zero",
-      "description": "Read a and b. Print a/b. If b = 0, catch exception and print 'Error'.",
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    int a = sc.nextInt();\n    int b = sc.nextInt();\n    // try division with exception handling\n  }\n}",
-      "tests": [
-        { "input": "10 2", "expected": "5" },
-        { "input": "5 0", "expected": "Error" }
-      ]
+      "name": "Shape Inheritance: Rectangle & Square",
+      "description": "Create base class Shape with method double area(). Create Rectangle(width, height) extends Shape and overrides area(). Create Square(side) extends Rectangle using super. Read 'R w h' or 'S s' and print area with 2 decimals.",
+      "input_format": "Single line: either 'R w h' or 'S s'.",
+      "output_format": "Area with 2 decimals.",
+      "constraints": "1 ≤ sides ≤ 10^6",
+      "sample_input": "S 4",
+      "sample_output": "16.00",
+      "notes": ""
     },
     {
       "id": 2,
-      "title": "Multiple Catch Blocks",
-      "description": "Read integer n. Print n*n. If input is invalid (ex: string input), catch and print 'Invalid'.",
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    try{\n      int n = sc.nextInt();\n      System.out.println(n*n);\n    }\n    // catch suitable exception and print 'Invalid'\n  }\n}",
-      "tests": [
-        { "input": "5", "expected": "25" },
-        { "input": "abc", "expected": "Invalid" }
-      ]
+      "name": "Interface Payable",
+      "description": "Define interface Payable with method double getPaymentAmount(). Implement classes Employee(salary) and Invoice(quantity, pricePerItem). Read type and values and print payment amount.",
+      "input_format": "First word: type 'EMP' or 'INV'. For EMP: salary. For INV: quantity pricePerItem.",
+      "output_format": "Payment amount with 2 decimals.",
+      "constraints": "Positive values only.",
+      "sample_input": "INV 5 20",
+      "sample_output": "100.00",
+      "notes": ""
     },
     {
       "id": 3,
-      "title": "Array Index Exception",
-      "description": "Read N then N elements in array, then index i. Print arr[i]. If index is invalid print 'Out of bounds'.",
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    int n = sc.nextInt();\n    int[] arr = new int[n];\n    for(int i=0;i<n;i++) arr[i]=sc.nextInt();\n    int idx = sc.nextInt();\n    // try printing arr[idx]\n  }\n}",
-      "tests": [
-        { "input": "5\n1 2 3 4 5\n2", "expected": "3" },
-        { "input": "4\n10 20 30 40\n5", "expected": "Out of bounds" }
-      ]
+      "name": "Bank Account with Overdraft Check",
+      "description": "Extend earlier BankAccount: if withdraw amount > balance, do not change balance and print \"INSUFFICIENT\" before final balance. Otherwise withdraw. Print final balance.",
+      "input_format": "Owner, initial balance, q operations (D/W).",
+      "output_format": "Messages (if any) and final balance with 2 decimals.",
+      "constraints": "0 ≤ q ≤ 10^5",
+      "sample_input": "Ram\n100\n2\nW 150\nD 50",
+      "sample_output": "INSUFFICIENT\n150.00",
+      "notes": "Simple logic, no real exceptions."
     },
     {
       "id": 4,
-      "title": "Finally Block Execution",
-      "description": "Always print 'Done' in finally block after executing either normal result or Error.",
-      "examplesNote": "Final output must be two lines only.",
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc = new Scanner(System.in);\n    try{\n      int a = sc.nextInt();\n      int b = sc.nextInt();\n      System.out.println(a/b);\n    }\n    catch(Exception e){ System.out.println(\"Error\"); }\n    finally{\n      // print Done\n    }\n  }\n}",
-      "tests": [
-        { "input": "10 2", "expected": "5\nDone" },
-        { "input": "5 0", "expected": "Error\nDone" }
-      ]
+      "name": "Custom Exception: InvalidAgeException",
+      "description": "Define custom checked exception InvalidAgeException. Read age; if age < 18 throw exception and catch it in main printing \"INVALID AGE\". Otherwise print \"VALID\".",
+      "input_format": "Single integer age.",
+      "output_format": "INVALID AGE or VALID.",
+      "constraints": "0 ≤ age ≤ 150",
+      "sample_input": "16",
+      "sample_output": "INVALID AGE",
+      "notes": ""
     },
     {
       "id": 5,
-      "title": "Throw Custom Error (Manual)",
-      "description": "If number is negative, manually throw exception and print 'Negative'. Else print square.",
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n = sc.nextInt();\n    try{\n      // throw exception manually if negative\n    }\n    catch(Exception e){\n      System.out.println(\"Negative\");\n    }\n  }\n}",
-      "tests": [
-        { "input": "5", "expected": "25" },
-        { "input": "-3", "expected": "Negative" }
-      ]
+      "name": "Abstract Class Animal",
+      "description": "Create abstract class Animal with abstract String sound(). Implement Dog and Cat classes. Read \"dog\" or \"cat\" and print their sound (e.g., \"Woof\" or \"Meow\").",
+      "input_format": "Single word: dog or cat.",
+      "output_format": "Sound string.",
+      "constraints": "",
+      "sample_input": "dog",
+      "sample_output": "Woof",
+      "notes": ""
     },
     {
       "id": 6,
-      "title": "User Defined Exception Class",
-      "description": "Create class InvalidAgeException. If age < 18 throw exception and print 'Underage', else print 'Allowed'.",
-      "starterCode": "import java.util.*;\nclass InvalidAgeException extends Exception{}\npublic class Main{\n  static void validate(int age) throws InvalidAgeException{\n    // throw if age<18\n  }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int age=sc.nextInt();\n    try{\n      validate(age);\n      System.out.println(\"Allowed\");\n    } catch(InvalidAgeException e){\n      System.out.println(\"Underage\");\n    }\n  }\n}",
-      "tests": [
-        { "input": "20", "expected": "Allowed" },
-        { "input": "15", "expected": "Underage" }
-      ]
+      "name": "Polymorphic Shape Array",
+      "description": "Read n, then n lines each describing 'R w h' or 'S s' (Rectangle/Square). Store as Shape references, then print total area of all shapes.",
+      "input_format": "n then n lines of shapes.",
+      "output_format": "Total area with 2 decimals.",
+      "constraints": "1 ≤ n ≤ 10^5",
+      "sample_input": "2\nR 2 3\nS 4",
+      "sample_output": "22.00",
+      "notes": ""
     },
     {
       "id": 7,
-      "title": "Null Exception Simulation",
-      "description": "Read a string. If string is 'null' (exact text), simulate a NullPointerException and print 'Null'. Else print the length.",
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String s=sc.next();\n    try{\n      // if s equals \"null\" throw new NullPointerException\n    }\n    catch(NullPointerException e){\n      System.out.println(\"Null\");\n    }\n  }\n}",
-      "tests": [
-        { "input": "hello", "expected": "5" },
-        { "input": "null", "expected": "Null" }
-      ]
+      "name": "Comparable Student by Marks",
+      "description": "Create class Student(name, marks) implementing Comparable<Student> sorted by marks desc, then name asc. Read n, then n students, sort and print them.",
+      "input_format": "n, then n lines: name marks.",
+      "output_format": "n lines: name marks sorted.",
+      "constraints": "1 ≤ n ≤ 10^5",
+      "sample_input": "3\nRam 90\nSam 95\nAbi 95",
+      "sample_output": "Abi 95\nSam 95\nRam 90",
+      "notes": ""
     },
     {
       "id": 8,
-      "title": "Number Format Validation",
-      "description": "Read string input. Convert to integer. If not valid print 'Invalid Number'. Else print n*2.",
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    String s=sc.next();\n    try{\n      // convert and print double of integer\n    }\n    catch(NumberFormatException e){ System.out.println(\"Invalid Number\"); }\n  }\n}",
-      "tests": [
-        { "input": "12", "expected": "24" },
-        { "input": "abc", "expected": "Invalid Number" }
-      ]
+      "name": "Try-Catch Divide by Zero",
+      "description": "Read two integers a and b. Try to compute a/b. If division by zero occurs, catch exception and print \"ERROR\" instead of result.",
+      "input_format": "Two integers a b.",
+      "output_format": "Either quotient (integer division) or ERROR.",
+      "constraints": "−10^9 ≤ a, b ≤ 10^9",
+      "sample_input": "10 0",
+      "sample_output": "ERROR",
+      "notes": ""
     },
     {
       "id": 9,
-      "title": "Safe Average",
-      "description": "Read N then N integers. If N == 0 print 'NA'. Else print average (int division).",
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    try{\n      // handle 0 case using exception\n    }\n    catch(Exception e){ System.out.println(\"NA\"); }\n  }\n}",
-      "tests": [
-        { "input": "3\n10 20 30", "expected": "20" },
-        { "input": "0", "expected": "NA" }
-      ]
+      "name": "Immutable Point Class",
+      "description": "Create immutable class Point with final x,y and method distanceTo(Point other). Read x1,y1,x2,y2 and print Euclidean distance with 4 decimals.",
+      "input_format": "Four doubles x1 y1 x2 y2.",
+      "output_format": "Distance with 4 decimals.",
+      "constraints": "",
+      "sample_input": "0 0 3 4",
+      "sample_output": "5.0000",
+      "notes": ""
     },
     {
       "id": 10,
-      "title": "Mini Exception Calculator",
-      "description": "Perform + - * /. If division by zero → Error. If operator invalid → Invalid.",
-      "starterCode": "import java.util.*;\npublic class Main{\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    char op=sc.next().charAt(0);\n    try{\n      // handle calculator with exception safety\n    }\n    catch(ArithmeticException e){ System.out.println(\"Error\"); }\n    catch(Exception e){ System.out.println(\"Invalid\"); }\n  }\n}",
-      "tests": [
-        { "input": "10 2 +", "expected": "12" },
-        { "input": "5 0 /", "expected": "Error" },
-        { "input": "3 4 x", "expected": "Invalid" }
-      ]
+      "name": "Interface Shape3D (Volume)",
+      "description": "Define interface Shape3D with method double volume(). Implement Cube(side) and Sphere(radius with π=3.14). Read type and size, print volume.",
+      "input_format": "Line: 'C side' or 'S r'.",
+      "output_format": "Volume with 2 decimals.",
+      "constraints": "",
+      "sample_input": "C 3",
+      "sample_output": "27.00",
+      "notes": ""
     }
   ]
 }

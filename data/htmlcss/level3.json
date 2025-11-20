@@ -1,27 +1,65 @@
 {
-  "title": "HTML+CSS Level 3 — Images & Lists",
-  "concept": "Practice inserting images and creating lists.",
+  "title": "HTML+CSS Level 3 — Images & Simple Layout",
+  "concept": "Use images, navigation menus, and basic two-column layouts.",
   "challenges": [
     {
-      "title": "Q1: Image with Alt Text",
-      "description": "Add an image to the page using an <img> tag. Use any valid image URL and provide meaningful alt text describing the image.",
+      "id": 1,
+      "title": "Profile Card with Image",
+      "description": "Create a centered profile card containing a circular avatar image, a name, and a short bio paragraph.",
       "inputDescription": "No input.",
-      "outputDescription": "Page shows an image and has proper alt text.",
+      "outputDescription": "A card with an image styled as a circle and text below it.",
       "examples": [
-        "Example alt text: 'Beautiful sunset over the mountains'."
+        "A square image cropped into a circle using border-radius:50%."
       ],
-      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Image Demo</title>\n</head>\n<body>\n    <!-- Add your img tag here -->\n</body>\n</html>\n",
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Profile Card</title>\n  <style>\n    /* Center card; make image circular; add some spacing */\n  </style>\n</head>\n<body>\n  <div class=\"profile-card\">\n    <img src=\"https://via.placeholder.com/100\" alt=\"Avatar\">\n    <h2>Student Name</h2>\n    <p>Short bio goes here.</p>\n  </div>\n</body>\n</html>\n",
       "tests": []
     },
     {
-      "title": "Q2: Favourite Movies List",
-      "description": "Create an unordered list of at least 3 of your favourite movies. Below it, create an ordered list of the top 3 things you want to learn in web development.",
+      "id": 2,
+      "title": "Horizontal Navigation Menu",
+      "description": "Create a horizontal navigation bar with 4 items: Home, About, Courses, Contact. Use an unordered list, remove bullets, and place items in one row.",
       "inputDescription": "No input.",
-      "outputDescription": "One unordered and one ordered list displayed.",
+      "outputDescription": "A horizontal nav bar with equal spaced items.",
       "examples": [
-        "Use <ul> with <li> for movies and <ol> with <li> for learning goals."
+        "A bar at top with items side by side."
       ],
-      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Lists Demo</title>\n</head>\n<body>\n    <!-- Add your UL and OL lists here -->\n</body>\n</html>\n",
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Navigation Menu</title>\n  <style>\n    /* Style nav ul to be horizontal (flex or inline-block) */\n  </style>\n</head>\n<body>\n  <nav>\n    <ul>\n      <li><a href=\"#\">Home</a></li>\n      <li><a href=\"#\">About</a></li>\n      <li><a href=\"#\">Courses</a></li>\n      <li><a href=\"#\">Contact</a></li>\n    </ul>\n  </nav>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 3,
+      "title": "Two-Column Layout",
+      "description": "Create a simple two-column layout: left column for navigation links and right column for main content. Use CSS to place them side-by-side.",
+      "inputDescription": "No input.",
+      "outputDescription": "Two columns, left narrower than right.",
+      "examples": [
+        "Left column 25% width menu, right column 75% content."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Two Column Layout</title>\n  <style>\n    /* Use flexbox or float to create two columns */\n  </style>\n</head>\n<body>\n  <div class=\"layout\">\n    <aside class=\"sidebar\">\n      <ul>\n        <li>Link 1</li>\n        <li>Link 2</li>\n      </ul>\n    </aside>\n    <main class=\"content\">\n      <h1>Welcome</h1>\n      <p>Main content here.</p>\n    </main>\n  </div>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 4,
+      "title": "Feature List with Icons",
+      "description": "Create a section listing three features, each with an icon (you can use emoji) and a short description. Align icon and text nicely.",
+      "inputDescription": "No input.",
+      "outputDescription": "Three rows with icon + text aligned.",
+      "examples": [
+        "✅ Fast\n📱 Responsive\n🔒 Secure"
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Features</title>\n  <style>\n    /* Use flexbox or inline-block to align icon and text */\n  </style>\n</head>\n<body>\n  <div class=\"feature\">\n    <span class=\"icon\">⚡</span>\n    <span class=\"text\">Fast and lightweight</span>\n  </div>\n  <div class=\"feature\">\n    <span class=\"icon\">📱</span>\n    <span class=\"text\">Mobile friendly</span>\n  </div>\n  <div class=\"feature\">\n    <span class=\"icon\">🔒</span>\n    <span class=\"text\">Secure by design</span>\n  </div>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 5,
+      "title": "Simple Banner Section",
+      "description": "Create a full-width banner (hero section) with a background color, a large heading, a subtitle, and a button-style link.",
+      "inputDescription": "No input.",
+      "outputDescription": "A hero section at top with big title and call-to-action button.",
+      "examples": [
+        "Centered title with a button below \"Get Started\"."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Hero Banner</title>\n  <style>\n    /* Style .hero with padding and background; style button link */\n  </style>\n</head>\n<body>\n  <section class=\"hero\">\n    <h1>Welcome to EduWin</h1>\n    <p>Your smart learning companion.</p>\n    <a class=\"btn\" href=\"#\">Get Started</a>\n  </section>\n</body>\n</html>\n",
       "tests": []
     }
   ]

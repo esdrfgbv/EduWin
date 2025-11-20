@@ -1,28 +1,126 @@
 {
-  "title": "System Design Level 6 — Microservices & Messaging",
-  "concept": "MCQs on microservices and message queues.",
-  "challenges": [
+  "title": "System Design Level 6 — Messaging, Queues & Streaming",
+  "concept": "Async communication, message queues, pub/sub, streaming and backpressure.",
+  "questions": [
     {
-      "title": "Q1: Monolith vs Microservices",
-      "description": "A main advantage of microservices over a monolithic architecture is:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\\na) All teams must use the same language and framework\\nb) Easier independent deployment and scaling of services\\nc) Single database schema is enforced\\nd) No need for network communication at all"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "A primary benefit of using a message queue between services is:",
+      "options": {
+        "A": "Tight coupling between producer and consumer",
+        "B": "Loose coupling and asynchronous communication",
+        "C": "Eliminating the need for retries",
+        "D": "Guaranteeing zero latency"
+      },
+      "answer": "B",
+      "explanation": "Queues decouple sender/receiver and enable asynchronous, resilient processing."
     },
     {
-      "title": "Q2: Message Queue",
-      "description": "A message queue is mainly used for:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\\na) Synchronous request-response communication\\nb) Asynchronous communication and decoupling producers and consumers\\nc) Storing log files only\\nd) Replacing all databases in the system"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "In a pub/sub system, publishers:",
+      "options": {
+        "A": "Send messages to specific consumers directly",
+        "B": "Publish messages to topics without knowing which consumers will receive them",
+        "C": "Must know all consumer addresses",
+        "D": "Cannot be scaled horizontally"
+      },
+      "answer": "B",
+      "explanation": "Publishers write to topics; subscribers independently subscribe to topics of interest."
+    },
+    {
+      "id": 3,
+      "question": "At-least-once delivery semantics means:",
+      "options": {
+        "A": "Messages are delivered exactly once",
+        "B": "Messages may be delivered zero times",
+        "C": "Messages may be delivered more than once but not lost",
+        "D": "Messages are delivered in strict order only"
+      },
+      "answer": "C",
+      "explanation": "At-least-once trades potential duplicates for durability; consumers must handle idempotency."
+    },
+    {
+      "id": 4,
+      "question": "Which is a common design pattern for processing a queue without overloading downstream systems?",
+      "options": {
+        "A": "Ignoring backpressure",
+        "B": "Consumer-side rate limiting and concurrency control",
+        "C": "Infinite retries with no delay",
+        "D": "Dropping all messages by default"
+      },
+      "answer": "B",
+      "explanation": "Consumers should control their concurrency/rate to avoid overwhelming dependencies."
+    },
+    {
+      "id": 5,
+      "question": "Kafka-like log-based systems store messages:",
+      "options": {
+        "A": "Only in memory",
+        "B": "In an append-only log with offsets",
+        "C": "In random files across the network",
+        "D": "Only on the client"
+      },
+      "answer": "B",
+      "explanation": "Kafka partitions are append-only logs; consumers track offsets."
+    },
+    {
+      "id": 6,
+      "question": "In a streaming system, backpressure is used to:",
+      "options": {
+        "A": "Increase producer speed when consumer is slow",
+        "B": "Signal producers to slow down when consumers are overloaded",
+        "C": "Drop all messages",
+        "D": "Encrypt messages"
+      },
+      "answer": "B",
+      "explanation": "Backpressure propagates capacity limits upstream to avoid overload."
+    },
+    {
+      "id": 7,
+      "question": "Idempotent consumers are important because:",
+      "options": {
+        "A": "They can never crash",
+        "B": "They can safely handle duplicate messages without incorrect side effects",
+        "C": "They require less memory",
+        "D": "They avoid the need for retries"
+      },
+      "answer": "B",
+      "explanation": "Idempotency ensures repeated operations have the same effect as one."
+    },
+    {
+      "id": 8,
+      "question": "Dead-letter queues (DLQ) are used to:",
+      "options": {
+        "A": "Store successfully processed messages",
+        "B": "Store messages that repeatedly fail processing",
+        "C": "Hold all logs",
+        "D": "Delete messages permanently"
+      },
+      "answer": "B",
+      "explanation": "DLQs capture poison messages for inspection or manual handling."
+    },
+    {
+      "id": 9,
+      "question": "In-order processing per key is often achieved by:",
+      "options": {
+        "A": "Randomly assigning keys to partitions",
+        "B": "Hash-partitioning by key so all messages for a key go to the same partition",
+        "C": "Ignoring keys entirely",
+        "D": "Broadcasting to all partitions"
+      },
+      "answer": "B",
+      "explanation": "Hashing by key keeps all events for that key in one ordered partition."
+    },
+    {
+      "id": 10,
+      "question": "A major difference between request/response (HTTP) and messaging (queues) is:",
+      "options": {
+        "A": "Messaging is synchronous, HTTP is async",
+        "B": "Queues naturally support asynchronous, decoupled communication",
+        "C": "HTTP cannot be used on the internet",
+        "D": "Messaging cannot be retried"
+      },
+      "answer": "B",
+      "explanation": "Queues decouple producers and consumers in time; HTTP is typically synchronous."
     }
   ]
 }

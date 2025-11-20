@@ -1,0 +1,148 @@
+{
+  "title": "C# Level 7 — Functions & Recursion",
+  "concept": "Define and use functions with parameters and return values, including recursion.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Distance Between Two Points",
+      "description": "Write a method double Distance(double x1, double y1, double x2, double y2) that returns the distance between points (x1, y1) and (x2, y2). In Main, read four doubles, call the method and print the result.",
+      "inputDescription": "Four real numbers x1, y1, x2, y2.",
+      "outputDescription": "One real number: distance between the two points.",
+      "examples": [
+        "Input:\n0 0 3 4\n\nOutput:\n5"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static double Distance(double x1, double y1, double x2, double y2) {\n        // compute and return distance\n    }\n    static void Main() {\n        string[] p = Console.ReadLine().Split();\n        double x1 = double.Parse(p[0]);\n        double y1 = double.Parse(p[1]);\n        double x2 = double.Parse(p[2]);\n        double y2 = double.Parse(p[3]);\n        // call Distance and print\n    }\n}\n",
+      "tests": [
+        { "input": "0 0 3 4", "expected": "5" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Power Function (Iterative)",
+      "description": "Write a method double Power(double a, int n) that returns a^n for integer n (n can be negative, zero, or positive). Use a loop inside the method. In Main, read a and n, call Power and print the result.",
+      "inputDescription": "Real a and integer n.",
+      "outputDescription": "Real number: a^n.",
+      "examples": [
+        "Input:\n2 3\n\nOutput:\n8"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static double Power(double a, int n) {\n        // implement iterative power including negative n\n    }\n    static void Main() {\n        string[] p = Console.ReadLine().Split();\n        double a = double.Parse(p[0]);\n        int n = int.Parse(p[1]);\n        // call Power and print\n    }\n}\n",
+      "tests": [
+        { "input": "2 3", "expected": "8" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Capitalize Words",
+      "description": "Write a method void Capitalize(ref string s) that makes the first letter of each word uppercase. Words are separated by single spaces. In Main, read a line into s, call Capitalize, then print s.",
+      "inputDescription": "One line in lowercase.",
+      "outputDescription": "Same sentence with each word capitalized.",
+      "examples": [
+        "Input:\nhello world from c#\n\nOutput:\nHello World From C#"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static void Capitalize(ref string s) {\n        // make first letter of each word uppercase\n    }\n    static void Main() {\n        string s = Console.ReadLine();\n        Capitalize(ref s);\n        Console.WriteLine(s);\n    }\n}\n",
+      "tests": [
+        { "input": "hello world from c#", "expected": "Hello World From C#" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Recursive Power (Non-Negative n)",
+      "description": "Write a recursive method double PowerRec(double a, int n) to compute a^n for n >= 0. In Main, read a and n, call PowerRec, and print the result.",
+      "inputDescription": "Real a and integer n >= 0.",
+      "outputDescription": "Real number: a^n.",
+      "examples": [
+        "Input:\n3 2\n\nOutput:\n9"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static double PowerRec(double a, int n) {\n        // recursive definition with base case n==0\n    }\n    static void Main() {\n        string[] p = Console.ReadLine().Split();\n        double a = double.Parse(p[0]);\n        int n = int.Parse(p[1]);\n        // call PowerRec and print\n    }\n}\n",
+      "tests": [
+        { "input": "3 2", "expected": "9" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Recursive Fibonacci",
+      "description": "Write a method long Fib(int n) that returns the n-th Fibonacci number using recursion. Fib(0)=0, Fib(1)=1. Assume n <= 30. In Main, read n, print Fib(n).",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "n-th Fibonacci number.",
+      "examples": [
+        "Input:\n7\n\nOutput:\n13"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static long Fib(int n) {\n        // recursive Fibonacci\n    }\n    static void Main() {\n        int n = int.Parse(Console.ReadLine());\n        Console.WriteLine(Fib(n));\n    }\n}\n",
+      "tests": [
+        { "input": "7", "expected": "13" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Reverse Sequence Recursively",
+      "description": "Given a sequence of integers ending with 0, print all numbers (except the final 0) in reverse order using recursion and without using arrays.",
+      "inputDescription": "Integers, one per line, ending with 0.",
+      "outputDescription": "Same numbers in reverse order, each on its own line.",
+      "examples": [
+        "Input:\n1\n2\n3\n0\n\nOutput:\n3\n2\n1"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static void ReverseSeq() {\n        int x = int.Parse(Console.ReadLine());\n        // recurse until 0, then print in reverse\n    }\n    static void Main() {\n        ReverseSeq();\n    }\n}\n",
+      "tests": [
+        { "input": "1\n2\n3\n0", "expected": "3\n2\n1" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Iterative Fibonacci",
+      "description": "Write a method long FibIter(int n) that computes the n-th Fibonacci number using a loop. In Main, read n and print FibIter(n).",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "n-th Fibonacci number.",
+      "examples": [
+        "Input:\n10\n\nOutput:\n55"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static long FibIter(int n) {\n        // iterative Fibonacci\n    }\n    static void Main() {\n        int n = int.Parse(Console.ReadLine());\n        Console.WriteLine(FibIter(n));\n    }\n}\n",
+      "tests": [
+        { "input": "10", "expected": "55" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Count Distinct (Function)",
+      "description": "Write a method int CountDistinct(int[] a) that returns the number of distinct integers in the array. In Main, read n, then n integers into an array, call the method and print the result.",
+      "inputDescription": "First line: n. Second line: n integers.",
+      "outputDescription": "Single integer: number of distinct values.",
+      "examples": [
+        "Input:\n5\n1 2 2 3 1\n\nOutput:\n3"
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static int CountDistinct(int[] a) {\n        // use HashSet<int>\n    }\n    static void Main() {\n        int n = int.Parse(Console.ReadLine());\n        int[] a = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);\n        Console.WriteLine(CountDistinct(a));\n    }\n}\n",
+      "tests": [
+        { "input": "5\n1 2 2 3 1", "expected": "3" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Max of Array (Function)",
+      "description": "Write a method int MaxArray(int[] a) that returns the largest element. In Main, read n, the elements, and print the maximum.",
+      "inputDescription": "First line: n. Second line: n integers.",
+      "outputDescription": "Single integer: maximum array element.",
+      "examples": [
+        "Input:\n4\n3 9 1 8\n\nOutput:\n9"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static int MaxArray(int[] a) {\n        // iterate and track maximum\n    }\n    static void Main() {\n        int n = int.Parse(Console.ReadLine());\n        int[] a = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);\n        Console.WriteLine(MaxArray(a));\n    }\n}\n",
+      "tests": [
+        { "input": "4\n3 9 1 8", "expected": "9" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Contains Element (Function)",
+      "description": "Write a method bool Contains(int[] a, int x) that returns true if x appears in the array. In Main, read n, the elements, then x, and print YES if found, otherwise NO.",
+      "inputDescription": "First line: n. Second line: n integers. Third line: x.",
+      "outputDescription": "YES or NO.",
+      "examples": [
+        "Input:\n5\n1 2 3 4 5\n3\n\nOutput:\nYES",
+        "Input:\n3\n1 2 3\n4\n\nOutput:\nNO"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static bool Contains(int[] a, int x) {\n        // search for x\n    }\n    static void Main() {\n        int n = int.Parse(Console.ReadLine());\n        int[] a = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);\n        int x = int.Parse(Console.ReadLine());\n        Console.WriteLine(Contains(a, x) ? \"YES\" : \"NO\");\n    }\n}\n",
+      "tests": [
+        { "input": "5\n1 2 3 4 5\n3", "expected": "YES" },
+        { "input": "3\n1 2 3\n4", "expected": "NO" }
+      ]
+    }
+  ]
+}

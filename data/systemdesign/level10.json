@@ -1,28 +1,126 @@
 {
-  "title": "System Design Level 10 — Chat / Messaging System",
-  "concept": "Scenario-based design questions for a chat/messaging application.",
-  "challenges": [
+  "title": "System Design Level 10 — End-to-End Design & Trade-offs",
+  "concept": "Holistic design, consistency vs availability, multi-region, cost, and scaling strategies.",
+  "questions": [
     {
-      "title": "Q1: Messaging Requirements & APIs",
-      "description": "Design a basic real-time chat system supporting 1-1 messaging. List functional requirements (send, receive, delivery status) and sketch the core APIs or protocols you would use (HTTP, WebSockets, etc.).",
-      "inputDescription": "No input. Design question.",
-      "outputDescription": "List of requirements and example API/protocol choices (checked manually).",
-      "examples": [
-        "You can suggest using HTTP for login/history and WebSockets for live chat."
-      ],
-      "starterCode": "// List requirements, then outline APIs and protocol usage.\n",
-      "tests": []
+      "id": 1,
+      "question": "Designing a globally distributed system with low latency often requires:",
+      "options": {
+        "A": "Single-region deployment only",
+        "B": "Multi-region replication and routing users to nearest region",
+        "C": "Disabling caching",
+        "D": "No load balancing"
+      },
+      "answer": "B",
+      "explanation": "Multi-region with geo-routing reduces latency for global users."
     },
     {
-      "title": "Q2: Data Storage & Scaling",
-      "description": "Explain how you would store messages and conversation metadata. How would you scale the system horizontally when the number of users grows, and how would you ensure messages are not lost?",
-      "inputDescription": "No input. Design question.",
-      "outputDescription": "Description of message tables/collections, sharding/partitioning, replication and durability strategies (checked manually).",
-      "examples": [
-        "Mention storing messages by conversation, using replicated databases or message queues for durability."
-      ],
-      "starterCode": "// Describe message schema, partitioning (by user/conversation), and durability strategy.\n",
-      "tests": []
+      "id": 2,
+      "question": "To provide strong consistency across multiple regions, a system often must:",
+      "options": {
+        "A": "Never use consensus",
+        "B": "Coordinate writes using protocols like Paxos/Raft, adding latency",
+        "C": "Never replicate data",
+        "D": "Use only local caches"
+      },
+      "answer": "B",
+      "explanation": "Strong consistency typically requires consensus/coordination across replicas."
+    },
+    {
+      "id": 3,
+      "question": "Event sourcing pattern stores:",
+      "options": {
+        "A": "Only the latest state",
+        "B": "A sequence of events that can be replayed to reconstruct the state",
+        "C": "Only user sessions",
+        "D": "No history"
+      },
+      "answer": "B",
+      "explanation": "Event sourcing persists all state changes as an immutable log of events."
+    },
+    {
+      "id": 4,
+      "question": "Command Query Responsibility Segregation (CQRS) pattern:",
+      "options": {
+        "A": "Uses the same model for reads and writes",
+        "B": "Separates read and write models, possibly with different stores",
+        "C": "Forbids queries",
+        "D": "Is unrelated to databases"
+      },
+      "answer": "B",
+      "explanation": "CQRS splits write model (commands) and read model (queries) for scalability and flexibility."
+    },
+    {
+      "id": 5,
+      "question": "In a cost-constrained environment, one common approach is to:",
+      "options": {
+        "A": "Overprovision all resources",
+        "B": "Use auto-scaling and right-sizing to match capacity to real demand",
+        "C": "Disable monitoring",
+        "D": "Avoid caching to save memory"
+      },
+      "answer": "B",
+      "explanation": "Auto-scaling adjusts resources based on load, controlling cost."
+    },
+    {
+      "id": 6,
+      "question": "Strong consistency is usually most critical for:",
+      "options": {
+        "A": "Analytics dashboards",
+        "B": "User profile photos",
+        "C": "Bank account balances and money transfers",
+        "D": "Search autocomplete suggestions"
+      },
+      "answer": "C",
+      "explanation": "Financial operations usually demand strict correctness and consistency."
+    },
+    {
+      "id": 7,
+      "question": "Eventual consistency is often acceptable for:",
+      "options": {
+        "A": "Inventory updates in a flash sale",
+        "B": "Payment ledgers",
+        "C": "Read replicas for user timelines or likes count",
+        "D": "Security-critical access control"
+      },
+      "answer": "C",
+      "explanation": "Social engagement counts or feeds can tolerate brief inconsistencies."
+    },
+    {
+      "id": 8,
+      "question": "A 'hot partition' in a sharded system happens when:",
+      "options": {
+        "A": "All shards receive equal traffic",
+        "B": "One partition receives disproportionate share of traffic and load",
+        "C": "No traffic is received",
+        "D": "Replication is disabled"
+      },
+      "answer": "B",
+      "explanation": "Hot partitions become bottlenecks and can cause outages."
+    },
+    {
+      "id": 9,
+      "question": "When designing for graceful degradation, the idea is to:",
+      "options": {
+        "A": "Completely shut down when overloaded",
+        "B": "Drop non-critical features under load while keeping core functionality working",
+        "C": "Ignore load",
+        "D": "Always return errors"
+      },
+      "answer": "B",
+      "explanation": "Graceful degradation keeps essential features alive even under stress."
+    },
+    {
+      "id": 10,
+      "question": "To evaluate a system design, you should primarily:",
+      "options": {
+        "A": "Optimize for only one metric (e.g., latency) ignoring others",
+        "B": "Consider trade-offs across reliability, scalability, latency, cost, and complexity",
+        "C": "Ignore product requirements",
+        "D": "Focus only on implementation details"
+      },
+      "answer": "B",
+      "explanation": "Real-world design is about balancing multiple constraints and trade-offs."
     }
   ]
 }

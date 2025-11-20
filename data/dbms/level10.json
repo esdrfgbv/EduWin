@@ -1,28 +1,126 @@
 {
-  "title": "DBMS Level 10 — Transactions & Indexing",
-  "concept": "MCQs on ACID properties, transactions and indexes.",
-  "challenges": [
+  "title": "DBMS Level 10 — Data Warehousing & Advanced Topics",
+  "concept": "OLTP vs OLAP, star/snowflake schema, column stores, cubes and OLAP operations.",
+  "questions": [
     {
-      "title": "Q1: ACID - A Stands For",
-      "description": "In ACID properties of a transaction, A stands for:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) Accuracy\nb) Atomicity\nc) Access\nd) Association"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "OLTP systems are primarily optimized for:",
+      "options": {
+        "A": "Complex analytical queries over historical data",
+        "B": "High volume of simple read/write transactions",
+        "C": "Batch processing only",
+        "D": "Offline reporting only"
+      },
+      "answer": "B",
+      "explanation": "Online Transaction Processing focuses on many small, concurrent operations (e.g., bank transactions)."
     },
     {
-      "title": "Q2: Purpose of Index",
-      "description": "The main purpose of an index in a database is to:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) Increase redundancy\nb) Enforce referential integrity\nc) Speed up data retrieval\nd) Compress table data"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "OLAP systems are primarily optimized for:",
+      "options": {
+        "A": "Single-row inserts",
+        "B": "High-throughput key-value reads",
+        "C": "Complex aggregations and analytical queries over large datasets",
+        "D": "Only real-time messaging"
+      },
+      "answer": "C",
+      "explanation": "Online Analytical Processing supports heavy aggregations across large historical datasets."
+    },
+    {
+      "id": 3,
+      "question": "In a star schema, the central table is called:",
+      "options": {
+        "A": "Dimension table",
+        "B": "Fact table",
+        "C": "Bridge table",
+        "D": "Index table"
+      },
+      "answer": "B",
+      "explanation": "Fact tables store measurements (facts) and foreign keys to dimension tables."
+    },
+    {
+      "id": 4,
+      "question": "Dimension tables in a star schema typically store:",
+      "options": {
+        "A": "Numeric metrics and aggregated measures only",
+        "B": "Highly normalized reference data",
+        "C": "Descriptive attributes (e.g., product name, customer region) about facts",
+        "D": "Transaction logs"
+      },
+      "answer": "C",
+      "explanation": "Dimensions hold descriptive attributes that contextualize facts (who, what, where, when)."
+    },
+    {
+      "id": 5,
+      "question": "A snowflake schema differs from a star schema mainly because:",
+      "options": {
+        "A": "Fact table is split into multiple tables",
+        "B": "Dimensions are further normalized into multiple related tables",
+        "C": "No dimensions are used",
+        "D": "It uses only key-value pairs"
+      },
+      "answer": "B",
+      "explanation": "Snowflake schemas normalize dimension tables into multiple levels."
+    },
+    {
+      "id": 6,
+      "question": "Column-oriented databases (column stores) are generally better than row stores when:",
+      "options": {
+        "A": "Most queries read many columns of few rows",
+        "B": "Most queries read few columns from many rows with heavy aggregation",
+        "C": "Workload is dominated by single-row lookups by primary key",
+        "D": "No compression is needed"
+      },
+      "answer": "B",
+      "explanation": "Column stores excel at scanning a few columns across many rows and compress well."
+    },
+    {
+      "id": 7,
+      "question": "In OLAP, 'roll-up' refers to:",
+      "options": {
+        "A": "Moving from summarized data to more detailed data",
+        "B": "Aggregating data along a dimension hierarchy (e.g., day → month → year)",
+        "C": "Adding a new dimension",
+        "D": "Filtering individual records"
+      },
+      "answer": "B",
+      "explanation": "Roll-up aggregates data to higher levels in a dimension hierarchy."
+    },
+    {
+      "id": 8,
+      "question": "In OLAP, 'drill-down' refers to:",
+      "options": {
+        "A": "Aggregating to higher levels",
+        "B": "Moving from summary to more detailed data (e.g., year → month → day)",
+        "C": "Dropping a dimension",
+        "D": "Adding random noise to data"
+      },
+      "answer": "B",
+      "explanation": "Drill-down explores more detailed levels of data."
+    },
+    {
+      "id": 9,
+      "question": "A typical ETL (Extract–Transform–Load) pipeline in a data warehouse does NOT involve:",
+      "options": {
+        "A": "Extracting data from multiple sources",
+        "B": "Transforming/cleaning data into a consistent format",
+        "C": "Loading cleaned data into the warehouse",
+        "D": "Directly serving OLTP transactions from the warehouse"
+      },
+      "answer": "D",
+      "explanation": "Data warehouses usually serve analytical queries, not OLTP transactional workloads."
+    },
+    {
+      "id": 10,
+      "question": "Slowly Changing Dimensions (SCD) techniques are used to:",
+      "options": {
+        "A": "Handle changes in dimension attributes over time (e.g., customer address history)",
+        "B": "Compress fact tables",
+        "C": "Handle real-time transactions",
+        "D": "Enforce referential integrity"
+      },
+      "answer": "A",
+      "explanation": "SCD patterns (Types 1, 2, 3, etc.) describe how to store historical changes in dimension data."
     }
   ]
 }

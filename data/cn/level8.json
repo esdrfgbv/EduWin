@@ -1,27 +1,66 @@
 {
+  "level": 8,
   "title": "CN Level 8 — Small Office Network Design",
-  "concept": "Scenario-based design questions for a small office network.",
+  "concept": "Scenario-based design for a small office: devices, topology, IP addressing.",
   "challenges": [
     {
+      "id": 1,
       "title": "Q1: Devices & Topology",
       "description": "Design a basic network for an office with 30 computers and Internet access. List the main network devices you would use (router, switches, access points, etc.) and describe a simple topology connecting them.",
       "inputDescription": "No input. Design question.",
       "outputDescription": "Short design with device list and topology explanation (checked manually).",
       "examples": [
-        "Think of: ISP modem/router → core switch → access switches → PCs and Wi-Fi AP."
+        "Hint: ISP modem/router → core switch → access switches → PCs and Wi-Fi AP(s)."
       ],
       "starterCode": "// Describe devices and how they are connected in a simple diagram (text).\n",
       "tests": []
     },
     {
+      "id": 2,
       "title": "Q2: IP Addressing Plan",
-      "description": "For the same office network, propose a simple IP addressing plan using a private IPv4 subnet (for example 192.168.x.x). Explain how devices get their IPs.",
+      "description": "For the same office network, propose a simple IPv4 addressing plan using a private subnet (e.g., 192.168.x.x). Explain how devices get their IP addresses (DHCP vs static).",
       "inputDescription": "No input. Design question.",
-      "outputDescription": "Simple subnet choice and explanation of DHCP/static assignment (checked manually).",
+      "outputDescription": "Subnet choice and explanation of address assignment (checked manually).",
       "examples": [
-        "Example: Use 192.168.1.0/24, router = 192.168.1.1, DHCP range 192.168.1.100-200."
+        "Example: Use 192.168.1.0/24, router = 192.168.1.1, DHCP range 192.168.1.100–192.168.1.200."
       ],
       "starterCode": "// Write your IP scheme and how DHCP would be used.\n",
+      "tests": []
+    },
+    {
+      "id": 3,
+      "title": "Q3: Wired vs Wireless",
+      "description": "In this office of 30 computers and some mobile devices, explain which devices you would connect via wired Ethernet and which via Wi-Fi, and why.",
+      "inputDescription": "No input. Short descriptive answer.",
+      "outputDescription": "Explanation comparing wired and wireless for different device types.",
+      "examples": [
+        "Hint: Desktops and servers often use wired for reliability, laptops/phones often use Wi-Fi for mobility."
+      ],
+      "starterCode": "// Briefly describe your choice of wired vs wireless for device categories.\n",
+      "tests": []
+    },
+    {
+      "id": 4,
+      "title": "Q4: Basic VLAN Idea (Optional Advanced)",
+      "description": "Suppose the office has two departments: Admin and Dev. Explain how VLANs could be used to separate their traffic logically even if they share the same physical switches.",
+      "inputDescription": "No input. Conceptual design.",
+      "outputDescription": "High-level explanation of VLAN tags and isolation.",
+      "examples": [
+        "Hint: VLAN 10 for Admin, VLAN 20 for Dev, router or Layer-3 switch for inter-VLAN routing."
+      ],
+      "starterCode": "// Explain how VLANs help segment the network and why this is useful.\n",
+      "tests": []
+    },
+    {
+      "id": 5,
+      "title": "Q5: Internet Redundancy (Bonus)",
+      "description": "If the office requires high availability Internet, briefly describe one way to add redundancy for the WAN connection.",
+      "inputDescription": "No input. Short design idea.",
+      "outputDescription": "Description of adding second ISP or backup link and how failover might work.",
+      "examples": [
+        "Example: Use dual WAN router with two ISPs and automatic failover."
+      ],
+      "starterCode": "// Describe one redundancy option and how it improves reliability.\n",
       "tests": []
     }
   ]

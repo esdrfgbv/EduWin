@@ -1,110 +1,117 @@
 {
-  "level": 6,
-  "title": "Methods / Functions",
-  "concept": "This level focuses on defining and calling methods in Java, returning values, passing parameters, using static methods and writing helper methods to organize logic.",
-  "challenges": [
+  "title": "Java Level 6 — Methods & Basic OOP",
+  "concept": "Defining methods, simple classes, encapsulation basics.",
+  "language": "java",
+  "problems": [
     {
       "id": 1,
-      "title": "Square using Method",
-      "description": "Create a method square(int n) that returns n*n. Read n and print result.",
-      "inputDescription": "Single integer.",
-      "outputDescription": "n squared.",
-      "starterCode": "import java.util.*;\npublic class Main{\n  static int square(int n){\n    // return n*n\n    return 0;\n  }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    // call method and print\n  }\n}",
-      "tests": [
-        { "input": "5", "expected": "25" },
-        { "input": "8", "expected": "64" }
-      ]
+      "name": "GCD of Two Numbers",
+      "description": "Write a method gcd(a, b) that returns greatest common divisor using Euclidean algorithm and use it in main.",
+      "input_format": "Two integers a and b.",
+      "output_format": "Single integer: gcd(a, b).",
+      "constraints": "1 ≤ a, b ≤ 10^9",
+      "sample_input": "12 18",
+      "sample_output": "6",
+      "notes": "Implement gcd as static method."
     },
     {
       "id": 2,
-      "title": "Max of Two",
-      "description": "Create method max2(int a,int b) that returns the larger of the two. If equal return either.",
-      "starterCode": "import java.util.*;\npublic class Main{\n  static int max2(int a,int b){\n    // return larger\n    return 0;\n  }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    // print result of max2\n  }\n}",
-      "tests": [
-        { "input": "3 9", "expected": "9" },
-        { "input": "7 2", "expected": "7" }
-      ]
+      "name": "Is Prime Method",
+      "description": "Write a method isPrime(n) that returns true if n is prime, else false. In main, print YES or NO.",
+      "input_format": "Single integer n.",
+      "output_format": "YES or NO.",
+      "constraints": "2 ≤ n ≤ 10^6",
+      "sample_input": "11",
+      "sample_output": "YES",
+      "notes": ""
     },
     {
       "id": 3,
-      "title": "Factorial Method",
-      "description": "Create factorial(int n) and compute n! using loop. Print result.",
-      "starterCode": "import java.util.*;\npublic class Main{\n  static int factorial(int n){\n    // loop and compute\n    return 0;\n  }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    // call factorial and print\n  }\n}",
-      "tests": [
-        { "input": "5", "expected": "120" },
-        { "input": "3", "expected": "6" }
-      ]
+      "name": "Sum of Array (Method)",
+      "description": "Write a method sumArray(int[] a) that returns sum of elements. Use it after reading input.",
+      "input_format": "First line: n. Second line: n integers.",
+      "output_format": "Single long integer: sum.",
+      "constraints": "1 ≤ n ≤ 10^5",
+      "sample_input": "3\n10 20 30",
+      "sample_output": "60",
+      "notes": ""
     },
     {
       "id": 4,
-      "title": "Prime Check using Method",
-      "description": "Create isPrime(int n) that returns true if prime else false. Print Yes or No.",
-      "starterCode": "import java.util.*;\npublic class Main{\n  static boolean isPrime(int n){\n    // return true/false\n    return false;\n  }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    // print Yes or No\n  }\n}",
-      "tests": [
-        { "input": "7", "expected": "Yes" },
-        { "input": "9", "expected": "No" }
-      ]
+      "name": "Rectangle Class",
+      "description": "Create a class Rectangle with fields width and height (int), constructor, and method area() returning width*height. Read w,h, create object, print area().",
+      "input_format": "Two integers w h.",
+      "output_format": "Single integer: area.",
+      "constraints": "1 ≤ w, h ≤ 10^6",
+      "sample_input": "4 5",
+      "sample_output": "20",
+      "notes": ""
     },
     {
       "id": 5,
-      "title": "Reverse Number using Method",
-      "description": "Create reverseNum(int n) that returns integer reversed.",
-      "starterCode": "import java.util.*;\npublic class Main{\n  static int reverseNum(int n){\n    // reverse and return\n    return 0;\n  }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    // print reverseNum(n)\n  }\n}",
-      "tests": [
-        { "input": "123", "expected": "321" },
-        { "input": "500", "expected": "5" }
-      ]
+      "name": "Circle Class",
+      "description": "Create Circle class with radius (double) and method getArea() using π=3.14. Read radius, create object, print area with 2 decimals.",
+      "input_format": "Single double r.",
+      "output_format": "Area with 2 decimal places.",
+      "constraints": "0 ≤ r ≤ 10^4",
+      "sample_input": "3",
+      "sample_output": "28.26",
+      "notes": ""
     },
     {
       "id": 6,
-      "title": "Sum of Array using Method",
-      "description": "Create sumArr(int[] arr) that returns sum of array elements.",
-      "starterCode": "import java.util.*;\npublic class Main{\n  static int sumArr(int[] arr){\n    // return sum\n    return 0;\n  }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    int[] arr=new int[n];\n    for(int i=0;i<n;i++) arr[i]=sc.nextInt();\n    // print sumArr(arr)\n  }\n}",
-      "tests": [
-        { "input": "5\n1 2 3 4 5", "expected": "15" },
-        { "input": "3\n10 10 10", "expected": "30" }
-      ]
+      "name": "Student Class",
+      "description": "Define Student with fields name (String), age (int). Read name and age, create object and print \"Name: <name>, Age: <age>\".",
+      "input_format": "First line: name. Second line: age.",
+      "output_format": "Single line: Name: <name>, Age: <age>",
+      "constraints": "1 ≤ age ≤ 120",
+      "sample_input": "Alice\n20",
+      "sample_output": "Name: Alice, Age: 20",
+      "notes": ""
     },
     {
       "id": 7,
-      "title": "GCD using Method",
-      "description": "Create gcd(int a,int b) using Euclidean algorithm. Print result.",
-      "starterCode": "import java.util.*;\npublic class Main{\n  static int gcd(int a,int b){\n    // return gcd\n    return 0;\n  }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    // print gcd\n  }\n}",
-      "tests": [
-        { "input": "12 18", "expected": "6" },
-        { "input": "7 13", "expected": "1" }
-      ]
+      "name": "Overloaded Sum Methods",
+      "description": "Create overloaded methods sum(int a, int b) and sum(int a, int b, int c). Read 2 or 3 numbers; if input has 2 numbers print sum of two; if 3 print sum of three.",
+      "input_format": "First integer k (2 or 3). Next k integers.",
+      "output_format": "Single integer sum.",
+      "constraints": "k ∈ {2,3}",
+      "sample_input": "3\n1 2 3",
+      "sample_output": "6",
+      "notes": ""
     },
     {
       "id": 8,
-      "title": "LCM using Method",
-      "description": "Create lcm(int a,int b) that uses gcd inside and returns LCM.",
-      "starterCode": "import java.util.*;\npublic class Main{\n  static int gcd(int a,int b){ return 0; }\n  static int lcm(int a,int b){\n    // call gcd and compute lcm\n    return 0;\n  }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    // print lcm(a,b)\n  }\n}",
-      "tests": [
-        { "input": "4 6", "expected": "12" },
-        { "input": "3 5", "expected": "15" }
-      ]
+      "name": "Static Utility Method: isPalindrome",
+      "description": "Write a static method isPalindrome(String s) that checks if s is palindrome. Read s, print YES or NO.",
+      "input_format": "Single string s.",
+      "output_format": "YES or NO.",
+      "constraints": "0 ≤ |s| ≤ 10^5",
+      "sample_input": "madam",
+      "sample_output": "YES",
+      "notes": ""
     },
     {
       "id": 9,
-      "title": "Check Palindrome Number using Method",
-      "description": "Create isPal(int n) that returns true if number is palindrome else false. Print Yes or No.",
-      "starterCode": "import java.util.*;\npublic class Main{\n  static boolean isPal(int n){ return false; }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int n=sc.nextInt();\n    // print Yes or No\n  }\n}",
-      "tests": [
-        { "input": "121", "expected": "Yes" },
-        { "input": "123", "expected": "No" }
-      ]
+      "name": "Temperature Converter Class",
+      "description": "Create class TempConverter with static methods toCelsius(double f) and toFahrenheit(double c). Read an integer t and value x. If t=1 convert F->C, if t=2 convert C->F. Print with 2 decimals.",
+      "input_format": "First line: t (1 or 2). Second line: double x.",
+      "output_format": "One double with 2 decimal places.",
+      "constraints": "−1000 ≤ x ≤ 1000",
+      "sample_input": "1\n50",
+      "sample_output": "10.00",
+      "notes": ""
     },
     {
       "id": 10,
-      "title": "Mini Calculator (Methods)",
-      "description": "Create methods add, sub, mul, div. Read a, b and operator (+ - * /). Print result. Division should be integer division.",
-      "starterCode": "import java.util.*;\npublic class Main{\n  static int add(int a,int b){ return 0; }\n  static int sub(int a,int b){ return 0; }\n  static int mul(int a,int b){ return 0; }\n  static int div(int a,int b){ return 0; }\n  public static void main(String[] args){\n    Scanner sc=new Scanner(System.in);\n    int a=sc.nextInt();\n    int b=sc.nextInt();\n    char op=sc.next().charAt(0);\n    // choose method based on op\n  }\n}",
-      "tests": [
-        { "input": "8 4 *", "expected": "32" },
-        { "input": "10 3 -", "expected": "7" },
-        { "input": "9 3 /", "expected": "3" }
-      ]
+      "name": "Bank Account Class",
+      "description": "Create BankAccount class with fields owner (String) and balance (double), constructor, deposit(amount), withdraw(amount) (no negative balance check). Read owner, initial balance, then an integer q operations of type D amount or W amount. After all operations print final balance with 2 decimals.",
+      "input_format": "Line1: owner (string no spaces). Line2: double balance. Line3: int q. Next q lines: operation: 'D x' or 'W x'.",
+      "output_format": "Final balance with 2 decimals.",
+      "constraints": "0 ≤ q ≤ 10^5",
+      "sample_input": "Ram\n1000\n3\nD 500\nW 200\nD 100",
+      "sample_output": "1400.00",
+      "notes": ""
     }
   ]
 }

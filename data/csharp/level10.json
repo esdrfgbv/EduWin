@@ -1,0 +1,134 @@
+{
+  "title": "C# Level 10 — Combined STL & Logic Problems",
+  "concept": "Combine loops, arrays, strings, sets and dictionaries to solve slightly larger problems.",
+  "challenges": [
+    {
+      "id": 1,
+      "title": "Fibonacci Index",
+      "description": "Given an integer a, determine its index in the Fibonacci sequence (0-based: fib(0)=0, fib(1)=1). If a is not a Fibonacci number, print -1.",
+      "inputDescription": "Single integer a.",
+      "outputDescription": "Index n such that fib(n)=a, or -1.",
+      "examples": [
+        "Input:\n5\n\nOutput:\n5",
+        "Input:\n4\n\nOutput:\n-1"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static void Main() {\n        long a = long.Parse(Console.ReadLine());\n        // generate Fibonacci numbers until >= a, then check\n    }\n}\n",
+      "tests": [
+        { "input": "5", "expected": "5" },
+        { "input": "4", "expected": "-1" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Second Maximum in Sequence",
+      "description": "The sequence consists of distinct positive integers ending with 0. Find the second largest element (ignore the final 0).",
+      "inputDescription": "Positive integers (distinct) each on its own line, ending with 0.",
+      "outputDescription": "Single integer: second largest.",
+      "examples": [
+        "Input:\n1\n7\n9\n0\n\nOutput:\n7"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static void Main() {\n        int max1 = 0, max2 = 0;\n        // read ints until 0, track top two\n    }\n}\n",
+      "tests": [
+        { "input": "1\n7\n9\n0", "expected": "7" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Sequence Statistics",
+      "description": "Given a sequence of integers ending with 0, compute:\n1) the sum of all numbers (excluding final 0),\n2) the maximum value,\n3) the count of even numbers,\n4) how many numbers are equal to the maximum.\nPrint each result on its own line in that order.",
+      "inputDescription": "Integers each on its own line, ending with 0.",
+      "outputDescription": "Four lines: sum, max, evenCount, maxCount.",
+      "examples": [
+        "Example only."
+      ],
+      "starterCode": "using System;\nclass Program {\n    static void Main() {\n        long sum = 0;\n        int mx = int.MinValue;\n        int evenCount = 0, maxCount = 0;\n        // read numbers until 0 and compute stats\n    }\n}\n",
+      "tests": []
+    },
+    {
+      "id": 4,
+      "title": "8 Queens Check",
+      "description": "Eight queens are placed on a chessboard. Positions are given as 8 pairs (x,y). Check if any two queens attack each other. If no two attack, print NO, otherwise YES.",
+      "inputDescription": "8 lines of two integers x y (1..8).",
+      "outputDescription": "YES or NO.",
+      "examples": [
+        "Classic 8-queens check problem."
+      ],
+      "starterCode": "using System;\nclass Program {\n    static void Main() {\n        int[] x = new int[8];\n        int[] y = new int[8];\n        // read positions and check rows, columns, diagonals\n    }\n}\n",
+      "tests": []
+    },
+    {
+      "id": 5,
+      "title": "Bowling Pins",
+      "description": "There are N bowling pins in a row, initially standing. Then K balls are thrown, each knocks down pins from l to r (inclusive). After all throws, print a string of length N: 'I' for standing pins, '.' for knocked down pins.",
+      "inputDescription": "First line: N K. Next K lines: l r.",
+      "outputDescription": "One line: string of length N consisting of 'I' and '.'.",
+      "examples": [
+        "Input:\n10 1\n3 6\n\nOutput:\nII....IIII"
+      ],
+      "starterCode": "using System;\nclass Program {\n    static void Main() {\n        string[] first = Console.ReadLine().Split();\n        int N = int.Parse(first[0]);\n        int K = int.Parse(first[1]);\n        // simulate knocking pins using a bool[] or char[]\n    }\n}\n",
+      "tests": []
+    },
+    {
+      "id": 6,
+      "title": "Guessing Game Helper",
+      "description": "Augustus thinks of a number from 1 to n. Beatrice repeatedly gives subsets of numbers and Augustus answers YES if his number is in the subset, NO otherwise. When Beatrice writes HELP, print all numbers that could still be Augustus's number in increasing order.",
+      "inputDescription": "First line: n. Then alternating lines: a line with numbers (subset) or the word HELP, and lines with YES/NO answers for subsets.",
+      "outputDescription": "One line: all possible numbers separated by spaces when HELP appears.",
+      "examples": [
+        "Based on classic 'Guess the number' helper problem."
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int n = int.Parse(Console.ReadLine());\n        // maintain possible set and update per YES/NO until HELP\n    }\n}\n",
+      "tests": []
+    },
+    {
+      "id": 7,
+      "title": "Languages in School",
+      "description": "Each of N students lists the languages they know. For each student: first k (number of languages), then k lines each with one language name. Output:\n1) Languages spoken by all students: first count, then list sorted; \n2) Languages spoken by at least one student: first count, then list sorted.",
+      "inputDescription": "First line: N. For each student: integer k, then k lines with language names.",
+      "outputDescription": "Two blocks: count and languages common to all, then count and languages in the union.",
+      "examples": [
+        "Classic 'languages' problem."
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int N = int.Parse(Console.ReadLine());\n        // track intersection and union sets of languages\n    }\n}\n",
+      "tests": []
+    },
+    {
+      "id": 8,
+      "title": "Word Occurrence Counts in Text",
+      "description": "Text is given in a single line. For each word, print how many times it has occurred before in the text. Words are separated by spaces. Print counts on the same line separated by spaces.",
+      "inputDescription": "One line: text.",
+      "outputDescription": "One line: integers for each word's previous count.",
+      "examples": [
+        "Input:\none two one two two\n\nOutput:\n0 0 1 1 2"
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        string[] words = Console.ReadLine().Split(new[]{' '}, StringSplitOptions.RemoveEmptyEntries);\n        var freq = new Dictionary<string,int>();\n        // for each word, print count so far, then increment\n    }\n}\n",
+      "tests": [
+        { "input": "one two one two two", "expected": "0 0 1 1 2" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Most Frequent Word Multi-Line",
+      "description": "Given n lines of text, determine the word with the highest frequency. If there are several, print the lexicographically smallest.",
+      "inputDescription": "First line: n. Next n lines: text.",
+      "outputDescription": "Single word: most frequent.",
+      "examples": [
+        "Example: hi hi what is hi -> hi"
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int n = int.Parse(Console.ReadLine());\n        var freq = new Dictionary<string,int>();\n        // count and pick best (max freq, then smallest word)\n    }\n}\n",
+      "tests": []
+    },
+    {
+      "id": 10,
+      "title": "Latin-English Dictionary Inversion",
+      "description": "You are given an English-Latin dictionary. Each line has the format: english - latin1,latin2,... Build the corresponding Latin-English dictionary: for each Latin word, list all English words that translate to it. Print lines sorted by Latin word; for each line print: latin - english1,english2,... with English words sorted.",
+      "inputDescription": "First line: N. Next N lines: 'english - latin1,latin2,...'.",
+      "outputDescription": "Latin-English dictionary in the described format.",
+      "examples": [
+        "Standard Latin-English inversion problem."
+      ],
+      "starterCode": "using System;\nusing System.Collections.Generic;\nclass Program {\n    static void Main() {\n        int N = int.Parse(Console.ReadLine());\n        var dict = new Dictionary<string,SortedSet<string>>();\n        // parse each line, fill dict, then print sorted by latin word\n    }\n}\n",
+      "tests": []
+    }
+  ]
+}

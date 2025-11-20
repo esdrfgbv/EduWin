@@ -1,33 +1,150 @@
 {
-  "title": "C++ Level 6 — Vectors & Dynamic Arrays",
-  "concept": "Use std::vector to store and process dynamic lists of integers.",
+  "title": "C++ Level 6 — Strings & Character Operations",
+  "concept": "Use std::string to index, slice, count, replace and modify characters in strings.",
   "challenges": [
     {
-      "title": "Vector Input & Sum",
-      "description": "Read N and then N integers into a vector, and print their sum.",
-      "inputDescription": "First line: N. Second line: N integers.",
-      "outputDescription": "Single integer: sum of all elements.",
+      "id": 1,
+      "title": "String Properties",
+      "description": "Given a string s, print:\n1) the 3rd character,\n2) the second-last character,\n3) the first 5 characters,\n4) all but the last 2 characters,\n5) characters with even indices,\n6) characters with odd indices,\n7) the string in reverse,\n8) every second character in reverse starting from the last,\n9) the length of the string.\nEach item must be printed on its own line.",
+      "inputDescription": "One line: string s (length >= 5).",
+      "outputDescription": "Nine lines as described.",
       "examples": [
-        "Input:\n4\n2 4 6 8\n\nOutput:\n20"
+        "Input:\nabcdef\n\nOutput:\nc\ne\nabcde\nabcd\nace\nbdf\nfedcba\nfdb\n6"
       ],
-      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int N;\n    // read N and then N integers into a vector, then print sum\n    return 0;\n}\n",
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    string s;\n    // read whole line into s and print slices\n    return 0;\n}\n",
       "tests": [
-        { "input": "4\n2 4 6 8", "expected": "20" },
-        { "input": "3\n1 1 1", "expected": "3" }
+        { "input": "abcdef", "expected": "c\ne\nabcde\nabcd\nace\nbdf\nfedcba\nfdb\n6" }
       ]
     },
     {
-      "title": "Count Greater Than X",
-      "description": "Given N, a vector of N integers and a value X, count how many elements are strictly greater than X.",
-      "inputDescription": "First line: N. Second line: N integers. Third line: X.",
-      "outputDescription": "Single integer: count of elements > X.",
+      "id": 2,
+      "title": "Word Count",
+      "description": "Given a line of text, count how many words it has. Words are separated by spaces (multiple spaces may appear).",
+      "inputDescription": "One line of text.",
+      "outputDescription": "Single integer: number of words.",
       "examples": [
-        "Input:\n5\n1 5 2 7 3\n3\n\nOutput:\n2"
+        "Input:\nHello world from C++\n\nOutput:\n4"
       ],
-      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int N;\n    // your code here using vector<int>\n    return 0;\n}\n",
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    string line;\n    // read line, split by spaces, count non-empty tokens\n    return 0;\n}\n",
       "tests": [
-        { "input": "5\n1 5 2 7 3\n3", "expected": "2" },
-        { "input": "4\n10 20 30 40\n25", "expected": "2" }
+        { "input": "Hello world from C++", "expected": "4" },
+        { "input": "One", "expected": "1" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Swap Two Words",
+      "description": "Given a string that contains exactly two words separated by a single space, swap the words.",
+      "inputDescription": "One line: two words separated by a space.",
+      "outputDescription": "The two words in reversed order, separated by a single space.",
+      "examples": [
+        "Input:\nhello world\n\nOutput:\nworld hello"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    string s;\n    // split into two words and swap\n    return 0;\n}\n",
+      "tests": [
+        { "input": "hello world", "expected": "world hello" },
+        { "input": "Ram Kiran", "expected": "Kiran Ram" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "First and Last f",
+      "description": "Given a string, print the index of the first and the last occurrence of the letter 'f'. Indices are 0-based. If 'f' occurs only once, print its index once. If it does not occur, print nothing.",
+      "inputDescription": "One line: string s.",
+      "outputDescription": "Either one or two integers separated by a space, or empty output.",
+      "examples": [
+        "Input:\ncoffee\n\nOutput:\n1 4"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    string s;\n    // find first and last position of 'f'\n    return 0;\n}\n",
+      "tests": [
+        { "input": "coffee", "expected": "1 4" },
+        { "input": "abc", "expected": "" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Second Occurrence of f",
+      "description": "Given a string, print the index of the second occurrence of 'f'. If the string contains 'f' only once, print -1; if it does not contain 'f', print -2.",
+      "inputDescription": "One line: string s.",
+      "outputDescription": "Single integer: index or -1 or -2.",
+      "examples": [
+        "Input:\ncoffee\n\nOutput:\n4"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    string s;\n    // scan to find second 'f'\n    return 0;\n}\n",
+      "tests": [
+        { "input": "coffee", "expected": "4" },
+        { "input": "fast", "expected": "-1" },
+        { "input": "abc", "expected": "-2" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Remove Between First and Last h",
+      "description": "Given a string containing at least two 'h' characters, remove the first 'h', the last 'h' and all characters between them. Print the result.",
+      "inputDescription": "One line: string s with at least two 'h'.",
+      "outputDescription": "Modified string.",
+      "examples": [
+        "Input:\nabchxyzha\n\nOutput:\naba"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    string s;\n    // erase substring from first 'h' to last 'h' inclusive\n    return 0;\n}\n",
+      "tests": [
+        { "input": "abchxyzha", "expected": "aba" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Reverse Between First and Last h",
+      "description": "Given a string containing at least two 'h' characters, reverse the characters between the first and last 'h'. Keep all 'h' and other characters in place.",
+      "inputDescription": "One line: string s with at least two 'h'.",
+      "outputDescription": "New string with middle segment reversed.",
+      "examples": [
+        "Input:\nahbcdefhg\n\nOutput:\nahfedcbhg"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    string s;\n    // find first and last 'h' and reverse substring between them\n    return 0;\n}\n",
+      "tests": [
+        { "input": "ahbcdefhg", "expected": "ahfedcbhg" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Replace 1 With one",
+      "description": "Given a string, replace every digit character '1' with the word \"one\".",
+      "inputDescription": "One line: string s.",
+      "outputDescription": "Modified string.",
+      "examples": [
+        "Input:\nI have 1 apple\n\nOutput:\nI have one apple"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    string s;\n    // build new string, replacing '1' with \"one\"\n    return 0;\n}\n",
+      "tests": [
+        { "input": "1", "expected": "one" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Remove @ Characters",
+      "description": "Given a string, remove all '@' characters from it and print the result.",
+      "inputDescription": "One line: string s.",
+      "outputDescription": "String without '@'.",
+      "examples": [
+        "Input:\na@b@c\n\nOutput:\nabc"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    string s;\n    // copy all chars except '@' into new string\n    return 0;\n}\n",
+      "tests": [
+        { "input": "a@b@c", "expected": "abc" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Replace Middle h With H",
+      "description": "Given a string with at least two 'h' characters, replace every 'h' between the first and last 'h' (not including them) with 'H'. The first and last 'h' remain lowercase.",
+      "inputDescription": "One line: string s with at least two 'h'.",
+      "outputDescription": "Modified string.",
+      "examples": [
+        "Input:\nhihhih\n\nOutput:\nhiHHih"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    string s;\n    // find first and last 'h' and replace inside range\n    return 0;\n}\n",
+      "tests": [
+        { "input": "hihhih", "expected": "hiHHih" }
       ]
     }
   ]

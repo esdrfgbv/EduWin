@@ -1,138 +1,126 @@
 {
-  "level": 3,
-  "title": "Loops (for / while)",
-  "concept": "This level focuses on using for and while loops in Python. You will practice printing sequences, computing sums, factorial, digit operations and simple number algorithms.",
+  "title": "Python Level 3 — Loops & Simple Number Algorithms",
+  "concept": "Use while and for loops to iterate ranges, compute sums, factorials, and simple numeric properties.",
   "challenges": [
     {
       "id": 1,
       "title": "Print 1 to N",
-      "description": "Read an integer N and print numbers from 1 to N separated by spaces.",
-      "inputDescription": "Single integer N.",
-      "outputDescription": "1 2 3 ... N",
-      "examples": ["Input:\n5\nOutput:\n1 2 3 4 5"],
-      "starterCode": "n = int(input())\n# print 1 to n\n",
-      "tests": [
-        { "input": "5", "expected": "1 2 3 4 5" },
-        { "input": "1", "expected": "1" }
-      ]
+      "description": "Given an integer N, print all integers from 1 to N inclusive on one line separated by spaces.",
+      "inputDescription": "Single integer N (N ≥ 1).",
+      "outputDescription": "Numbers 1 2 ... N.",
+      "examples": [
+        "Input:\n5\n\nOutput:\n1 2 3 4 5"
+      ],
+      "starterCode": "def main():\n    N = int(input().strip())\n    # TODO: use a loop to print 1..N\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 2,
-      "title": "Sum of 1 to N",
-      "description": "Calculate the sum of numbers from 1 to N and print it.",
-      "inputDescription": "Single integer N.",
-      "outputDescription": "Sum as integer.",
-      "examples": ["Input:\n5\nOutput:\n15"],
-      "starterCode": "n = int(input())\n# compute 1+2+...+n\n",
-      "tests": [
-        { "input": "5", "expected": "15" },
-        { "input": "10", "expected": "55" }
-      ]
+      "title": "Sum from 1 to N",
+      "description": "Given N, compute the sum of all integers from 1 to N using a loop (do not use the formula).",
+      "inputDescription": "Single integer N (N ≥ 1).",
+      "outputDescription": "Single integer: sum 1 + 2 + ... + N.",
+      "examples": [
+        "Input:\n5\n\nOutput:\n15"
+      ],
+      "starterCode": "def main():\n    N = int(input().strip())\n    total = 0\n    # TODO: loop i from 1 to N and add to total, then print\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 3,
       "title": "Factorial",
-      "description": "Read N and print N! (factorial of N). Assume N is non-negative and small enough.",
-      "inputDescription": "Single integer N.",
-      "outputDescription": "N! as integer.",
-      "examples": ["Input:\n4\nOutput:\n24"],
-      "starterCode": "n = int(input())\n# compute factorial using loop\n",
-      "tests": [
-        { "input": "4", "expected": "24" },
-        { "input": "5", "expected": "120" }
-      ]
+      "description": "Given integer n (0 ≤ n ≤ 20), compute n! (n factorial) using a loop.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Single integer: n!.",
+      "examples": [
+        "Input:\n4\n\nOutput:\n24"
+      ],
+      "starterCode": "def main():\n    n = int(input().strip())\n    fact = 1\n    # TODO: multiply fact by each number from 1 to n\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 4,
-      "title": "Multiplication Table",
-      "description": "Read an integer N and print its multiplication table from 1 to 10. Each line should be: N x i = value",
-      "inputDescription": "Single integer N.",
-      "outputDescription": "10 lines of multiplication table.",
-      "examples": ["Input:\n2\nOutput:\n2 x 1 = 2\n2 x 2 = 4\n...\n2 x 10 = 20"],
-      "starterCode": "n = int(input())\n# print table lines\n",
-      "tests": [
-        { "input": "2", "expected": "2 x 1 = 2\n2 x 2 = 4\n2 x 3 = 6\n2 x 4 = 8\n2 x 5 = 10\n2 x 6 = 12\n2 x 7 = 14\n2 x 8 = 16\n2 x 9 = 18\n2 x 10 = 20" },
-        { "input": "3", "expected": "3 x 1 = 3\n3 x 2 = 6\n3 x 3 = 9\n3 x 4 = 12\n3 x 5 = 15\n3 x 6 = 18\n3 x 7 = 21\n3 x 8 = 24\n3 x 9 = 27\n3 x 10 = 30" }
-      ]
+      "title": "Count Digits",
+      "description": "Given a non-negative integer N, count how many digits it has in decimal representation.",
+      "inputDescription": "Single integer N (N ≥ 0).",
+      "outputDescription": "Single integer: number of digits.",
+      "examples": [
+        "Input:\n12345\n\nOutput:\n5"
+      ],
+      "starterCode": "def main():\n    n = int(input().strip())\n    # TODO: count digits (handle 0 as 1 digit)\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 5,
-      "title": "Count Digits",
-      "description": "Read an integer and print how many digits it has.",
-      "inputDescription": "Single integer n.",
-      "outputDescription": "Number of digits.",
-      "examples": ["Input:\n12345\nOutput:\n5"],
-      "starterCode": "n = int(input())\n# count digits\n",
-      "tests": [
-        { "input": "12345", "expected": "5" },
-        { "input": "7", "expected": "1" }
-      ]
+      "title": "Sum of Digits",
+      "description": "Given a non-negative integer N, compute the sum of its digits.",
+      "inputDescription": "Single integer N (N ≥ 0).",
+      "outputDescription": "Single integer: sum of all decimal digits.",
+      "examples": [
+        "Input:\n1234\n\nOutput:\n10"
+      ],
+      "starterCode": "def main():\n    n = int(input().strip())\n    # TODO: repeatedly take last digit and add to sum\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 6,
-      "title": "Sum of Digits",
-      "description": "Read an integer n and print the sum of its digits.",
-      "inputDescription": "Single integer n.",
-      "outputDescription": "Sum of digits.",
-      "examples": ["Input:\n246\nOutput:\n12"],
-      "starterCode": "n = int(input())\n# sum the digits\n",
-      "tests": [
-        { "input": "246", "expected": "12" },
-        { "input": "999", "expected": "27" }
-      ]
+      "title": "Reverse Digits",
+      "description": "Given a non-negative integer N, print the integer that has the digits of N in reverse order (no leading zeros in output unless N = 0).",
+      "inputDescription": "Single integer N (N ≥ 0).",
+      "outputDescription": "Single integer: reversed N.",
+      "examples": [
+        "Input:\n1230\n\nOutput:\n321"
+      ],
+      "starterCode": "def main():\n    n = int(input().strip())\n    # TODO: build reversed number using % 10 and // 10\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 7,
-      "title": "Reverse Number",
-      "description": "Read an integer and print its digits in reverse order (as integer).",
-      "inputDescription": "Single integer n.",
-      "outputDescription": "Reversed integer.",
-      "examples": ["Input:\n1234\nOutput:\n4321"],
-      "starterCode": "n = int(input())\n# reverse digits\n",
-      "tests": [
-        { "input": "1234", "expected": "4321" },
-        { "input": "500", "expected": "5" }
-      ]
+      "title": "Power of Two",
+      "description": "Given integer N, determine if N is a power of two (1, 2, 4, 8, ...). Print YES if it is, otherwise NO.",
+      "inputDescription": "Single integer N (N ≥ 1).",
+      "outputDescription": "YES or NO.",
+      "examples": [
+        "Input:\n16\n\nOutput:\nYES"
+      ],
+      "starterCode": "def main():\n    N = int(input().strip())\n    # TODO: check if N is a power of two using a loop or bit trick\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 8,
-      "title": "Power a^b",
-      "description": "Read integers a and b and compute a^b using a loop (do not use built-in pow).",
-      "inputDescription": "Two integers a and b.",
-      "outputDescription": "a to the power b.",
-      "examples": ["Input:\n2 3\nOutput:\n8"],
-      "starterCode": "a, b = map(int, input().split())\n# compute a^b\n",
-      "tests": [
-        { "input": "2 3", "expected": "8" },
-        { "input": "5 2", "expected": "25" }
-      ]
+      "title": "Number of Zeros in Sequence",
+      "description": "First read integer N. Then read N integers. Count how many of them are equal to zero and print the count.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Single integer: count of zeros.",
+      "examples": [
+        "Input:\n5\n1 0 2 0 3\n\nOutput:\n2"
+      ],
+      "starterCode": "def main():\n    N = int(input().strip())\n    arr = list(map(int, input().split()))\n    # TODO: count how many elements are 0\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 9,
-      "title": "Fibonacci N Terms",
-      "description": "Print the first N Fibonacci numbers separated by spaces. Start with 0 1 1 2 3...",
-      "inputDescription": "Single integer N.",
-      "outputDescription": "N Fibonacci numbers on one line.",
-      "examples": ["Input:\n5\nOutput:\n0 1 1 2 3"],
-      "starterCode": "n = int(input())\n# print first n fibonacci numbers\n",
-      "tests": [
-        { "input": "5", "expected": "0 1 1 2 3" },
-        { "input": "1", "expected": "0" }
-      ]
+      "title": "Smallest Divisor Greater Than 1",
+      "description": "Given integer n ≥ 2, find its smallest divisor greater than 1 and print it.",
+      "inputDescription": "Single integer n (n ≥ 2).",
+      "outputDescription": "Smallest divisor d > 1.",
+      "examples": [
+        "Input:\n15\n\nOutput:\n3"
+      ],
+      "starterCode": "def main():\n    n = int(input().strip())\n    # TODO: try divisors from 2 upward until one divides n\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 10,
-      "title": "Prime or Not",
-      "description": "Check if a number is prime. Print Yes if prime, otherwise print No.",
-      "inputDescription": "Single integer n (n >= 1).",
-      "outputDescription": "Yes | No",
-      "examples": ["Input:\n7\nOutput:\nYes"],
-      "starterCode": "n = int(input())\n# check primality using loop\n",
-      "tests": [
-        { "input": "7", "expected": "Yes" },
-        { "input": "9", "expected": "No" },
-        { "input": "1", "expected": "No" }
-      ]
+      "title": "Fibonacci Number",
+      "description": "Given n (0 ≤ n ≤ 45), compute the n-th Fibonacci number assuming F0 = 0, F1 = 1.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Single integer: F_n.",
+      "examples": [
+        "Input:\n7\n\nOutput:\n13"
+      ],
+      "starterCode": "def main():\n    n = int(input().strip())\n    # TODO: compute Fibonacci iteratively (loop)\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     }
   ]
 }

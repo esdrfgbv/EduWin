@@ -1,36 +1,134 @@
 {
-  "title": "JavaScript Level 10 — Objects, Maps & Frequencies",
-  "concept": "Use objects as frequency maps to solve small problems.",
+  "title": "JavaScript Level 10 — Combined Logic & Data Structures",
+  "concept": "Combine loops, arrays, strings, sets and maps to solve slightly larger problems.",
   "challenges": [
     {
-      "title": "Frequency of Numbers",
-      "description": "Given N and N integers, print the frequency of each distinct number in increasing order of the number. Each line should contain: number count.",
-      "inputDescription": "First line: N. Second line: N integers.",
-      "outputDescription": "Multiple lines of 'number count' in ascending order of number.",
+      "id": 1,
+      "title": "Fibonacci Index",
+      "description": "Given an integer a, determine its index in the Fibonacci sequence (0-based: fib(0)=0, fib(1)=1). If a is not a Fibonacci number, print -1.",
+      "inputDescription": "Single integer a.",
+      "outputDescription": "Index n such that fib(n)=a, or -1.",
       "examples": [
-        "Input:\n5\n1 2 2 3 1\n\nOutput:\n1 2\n2 2\n3 1"
+        "Input:\n5\n\nOutput:\n5",
+        "Input:\n4\n\nOutput:\n-1"
       ],
-      "starterCode": "const fs = require('fs');\nconst data = fs.readFileSync(0, 'utf8').trim().split(/\\s+/);\n// Use an object to store frequencies and then print in sorted order\n",
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const a = BigInt(fs.readFileSync(0, 'utf8').trim());\n  // generate Fibonacci numbers until >= a, then check\n}\n\nmain();\n",
       "tests": [
-        {
-          "input": "5\n1 2 2 3 1",
-          "expected": "1 2\n2 2\n3 1"
-        }
+        { "input": "5", "expected": "5" },
+        { "input": "4", "expected": "-1" }
       ]
     },
     {
-      "title": "Sum of Unique Elements",
-      "description": "Given N and an array of N integers, compute the sum of distinct elements (each value counted only once).",
-      "inputDescription": "First line: N. Second line: N integers.",
-      "outputDescription": "Single integer: sum of distinct values.",
+      "id": 2,
+      "title": "Second Maximum in Sequence",
+      "description": "The sequence consists of distinct positive integers ending with 0. Find the second largest element (ignore the final 0).",
+      "inputDescription": "Positive integers (distinct) each on its own line, ending with 0.",
+      "outputDescription": "Single integer: second largest.",
       "examples": [
-        "Input:\n5\n1 2 2 3 1\n\nOutput:\n6"
+        "Input:\n1\n7\n9\n0\n\nOutput:\n7"
       ],
-      "starterCode": "const fs = require('fs');\nconst data = fs.readFileSync(0, 'utf8').trim().split(/\\s+/);\n// Use an object or Set to track distinct numbers and compute sum\n",
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const data = fs.readFileSync(0, 'utf8').trim().split(/\\s+/).map(Number);\n  let max1 = 0, max2 = 0;\n  // scan data until 0, track two largest\n}\n\nmain();\n",
       "tests": [
-        { "input": "5\n1 2 2 3 1", "expected": "6" },
-        { "input": "4\n5 5 5 5", "expected": "5" }
+        { "input": "1\n7\n9\n0", "expected": "7" }
       ]
+    },
+    {
+      "id": 3,
+      "title": "Sequence Statistics",
+      "description": "Given a sequence of integers ending with 0, compute:\n1) the sum of all numbers (excluding final 0),\n2) the maximum value,\n3) the count of even numbers,\n4) how many numbers are equal to the maximum.\nPrint each result on its own line in that order.",
+      "inputDescription": "Integers each on its own line, ending with 0.",
+      "outputDescription": "Four lines: sum, max, evenCount, maxCount.",
+      "examples": [
+        "Example only."
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const nums = fs.readFileSync(0, 'utf8').trim().split(/\\s+/).map(Number);\n  let sum = 0;\n  let mx = Number.NEGATIVE_INFINITY;\n  let evenCount = 0;\n  let maxCount = 0;\n  // process until 0, compute stats\n}\n\nmain();\n",
+      "tests": []
+    },
+    {
+      "id": 4,
+      "title": "8 Queens Check",
+      "description": "Eight queens are placed on a chessboard. Positions are given as 8 pairs (x,y). Check if any two queens attack each other. If no two attack, print NO, otherwise YES.",
+      "inputDescription": "8 lines of two integers x y (1..8).",
+      "outputDescription": "YES or NO.",
+      "examples": [
+        "Classic 8-queens check problem."
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const data = fs.readFileSync(0, 'utf8').trim().split(/\\s+/).map(Number);\n  const x = [], y = [];\n  for (let i = 0; i < 8; i++) {\n    x.push(data[2*i]);\n    y.push(data[2*i + 1]);\n  }\n  // check rows, columns, diagonals; print YES if any attack else NO\n}\n\nmain();\n",
+      "tests": []
+    },
+    {
+      "id": 5,
+      "title": "Bowling Pins",
+      "description": "There are N bowling pins in a row, initially standing. Then K balls are thrown, each knocks down pins from l to r (inclusive). After all throws, print a string of length N: 'I' for standing pins, '.' for knocked down pins.",
+      "inputDescription": "First line: N K. Next K lines: l r.",
+      "outputDescription": "One line: string of length N consisting of 'I' and '.'.",
+      "examples": [
+        "Input:\n10 1\n3 6\n\nOutput:\nII....IIII"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const lines = fs.readFileSync(0, 'utf8').trim().split(/\\r?\\n/);\n  const first = lines[0].trim().split(/\\s+/).map(Number);\n  const N = first[0];\n  const K = first[1];\n  // simulate knocking pins using an array\n}\n\nmain();\n",
+      "tests": []
+    },
+    {
+      "id": 6,
+      "title": "Guessing Game Helper",
+      "description": "Augustus thinks of a number from 1 to n. Beatrice repeatedly gives subsets of numbers and Augustus answers YES if his number is in the subset, NO otherwise. When Beatrice writes HELP, print all numbers that could still be Augustus's number in increasing order.",
+      "inputDescription": "First line: n. Then alternating lines: subsets or HELP, with YES/NO responses for subsets.",
+      "outputDescription": "One line: all possible numbers separated by spaces when HELP appears.",
+      "examples": [
+        "Based on classic 'Guess the number' helper problem."
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const lines = fs.readFileSync(0, 'utf8').trim().split(/\\r?\\n/);\n  let i = 0;\n  const n = parseInt(lines[i++].trim(), 10);\n  // maintain possible set and update after each YES/NO until HELP\n}\n\nmain();\n",
+      "tests": []
+    },
+    {
+      "id": 7,
+      "title": "Languages in School",
+      "description": "Each of N students lists the languages they know. For each student: first k (number of languages), then k lines each with one language name. Output:\n1) Languages spoken by all students: first count, then list sorted;\n2) Languages spoken by at least one student: first count, then list sorted.",
+      "inputDescription": "First line: N. For each student: integer k, then k lines with language names.",
+      "outputDescription": "Two blocks: count and languages common to all, then count and languages in the union.",
+      "examples": [
+        "Classic 'languages' problem."
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const lines = fs.readFileSync(0, 'utf8').trim().split(/\\r?\\n/);\n  let i = 0;\n  const N = parseInt(lines[i++].trim(), 10);\n  // track intersection and union of language sets\n}\n\nmain();\n",
+      "tests": []
+    },
+    {
+      "id": 8,
+      "title": "Word Occurrence Counts in Text",
+      "description": "Text is given in a single line. For each word, print how many times it has occurred before in the text. Words are separated by spaces. Print counts on the same line separated by spaces.",
+      "inputDescription": "One line: text.",
+      "outputDescription": "One line: integers for each word's previous count.",
+      "examples": [
+        "Input:\none two one two two\n\nOutput:\n0 0 1 1 2"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const words = fs.readFileSync(0, 'utf8').trim().split(/\\s+/);\n  const freq = new Map();\n  // for each word, print count so far then increment\n}\n\nmain();\n",
+      "tests": [
+        { "input": "one two one two two", "expected": "0 0 1 1 2" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Most Frequent Word Multi-Line",
+      "description": "Given n lines of text, determine the word with the highest frequency. If there are several, print the lexicographically smallest.",
+      "inputDescription": "First line: n. Next n lines: text.",
+      "outputDescription": "Single word: most frequent.",
+      "examples": [
+        "Example: hi hi what is hi -> hi"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const lines = fs.readFileSync(0, 'utf8').split(/\\r?\\n/);\n  const n = parseInt(lines[0].trim(), 10);\n  const freq = new Map();\n  // count words, choose by (freq desc, word asc)\n}\n\nmain();\n",
+      "tests": []
+    },
+    {
+      "id": 10,
+      "title": "Latin-English Dictionary Inversion",
+      "description": "You are given an English-Latin dictionary. Each line has the format: english - latin1,latin2,... Build the corresponding Latin-English dictionary: for each Latin word, list all English words that translate to it. Print lines sorted by Latin word; for each line print: latin - english1,english2,... with English words sorted.",
+      "inputDescription": "First line: N. Next N lines: 'english - latin1,latin2,...'.",
+      "outputDescription": "Latin-English dictionary in the described format.",
+      "examples": [
+        "Standard Latin-English inversion problem."
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const lines = fs.readFileSync(0, 'utf8').trim().split(/\\r?\\n/);\n  let i = 0;\n  const N = parseInt(lines[i++].trim(), 10);\n  const dict = new Map(); // latin -> Set(english)\n  // parse each line, fill dict, then print sorted\n}\n\nmain();\n",
+      "tests": []
     }
   ]
 }

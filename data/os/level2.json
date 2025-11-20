@@ -1,28 +1,126 @@
 {
-  "title": "OS Level 2 — Process Concepts & States",
-  "concept": "MCQs on process, states and PCB.",
-  "challenges": [
+  "title": "OS Level 2 — Memory & Synchronization",
+  "concept": "Paging, segmentation, deadlocks, critical section and semaphores.",
+  "questions": [
     {
-      "title": "Q1: Process Definition",
-      "description": "A process in an operating system is:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) A program stored on disk\nb) A program in execution\nc) A compiler program\nd) A device driver only"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "Virtual memory is primarily used to:",
+      "options": {
+        "A": "Increase CPU speed",
+        "B": "Increase effective memory size using disk",
+        "C": "Reduce disk usage",
+        "D": "Encrypt data"
+      },
+      "answer": "B",
+      "explanation": "Virtual memory uses disk to simulate a larger main memory."
     },
     {
-      "title": "Q2: Process State Not Valid",
-      "description": "Which of the following is NOT typically a process state?",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) Ready\nb) Running\nc) Blocked/Waiting\nd) Compiling"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "Which is TRUE about paging?",
+      "options": {
+        "A": "Pages are variable-sized blocks",
+        "B": "It eliminates external fragmentation",
+        "C": "It eliminates internal fragmentation",
+        "D": "It does not use page tables"
+      },
+      "answer": "B",
+      "explanation": "Paging uses fixed-size frames/pages so external fragmentation is removed; internal fragmentation can remain."
+    },
+    {
+      "id": 3,
+      "question": "In segmentation, a logical address consists of:",
+      "options": {
+        "A": "Page number and offset",
+        "B": "Segment number and offset",
+        "C": "Frame number only",
+        "D": "Base and limit"
+      },
+      "answer": "B",
+      "explanation": "Segmentation uses segment number + offset within that segment."
+    },
+    {
+      "id": 4,
+      "question": "Which of the following is NOT a necessary condition for deadlock?",
+      "options": {
+        "A": "Mutual exclusion",
+        "B": "Hold and wait",
+        "C": "No preemption",
+        "D": "Shortest job first"
+      },
+      "answer": "D",
+      "explanation": "Deadlock conditions are mutual exclusion, hold & wait, no preemption, and circular wait."
+    },
+    {
+      "id": 5,
+      "question": "The critical section problem arises in:",
+      "options": {
+        "A": "Single-process systems only",
+        "B": "Multi-process or multi-threaded systems sharing data",
+        "C": "Systems without memory",
+        "D": "Only real-time systems"
+      },
+      "answer": "B",
+      "explanation": "Critical sections occur when concurrent entities access shared data."
+    },
+    {
+      "id": 6,
+      "question": "Which of the following is a synchronization primitive?",
+      "options": {
+        "A": "Semaphore",
+        "B": "Page table",
+        "C": "Cache",
+        "D": "Stack pointer"
+      },
+      "answer": "A",
+      "explanation": "Semaphores are used to enforce mutual exclusion or signaling among processes/threads."
+    },
+    {
+      "id": 7,
+      "question": "Binary semaphore is used to:",
+      "options": {
+        "A": "Count arbitrary resources",
+        "B": "Implement mutual exclusion (lock)",
+        "C": "Store process IDs",
+        "D": "Handle interrupts"
+      },
+      "answer": "B",
+      "explanation": "Binary semaphore (0/1) is essentially a mutex."
+    },
+    {
+      "id": 8,
+      "question": "Thrashing in an OS is:",
+      "options": {
+        "A": "CPU overheating",
+        "B": "Excessive context switching",
+        "C": "Excessive paging activity with little useful work",
+        "D": "Disk failure"
+      },
+      "answer": "C",
+      "explanation": "Thrashing occurs when the system spends most of its time swapping pages instead of executing."
+    },
+    {
+      "id": 9,
+      "question": "Which page replacement algorithm can suffer from Belady's anomaly?",
+      "options": {
+        "A": "Optimal",
+        "B": "LRU",
+        "C": "FIFO",
+        "D": "Clock"
+      },
+      "answer": "C",
+      "explanation": "FIFO can show Belady's anomaly where more frames cause more page faults."
+    },
+    {
+      "id": 10,
+      "question": "Which data structure is typically used for implementing a page table?",
+      "options": {
+        "A": "Stack",
+        "B": "Linked list",
+        "C": "Array",
+        "D": "Binary search tree"
+      },
+      "answer": "C",
+      "explanation": "Traditional page tables are arrays indexed by page number (though hierarchical/hashed variations exist)."
     }
   ]
 }

@@ -1,33 +1,150 @@
 {
-  "title": "JavaScript Level 6 — Functions",
-  "concept": "Define and call functions to perform calculations.",
+  "title": "JavaScript Level 6 — Strings & Character Operations",
+  "concept": "Use strings to index, slice, count, replace and modify characters.",
   "challenges": [
     {
-      "title": "Square of a Number",
-      "description": "Read an integer n and print its square (n * n).",
-      "inputDescription": "Single integer n.",
-      "outputDescription": "Single integer: n squared.",
+      "id": 1,
+      "title": "String Properties",
+      "description": "Given a string s, print:\n1) the 3rd character,\n2) the second-last character,\n3) the first 5 characters,\n4) all but the last 2 characters,\n5) characters with even indices,\n6) characters with odd indices,\n7) the string in reverse,\n8) every second character in reverse starting from the last,\n9) the length of the string.\nEach item must be printed on its own line.",
+      "inputDescription": "One line: string s (length >= 5).",
+      "outputDescription": "Nine lines as described.",
       "examples": [
-        "Input:\n4\n\nOutput:\n16"
+        "Input:\nabcdef\n\nOutput:\nc\ne\nabcde\nabcd\nace\nbdf\nfedcba\nfdb\n6"
       ],
-      "starterCode": "const fs = require('fs');\nconst input = fs.readFileSync(0, 'utf8').trim();\n\nfunction square(n) {\n  // return n * n;\n}\n\n// Use the function and print the result\n",
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const s = fs.readFileSync(0, 'utf8').replace(/\\r?\\n$/, '');\n  // print required slices and length, each on its own line\n}\n\nmain();\n",
       "tests": [
-        { "input": "4", "expected": "16" },
-        { "input": "0", "expected": "0" }
+        { "input": "abcdef", "expected": "c\ne\nabcde\nabcd\nace\nbdf\nfedcba\nfdb\n6" }
       ]
     },
     {
-      "title": "Absolute Value using Function",
-      "description": "Read an integer n and print its absolute value using a function absValue(n).",
-      "inputDescription": "Single integer n.",
-      "outputDescription": "Single integer: absolute value of n.",
+      "id": 2,
+      "title": "Word Count",
+      "description": "Given a line of text, count how many words it has. Words are separated by spaces (multiple spaces may appear).",
+      "inputDescription": "One line of text.",
+      "outputDescription": "Single integer: number of words.",
       "examples": [
-        "Input:\n-5\n\nOutput:\n5"
+        "Input:\nHello world from JS\n\nOutput:\n4"
       ],
-      "starterCode": "const fs = require('fs');\nconst input = fs.readFileSync(0, 'utf8').trim();\n\nfunction absValue(n) {\n  // if n is negative, return -n, else return n\n}\n\n// Call absValue and print the result\n",
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const line = fs.readFileSync(0, 'utf8').trim();\n  // split by spaces, ignore empty entries, count\n}\n\nmain();\n",
       "tests": [
-        { "input": "-5", "expected": "5" },
-        { "input": "7", "expected": "7" }
+        { "input": "Hello world from JS", "expected": "4" },
+        { "input": "One", "expected": "1" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Swap Two Words",
+      "description": "Given a string that contains exactly two words separated by a single space, swap the words.",
+      "inputDescription": "One line: two words separated by a space.",
+      "outputDescription": "The two words in reversed order, separated by a single space.",
+      "examples": [
+        "Input:\nhello world\n\nOutput:\nworld hello"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const s = fs.readFileSync(0, 'utf8').trim();\n  // split into two words and swap\n}\n\nmain();\n",
+      "tests": [
+        { "input": "hello world", "expected": "world hello" },
+        { "input": "Ram Kiran", "expected": "Kiran Ram" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "First and Last f",
+      "description": "Given a string, print the index of the first and the last occurrence of the letter 'f'. Indices are 0-based. If 'f' occurs only once, print its index once. If it does not occur, print nothing.",
+      "inputDescription": "One line: string s.",
+      "outputDescription": "Either one or two integers separated by a space, or empty output.",
+      "examples": [
+        "Input:\ncoffee\n\nOutput:\n1 4"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const s = fs.readFileSync(0, 'utf8').trim();\n  // use indexOf and lastIndexOf\n}\n\nmain();\n",
+      "tests": [
+        { "input": "coffee", "expected": "1 4" },
+        { "input": "abc", "expected": "" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Second Occurrence of f",
+      "description": "Given a string, print the index of the second occurrence of 'f'. If the string contains 'f' only once, print -1; if it does not contain 'f', print -2.",
+      "inputDescription": "One line: string s.",
+      "outputDescription": "Single integer: index or -1 or -2.",
+      "examples": [
+        "Input:\ncoffee\n\nOutput:\n4"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const s = fs.readFileSync(0, 'utf8').trim();\n  // scan to find second 'f'\n}\n\nmain();\n",
+      "tests": [
+        { "input": "coffee", "expected": "4" },
+        { "input": "fast", "expected": "-1" },
+        { "input": "abc", "expected": "-2" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Remove Between First and Last h",
+      "description": "Given a string containing at least two 'h' characters, remove the first 'h', the last 'h' and all characters between them. Print the result.",
+      "inputDescription": "One line: string s with at least two 'h'.",
+      "outputDescription": "Modified string.",
+      "examples": [
+        "Input:\nabchxyzha\n\nOutput:\naba"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const s = fs.readFileSync(0, 'utf8').trim();\n  // erase substring between first and last 'h' inclusive\n}\n\nmain();\n",
+      "tests": [
+        { "input": "abchxyzha", "expected": "aba" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Reverse Between First and Last h",
+      "description": "Given a string containing at least two 'h' characters, reverse the characters between the first and last 'h'. Keep all 'h' and other characters in place.",
+      "inputDescription": "One line: string s with at least two 'h'.",
+      "outputDescription": "New string with middle segment reversed.",
+      "examples": [
+        "Input:\nahbcdefhg\n\nOutput:\nahfedcbhg"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const s = fs.readFileSync(0, 'utf8').trim();\n  // find first and last 'h', reverse substring between them\n}\n\nmain();\n",
+      "tests": [
+        { "input": "ahbcdefhg", "expected": "ahfedcbhg" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Replace 1 With one",
+      "description": "Given a string, replace every digit character '1' with the word \"one\".",
+      "inputDescription": "One line: string s.",
+      "outputDescription": "Modified string.",
+      "examples": [
+        "Input:\nI have 1 apple\n\nOutput:\nI have one apple"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const s = fs.readFileSync(0, 'utf8').trim();\n  // build new string, replacing '1' with \"one\"\n}\n\nmain();\n",
+      "tests": [
+        { "input": "1", "expected": "one" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Remove @ Characters",
+      "description": "Given a string, remove all '@' characters from it and print the result.",
+      "inputDescription": "One line: string s.",
+      "outputDescription": "String without '@'.",
+      "examples": [
+        "Input:\na@b@c\n\nOutput:\nabc"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const s = fs.readFileSync(0, 'utf8').trim();\n  // copy all chars except '@' into a new string\n}\n\nmain();\n",
+      "tests": [
+        { "input": "a@b@c", "expected": "abc" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Replace Middle h With H",
+      "description": "Given a string with at least two 'h' characters, replace every 'h' between the first and last 'h' (not including them) with 'H'. The first and last 'h' remain lowercase.",
+      "inputDescription": "One line: string s with at least two 'h'.",
+      "outputDescription": "Modified string.",
+      "examples": [
+        "Input:\nhihhih\n\nOutput:\nhiHHih"
+      ],
+      "starterCode": "const fs = require('fs');\n\nfunction main() {\n  const s = fs.readFileSync(0, 'utf8').trim();\n  // find first & last 'h', replace middle 'h' with 'H'\n}\n\nmain();\n",
+      "tests": [
+        { "input": "hihhih", "expected": "hiHHih" }
       ]
     }
   ]

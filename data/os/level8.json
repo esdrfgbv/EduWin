@@ -1,28 +1,126 @@
 {
-  "title": "OS Level 8 — Memory Management & Paging",
-  "concept": "MCQs on paging, logical vs physical address and fragmentation.",
-  "challenges": [
+  "title": "OS Level 8 — Deadlocks & Resource Management",
+  "concept": "Deadlock modeling, prevention, avoidance (Banker’s), detection and recovery.",
+  "questions": [
     {
-      "title": "Q1: Paging",
-      "description": "In paging, logical memory is divided into:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) Frames\nb) Pages\nc) Segments\nd) Blocks of variable size"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "Which of the following is NOT a Coffman condition for deadlock?",
+      "options": {
+        "A": "Mutual exclusion",
+        "B": "Hold and wait",
+        "C": "No preemption",
+        "D": "Shortest job first"
+      },
+      "answer": "D",
+      "explanation": "Deadlock conditions: mutual exclusion, hold and wait, no preemption, circular wait."
     },
     {
-      "title": "Q2: Fragmentation Type",
-      "description": "In paging, which type of fragmentation can occur?",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) External fragmentation only\nb) Internal fragmentation only\nc) Both internal and external\nd) No fragmentation"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "Deadlock prevention aims to:",
+      "options": {
+        "A": "Allow deadlocks and then recover",
+        "B": "Dynamically analyze resource allocation graph for cycles",
+        "C": "Ensure at least one of the necessary conditions for deadlock never holds",
+        "D": "Ignore deadlocks completely"
+      },
+      "answer": "C",
+      "explanation": "Prevention breaks at least one deadlock condition structurally."
+    },
+    {
+      "id": 3,
+      "question": "Banker’s algorithm is used for:",
+      "options": {
+        "A": "Deadlock detection in completed schedules",
+        "B": "Deadlock avoidance by checking safety of each resource request",
+        "C": "Deadlock prevention by disabling mutual exclusion",
+        "D": "CPU scheduling"
+      },
+      "answer": "B",
+      "explanation": "The banker’s algorithm checks if granting a request keeps the system in a safe state."
+    },
+    {
+      "id": 4,
+      "question": "A safe state in deadlock avoidance means:",
+      "options": {
+        "A": "No process can proceed",
+        "B": "There exists a sequence in which all processes can finish",
+        "C": "Deadlock has already occurred",
+        "D": "At least one process has been aborted"
+      },
+      "answer": "B",
+      "explanation": "Safe states guarantee at least one completion ordering exists."
+    },
+    {
+      "id": 5,
+      "question": "Deadlock detection in systems with single instance per resource type can be done with:",
+      "options": {
+        "A": "Banker’s safety algorithm",
+        "B": "Wait-for graph cycle detection",
+        "C": "Priority scheduling",
+        "D": "Round-robin I/O"
+      },
+      "answer": "B",
+      "explanation": "Wait-for graphs detect cycles indicating deadlocks with single instances."
+    },
+    {
+      "id": 6,
+      "question": "Resource preemption as a deadlock recovery method involves:",
+      "options": {
+        "A": "Never taking resources away from processes",
+        "B": "Temporarily taking resources from some processes and giving them to others",
+        "C": "Disabling interrupts",
+        "D": "Ignoring deadlocks"
+      },
+      "answer": "B",
+      "explanation": "Preemption forcibly reallocates resources from some processes to resolve deadlock."
+    },
+    {
+      "id": 7,
+      "question": "Which is a disadvantage of 'ignore deadlock' strategy (like in many OSes)?",
+      "options": {
+        "A": "It is too expensive to implement",
+        "B": "Deadlocks can persist indefinitely and require manual intervention (e.g. kill process)",
+        "C": "It guarantees no deadlocks",
+        "D": "It requires complex resource graphs"
+      },
+      "answer": "B",
+      "explanation": "Ignoring deadlock can leave stuck processes that users must handle manually."
+    },
+    {
+      "id": 8,
+      "question": "Ordering all resources and forcing processes to request resources only in increasing order is a technique for:",
+      "options": {
+        "A": "Deadlock prevention (breaking circular wait)",
+        "B": "Deadlock detection",
+        "C": "CPU scheduling",
+        "D": "Security management"
+      },
+      "answer": "A",
+      "explanation": "Resource ordering prevents circular wait and thus deadlock."
+    },
+    {
+      "id": 9,
+      "question": "Which of these is typically NOT considered when choosing a victim for deadlock recovery?",
+      "options": {
+        "A": "How long process has run",
+        "B": "How many resources it holds",
+        "C": "Priority and importance of the process",
+        "D": "Color of the process’s icon"
+      },
+      "answer": "D",
+      "explanation": "Practical criteria include priority, progress, cost of rollback, etc., not UI properties."
+    },
+    {
+      "id": 10,
+      "question": "Deadlock avoidance requires the OS to know:",
+      "options": {
+        "A": "Maximum resource requirements of each process",
+        "B": "Only current allocations",
+        "C": "Only number of processes",
+        "D": "Nothing; it just guesses"
+      },
+      "answer": "A",
+      "explanation": "Banker-style avoidance uses declared maximum demands to test future safety."
     }
   ]
 }

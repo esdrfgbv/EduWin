@@ -1,27 +1,65 @@
 {
-  "title": "HTML+CSS Level 7 — Box Model & Layout Basics",
-  "concept": "Use margins, padding, borders and box sizing.",
+  "title": "HTML+CSS Level 7 — CSS Grid & Multi-Section Layouts",
+  "concept": "Use CSS Grid for card galleries and complex page layouts with rows and columns.",
   "challenges": [
     {
-      "title": "Q1: Card Box",
-      "description": "Create a 'card' div with some text inside. Apply CSS to give it a border, padding, margin from the page edge, and a fixed width (e.g., 300px).",
+      "id": 1,
+      "title": "Grid Photo Gallery",
+      "description": "Create a simple photo gallery using CSS Grid: 3 columns on desktop, with 6 placeholder images.",
       "inputDescription": "No input.",
-      "outputDescription": "A card-like box with clear spacing.",
+      "outputDescription": "A grid of images with equal gaps between them.",
       "examples": [
-        "Use box-sizing: border-box to make width easier to control."
+        "Use grid-template-columns: repeat(3, 1fr) and gap."
       ],
-      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Card Box</title>\n    <style>\n        /* Add .card styles here */\n    </style>\n</head>\n<body>\n    <div class=\"card\">\n        <!-- Card content here -->\n    </div>\n</body>\n</html>\n",
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Photo Gallery</title>\n  <style>\n    /* Use display:grid on .gallery with 3 equal columns */\n  </style>\n</head>\n<body>\n  <div class=\"gallery\">\n    <img src=\"https://via.placeholder.com/150\" alt=\"img1\">\n    <img src=\"https://via.placeholder.com/150\" alt=\"img2\">\n    <img src=\"https://via.placeholder.com/150\" alt=\"img3\">\n    <img src=\"https://via.placeholder.com/150\" alt=\"img4\">\n    <img src=\"https://via.placeholder.com/150\" alt=\"img5\">\n    <img src=\"https://via.placeholder.com/150\" alt=\"img6\">\n  </div>\n</body>\n</html>\n",
       "tests": []
     },
     {
-      "title": "Q2: Two Columns (Basic)",
-      "description": "Create two divs side by side that each contain some text. Use CSS (float or inline-block or flex if you know it) to make them appear in two columns with some gap.",
+      "id": 2,
+      "title": "Grid-Based Dashboard",
+      "description": "Create a dashboard section using CSS Grid with 4 cards arranged as 2 columns x 2 rows on desktop.",
       "inputDescription": "No input.",
-      "outputDescription": "Two columns visible on the page.",
+      "outputDescription": "A 2x2 grid of cards, equal size, with gaps.",
       "examples": [
-        "Columns could be 45% width each with margin between."
+        "Cards: Attendance, Average Score, Upcoming Exams, Alerts."
       ],
-      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n    <meta charset=\"UTF-8\">\n    <title>Two Columns</title>\n    <style>\n        /* Style your columns here */\n    </style>\n</head>\n<body>\n    <div class=\"col left\">\n        <!-- Left column content -->\n    </div>\n    <div class=\"col right\">\n        <!-- Right column content -->\n    </div>\n</body>\n</html>\n",
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Grid Dashboard</title>\n  <style>\n    /* Use grid on .dashboard with 2 columns, gap, and card styling */\n  </style>\n</head>\n<body>\n  <section class=\"dashboard\">\n    <div class=\"card\">Attendance</div>\n    <div class=\"card\">Average Score</div>\n    <div class=\"card\">Upcoming Exams</div>\n    <div class=\"card\">Alerts</div>\n  </section>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 3,
+      "title": "Header-Content-Footer Grid Layout",
+      "description": "Create a page layout using CSS Grid with three areas: header on top, content in the middle, and footer at the bottom.",
+      "inputDescription": "No input.",
+      "outputDescription": "Full-page layout with clearly separated header, content, and footer.",
+      "examples": [
+        "Use grid-template-rows for header/content/footer heights."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Grid Layout</title>\n  <style>\n    /* Use grid on .page with three rows: header, main, footer */\n  </style>\n</head>\n<body>\n  <div class=\"page\">\n    <header class=\"header\">Header</header>\n    <main class=\"main\">Main content</main>\n    <footer class=\"footer\">Footer</footer>\n  </div>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 4,
+      "title": "Sidebar + Content + Extra Panel Grid",
+      "description": "Create a three-column layout using CSS Grid: left sidebar, main content, and a right info panel.",
+      "inputDescription": "No input.",
+      "outputDescription": "Three columns with different widths.",
+      "examples": [
+        "Columns: 200px sidebar, flexible main, 250px right panel."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Three Column Grid</title>\n  <style>\n    /* Use grid-template-columns: 200px 1fr 250px on .layout */\n  </style>\n</head>\n<body>\n  <div class=\"layout\">\n    <aside class=\"left\">Menu</aside>\n    <main class=\"center\">Content</main>\n    <aside class=\"right\">Notifications</aside>\n  </div>\n</body>\n</html>\n",
+      "tests": []
+    },
+    {
+      "id": 5,
+      "title": "Card with Grid Areas",
+      "description": "Create a single card that uses CSS Grid inside it: title at top, description text in the middle, button at bottom-right.",
+      "inputDescription": "No input.",
+      "outputDescription": "A card with internal grid placement.",
+      "examples": [
+        "Title area, content area, CTA button in bottom-right corner."
+      ],
+      "starterCode": "<!DOCTYPE html>\n<html>\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Grid Card</title>\n  <style>\n    /* Use grid-template-areas inside .card */\n  </style>\n</head>\n<body>\n  <div class=\"card\">\n    <h3 class=\"card-title\">Pro Plan</h3>\n    <p class=\"card-desc\">Access advanced analytics and exports.</p>\n    <button class=\"card-btn\">Upgrade</button>\n  </div>\n</body>\n</html>\n",
       "tests": []
     }
   ]

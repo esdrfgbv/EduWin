@@ -1,28 +1,126 @@
 {
-  "title": "System Design Level 3 — Caching & Load Balancing",
-  "concept": "MCQs on cache usage and load balancers.",
-  "challenges": [
+  "title": "System Design Level 3 — High-Level Architecture",
+  "concept": "Designing large-scale systems: rate limiting, search, newsfeed, id generation and observability.",
+  "questions": [
     {
-      "title": "Q1: Cache Benefit",
-      "description": "What is the primary benefit of using a cache?",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\\na) Reduces disk space usage\\nb) Reduces data redundancy in database\\nc) Reduces latency for frequently accessed data\\nd) Guarantees strong consistency always"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "Which technique is commonly used to implement API rate limiting?",
+      "options": {
+        "A": "Round-robin DNS",
+        "B": "Token bucket / leaky bucket algorithms",
+        "C": "Page replacement algorithms",
+        "D": "Binary search trees"
+      },
+      "answer": "B",
+      "explanation": "Token bucket and leaky bucket are standard algorithms for rate limiting."
     },
     {
-      "title": "Q2: Load Balancer",
-      "description": "A load balancer primarily helps to:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\\na) Backup the database\\nb) Encrypt network traffic\\nc) Distribute incoming requests across multiple servers\\nd) Compress images for faster delivery"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "In a URL shortener design, which is a typical requirement for the ID generator?",
+      "options": {
+        "A": "IDs must be sequential with no gaps",
+        "B": "IDs must be globally unique and relatively short",
+        "C": "IDs must embed the original URL",
+        "D": "IDs must be cryptographically random only"
+      },
+      "answer": "B",
+      "explanation": "Shortener IDs must be unique and compact; sequence or random with collision handling works."
+    },
+    {
+      "id": 3,
+      "question": "For a social network newsfeed, a common optimization is:",
+      "options": {
+        "A": "Always computing feed on the fly for each request",
+        "B": "Precomputing and storing user feeds (fan-out-on-write) for some users",
+        "C": "Using only a single global feed table",
+        "D": "Broadcasting all posts to all users"
+      },
+      "answer": "B",
+      "explanation": "Fan-out-on-write precomputes feeds for faster reads at the cost of more write work."
+    },
+    {
+      "id": 4,
+      "question": "Which search data structure is commonly used in large-scale text search engines?",
+      "options": {
+        "A": "Single huge linked list",
+        "B": "Inverted index",
+        "C": "Stack",
+        "D": "Simple array scan"
+      },
+      "answer": "B",
+      "explanation": "Inverted indexes map terms → documents that contain them."
+    },
+    {
+      "id": 5,
+      "question": "Which of the following helps with observability in a distributed system?",
+      "options": {
+        "A": "Only using print statements",
+        "B": "Centralized logging, metrics and distributed tracing",
+        "C": "Disabling logs to reduce overhead",
+        "D": "Storing logs only on the local server"
+      },
+      "answer": "B",
+      "explanation": "Good observability uses structured logs, metrics and tracing across services."
+    },
+    {
+      "id": 6,
+      "question": "For a write-heavy analytics system where absolute accuracy is not critical, a common approach is to:",
+      "options": {
+        "A": "Use strictly consistent transactions only",
+        "B": "Use append-only logs and batch processing (e.g., MapReduce)",
+        "C": "Disable durability",
+        "D": "Store everything in memory only"
+      },
+      "answer": "B",
+      "explanation": "Analytics often uses append-only logs and batch jobs, accepting eventual consistency."
+    },
+    {
+      "id": 7,
+      "question": "Which of the following helps avoid a single point of failure at the load balancer layer?",
+      "options": {
+        "A": "Sticky sessions",
+        "B": "Using a single powerful server",
+        "C": "Having multiple load balancers with health checks and failover",
+        "D": "Caching DNS records forever"
+      },
+      "answer": "C",
+      "explanation": "Redundant load balancers with failover avoid single points of failure."
+    },
+    {
+      "id": 8,
+      "question": "Backpressure in a streaming system is used to:",
+      "options": {
+        "A": "Increase the speed of producers",
+        "B": "Slow down producers when consumers are overloaded",
+        "C": "Compress data on the fly",
+        "D": "Encrypt traffic"
+      },
+      "answer": "B",
+      "explanation": "Backpressure signals producers to reduce rate to prevent overload."
+    },
+    {
+      "id": 9,
+      "question": "To ensure idempotency in an HTTP API (e.g., for PUT requests), a common strategy is:",
+      "options": {
+        "A": "Ignore duplicate requests",
+        "B": "Design endpoints so that repeated identical requests have the same effect",
+        "C": "Force clients to never retry",
+        "D": "Randomly reject duplicate requests"
+      },
+      "answer": "B",
+      "explanation": "Idempotent operations can be repeated safely without changing the result after the first call."
+    },
+    {
+      "id": 10,
+      "question": "In distributed systems, a circuit breaker pattern is used to:",
+      "options": {
+        "A": "Increase the number of requests to failing services",
+        "B": "Temporarily stop calls to an unhealthy service to avoid cascading failures",
+        "C": "Encrypt communication between services",
+        "D": "Guarantee strong consistency"
+      },
+      "answer": "B",
+      "explanation": "Circuit breakers detect failures and short-circuit calls to protect the system."
     }
   ]
 }

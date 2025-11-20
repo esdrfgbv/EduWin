@@ -1,143 +1,127 @@
 {
-  "level": 5,
-  "title": "Strings",
-  "concept": "This level strengthens string manipulation skills in Python—length, counting characters, vowels, reversing, palindrome check, searching substrings, and frequency. Do NOT add extra debug text in the output; follow required format strictly.",
+  "title": "Python Level 4 — Loops & Number Sequences",
+  "concept": "Use loops to print ranges, compute sums, factorials, and simple numeric properties.",
   "challenges": [
     {
       "id": 1,
-      "title": "String Length",
-      "description": "Read a string and print its length.",
-      "inputDescription": "A string (may contain spaces).",
-      "outputDescription": "Length of string.",
-      "examples": ["Input:\nhello\nOutput:\n5"],
-      "starterCode": "s = input()\n# print length\n",
-      "tests": [
-        { "input": "hello", "expected": "5" },
-        { "input": "abc def", "expected": "7" }
-      ]
+      "title": "From A to B",
+      "description": "Given two integers A and B, print all numbers from A to B inclusive. If A <= B, print in ascending order; otherwise in descending order. All numbers must be on a single line separated by one space.",
+      "inputDescription": "Two integers A and B.",
+      "outputDescription": "Sequence of integers separated by spaces.",
+      "examples": [
+        "Input:\n3 7\n\nOutput:\n3 4 5 6 7",
+        "Input:\n7 3\n\nOutput:\n7 6 5 4 3"
+      ],
+      "starterCode": "def main():\n    A, B = map(int, input().split())\n    # TODO: print numbers from A to B in correct order\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 2,
-      "title": "Count Vowels",
-      "description": "Count the number of vowels (a,e,i,o,u in both cases) in the string.",
-      "inputDescription": "A string.",
-      "outputDescription": "Number of vowels.",
-      "examples": ["Input:\nprogram\nOutput:\n2"],
-      "starterCode": "s = input()\n# count vowels\n",
-      "tests": [
-        { "input": "program", "expected": "2" },
-        { "input": "AEIOU", "expected": "5" }
-      ]
+      "title": "Squares Not Exceeding N",
+      "description": "Given an integer N (N >= 1), print all perfect squares (1, 4, 9, ...) that are less than or equal to N, in ascending order.",
+      "inputDescription": "Single integer N.",
+      "outputDescription": "All i*i <= N in ascending order, separated by spaces.",
+      "examples": [
+        "Input:\n15\n\nOutput:\n1 4 9"
+      ],
+      "starterCode": "def main():\n    N = int(input().strip())\n    # TODO: print squares not exceeding N\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 3,
-      "title": "Count Consonants",
-      "description": "Count consonants (alphabet but not vowel). Ignore digits and symbols.",
-      "inputDescription": "A string.",
-      "outputDescription": "Number of consonants.",
-      "examples": ["Input:\ncode\nOutput:\n2"],
-      "starterCode": "s = input()\n# count consonants\n",
-      "tests": [
-        { "input": "code", "expected": "2" },
-        { "input": "xyz", "expected": "3" }
-      ]
+      "title": "Sum of 10 Numbers",
+      "description": "Read exactly 10 integers and print their sum.",
+      "inputDescription": "10 integers (separated by spaces or newlines).",
+      "outputDescription": "Single integer: sum of the 10 numbers.",
+      "examples": [
+        "Input:\n1 2 3 4 5 6 7 8 9 10\n\nOutput:\n55"
+      ],
+      "starterCode": "def main():\n    import sys\n    data = list(map(int, sys.stdin.read().strip().split()))\n    # TODO: sum first 10 integers and print\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 4,
-      "title": "Reverse String",
-      "description": "Print the reverse of the string.",
-      "inputDescription": "A string.",
-      "outputDescription": "Reversed string.",
-      "examples": ["Input:\nhello\nOutput:\nolleh"],
-      "starterCode": "s = input()\n# print reverse\n",
-      "tests": [
-        { "input": "hello", "expected": "olleh" },
-        { "input": "abc", "expected": "cba" }
-      ]
+      "title": "Sum of N Numbers",
+      "description": "The first input value is an integer N. Then follow N integers. Print their sum.",
+      "inputDescription": "First: N, then N integers.",
+      "outputDescription": "Single integer: sum of the N integers.",
+      "examples": [
+        "Input:\n3\n10 20 30\n\nOutput:\n60"
+      ],
+      "starterCode": "def main():\n    import sys\n    data = list(map(int, sys.stdin.read().strip().split()))\n    N = data[0]\n    nums = data[1:1+N]\n    # TODO: compute sum of nums and print\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 5,
-      "title": "Palindrome Check",
-      "description": "Check if the string is palindrome. Print Yes if palindrome else No.",
-      "inputDescription": "A string (no spaces).",
-      "outputDescription": "Yes | No",
-      "examples": ["Input:\nmadam\nOutput:\nYes"],
-      "starterCode": "s = input().strip()\n# check palindrome\n",
-      "tests": [
-        { "input": "madam", "expected": "Yes" },
-        { "input": "hello", "expected": "No" }
-      ]
+      "title": "Sum of Cubes",
+      "description": "Given integer N (N >= 1), compute 1^3 + 2^3 + ... + N^3 and print the result.",
+      "inputDescription": "Single integer N.",
+      "outputDescription": "Single integer: sum of cubes from 1 to N.",
+      "examples": [
+        "Input:\n3\n\nOutput:\n36"
+      ],
+      "starterCode": "def main():\n    N = int(input().strip())\n    # TODO: loop i from 1..N and sum i**3\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 6,
-      "title": "Copy String",
-      "description": "Read string S1 and print a copy S2 (simply print same string).",
-      "inputDescription": "One string.",
-      "outputDescription": "The same string.",
-      "examples": ["Input:\nhello\nOutput:\nhello"],
-      "starterCode": "s1 = input()\n# create s2 = s1 and print\n",
-      "tests": [
-        { "input": "hello", "expected": "hello" },
-        { "input": "coding", "expected": "coding" }
-      ]
+      "title": "Factorial",
+      "description": "Given integer n (n >= 0), compute n! = 1 * 2 * ... * n. Define 0! = 1.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Single integer: n!.",
+      "examples": [
+        "Input:\n4\n\nOutput:\n24"
+      ],
+      "starterCode": "def main():\n    n = int(input().strip())\n    fact = 1\n    # TODO: multiply fact by 1..n\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 7,
-      "title": "Concatenate Strings",
-      "description": "Read S1 and S2 and print concatenated S1S2 (no space).",
-      "inputDescription": "Two strings S1 and S2 on separate lines.",
-      "outputDescription": "Concatenated string.",
-      "examples": ["Input:\nHello\nWorld\nOutput:\nHelloWorld"],
-      "starterCode": "s1 = input().strip()\ns2 = input().strip()\n# print concatenation\n",
-      "tests": [
-        { "input": "Hello\nWorld", "expected": "HelloWorld" },
-        { "input": "abc\nxyz", "expected": "abcxyz" }
-      ]
+      "title": "Count Zeros",
+      "description": "First read integer N. Then read N integers. Count how many of them are equal to zero and print that count.",
+      "inputDescription": "First line: N. Second line (or many lines): N integers.",
+      "outputDescription": "Single integer: number of zeros.",
+      "examples": [
+        "Input:\n5\n1 0 2 0 3\n\nOutput:\n2"
+      ],
+      "starterCode": "def main():\n    N = int(input().strip())\n    nums = list(map(int, input().split()))\n    # TODO: count zeros in nums\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 8,
-      "title": "First Occurrence",
-      "description": "Print the index of first occurrence of character X in string S. If not found print -1.",
-      "inputDescription": "First line S, second line X.",
-      "outputDescription": "Index or -1.",
-      "examples": ["Input:\nbanana\na\nOutput:\n1"],
-      "starterCode": "s = input()\nx = input().strip()\n# find index of first occurrence\n",
-      "tests": [
-        { "input": "banana\na", "expected": "1" },
-        { "input": "hello\nx", "expected": "-1" }
-      ]
+      "title": "Sum of Factorials",
+      "description": "Given integer n (n >= 1), compute 1! + 2! + ... + n! and print the sum.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Single integer: sum of factorials.",
+      "examples": [
+        "Input:\n3\n\nOutput:\n9"
+      ],
+      "starterCode": "def main():\n    n = int(input().strip())\n    # TODO: accumulate factorials efficiently (reuse previous factorial)\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 9,
-      "title": "Word Count",
-      "description": "Count number of words in a sentence. Words are separated by spaces.",
-      "inputDescription": "A sentence.",
-      "outputDescription": "Number of words.",
-      "examples": ["Input:\nHello world from Python\nOutput:\n4"],
-      "starterCode": "s = input()\n# count words\n",
-      "tests": [
-        { "input": "Hello world from Python", "expected": "4" },
-        { "input": "One", "expected": "1" }
-      ]
+      "title": "Smallest Divisor",
+      "description": "Given an integer n >= 2, find its smallest divisor greater than 1 and print it.",
+      "inputDescription": "Single integer n.",
+      "outputDescription": "Smallest integer d > 1 that divides n.",
+      "examples": [
+        "Input:\n15\n\nOutput:\n3"
+      ],
+      "starterCode": "def main():\n    n = int(input().strip())\n    # TODO: try divisors from 2 upward, print first that divides n\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     },
     {
       "id": 10,
-      "title": "Character Frequency",
-      "description": "Count how many times each lowercase alphabet a–z appears and print in 26 lines a:x format.",
-      "inputDescription": "A string.",
-      "outputDescription": "26 lines of a:x, b:x ... z:x",
-      "examples": ["Input:\napple\nOutput:\na:1 ... p:2 ..."],
-      "starterCode": "s = input().lower()\n# count frequency a to z\n",
-      "tests": [
-        {
-          "input": "apple",
-          "expected": "a:1\nb:0\nc:0\nd:0\ne:1\nf:0\ng:0\nh:0\ni:0\nj:0\nk:0\nl:1\nm:0\nn:0\no:0\np:2\nq:0\nr:0\ns:0\nt:0\nu:0\nv:0\nw:0\nx:0\ny:0\nz:0"
-        },
-        {
-          "input": "aaa",
-          "expected": "a:3\nb:0\nc:0\nd:0\ne:0\nf:0\ng:0\nh:0\ni:0\nj:0\nk:0\nl:0\nm:0\nn:0\no:0\np:0\nq:0\nr:0\ns:0\nt:0\nu:0\nv:0\nw:0\nx:0\ny:0\nz:0"
-        }
-      ]
+      "title": "Largest Power of Two",
+      "description": "Given integer N >= 1, find the largest integer x such that 2^x <= N. Print x and 2^x separated by a space.",
+      "inputDescription": "Single integer N.",
+      "outputDescription": "Two integers: x and 2^x.",
+      "examples": [
+        "Input:\n5\n\nOutput:\n2 4"
+      ],
+      "starterCode": "def main():\n    N = int(input().strip())\n    # TODO: repeatedly multiply by 2 or use bit logic to find largest power of 2 <= N\n\nif __name__ == \"__main__\":\n    main()\n",
+      "tests": []
     }
   ]
 }

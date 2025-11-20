@@ -1,18 +1,19 @@
 {
   "title": "C++ Level 3 — Conditional Statements",
-  "concept": "Practice using if-else conditions, comparison operators, and decision making.",
+  "concept": "Use if-else to classify numbers and handle simple logic.",
   "challenges": [
     {
+      "id": 1,
       "title": "Positive, Negative or Zero",
-      "description": "Given an integer n, print Positive if n > 0, Negative if n < 0, or Zero if n is 0.",
+      "description": "Given an integer n, print Positive if n > 0, Negative if n < 0, or Zero if n == 0.",
       "inputDescription": "Single integer n.",
-      "outputDescription": "Print one of the words: Positive, Negative, or Zero.",
+      "outputDescription": "One word: Positive, Negative, or Zero.",
       "examples": [
         "Input:\n5\n\nOutput:\nPositive",
         "Input:\n-3\n\nOutput:\nNegative",
         "Input:\n0\n\nOutput:\nZero"
       ],
-      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int n;\n    // your code here\n    return 0;\n}\n",
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int n;\n    // print Positive / Negative / Zero\n    return 0;\n}\n",
       "tests": [
         { "input": "5", "expected": "Positive" },
         { "input": "-3", "expected": "Negative" },
@@ -20,18 +21,145 @@
       ]
     },
     {
+      "id": 2,
       "title": "Max of Three Numbers",
-      "description": "Given three integers a, b, c, print the maximum value.",
-      "inputDescription": "Three integers a, b and c.",
-      "outputDescription": "Single integer which is the maximum of a, b, c.",
+      "description": "Given three integers a, b, c, print the largest of them.",
+      "inputDescription": "Three integers a, b, c.",
+      "outputDescription": "Single integer: max(a, b, c).",
       "examples": [
         "Input:\n2 7 4\n\nOutput:\n7"
       ],
-      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\n\nint main() {\n    int a, b, c;\n    // read three numbers and print the maximum\n    return 0;\n}\n",
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int a, b, c;\n    // read and print maximum\n    return 0;\n}\n",
       "tests": [
         { "input": "2 7 4", "expected": "7" },
-        { "input": "-1 -5 -3", "expected": "-1" },
-        { "input": "10 10 5", "expected": "10" }
+        { "input": "-1 -5 -3", "expected": "-1" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Minimum of Three Numbers",
+      "description": "Given three integers a, b, c, print the smallest of them.",
+      "inputDescription": "Three integers a, b, c.",
+      "outputDescription": "Single integer: min(a, b, c).",
+      "examples": [
+        "Input:\n3 1 5\n\nOutput:\n1"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int a, b, c;\n    // print minimum\n    return 0;\n}\n",
+      "tests": [
+        { "input": "3 1 5", "expected": "1" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "How Many Are Equal",
+      "description": "Given three integers a, b, c, print 3 if all are equal, 2 if exactly two are equal, or 0 if all are different.",
+      "inputDescription": "Three integers a, b, c.",
+      "outputDescription": "Single integer: 3, 2, or 0.",
+      "examples": [
+        "Input:\n1 1 1\n\nOutput:\n3",
+        "Input:\n1 1 2\n\nOutput:\n2",
+        "Input:\n1 2 3\n\nOutput:\n0"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int a, b, c;\n    // print 3, 2 or 0 based on equality\n    return 0;\n}\n",
+      "tests": [
+        { "input": "1 1 1", "expected": "3" },
+        { "input": "1 1 2", "expected": "2" },
+        { "input": "1 2 3", "expected": "0" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Leap Year Check",
+      "description": "Given a year y, print LEAP if it's a leap year in Gregorian calendar and COMMON otherwise.",
+      "inputDescription": "Integer year y.",
+      "outputDescription": "LEAP or COMMON (all caps).",
+      "examples": [
+        "Input:\n2000\n\nOutput:\nLEAP",
+        "Input:\n1900\n\nOutput:\nCOMMON"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int y;\n    // leap if (y%4==0 && y%100!=0) || (y%400==0)\n    return 0;\n}\n",
+      "tests": [
+        { "input": "2000", "expected": "LEAP" },
+        { "input": "1900", "expected": "COMMON" },
+        { "input": "2020", "expected": "LEAP" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Chess Rook Move",
+      "description": "Given coordinates of two squares (x1,y1) and (x2,y2) on a chessboard, print YES if a rook can move from the first to the second in one move, otherwise NO.",
+      "inputDescription": "Four integers x1, y1, x2, y2 (1–8).",
+      "outputDescription": "YES or NO.",
+      "examples": [
+        "Input:\n1 1 1 8\n\nOutput:\nYES",
+        "Input:\n1 1 8 8\n\nOutput:\nNO"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int x1,y1,x2,y2;\n    // rook: same row or same column\n    return 0;\n}\n",
+      "tests": [
+        { "input": "1 1 1 8", "expected": "YES" },
+        { "input": "1 1 8 8", "expected": "NO" }
+      ]
+    },
+    {
+      "id": 7,
+      "title": "Same Color Cells",
+      "description": "Given two cells (x1,y1) and (x2,y2), print YES if they are the same color on a chessboard, else NO.",
+      "inputDescription": "Four integers x1, y1, x2, y2.",
+      "outputDescription": "YES or NO.",
+      "examples": [
+        "Input:\n1 1 2 2\n\nOutput:\nYES"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int x1,y1,x2,y2;\n    // same color if (x1+y1)%2 == (x2+y2)%2\n    return 0;\n}\n",
+      "tests": [
+        { "input": "1 1 2 2", "expected": "YES" },
+        { "input": "1 1 1 2", "expected": "NO" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "Chess King Move",
+      "description": "Given two cells, print YES if a king can go from first to second in one move, else NO.",
+      "inputDescription": "Four integers x1, y1, x2, y2.",
+      "outputDescription": "YES or NO.",
+      "examples": [
+        "Input:\n4 4 5 5\n\nOutput:\nYES"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int x1,y1,x2,y2;\n    // king: abs(dx)<=1 && abs(dy)<=1 and not same cell\n    return 0;\n}\n",
+      "tests": [
+        { "input": "4 4 5 5", "expected": "YES" },
+        { "input": "4 4 6 6", "expected": "NO" }
+      ]
+    },
+    {
+      "id": 9,
+      "title": "Chocolate Bar Split",
+      "description": "A chocolate bar of size n×m can be broken along grid lines. Print YES if it is possible to break off exactly k squares in one break, else NO.",
+      "inputDescription": "Three integers n, m, k.",
+      "outputDescription": "YES or NO.",
+      "examples": [
+        "Input:\n4 2 6\n\nOutput:\nYES",
+        "Input:\n4 2 7\n\nOutput:\nNO"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int n,m,k;\n    // YES if k < n*m and (k % n == 0 || k % m == 0)\n    return 0;\n}\n",
+      "tests": [
+        { "input": "4 2 6", "expected": "YES" },
+        { "input": "4 2 7", "expected": "NO" }
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Chess Knight Move",
+      "description": "Given two cells, print YES if a knight can move from first to second in one move, else NO.",
+      "inputDescription": "Four integers x1, y1, x2, y2.",
+      "outputDescription": "YES or NO.",
+      "examples": [
+        "Input:\n1 1 2 3\n\nOutput:\nYES",
+        "Input:\n1 1 3 3\n\nOutput:\nNO"
+      ],
+      "starterCode": "#include <bits/stdc++.h>\nusing namespace std;\nint main() {\n    int x1,y1,x2,y2;\n    // knight: (|dx|==2 && |dy|==1) or (|dx|==1 && |dy|==2)\n    return 0;\n}\n",
+      "tests": [
+        { "input": "1 1 2 3", "expected": "YES" },
+        { "input": "1 1 3 3", "expected": "NO" }
       ]
     }
   ]

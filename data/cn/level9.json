@@ -1,27 +1,66 @@
 {
+  "level": 9,
   "title": "CN Level 9 — Performance & Troubleshooting",
-  "concept": "Scenario-based questions on diagnosing latency and connectivity issues.",
+  "concept": "Scenario-based questions on diagnosing latency, packet loss and connectivity problems.",
   "challenges": [
     {
+      "id": 1,
       "title": "Q1: High Latency Investigation",
-      "description": "Users in an office complain that a web application is very slow. Describe a step-by-step approach you would use to troubleshoot whether the issue is due to local network, ISP, DNS, or the web server itself.",
+      "description": "Users in an office complain that a web application is very slow. Describe a step-by-step approach you would use to troubleshoot whether the issue is due to the local network, ISP, DNS, or the web server itself.",
       "inputDescription": "No input. Scenario question.",
       "outputDescription": "Ordered list of troubleshooting steps (checked manually).",
       "examples": [
-        "Mention tests like ping to gateway, ping to external IP, DNS lookup, traceroute, etc."
+        "Mention tests like: ping gateway, ping external IP, DNS lookup, traceroute, browser dev tools, checking server status, etc."
       ],
       "starterCode": "// List steps you would follow and what each step checks.\n",
       "tests": []
     },
     {
+      "id": 2,
       "title": "Q2: Packet Loss Scenario",
       "description": "Some users notice frequent disconnections in a video call app. Explain possible network-level reasons (e.g., Wi-Fi interference, congestion) and what measurements or tools could help confirm the root cause.",
       "inputDescription": "No input. Scenario question.",
       "outputDescription": "Short explanation of causes and measurements (checked manually).",
       "examples": [
-        "You can mention checking Wi-Fi signal strength, channel overlap, packet loss stats, etc."
+        "You can mention checking Wi-Fi signal strength, channel overlap, ping/packet-loss stats, speed tests, etc."
       ],
       "starterCode": "// Describe likely causes and how you would measure them.\n",
+      "tests": []
+    },
+    {
+      "id": 3,
+      "title": "Q3: Single User vs All Users",
+      "description": "Only one user in the office reports that the Internet is slow, while others are fine. What checks would you perform on that user’s PC and connection before suspecting the wider network?",
+      "inputDescription": "No input. Scenario question.",
+      "outputDescription": "List of checks at the end host (manual evaluation).",
+      "examples": [
+        "Hint: Check NIC link speed, Wi-Fi signal, background downloads, malware, local DNS settings, etc."
+      ],
+      "starterCode": "// Focus on end-host checks: network adapter, cabling/Wi-Fi, local processes.\n",
+      "tests": []
+    },
+    {
+      "id": 4,
+      "title": "Q4: Intermittent Connectivity",
+      "description": "Users complain that the connection drops randomly for a few seconds every hour. Suggest possible physical-layer or data-link-layer causes and how you would investigate them.",
+      "inputDescription": "No input. Scenario question.",
+      "outputDescription": "Possible causes + investigation plan.",
+      "examples": [
+        "Examples: Loose cable, bad switch port, power-saving on NIC, Wi-Fi channel interference."
+      ],
+      "starterCode": "// Mention layer 1/2 issues and tools like link-light checks, swapping cables/ports, Wi-Fi analyzer.\n",
+      "tests": []
+    },
+    {
+      "id": 5,
+      "title": "Q5: Baseline Performance",
+      "description": "Explain why having a performance baseline of the network (normal latency, normal throughput) is useful for troubleshooting.",
+      "inputDescription": "No input. Conceptual question.",
+      "outputDescription": "Short reasoning (checked manually).",
+      "examples": [
+        "Hint: You can compare current metrics against baseline to detect anomalies more easily."
+      ],
+      "starterCode": "// Explain 2–3 reasons why baselines help detect and debug problems.\n",
       "tests": []
     }
   ]

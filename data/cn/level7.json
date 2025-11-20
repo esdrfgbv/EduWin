@@ -1,27 +1,66 @@
 {
+  "level": 7,
   "title": "CN Level 7 — Network Security Basics",
-  "concept": "MCQs on basic security, encryption and firewalls.",
+  "concept": "Encryption, authentication, firewalls, and basic security principles.",
   "challenges": [
     {
+      "id": 1,
       "title": "Q1: Encryption Goal",
       "description": "The main goal of encryption in networking is to provide:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "inputDescription": "No input. MCQ.",
+      "outputDescription": "Choose the correct option.",
       "examples": [
-        "Options:\\na) Integrity only\\nb) Confidentiality of data\\nc) Availability only\\nd) Physical security of devices"
+        "Options:\n a) Integrity only\n b) Confidentiality of data\n c) Availability only\n d) Physical security of devices"
       ],
       "starterCode": "// Answer: a / b / c / d",
       "tests": []
     },
     {
+      "id": 2,
       "title": "Q2: Firewall Role",
       "description": "A firewall in a network is used to:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "inputDescription": "No input. MCQ.",
+      "outputDescription": "Choose the correct option.",
       "examples": [
-        "Options:\\na) Increase Wi-Fi range\\nb) Filter incoming and outgoing traffic based on security rules\\nc) Replace all routers\\nd) Provide automatic software updates"
+        "Options:\n a) Increase Wi-Fi range\n b) Filter incoming and outgoing traffic based on security rules\n c) Replace all routers\n d) Provide automatic software updates"
       ],
       "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "id": 3,
+      "title": "Q3: Authentication",
+      "description": "Which of the following best describes authentication?",
+      "inputDescription": "No input. MCQ.",
+      "outputDescription": "Choose the correct option.",
+      "examples": [
+        "Options:\n a) Ensuring data has not been altered in transit\n b) Verifying the identity of a user or system\n c) Hiding data from unauthorized users\n d) Ensuring systems are always available"
+      ],
+      "starterCode": "// Answer: b",
+      "tests": []
+    },
+    {
+      "id": 4,
+      "title": "Q4: VPN Usage",
+      "description": "A Virtual Private Network (VPN) is mainly used to:",
+      "inputDescription": "No input. MCQ.",
+      "outputDescription": "Choose the correct option.",
+      "examples": [
+        "Options:\n a) Increase bandwidth of the Internet connection\n b) Securely connect remote users or sites over an untrusted network\n c) Replace firewalls\n d) Compress video streams only"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "id": 5,
+      "title": "Q5: Strong Password Practice",
+      "description": "Which of the following is the best example of a strong password practice?",
+      "inputDescription": "No input. MCQ.",
+      "outputDescription": "Choose the correct option.",
+      "examples": [
+        "Options:\n a) Using 'password123' for all accounts\n b) Sharing your password with friends you trust\n c) Using a long passphrase with mixed characters and not reusing across sites\n d) Writing your password on a sticky note on your monitor"
+      ],
+      "starterCode": "// Answer: c",
       "tests": []
     }
   ]

@@ -1,25 +1,64 @@
 {
+  "level": 6,
   "title": "CN Level 6 — Application Layer Protocols",
-  "concept": "MCQs on HTTP, DNS and email protocols.",
+  "concept": "HTTP, HTTPS, DNS, email protocols (SMTP, POP3, IMAP) and basic behavior.",
   "challenges": [
     {
+      "id": 1,
       "title": "Q1: DNS Purpose",
       "description": "DNS (Domain Name System) is used to:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "inputDescription": "No input. MCQ.",
+      "outputDescription": "Choose the correct option.",
       "examples": [
-        "Options:\\na) Encrypt web traffic\\nb) Map domain names to IP addresses\\nc) Transfer email messages\\nd) Compress image files on the web"
+        "Options:\n a) Encrypt web traffic\n b) Map domain names to IP addresses\n c) Transfer email messages\n d) Compress image files on the web"
       ],
       "starterCode": "// Answer: a / b / c / d",
       "tests": []
     },
     {
+      "id": 2,
       "title": "Q2: HTTP Type",
       "description": "HTTP is primarily a:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
+      "inputDescription": "No input. MCQ.",
+      "outputDescription": "Choose the correct option.",
       "examples": [
-        "Options:\\na) Connectionless transport protocol\\nb) Application layer request-response protocol\\nc) Network layer routing protocol\\nd) Data link layer framing protocol"
+        "Options:\n a) Connectionless transport protocol\n b) Application layer request-response protocol\n c) Network layer routing protocol\n d) Data link layer framing protocol"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "id": 3,
+      "title": "Q3: HTTPS",
+      "description": "HTTPS is essentially:",
+      "inputDescription": "No input. MCQ.",
+      "outputDescription": "Choose the correct option.",
+      "examples": [
+        "Options:\n a) HTTP over SSL/TLS for encryption\n b) HTTP using UDP instead of TCP\n c) A replacement for DNS\n d) A protocol for sending emails only"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "id": 4,
+      "title": "Q4: Email Sending Protocol",
+      "description": "Which protocol is most commonly used to send emails from a client to a mail server?",
+      "inputDescription": "No input. MCQ.",
+      "outputDescription": "Choose the correct option.",
+      "examples": [
+        "Options:\n a) SMTP\n b) POP3\n c) IMAP\n d) FTP"
+      ],
+      "starterCode": "// Answer: a / b / c / d",
+      "tests": []
+    },
+    {
+      "id": 5,
+      "title": "Q5: Email Retrieval",
+      "description": "Which protocol is commonly used by a mail client to retrieve emails while keeping them stored on the server (synchronization across devices)?",
+      "inputDescription": "No input. MCQ.",
+      "outputDescription": "Choose the correct option.",
+      "examples": [
+        "Options:\n a) SMTP\n b) POP3\n c) IMAP\n d) DHCP"
       ],
       "starterCode": "// Answer: a / b / c / d",
       "tests": []

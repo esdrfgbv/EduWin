@@ -1,119 +1,139 @@
 {
-  "level": 1,
-  "title": "Arrays & Basic Searching",
-  "concept": "This level introduces Data Structures & Algorithms using basic arrays, traversal, summation, max/min search, counting occurrence, and linear search without using inbuilt functions.",
+  "title": "DSA Level 1 — Arrays & Basic Problems",
+  "concept": "Fundamental array operations: traversal, searching, min/max, counting, prefix calculations.",
   "challenges": [
     {
       "id": 1,
-      "title": "Sum of Array",
-      "description": "Read N and N integers. Print the total sum.",
-      "inputDescription": "N then N integers.",
-      "outputDescription": "Sum of array.",
-      "examples": ["Input:\n5\n1 2 3 4 5\nOutput:\n15"],
-      "starterCode": "// read N and array\n// compute sum\n",
-      "tests": [
-        { "input": "5\n1 2 3 4 5", "expected": "15" },
-        { "input": "3\n10 10 10", "expected": "30" }
-      ]
+      "title": "Linear Search in Array",
+      "description": "Given an array of N integers and a value X, check if X is present in the array. If present, print the index (0-based) of the first occurrence. Otherwise, print -1.",
+      "inputDescription": "First line: integer N. Second line: N integers (the array). Third line: integer X.",
+      "outputDescription": "Single integer: index of first occurrence of X or -1 if not found.",
+      "examples": [
+        "Input:\n5\n1 4 3 4 5\n4\n\nOutput:\n1",
+        "Input:\n4\n2 2 2 2\n3\n\nOutput:\n-1"
+      ],
+      "constraints": "1 ≤ N ≤ 10^5, |a[i]| ≤ 10^9",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 2,
-      "title": "Maximum Element",
-      "description": "Print the largest element in the array.",
-      "examples": ["Input:\n4\n3 9 1 8\nOutput:\n9"],
-      "starterCode": "// find max by traversing array\n",
-      "tests": [
-        { "input": "4\n3 9 1 8", "expected": "9" },
-        { "input": "3\n7 7 7", "expected": "7" }
-      ]
+      "title": "Maximum Element in Array",
+      "description": "Given an array of N integers, find the maximum value and its index (0-based). If there are multiple occurrences, print the index of the first one.",
+      "inputDescription": "First line: N. Second line: N space-separated integers.",
+      "outputDescription": "Two integers: maxValue index.",
+      "examples": [
+        "Input:\n5\n1 7 3 7 5\n\nOutput:\n7 1"
+      ],
+      "constraints": "1 ≤ N ≤ 10^5, |a[i]| ≤ 10^9",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 3,
-      "title": "Minimum Element",
-      "description": "Print the smallest element in the array.",
-      "examples": ["Input:\n5\n8 3 9 1 4\nOutput:\n1"],
-      "starterCode": "// find smallest element\n",
-      "tests": [
-        { "input": "5\n8 3 9 1 4", "expected": "1" },
-        { "input": "3\n5 5 5", "expected": "5" }
-      ]
+      "title": "Minimum Element in Array",
+      "description": "Given an array of N integers, find the minimum value and its index (0-based). If there are multiple occurrences, print the index of the first one.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Two integers: minValue index.",
+      "examples": [
+        "Input:\n5\n5 4 4 9 10\n\nOutput:\n4 1"
+      ],
+      "constraints": "1 ≤ N ≤ 10^5, |a[i]| ≤ 10^9",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 4,
-      "title": "Linear Search",
-      "description": "Search for X in the array. Print Yes if found else No.",
-      "examples": ["Input:\n5\n1 2 3 4 5\n3\nOutput:\nYes"],
-      "starterCode": "// search X using linear search\n",
-      "tests": [
-        { "input": "5\n1 2 3 4 5\n3", "expected": "Yes" },
-        { "input": "4\n10 20 30 40\n25", "expected": "No" }
-      ]
+      "title": "Sum of Array Elements",
+      "description": "Compute the sum of all elements in an array of N integers.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Single integer: sum of all elements.",
+      "examples": [
+        "Input:\n4\n1 2 3 4\n\nOutput:\n10"
+      ],
+      "constraints": "1 ≤ N ≤ 10^5, |a[i]| ≤ 10^9 (use 64-bit type for sum)",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 5,
-      "title": "Count Occurrences",
-      "description": "Print how many times X occurs in the array.",
-      "examples": ["Input:\n6\n2 3 2 5 2 8\n2\nOutput:\n3"],
-      "starterCode": "// count X by traversing array\n",
-      "tests": [
-        { "input": "6\n2 3 2 5 2 8\n2", "expected": "3" },
-        { "input": "5\n1 2 3 4 5\n6", "expected": "0" }
-      ]
+      "title": "Count Even and Odd",
+      "description": "Given an array of N integers, count how many elements are even and how many are odd.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Two integers: countEven countOdd.",
+      "examples": [
+        "Input:\n5\n1 2 3 4 5\n\nOutput:\n2 3"
+      ],
+      "constraints": "1 ≤ N ≤ 10^5",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 6,
-      "title": "Reverse Array Print",
-      "description": "Print array in reverse order separated by spaces.",
-      "examples": ["Input:\n4\n10 20 30 40\nOutput:\n40 30 20 10"],
-      "starterCode": "// print from last index to first\n",
-      "tests": [
-        { "input": "4\n10 20 30 40", "expected": "40 30 20 10" },
-        { "input": "3\n1 2 3", "expected": "3 2 1" }
-      ]
+      "title": "Reverse Array",
+      "description": "Given an array of N integers, print the elements in reverse order.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "N integers: the array in reverse order.",
+      "examples": [
+        "Input:\n5\n1 2 3 4 5\n\nOutput:\n5 4 3 2 1"
+      ],
+      "constraints": "1 ≤ N ≤ 10^5",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 7,
-      "title": "Second Largest",
-      "description": "Find the second largest DISTINCT element in the array.",
-      "examples": ["Input:\n5\n8 1 4 9 7\nOutput:\n8"],
-      "starterCode": "// find max and 2nd max without sorting\n",
-      "tests": [
-        { "input": "5\n8 1 4 9 7", "expected": "8" },
-        { "input": "4\n10 9 8 7", "expected": "9" }
-      ]
+      "title": "Number of Positive, Negative and Zero",
+      "description": "Given an array of N integers, count how many elements are positive, how many are negative, and how many are zero.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "Three integers: countPositive countNegative countZero.",
+      "examples": [
+        "Input:\n5\n-1 0 2 -3 4\n\nOutput:\n2 2 1"
+      ],
+      "constraints": "1 ≤ N ≤ 10^5",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 8,
-      "title": "Sorted or Not",
-      "description": "Check if array is sorted in non-decreasing order. Print Yes or No.",
-      "examples": ["Input:\n5\n1 2 2 4 5\nOutput:\nYes"],
-      "starterCode": "// compare each element with next\n",
-      "tests": [
-        { "input": "5\n1 2 2 4 5", "expected": "Yes" },
-        { "input": "4\n3 1 4 5", "expected": "No" }
-      ]
+      "title": "Kth Element of Array",
+      "description": "Given N, an array of N integers, and an index K, print the element at index K (0-based). If K is out of bounds (K < 0 or K ≥ N), print \"Invalid\".",
+      "inputDescription": "First line: N. Second line: N integers. Third line: integer K.",
+      "outputDescription": "Single integer a[K] or the word \"Invalid\".",
+      "examples": [
+        "Input:\n5\n10 20 30 40 50\n2\n\nOutput:\n30",
+        "Input:\n3\n1 2 3\n5\n\nOutput:\nInvalid"
+      ],
+      "constraints": "1 ≤ N ≤ 10^5",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 9,
-      "title": "Left Rotation by 1",
-      "description": "Left rotate the array by one position and print new array.",
-      "examples": ["Input:\n5\n1 2 3 4 5\nOutput:\n2 3 4 5 1"],
-      "starterCode": "// shift all elements left by one\n",
-      "tests": [
-        { "input": "5\n1 2 3 4 5", "expected": "2 3 4 5 1" },
-        { "input": "3\n7 8 9", "expected": "8 9 7" }
-      ]
+      "title": "Prefix Sum of Array",
+      "description": "Given an array of N integers, construct another array where the i-th element is the sum of the first i elements of the original array (1-indexed). Print the prefix sums as a sequence.",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "N integers: prefix sums.",
+      "examples": [
+        "Input:\n5\n1 2 3 4 5\n\nOutput:\n1 3 6 10 15"
+      ],
+      "constraints": "1 ≤ N ≤ 10^5, use 64-bit sum",
+      "starterCode": "",
+      "tests": []
     },
     {
       "id": 10,
-      "title": "Prefix Sum Array",
-      "description": "Create prefix sum array where prefix[i] = sum of elements from index 0 to i. Print prefix array.",
-      "examples": ["Input:\n5\n1 2 3 4 5\nOutput:\n1 3 6 10 15"],
-      "starterCode": "// compute prefix sum using loop\n",
-      "tests": [
-        { "input": "5\n1 2 3 4 5", "expected": "1 3 6 10 15" },
-        { "input": "3\n2 2 2", "expected": "2 4 6" }
-      ]
+      "title": "Array is Sorted or Not",
+      "description": "Given an array of N integers, determine if the array is sorted in non-decreasing order. If sorted, print \"YES\", otherwise print \"NO\".",
+      "inputDescription": "First line: N. Second line: N integers.",
+      "outputDescription": "\"YES\" or \"NO\".",
+      "examples": [
+        "Input:\n5\n1 2 2 3 4\n\nOutput:\nYES",
+        "Input:\n4\n3 1 2 4\n\nOutput:\nNO"
+      ],
+      "constraints": "1 ≤ N ≤ 10^5",
+      "starterCode": "",
+      "tests": []
     }
   ]
 }

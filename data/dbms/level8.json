@@ -1,28 +1,126 @@
 {
-  "title": "DBMS Level 8 — Subqueries & Nested Queries",
-  "concept": "MCQs on subqueries and IN/EXISTS.",
-  "challenges": [
+  "title": "DBMS Level 7 — Advanced Transactions & Concurrency",
+  "concept": "Lock types, isolation anomalies, 2PL variants, timestamp ordering and deadlocks.",
+  "questions": [
     {
-      "title": "Q1: Subquery Location",
-      "description": "A subquery in SQL is a query:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) That is always executed after the main query\nb) Written inside another SQL query\nc) That cannot reference other tables\nd) Used only for DELETE operations"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 1,
+      "question": "Which lock mode allows multiple transactions to read but not write a data item?",
+      "options": {
+        "A": "Shared lock (S-lock)",
+        "B": "Exclusive lock (X-lock)",
+        "C": "Update lock",
+        "D": "Intent exclusive lock"
+      },
+      "answer": "A",
+      "explanation": "Shared locks permit concurrent reads but conflict with exclusive locks."
     },
     {
-      "title": "Q2: IN vs =",
-      "description": "Which operator is commonly used with subqueries to check membership in a list of values?",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\na) BETWEEN\nb) LIKE\nc) IN\nd) HAVING"
-      ],
-      "starterCode": "// Mark your answer: a / b / c / d",
-      "tests": []
+      "id": 2,
+      "question": "Which isolation level prevents dirty reads but may still allow non-repeatable reads?",
+      "options": {
+        "A": "READ UNCOMMITTED",
+        "B": "READ COMMITTED",
+        "C": "REPEATABLE READ",
+        "D": "SERIALIZABLE"
+      },
+      "answer": "B",
+      "explanation": "READ COMMITTED disallows dirty reads but not non-repeatable reads."
+    },
+    {
+      "id": 3,
+      "question": "Strict two-phase locking (strict 2PL) differs from basic 2PL mainly because:",
+      "options": {
+        "A": "It does not use locks at all",
+        "B": "It releases locks only at commit/abort time",
+        "C": "It allows lock release during growing phase",
+        "D": "It uses timestamps instead of locks"
+      },
+      "answer": "B",
+      "explanation": "Strict 2PL holds all exclusive locks until transaction end, aiding recoverability."
+    },
+    {
+      "id": 4,
+      "question": "Which phenomenon is prevented by REPEATABLE READ but not by READ COMMITTED?",
+      "options": {
+        "A": "Dirty reads",
+        "B": "Non-repeatable reads",
+        "C": "Phantom reads",
+        "D": "Lost updates"
+      },
+      "answer": "B",
+      "explanation": "REPEATABLE READ ensures that rows read once cannot change within the transaction."
+    },
+    {
+      "id": 5,
+      "question": "Timestamp ordering protocols assign each transaction:",
+      "options": {
+        "A": "A unique timestamp used to order conflicting operations",
+        "B": "A lock table entry",
+        "C": "Only read locks",
+        "D": "No ordering guarantees"
+      },
+      "answer": "A",
+      "explanation": "Transactions are ordered by timestamps; conflicting actions that violate order are aborted."
+    },
+    {
+      "id": 6,
+      "question": "Deadlock detection in a DBMS is commonly implemented using:",
+      "options": {
+        "A": "Resource allocation graph and cycle detection",
+        "B": "Round-robin scheduling",
+        "C": "LRU cache replacement",
+        "D": "Timestamp ordering"
+      },
+      "answer": "A",
+      "explanation": "Wait-for graphs or resource allocation graphs are used to detect cycles (deadlocks)."
+    },
+    {
+      "id": 7,
+      "question": "Which technique prevents deadlocks by ordering resource acquisition and forcing transactions to follow that order?",
+      "options": {
+        "A": "Wait-die",
+        "B": "Wound-wait",
+        "C": "Resource ordering",
+        "D": "Deadlock detection"
+      },
+      "answer": "C",
+      "explanation": "Imposing a global order on resources and acquiring locks according to that order prevents cycles."
+    },
+    {
+      "id": 8,
+      "question": "In the wait-die scheme for deadlock prevention:",
+      "options": {
+        "A": "Younger transactions always abort older ones",
+        "B": "Older transactions may wait for younger ones, younger ones abort if requesting older's resources",
+        "C": "All transactions die immediately on conflict",
+        "D": "It is equivalent to strict 2PL"
+      },
+      "answer": "B",
+      "explanation": "Wait-die: if an older transaction requests a lock held by a younger one, it waits; otherwise the younger aborts."
+    },
+    {
+      "id": 9,
+      "question": "Which of the following schedules is always serializable?",
+      "options": {
+        "A": "Any schedule with only read operations",
+        "B": "Any schedule satisfying conflict-serializability",
+        "C": "Any schedule using non-strict 2PL",
+        "D": "Any schedule with no aborts"
+      },
+      "answer": "B",
+      "explanation": "Conflict-serializable schedules are equivalent to some serial schedule."
+    },
+    {
+      "id": 10,
+      "question": "Phantom reads are prevented at which isolation level (in most DBMS implementations)?",
+      "options": {
+        "A": "READ UNCOMMITTED",
+        "B": "READ COMMITTED",
+        "C": "REPEATABLE READ",
+        "D": "SERIALIZABLE"
+      },
+      "answer": "D",
+      "explanation": "Serializable isolation prevents phantoms, often via predicate locking or index-range locking."
     }
   ]
 }

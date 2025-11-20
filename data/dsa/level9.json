@@ -1,107 +1,16 @@
 {
-  "level": 9,
-  "title": "Dynamic Programming",
-  "concept": "This level focuses on solving problems using DP — memoization, tabulation, optimal substructure, overlapping subproblems, 1-D and 2-D DP tables, LIS, knapsack, coin change and grid-based DP.",
+  "title": "DSA Level 9 — Graphs",
+  "concept": "Adjacency list, BFS, DFS, connected components, shortest path on unweighted graphs, bipartite checking.",
   "challenges": [
-    {
-      "id": 1,
-      "title": "Fibonacci (DP - Tabulation)",
-      "description": "Given N, print the Nth Fibonacci number using DP (bottom-up).",
-      "starterCode": "// dp[0]=0, dp[1]=1, fill up to n",
-      "tests": [
-        { "input": "6", "expected": "8" },
-        { "input": "0", "expected": "0" }
-      ]
-    },
-    {
-      "id": 2,
-      "title": "Climbing Stairs",
-      "description": "You can climb 1 or 2 steps. Count ways to reach Nth stair using DP.",
-      "starterCode": "// dp[n] = dp[n-1] + dp[n-2]",
-      "tests": [
-        { "input": "3", "expected": "3" },
-        { "input": "5", "expected": "8" }
-      ]
-    },
-    {
-      "id": 3,
-      "title": "Min Cost Climbing Stairs",
-      "description": "Given cost of each step, find min cost to reach the top. (Either index n or n-1 is the top.)",
-      "starterCode": "// dp[i] = cost[i] + min(dp[i-1], dp[i-2])",
-      "tests": [
-        { "input": "3\n10 15 20", "expected": "15" },
-        { "input": "5\n1 100 1 1 1", "expected": "3" }
-      ]
-    },
-    {
-      "id": 4,
-      "title": "Longest Increasing Subsequence (LIS - O(N²))",
-      "description": "Print length of LIS using DP.",
-      "starterCode": "// dp[i] = 1 + max(dp[j]) for j<i and arr[j]<arr[i]",
-      "tests": [
-        { "input": "6\n10 22 9 33 21 50", "expected": "4" },
-        { "input": "5\n5 4 3 2 1", "expected": "1" }
-      ]
-    },
-    {
-      "id": 5,
-      "title": "0/1 Knapsack",
-      "description": "Given N items with weight and value, and capacity W, print max value obtainable.",
-      "starterCode": "// classic knapsack dp with 2D table [i][w]",
-      "tests": [
-        { "input": "3 50\n10 60\n20 100\n30 120", "expected": "220" },
-        { "input": "2 10\n5 20\n6 30", "expected": "30" }
-      ]
-    },
-    {
-      "id": 6,
-      "title": "Coin Change — Total Ways",
-      "description": "Count ways to make sum X using unlimited coins (order doesn't matter).",
-      "starterCode": "// dp[i] += dp[i-coin] for each coin",
-      "tests": [
-        { "input": "3 4\n1 2 3", "expected": "4" },
-        { "input": "3 5\n1 2 5", "expected": "4" }
-      ]
-    },
-    {
-      "id": 7,
-      "title": "Subset Sum (DP)",
-      "description": "Given N numbers and sum K, print Yes if subset sums to K else No using DP.",
-      "starterCode": "// boolean dp[n+1][k+1]",
-      "tests": [
-        { "input": "4\n1 2 3 4\n6", "expected": "Yes" },
-        { "input": "4\n2 4 6 8\n5", "expected": "No" }
-      ]
-    },
-    {
-      "id": 8,
-      "title": "Edit Distance (Levenshtein)",
-      "description": "Given strings S and T, find minimum operations to convert S → T (insert/delete/replace).",
-      "starterCode": "// dp[i][j] = 1 + min(insert, delete, replace)",
-      "tests": [
-        { "input": "horse\nros", "expected": "3" },
-        { "input": "intention\nexecution", "expected": "5" }
-      ]
-    },
-    {
-      "id": 9,
-      "title": "Grid Path — Min Cost Path",
-      "description": "Given grid of costs N×M, start at (0,0) and reach (N−1,M−1) with only right/down. Print minimum total cost.",
-      "starterCode": "// dp[i][j] = cost[i][j] + min(top, left)",
-      "tests": [
-        { "input": "3 3\n1 3 1\n1 5 1\n4 2 1", "expected": "7" },
-        { "input": "2 2\n5 1\n2 1", "expected": "7" }
-      ]
-    },
-    {
-      "id": 10,
-      "title": "Longest Common Subsequence (LCS)",
-      "description": "Given strings A and B, print length of LCS using DP.",
-      "starterCode": "// dp[i][j] = 1 + dp[i-1][j-1] when match else max of remove",
-      "tests": [
-        { "input": "abcde\nace", "expected": "3" },
-        { "input": "abc\nabc", "expected": "3" }
-      ]
-    }
+    { "id": 1, "description": "BFS on adjacency list", "starterCode": "", "tests": [] },
+    { "id": 2, "description": "DFS on adjacency list", "starterCode": "", "tests": [] },
+    { "id": 3, "description": "Connected Components in Undirected Graph", "starterCode": "", "tests": [] },
+    { "id": 4, "description": "Cycle Detection in Undirected Graph", "starterCode": "", "tests": [] },
+    { "id": 5, "description": "Cycle Detection in Directed Graph", "starterCode": "", "tests": [] },
+    { "id": 6, "description": "Shortest Path in Unweighted Graph (BFS)", "starterCode": "", "tests": [] },
+    { "id": 7, "description": "Bipartite Check", "starterCode": "", "tests": [] },
+    { "id": 8, "description": "Topological Sorting", "starterCode": "", "tests": [] },
+    { "id": 9, "description": "Number of Islands (Matrix BFS)", "starterCode": "", "tests": [] },
+    { "id": 10, "description": "Word Ladder (Shortest Transformation)", "starterCode": "", "tests": [] }
   ]
 }
