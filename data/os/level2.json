@@ -1,7 +1,7 @@
 {
   "title": "OS Level 2 — Memory & Synchronization",
   "concept": "Paging, segmentation, deadlocks, critical section and semaphores.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "Virtual memory is primarily used to:",

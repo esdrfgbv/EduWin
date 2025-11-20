@@ -1,7 +1,7 @@
 {
   "title": "System Design Level 3 — High-Level Architecture",
   "concept": "Designing large-scale systems: rate limiting, search, newsfeed, id generation and observability.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "Which technique is commonly used to implement API rate limiting?",

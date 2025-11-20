@@ -1,7 +1,7 @@
 {
   "title": "OS Level 1 — Fundamentals",
   "concept": "Basic OS roles, processes, threads and system calls.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "What is the primary purpose of an Operating System?",

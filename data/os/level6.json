@@ -1,7 +1,7 @@
 {
   "title": "OS Level 6 — Virtual Memory & Paging (Advanced)",
   "concept": "Demand paging, page faults, TLB, working set, page-replacement and thrashing.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "A page fault occurs when:",

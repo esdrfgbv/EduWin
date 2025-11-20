@@ -1,7 +1,7 @@
 {
   "title": "System Design Level 6 — Messaging, Queues & Streaming",
   "concept": "Async communication, message queues, pub/sub, streaming and backpressure.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "A primary benefit of using a message queue between services is:",

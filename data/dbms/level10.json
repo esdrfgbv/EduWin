@@ -1,7 +1,7 @@
 {
   "title": "DBMS Level 10 — Data Warehousing & Advanced Topics",
   "concept": "OLTP vs OLAP, star/snowflake schema, column stores, cubes and OLAP operations.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "OLTP systems are primarily optimized for:",

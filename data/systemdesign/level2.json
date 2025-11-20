@@ -1,7 +1,7 @@
 {
   "title": "System Design Level 2 — Data, Caching & Reliability",
   "concept": "CAP theorem, consistency, replication, sharding and message queues.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "CAP theorem states that in a distributed system, you can guarantee at most:",

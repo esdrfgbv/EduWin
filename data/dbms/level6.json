@@ -1,7 +1,7 @@
 {
   "title": "DBMS Level 6 — Indexing & Query Processing",
   "concept": "Index types, B+ trees, hash indexes, query evaluation and cost estimation.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "The main purpose of an index in a database is to:",

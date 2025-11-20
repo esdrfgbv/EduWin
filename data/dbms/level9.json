@@ -1,7 +1,7 @@
 {
   "title": "DBMS Level 9 — Distributed Databases & NoSQL",
   "concept": "Replication, partitioning, distributed transactions, and NoSQL data models.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "Horizontal partitioning (sharding) in a distributed database means:",

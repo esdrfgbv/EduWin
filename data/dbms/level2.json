@@ -1,7 +1,7 @@
 {
   "title": "DBMS Level 2 — SQL & Normalization",
   "concept": "Joins, aggregations, functional dependencies and normal forms.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "Which JOIN returns only the matching rows from both tables?",

@@ -1,7 +1,7 @@
 {
   "title": "DBMS Level 4 — ER Modeling & Relational Design",
   "concept": "Entity–Relationship model, mapping ER to relational schema, keys, participation and relationship types.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "In an ER diagram, rectangles typically represent:",

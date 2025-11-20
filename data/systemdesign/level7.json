@@ -1,7 +1,7 @@
 {
   "title": "System Design Level 7 — Search, Ranking & Recommendation",
   "concept": "Inverted indexes, relevance ranking, autocomplete, recommendation and personalized feeds.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "A search engine’s inverted index maps:",

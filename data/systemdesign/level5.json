@@ -1,7 +1,7 @@
 {
   "title": "System Design Level 5 — Caching & Performance Patterns",
   "concept": "Cache patterns, invalidation strategies, cache stampede, and performance tuning.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "Which is a common cache placement for improving database read performance?",

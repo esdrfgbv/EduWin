@@ -1,7 +1,7 @@
 {
   "title": "OS Level 10 — Security & Advanced OS Topics",
   "concept": "Protection, access control, authentication, virtualization and containers.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "Which of the following best describes the principle of least privilege?",

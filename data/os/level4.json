@@ -1,7 +1,7 @@
 {
   "title": "OS Level 4 — File Systems",
   "concept": "File concepts, directory structures, allocation methods, FAT/inode, mounting and protection.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "Which of the following is NOT a typical file attribute?",

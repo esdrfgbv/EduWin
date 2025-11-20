@@ -1,7 +1,7 @@
 {
   "title": "OS Level 5 — I/O Systems & Device Management",
   "concept": "I/O hardware, device drivers, interrupts, polling, DMA and buffering.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "Which component typically acts as the software interface between device controller and OS?",

@@ -1,7 +1,7 @@
 {
   "title": "DBMS Level 5 — Advanced SQL, Views & Triggers",
   "concept": "Subqueries, correlated queries, views, triggers, set operations and constraints.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "Which SQL feature allows using the result of one query as input to another within the same statement?",

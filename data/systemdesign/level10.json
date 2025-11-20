@@ -1,7 +1,7 @@
 {
   "title": "System Design Level 10 — End-to-End Design & Trade-offs",
   "concept": "Holistic design, consistency vs availability, multi-region, cost, and scaling strategies.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "Designing a globally distributed system with low latency often requires:",

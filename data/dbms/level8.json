@@ -1,7 +1,7 @@
 {
   "title": "DBMS Level 7 — Advanced Transactions & Concurrency",
   "concept": "Lock types, isolation anomalies, 2PL variants, timestamp ordering and deadlocks.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "Which lock mode allows multiple transactions to read but not write a data item?",

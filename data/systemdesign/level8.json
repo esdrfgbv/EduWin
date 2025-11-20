@@ -1,7 +1,7 @@
 {
   "title": "System Design Level 8 — Social Systems & Rate Limiting",
   "concept": "Timelines, follower graphs, fan-out, abuse prevention and rate limiting patterns.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "In a Twitter-like system, 'fan-out-on-write' means:",

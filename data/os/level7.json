@@ -1,7 +1,7 @@
 {
   "title": "OS Level 7 — Synchronization & Classical Problems",
   "concept": "Critical sections, race conditions, semaphores, monitors and classical synchronization problems.",
-  "questions": [
+  "challenges": [
     {
       "id": 1,
       "question": "A race condition occurs when:",
