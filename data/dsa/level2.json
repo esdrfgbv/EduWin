@@ -1,4 +1,6 @@
 {
+    "level": 2,
+  "type" : "Compiler",
   "title": "DSA Level 2 — Arrays, Two-Pointers & Frequency",
   "concept": "Slightly harder array problems: pairs, frequency counting, two-pointer tricks.",
   "challenges": [

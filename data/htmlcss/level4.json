@@ -1,4 +1,6 @@
 {
+    "level": 4,
+  "type" : "Compiler",
   "title": "HTML+CSS Level 4 — Forms & Inputs",
   "concept": "Build and style simple forms with inputs, labels, and buttons.",
   "challenges": [

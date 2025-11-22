@@ -1,4 +1,6 @@
 {
+    "level": 6,
+  "type" : "Compiler",
   "title": "Java Level 6 — Methods & Basic OOP",
   "concept": "Defining methods, simple classes, encapsulation basics.",
   "language": "java",

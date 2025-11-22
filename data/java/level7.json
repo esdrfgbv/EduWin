@@ -1,4 +1,6 @@
 {
+    "level": 7,
+  "type" : "Compiler",
   "title": "Java Level 7 — Collections & Maps",
   "concept": "ArrayList, HashSet, HashMap, basic usage.",
   "language": "java",

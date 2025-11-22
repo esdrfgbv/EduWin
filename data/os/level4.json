@@ -1,6 +1,8 @@
 {
+  "level": 4,
   "title": "OS Level 4 — File Systems",
   "concept": "File concepts, directory structures, allocation methods, FAT/inode, mounting and protection.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,

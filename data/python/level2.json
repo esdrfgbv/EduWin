@@ -1,4 +1,6 @@
 {
+    "level": 2,
+  "type" : "Compiler",
   "title": "Python Level 2 — Conditions & Comparisons",
   "concept": "Use if, elif, else to compare numbers, classify values, and solve simple conditional tasks.",
   "challenges": [

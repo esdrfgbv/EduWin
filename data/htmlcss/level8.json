@@ -1,4 +1,6 @@
 {
+    "level": 8,
+  "type" : "Compiler",
   "title": "HTML+CSS Level 8 — Responsive Design & Media Queries",
   "concept": "Use media queries to adjust layouts on different screen sizes.",
   "challenges": [

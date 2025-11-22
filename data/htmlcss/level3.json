@@ -1,4 +1,6 @@
 {
+    "level": 3,
+  "type" : "Compiler",
   "title": "HTML+CSS Level 3 — Images & Simple Layout",
   "concept": "Use images, navigation menus, and basic two-column layouts.",
   "challenges": [

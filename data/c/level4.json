@@ -1,7 +1,8 @@
 {
   "level": 4,
-  "title": "Loops and Number Sequences",
-  "concept": "This level focuses on using loops (for / while) in C to process numeric sequences: printing ranges, sums, factorials, divisors and powers. Problems are adapted from Snakify loop tasks.",
+  "title": "C Level 4 — Loops and Sequences",
+  "concept": "Practice for and while loops to process ranges, sums, factorials and numeric sequences.",
+  "type": "Compiler",
   "challenges": [
     {
       "id": 1,

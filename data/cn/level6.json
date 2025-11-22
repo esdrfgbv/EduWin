@@ -2,66 +2,67 @@
   "level": 6,
   "title": "CN Level 6 — Application Layer Protocols",
   "concept": "HTTP, HTTPS, DNS, email protocols (SMTP, POP3, IMAP) and basic behavior.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,
-      "title": "Q1: DNS Purpose",
-      "description": "DNS (Domain Name System) is used to:",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option.",
-      "examples": [
-        "Options:\n a) Encrypt web traffic\n b) Map domain names to IP addresses\n c) Transfer email messages\n d) Compress image files on the web"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "DNS (Domain Name System) is used to:",
+      "options": {
+        "A": "Encrypt web traffic",
+        "B": "Map domain names to IP addresses",
+        "C": "Transfer email messages",
+        "D": "Compress image files on the web"
+      },
+      "answer": "B",
+      "explanation": "DNS resolves human-readable names (like example.com) to IP addresses."
     },
     {
       "id": 2,
-      "title": "Q2: HTTP Type",
-      "description": "HTTP is primarily a:",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option.",
-      "examples": [
-        "Options:\n a) Connectionless transport protocol\n b) Application layer request-response protocol\n c) Network layer routing protocol\n d) Data link layer framing protocol"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "HTTP is primarily a:",
+      "options": {
+        "A": "Connectionless transport protocol",
+        "B": "Application layer request-response protocol",
+        "C": "Network layer routing protocol",
+        "D": "Data link layer framing protocol"
+      },
+      "answer": "B",
+      "explanation": "HTTP is an Application-layer protocol built on top of TCP."
     },
     {
       "id": 3,
-      "title": "Q3: HTTPS",
-      "description": "HTTPS is essentially:",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option.",
-      "examples": [
-        "Options:\n a) HTTP over SSL/TLS for encryption\n b) HTTP using UDP instead of TCP\n c) A replacement for DNS\n d) A protocol for sending emails only"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "HTTPS is essentially:",
+      "options": {
+        "A": "HTTP over SSL/TLS for encryption",
+        "B": "HTTP using UDP instead of TCP",
+        "C": "A replacement for DNS",
+        "D": "A protocol for sending emails only"
+      },
+      "answer": "A",
+      "explanation": "HTTPS wraps HTTP inside an encrypted SSL/TLS tunnel for secure communication."
     },
     {
       "id": 4,
-      "title": "Q4: Email Sending Protocol",
-      "description": "Which protocol is most commonly used to send emails from a client to a mail server?",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option.",
-      "examples": [
-        "Options:\n a) SMTP\n b) POP3\n c) IMAP\n d) FTP"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "Which protocol is most commonly used to send emails from a client to a mail server?",
+      "options": {
+        "A": "SMTP",
+        "B": "POP3",
+        "C": "IMAP",
+        "D": "FTP"
+      },
+      "answer": "A",
+      "explanation": "SMTP (Simple Mail Transfer Protocol) is used for sending mail between clients and servers and between servers."
     },
     {
       "id": 5,
-      "title": "Q5: Email Retrieval",
-      "description": "Which protocol is commonly used by a mail client to retrieve emails while keeping them stored on the server (synchronization across devices)?",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option.",
-      "examples": [
-        "Options:\n a) SMTP\n b) POP3\n c) IMAP\n d) DHCP"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "Which protocol is commonly used by a mail client to retrieve emails while keeping them stored on the server (synchronization across devices)?",
+      "options": {
+        "A": "SMTP",
+        "B": "POP3",
+        "C": "IMAP",
+        "D": "DHCP"
+      },
+      "answer": "C",
+      "explanation": "IMAP keeps mail on the server and synchronizes state across multiple clients."
     }
   ]
 }

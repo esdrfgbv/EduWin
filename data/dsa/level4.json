@@ -1,4 +1,6 @@
 {
+    "level": 4,
+  "type" : "Compiler",
   "title": "DSA Level 4 — Linked Lists",
   "concept": "Singly and doubly linked list creation, insertion, deletion, searching and reversing.",
   "challenges": [

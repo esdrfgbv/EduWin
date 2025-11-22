@@ -2,66 +2,67 @@
   "level": 3,
   "title": "CN Level 3 — Physical & Data Link Layers",
   "concept": "MAC addresses, switches, frames, error detection and basic link-layer concepts.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,
-      "title": "Q1: MAC Address Layer",
-      "description": "MAC addresses are mainly used at which OSI layer?",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option.",
-      "examples": [
-        "Options:\n a) Physical layer\n b) Data link layer\n c) Network layer\n d) Application layer"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "MAC addresses are mainly used at which OSI layer?",
+      "options": {
+        "A": "Physical layer",
+        "B": "Data link layer",
+        "C": "Network layer",
+        "D": "Application layer"
+      },
+      "answer": "B",
+      "explanation": "MAC (Media Access Control) operates at the Data Link layer to identify interfaces on a local network."
     },
     {
       "id": 2,
-      "title": "Q2: Switch Operation",
-      "description": "An Ethernet switch mainly operates at the:",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option.",
-      "examples": [
-        "Options:\n a) Physical layer\n b) Data link layer\n c) Network layer\n d) Transport layer"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "An Ethernet switch mainly operates at the:",
+      "options": {
+        "A": "Physical layer",
+        "B": "Data link layer",
+        "C": "Network layer",
+        "D": "Transport layer"
+      },
+      "answer": "B",
+      "explanation": "Switches forward frames based on MAC addresses at the Data Link layer."
     },
     {
       "id": 3,
-      "title": "Q3: Frame vs Packet",
-      "description": "A frame is the data unit at the _____ layer and a packet is the data unit at the _____ layer.",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option.",
-      "examples": [
-        "Options:\n a) Network, Data link\n b) Data link, Network\n c) Physical, Network\n d) Application, Transport"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "A frame is the data unit at the _____ layer and a packet is the data unit at the _____ layer.",
+      "options": {
+        "A": "Network, Data link",
+        "B": "Data link, Network",
+        "C": "Physical, Network",
+        "D": "Application, Transport"
+      },
+      "answer": "B",
+      "explanation": "Frames belong to the Data Link layer while packets are Network-layer units."
     },
     {
       "id": 4,
-      "title": "Q4: Error Detection Field",
-      "description": "In Ethernet frames, which field is primarily used for error detection?",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option.",
-      "examples": [
-        "Options:\n a) Destination MAC address\n b) Source MAC address\n c) CRC/FCS (Frame Check Sequence)\n d) Type/Length field"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "In Ethernet frames, which field is primarily used for error detection?",
+      "options": {
+        "A": "Destination MAC address",
+        "B": "Source MAC address",
+        "C": "CRC/FCS (Frame Check Sequence)",
+        "D": "Type/Length field"
+      },
+      "answer": "C",
+      "explanation": "The Frame Check Sequence (FCS) with CRC is used to detect transmission errors."
     },
     {
       "id": 5,
-      "title": "Q5: Collision Domain",
-      "description": "Which device is used to reduce the size of collision domains in an Ethernet LAN?",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option.",
-      "examples": [
-        "Options:\n a) Hub\n b) Repeater\n c) Switch\n d) Modem"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "Which device is used to reduce the size of collision domains in an Ethernet LAN?",
+      "options": {
+        "A": "Hub",
+        "B": "Repeater",
+        "C": "Switch",
+        "D": "Modem"
+      },
+      "answer": "C",
+      "explanation": "Each switch port forms its own collision domain, reducing collisions compared to hubs."
     }
   ]
 }

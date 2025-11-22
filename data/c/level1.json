@@ -1,7 +1,8 @@
 {
   "level": 1,
-  "title": "Basic Input and Simple Calculations",
-  "concept": "This level focuses on simple input and output in C, as well as very basic arithmetic operations: sums, squares, and digit extraction. Problems are adapted from Snakify-style beginner tasks.",
+  "title": "C Level 1 — Basics",
+  "concept": "Intro to printing, reading input, variables and basic operators.",
+  "type": "Compiler",
   "challenges": [
     {
       "id": 1,

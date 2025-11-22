@@ -1,4 +1,6 @@
 {
+    "level": 5,
+  "type" : "Compiler",
   "title": "Python Level 4 — Loops & Number Sequences",
   "concept": "Use loops to print ranges, compute sums, factorials, and simple numeric properties.",
   "challenges": [

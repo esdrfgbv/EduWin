@@ -1,6 +1,8 @@
 {
+  "level": 7,
   "title": "DBMS Level 6 — Indexing & Query Processing",
   "concept": "Index types, B+ trees, hash indexes, query evaluation and cost estimation.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,

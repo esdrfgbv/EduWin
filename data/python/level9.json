@@ -1,4 +1,6 @@
 {
+    "level": 9,
+  "type" : "Compiler",
   "title": "Python Level 9 — Dicts & Frequency Counting",
   "concept": "Use dict and collections.Counter to build dictionaries, count frequencies, and aggregate values.",
   "challenges": [

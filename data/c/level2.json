@@ -1,7 +1,8 @@
 {
   "level": 2,
-  "title": "Numbers, Time and Simple Decisions",
-  "concept": "This level uses integers and real numbers in simple tasks: fractional parts, time calculations, basic comparisons and minimums. All tasks are adapted from Snakify-style beginner problems.",
+  "title": "C Level 2 — Numbers and Time",
+  "concept": "Work with integers and real numbers, fractional parts, time calculations and simple decisions using C.",
+  "type": "Compiler",
   "challenges": [
     {
       "id": 1,

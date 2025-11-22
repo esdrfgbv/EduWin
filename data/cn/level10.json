@@ -2,66 +2,67 @@
   "level": 10,
   "title": "CN Level 10 — Secure Web App Networking",
   "concept": "End-to-end design of a secure web application deployment: segmentation, HTTPS, firewalls.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,
-      "title": "Q1: Secure Deployment Architecture",
-      "description": "Design a high-level network architecture for hosting a secure web application. Include components like load balancer, web/app servers, database, and indicate which parts are exposed to the Internet and which are in private networks.",
-      "inputDescription": "No input. Scenario question.",
-      "outputDescription": "Diagram-style text description of public vs private segments (checked manually).",
-      "examples": [
-        "Think of: Internet → load balancer in public subnet → app servers in private subnet → DB in deeper private subnet (no direct Internet access)."
-      ],
-      "starterCode": "// Describe the components, their placement (public/private), and basic data flow.\n",
-      "tests": []
+      "question": "Which high-level architecture best represents a secure web application deployment?",
+      "options": {
+        "A": "Internet → database server (public IP) → web server (private IP)",
+        "B": "Internet → load balancer in public subnet → web/app servers in private subnet → database in deeper private subnet",
+        "C": "Internet → single server with web app and database exposed on all ports",
+        "D": "Internet → firewall → all servers on the same flat network"
+      },
+      "answer": "B",
+      "explanation": "Placing public-facing components in a public subnet and sensitive components in private subnets is a common secure design."
     },
     {
       "id": 2,
-      "title": "Q2: HTTPS & Firewall Rules",
-      "description": "Explain how HTTPS and firewall rules help secure the web application in the above architecture. Mention what traffic is allowed from the Internet and what is restricted between subnets.",
-      "inputDescription": "No input. Scenario question.",
-      "outputDescription": "Explanation of TLS for encryption and firewall rules for access control (checked manually).",
-      "examples": [
-        "Example: Allow HTTPS (443) from Internet to load balancer only, allow app servers to talk to DB on specific port from specific subnet, deny all else."
-      ],
-      "starterCode": "// Describe how HTTPS protects data in transit and how firewall rules restrict access.\n",
-      "tests": []
+      "question": "How do HTTPS and firewall rules together help secure a web application?",
+      "options": {
+        "A": "HTTPS provides encryption; firewall restricts which ports and sources can reach internal components",
+        "B": "HTTPS replaces the need for any firewalls",
+        "C": "Firewalls provide encryption and HTTPS provides routing",
+        "D": "They only protect against hardware failures"
+      },
+      "answer": "A",
+      "explanation": "HTTPS encrypts data in transit; firewalls enforce which traffic is allowed between the Internet and internal servers."
     },
     {
       "id": 3,
-      "title": "Q3: DMZ Concept",
-      "description": "Define what a DMZ (demilitarized zone) is in network security and explain where in your web app architecture you would place it.",
-      "inputDescription": "No input. Conceptual question.",
-      "outputDescription": "Short explanation and placement of DMZ.",
-      "examples": [
-        "Hint: Public-facing servers (like reverse proxy/load balancer) often live in a DMZ between external and internal networks."
-      ],
-      "starterCode": "// Define DMZ and explain which components should be placed there.\n",
-      "tests": []
+      "question": "In network security, a DMZ (demilitarized zone) is:",
+      "options": {
+        "A": "A fully trusted internal network for databases",
+        "B": "A network segment that hosts public-facing services, separated from both Internet and internal LAN",
+        "C": "A feature of TCP congestion control",
+        "D": "Another term for VPN tunnel"
+      },
+      "answer": "B",
+      "explanation": "A DMZ isolates public-facing servers (like reverse proxy/load balancer) from the core internal network."
     },
     {
       "id": 4,
-      "title": "Q4: Logging and Monitoring",
-      "description": "Describe at least three types of logs or monitoring metrics you would enable to detect security incidents or performance issues in this web app environment.",
-      "inputDescription": "No input. Scenario question.",
-      "outputDescription": "List and explanation of metrics/logs (manual evaluation).",
-      "examples": [
-        "Examples: Web server access logs, firewall logs, IDS/IPS alerts, CPU/memory usage, error rates, unusual login attempts."
-      ],
-      "starterCode": "// List logs/metrics and briefly explain why each is useful.\n",
-      "tests": []
+      "question": "Which of the following is the BEST set of logs/metrics to monitor for security and performance in a web app environment?",
+      "options": {
+        "A": "CPU temperature only",
+        "B": "Web server access/error logs, firewall logs, and metrics like latency/error rates",
+        "C": "Only database size growth",
+        "D": "Only number of open browser tabs on clients"
+      },
+      "answer": "B",
+      "explanation": "Combining application, network, and system metrics/logs helps detect attacks and performance issues."
     },
     {
       "id": 5,
-      "title": "Q5: Least Privilege Principle",
-      "description": "Explain the principle of least privilege and give two examples of how you would apply it in the secure web application network design.",
-      "inputDescription": "No input. Conceptual question.",
-      "outputDescription": "Explanation plus concrete examples.",
-      "examples": [
-        "Example: DB user account with only required permissions; firewall allowing only necessary ports between specific hosts."
-      ],
-      "starterCode": "// Explain the principle and give at least two concrete implementations.\n",
-      "tests": []
+      "question": "Which option best illustrates applying the principle of least privilege in a secure web app network?",
+      "options": {
+        "A": "Allow all ports between web servers and database servers",
+        "B": "Give the database user full admin rights on the OS",
+        "C": "Allow only specific ports between app and DB, and give the DB user only required permissions",
+        "D": "Use the same admin account for all services"
+      },
+      "answer": "C",
+      "explanation": "Least privilege means allowing only the minimal access needed—both in firewall rules and in account permissions."
     }
   ]
 }

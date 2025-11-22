@@ -1,4 +1,6 @@
 {
+    "level": 7,
+  "type" : "Compiler",
   "title": "C++ Level 7 — Functions & Recursion",
   "concept": "Define and use functions with parameters and return values, including recursive functions.",
   "challenges": [

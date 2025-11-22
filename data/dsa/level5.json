@@ -1,4 +1,6 @@
 {
+    "level": 5,
+  "type" : "Compiler",
   "title": "DSA Level 5 — Stacks & Queues",
   "concept": "Stack operations, queue operations, balanced parentheses, next greater element, sliding window.",
   "challenges": [

@@ -1,4 +1,6 @@
 {
+    "level": 9,
+  "type" : "Compiler",
   "title": "HTML+CSS Level 9 — Transitions & Hover Effects",
   "concept": "Use CSS transitions, transforms, and hover states for interactive UI.",
   "challenges": [

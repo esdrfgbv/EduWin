@@ -1,4 +1,6 @@
 {
+    "level": 7,
+  "type" : "Compiler",
   "title": "JavaScript Level 7 — Functions & Recursion",
   "concept": "Write helper functions and recursive functions in JavaScript.",
   "challenges": [

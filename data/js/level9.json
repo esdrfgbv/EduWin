@@ -1,4 +1,6 @@
 {
+    "level": 9,
+  "type" : "Compiler",
   "title": "JavaScript Level 9 — Maps and Frequency Counting",
   "concept": "Use Map and objects to build dictionaries, count frequencies, and aggregate values.",
   "challenges": [

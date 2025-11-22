@@ -1,6 +1,8 @@
 {
+  "level": 3,
   "title": "DBMS Level 3 — Transactions, Indexing & Concurrency",
   "concept": "ACID properties, isolation, serializability, indexing and query optimization.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,

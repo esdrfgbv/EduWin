@@ -1,7 +1,8 @@
 {
   "level": 5,
-  "title": "Arrays and List Processing",
-  "concept": "This level builds understanding of arrays (lists) and element-wise operations: indices, neighbors, maxima, counts and uniqueness. Problems are adapted from Snakify list tasks.",
+  "title": "C Level 5 — Arrays and Lists",
+  "concept": "Use arrays in C to process lists, neighbors, maxima and counts of elements.",
+  "type": "Compiler",
   "challenges": [
     {
       "id": 1,

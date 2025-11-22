@@ -1,6 +1,8 @@
 {
+  "level": 5,
   "title": "OS Level 5 — I/O Systems & Device Management",
   "concept": "I/O hardware, device drivers, interrupts, polling, DMA and buffering.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,

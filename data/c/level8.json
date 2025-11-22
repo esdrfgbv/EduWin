@@ -2,6 +2,7 @@
   "level": 8,
   "title": "Sets and Membership Checking",
   "concept": "This level works with set-like operations: unique elements, intersections, and membership tracking, implemented in C using arrays and loops. Problems are adapted from Snakify set tasks.",
+  "type": "Compiler",
   "challenges": [
     {
       "id": 1,

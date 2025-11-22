@@ -1,4 +1,6 @@
 {
+    "level": 7,
+  "type" : "Compiler",
   "title": "HTML+CSS Level 7 — CSS Grid & Multi-Section Layouts",
   "concept": "Use CSS Grid for card galleries and complex page layouts with rows and columns.",
   "challenges": [

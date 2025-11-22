@@ -1,4 +1,6 @@
 {
+    "level": 2,
+  "type" : "Compiler",
   "title": "HTML+CSS Level 2 — Basic CSS Styling",
   "concept": "Inline and internal CSS, colors, fonts, text alignment and simple backgrounds.",
   "challenges": [

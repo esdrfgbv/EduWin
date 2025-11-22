@@ -1,4 +1,6 @@
 {
+    "level": 10,
+  "type" : "Compiler",
   "title": "C# Level 10 — Combined STL & Logic Problems",
   "concept": "Combine loops, arrays, strings, sets and dictionaries to solve slightly larger problems.",
   "challenges": [

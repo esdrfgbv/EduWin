@@ -1,7 +1,8 @@
 {
   "level": 3,
-  "title": "Conditions and Chess Problems",
-  "concept": "This level focuses on if/else logic and classical Snakify-style condition problems: equality counting, leap year, and chess piece moves.",
+  "title": "C Level 3 — Conditions and Logic",
+  "concept": "Use if/else conditions to solve logic puzzles like equality checks and chess piece movements.",
+  "type": "Compiler",
   "challenges": [
     {
       "id": 1,

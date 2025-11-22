@@ -2,6 +2,7 @@
   "level": 10,
   "title": "Mini Projects with Combined Concepts",
   "concept": "Final level. These problems combine loops, arrays, strings, sets and map-like logic into mini-project style tasks, adapted from advanced Snakify problems.",
+  "type": "Compiler",
   "challenges": [
     {
       "id": 1,

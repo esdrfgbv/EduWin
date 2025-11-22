@@ -1,4 +1,6 @@
 {
+    "level": 9,
+  "type" : "Compiler",
   "title": "Java Level 9 — Advanced OOP & Exceptions",
   "concept": "Inheritance, interfaces, overriding, basic exception handling (still stdin/stdout based problems).",
   "language": "java",

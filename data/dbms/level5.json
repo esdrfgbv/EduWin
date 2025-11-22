@@ -1,6 +1,8 @@
 {
+  "level": 5,
   "title": "DBMS Level 5 — Advanced SQL, Views & Triggers",
   "concept": "Subqueries, correlated queries, views, triggers, set operations and constraints.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,

@@ -1,6 +1,8 @@
 {
+  "level": 3,
   "title": "OS Level 3 — Scheduling, I/O & Advanced Concepts",
   "concept": "Advanced scheduling, disk scheduling, multithreading models and RAID basics.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,

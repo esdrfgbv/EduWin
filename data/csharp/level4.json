@@ -1,4 +1,6 @@
 {
+    "level": 4,
+  "type" : "Compiler",
   "title": "C# Level 4 — Loops & Counting",
   "concept": "Use for/while loops to print ranges, compute sums, factorials and numeric properties.",
   "challenges": [

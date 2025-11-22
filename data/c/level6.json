@@ -2,6 +2,7 @@
   "level": 6,
   "title": "Strings and Character Operations",
   "concept": "This level focuses on string indexing, slicing, searching, replacing and deleting characters, adapted from Snakify string tasks. Implement using character arrays in C.",
+  "type" : "Compiler",
   "challenges": [
     {
       "id": 1,

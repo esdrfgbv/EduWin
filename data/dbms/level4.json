@@ -1,6 +1,8 @@
 {
+  "level": 4,
   "title": "DBMS Level 4 — ER Modeling & Relational Design",
   "concept": "Entity–Relationship model, mapping ER to relational schema, keys, participation and relationship types.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,

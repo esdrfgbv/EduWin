@@ -1,4 +1,6 @@
 {
+    "level": 2,
+  "type" : "Compiler",
   "title": "C++ Level 2 — Data Types & Operators",
   "concept": "Use integers and real numbers with arithmetic, time and money calculations.",
   "challenges": [

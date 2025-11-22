@@ -1,4 +1,6 @@
 {
+  "level": 1,
+  "type" : "Compiler",
   "title": "C++ Level 1 — Basics & I/O",
   "concept": "Basic cout/cin usage and simple integer arithmetic.",
   "challenges": [

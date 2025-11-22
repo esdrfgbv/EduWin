@@ -2,66 +2,67 @@
   "level": 5,
   "title": "CN Level 5 — Transport Layer: TCP & UDP",
   "concept": "TCP vs UDP, ports, reliability, congestion control and typical applications.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,
-      "title": "Q1: TCP Characteristic",
-      "description": "Which of the following is a key characteristic of TCP?",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option.",
-      "examples": [
-        "Options:\n a) Connectionless and unreliable\n b) Connection-oriented and reliable\n c) Used only for streaming video\n d) Does not support port numbers"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "Which of the following is a key characteristic of TCP?",
+      "options": {
+        "A": "Connectionless and unreliable",
+        "B": "Connection-oriented and reliable",
+        "C": "Used only for streaming video",
+        "D": "Does not support port numbers"
+      },
+      "answer": "B",
+      "explanation": "TCP provides reliable, connection-oriented, byte-stream transport with sequencing and retransmission."
     },
     {
       "id": 2,
-      "title": "Q2: UDP Usage",
-      "description": "UDP is preferred over TCP when:",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option.",
-      "examples": [
-        "Options:\n a) Reliability is more important than delay\n b) Applications can tolerate some loss but need low latency (e.g., live streaming)\n c) We need guaranteed in-order delivery\n d) We are transferring critical banking data"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "UDP is preferred over TCP when:",
+      "options": {
+        "A": "Reliability is more important than delay",
+        "B": "Applications can tolerate some loss but need low latency (e.g., live streaming)",
+        "C": "We need guaranteed in-order delivery",
+        "D": "We are transferring critical banking data"
+      },
+      "answer": "B",
+      "explanation": "UDP is connectionless and low-latency, suitable for real-time apps that tolerate some packet loss."
     },
     {
       "id": 3,
-      "title": "Q3: Well-known Port",
-      "description": "Which protocol commonly uses TCP port 80?",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option.",
-      "examples": [
-        "Options:\n a) FTP\n b) SMTP\n c) HTTP\n d) DNS (query)"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "Which protocol commonly uses TCP port 80?",
+      "options": {
+        "A": "FTP",
+        "B": "SMTP",
+        "C": "HTTP",
+        "D": "DNS (query)"
+      },
+      "answer": "C",
+      "explanation": "Port 80/TCP is the default port for HTTP web traffic."
     },
     {
       "id": 4,
-      "title": "Q4: TCP Features",
-      "description": "Which feature is NOT provided by UDP but is provided by TCP?",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option.",
-      "examples": [
-        "Options:\n a) Congestion control\n b) Checksum for error detection\n c) Multiplexing via ports\n d) Support for IPv4 and IPv6"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "Which feature is NOT provided by UDP but is provided by TCP?",
+      "options": {
+        "A": "Congestion control",
+        "B": "Checksum for error detection",
+        "C": "Multiplexing via ports",
+        "D": "Support for IPv4 and IPv6"
+      },
+      "answer": "A",
+      "explanation": "TCP implements congestion control; UDP is much simpler and does not."
     },
     {
       "id": 5,
-      "title": "Q5: Three-way Handshake",
-      "description": "TCP connection establishment typically uses:",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option.",
-      "examples": [
-        "Options:\n a) Two-way handshake\n b) Three-way handshake\n c) Four-way handshake\n d) No handshake is required"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "TCP connection establishment typically uses:",
+      "options": {
+        "A": "Two-way handshake",
+        "B": "Three-way handshake",
+        "C": "Four-way handshake",
+        "D": "No handshake is required"
+      },
+      "answer": "B",
+      "explanation": "TCP uses SYN, SYN-ACK, ACK (three-way handshake) to establish a connection."
     }
   ]
 }

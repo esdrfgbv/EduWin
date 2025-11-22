@@ -2,6 +2,7 @@
   "level": 7,
   "title": "Functions and Recursion",
   "concept": "This level focuses on writing and using functions in C, including functions with parameters, return values, and simple recursion. Problems are adapted from Snakify function and recursion tasks.",
+  "type": "Compiler",
   "challenges": [
     {
       "id": 1,

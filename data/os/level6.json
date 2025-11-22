@@ -1,6 +1,8 @@
 {
+  "level": 6,
   "title": "OS Level 6 — Virtual Memory & Paging (Advanced)",
   "concept": "Demand paging, page faults, TLB, working set, page-replacement and thrashing.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,

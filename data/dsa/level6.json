@@ -1,4 +1,6 @@
 {
+    "level": 6,
+  "type" : "Compiler",
   "title": "DSA Level 6 — Recursion & Backtracking",
   "concept": "Recursion techniques: permutations, subsets, n-Queens, Sudoku, backtracking search.",
   "challenges": [

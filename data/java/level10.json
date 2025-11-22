@@ -1,4 +1,6 @@
 {
+    "level": 10,
+  "type" : "Compiler",
   "title": "Java Level 10 — Mixed Algorithmic Challenges",
   "concept": "Harder problems combining arrays, strings, maps, and basic algorithms.",
   "language": "java",

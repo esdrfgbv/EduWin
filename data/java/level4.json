@@ -1,4 +1,6 @@
 {
+    "level": 4,
+  "type" : "Compiler",
   "title": "Java Level 4 — Arrays & Basic Strings",
   "concept": "One-dimensional arrays, traversals, simple string operations.",
   "language": "java",

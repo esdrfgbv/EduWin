@@ -1,4 +1,6 @@
 {
+    "level": 10,
+  "type" : "Compiler",
   "title": "DSA Level 10 — Dynamic Programming & Advanced",
   "concept": "Classical DP patterns: knapsack, LIS, LCS, DP on grids, bitmask DP.",
   "challenges": [

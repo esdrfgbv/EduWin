@@ -1,4 +1,6 @@
 {
+    "level": 3,
+  "type" : "Compiler",
   "title": "Java Level 3 — Loops & Simple Algorithms",
   "concept": "for/while loops, counting, sums, simple patterns.",
   "language": "java",

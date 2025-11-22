@@ -2,66 +2,67 @@
   "level": 1,
   "title": "CN Level 1 — Introduction to Computer Networks",
   "concept": "Basic concepts of computer networks, benefits, and broad classification of networks.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,
-      "title": "Q1: What is a Computer Network?",
-      "description": "A computer network is best described as:",
-      "inputDescription": "No input. This is an MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\n a) A single computer with multiple users\n b) A collection of interconnected computers that can share resources\n c) A special type of high-speed printer\n d) A backup device for storing files"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "A computer network is best described as:",
+      "options": {
+        "A": "A single computer with multiple users",
+        "B": "A collection of interconnected computers that can share resources",
+        "C": "A special type of high-speed printer",
+        "D": "A backup device for storing files"
+      },
+      "answer": "B",
+      "explanation": "A network connects multiple computers so they can share resources, data, and services."
     },
     {
       "id": 2,
-      "title": "Q2: Network Advantages",
-      "description": "Which of the following is NOT typically an advantage of using a computer network?",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\n a) Resource sharing\n b) Easy communication\n c) Centralized data management\n d) Complete elimination of security risks"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "Which of the following is NOT typically an advantage of using a computer network?",
+      "options": {
+        "A": "Resource sharing",
+        "B": "Easy communication",
+        "C": "Centralized data management",
+        "D": "Complete elimination of security risks"
+      },
+      "answer": "D",
+      "explanation": "Networks actually introduce security risks; they cannot eliminate them completely."
     },
     {
       "id": 3,
-      "title": "Q3: LAN Expansion",
-      "description": "A Local Area Network (LAN) typically covers:",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\n a) A whole country\n b) A small geographical area like a building or campus\n c) The entire Internet\n d) A connection between two continents"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "A Local Area Network (LAN) typically covers:",
+      "options": {
+        "A": "A whole country",
+        "B": "A small geographical area like a building or campus",
+        "C": "The entire Internet",
+        "D": "A connection between two continents"
+      },
+      "answer": "B",
+      "explanation": "LANs are limited to small areas such as a room, building, or campus."
     },
     {
       "id": 4,
-      "title": "Q4: WAN Example",
-      "description": "Which of the following is the best example of a Wide Area Network (WAN)?",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\n a) Network inside a college lab\n b) Network inside a single office floor\n c) Interconnection of branch offices of a company across different cities\n d) Connection of two PCs using a crossover cable only"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "Which of the following is the best example of a Wide Area Network (WAN)?",
+      "options": {
+        "A": "Network inside a college lab",
+        "B": "Network inside a single office floor",
+        "C": "Interconnection of branch offices of a company across different cities",
+        "D": "Connection of two PCs using a crossover cable only"
+      },
+      "answer": "C",
+      "explanation": "WANs connect networks across large geographic areas, such as cities or countries."
     },
     {
       "id": 5,
-      "title": "Q5: Internet vs Intranet",
-      "description": "Which statement about intranet is TRUE?",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option (a/b/c/d).",
-      "examples": [
-        "Options:\n a) Intranet is a global public network\n b) Intranet is a private network used within an organization\n c) Intranet and Internet are the same\n d) Intranet can only exist without using TCP/IP"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "Which statement about an intranet is TRUE?",
+      "options": {
+        "A": "Intranet is a global public network",
+        "B": "Intranet is a private network used within an organization",
+        "C": "Intranet and Internet are the same",
+        "D": "Intranet can only exist without using TCP/IP"
+      },
+      "answer": "B",
+      "explanation": "An intranet is a private, organization-internal network often built using Internet technologies."
     }
   ]
 }

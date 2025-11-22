@@ -1,4 +1,6 @@
 {
+    "level": 3,
+  "type" : "Compiler",
   "title": "C# Level 3 — Conditional Statements",
   "concept": "Use if-else to classify numbers and solve simple logic problems.",
   "challenges": [

@@ -1,4 +1,6 @@
 {
+    "level": 9,
+  "type" : "Compiler",
   "title": "DSA Level 9 — Graphs",
   "concept": "Adjacency list, BFS, DFS, connected components, shortest path on unweighted graphs, bipartite checking.",
   "challenges": [

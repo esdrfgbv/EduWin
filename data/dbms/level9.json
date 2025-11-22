@@ -1,6 +1,8 @@
 {
+  "level": 9,
   "title": "DBMS Level 9 — Distributed Databases & NoSQL",
   "concept": "Replication, partitioning, distributed transactions, and NoSQL data models.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,

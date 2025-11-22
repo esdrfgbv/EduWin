@@ -1,6 +1,8 @@
 {
+  "level": 8,
   "title": "OS Level 8 — Deadlocks & Resource Management",
   "concept": "Deadlock modeling, prevention, avoidance (Banker’s), detection and recovery.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,

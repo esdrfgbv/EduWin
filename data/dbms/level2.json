@@ -1,6 +1,8 @@
 {
+  "level": 2,
   "title": "DBMS Level 2 — SQL & Normalization",
   "concept": "Joins, aggregations, functional dependencies and normal forms.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,
@@ -28,7 +30,7 @@
     },
     {
       "id": 3,
-      "question": "A functional dependency X → Y in a relation R means:",
+      "question": "A functional dependency X \u2192 Y in a relation R means:",
       "options": {
         "A": "X and Y are keys",
         "B": "For each X value, there is exactly one Y value",
@@ -60,7 +62,7 @@
         "D": "BCNF"
       },
       "answer": "C",
-      "explanation": "3NF removes transitive dependencies (A→B, B→C implies A→C)."
+      "explanation": "3NF removes transitive dependencies (A\u2192B, B\u2192C implies A\u2192C)."
     },
     {
       "id": 6,
@@ -88,7 +90,7 @@
     },
     {
       "id": 8,
-      "question": "BCNF (Boyce–Codd Normal Form) can be informally described as:",
+      "question": "BCNF (Boyce\u2013Codd Normal Form) can be informally described as:",
       "options": {
         "A": "Every determinant is a candidate key",
         "B": "No partial dependencies",
@@ -96,7 +98,7 @@
         "D": "No multivalued dependencies"
       },
       "answer": "A",
-      "explanation": "In BCNF, for every non-trivial FD X→Y, X must be a superkey (candidate key or superset)."
+      "explanation": "In BCNF, for every non-trivial FD X\u2192Y, X must be a superkey (candidate key or superset)."
     },
     {
       "id": 9,

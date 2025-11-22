@@ -1,6 +1,8 @@
 {
+  "level": 9,
   "title": "OS Level 9 — Distributed & Real-Time Operating Systems",
   "concept": "Distributed OS concepts, clock synchronization, real-time scheduling and characteristics.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,

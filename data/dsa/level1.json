@@ -1,4 +1,6 @@
 {
+    "level": 1,
+  "type" : "Compiler",
   "title": "DSA Level 1 — Arrays & Basic Problems",
   "concept": "Fundamental array operations: traversal, searching, min/max, counting, prefix calculations.",
   "challenges": [

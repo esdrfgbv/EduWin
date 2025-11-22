@@ -1,4 +1,6 @@
 {
+    "level": 7,
+  "type" : "Compiler",
   "title": "Python Level 7 — Functions & Recursion",
   "concept": "Write helper functions and recursive functions in Python.",
   "challenges": [

@@ -1,4 +1,6 @@
 {
+    "level": 8,
+  "type" : "Compiler",
   "title": "C# Level 8 — Sets and Membership",
   "concept": "Use HashSet<T> to track unique values, intersections, and membership checks.",
   "challenges": [

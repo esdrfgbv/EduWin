@@ -1,4 +1,6 @@
 {
+    "level": 1,
+  "type" : "Compiler",
   "title": "HTML+CSS Level 1 — Basic HTML Structure",
   "concept": "HTML boilerplate, headings, paragraphs, line breaks and basic text formatting.",
   "challenges": [

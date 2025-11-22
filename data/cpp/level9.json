@@ -1,4 +1,6 @@
 {
+    "level": 9,
+  "type" : "Compiler",
   "title": "C++ Level 9 — Maps and Frequency Counting",
   "concept": "Use std::map to build dictionaries, count frequencies, and aggregate values.",
   "challenges": [

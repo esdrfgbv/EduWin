@@ -1,4 +1,6 @@
 {
+    "level": 1,
+  "type" : "Compiler",
   "title": "Java Level 1 — Basic I/O & Arithmetic",
   "concept": "Reading from stdin, printing to stdout, basic arithmetic.",
   "language": "java",

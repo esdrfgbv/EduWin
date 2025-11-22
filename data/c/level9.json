@@ -2,6 +2,7 @@
   "level": 9,
   "title": "Maps and Frequency Counting",
   "concept": "This level introduces dictionary-like problems: synonym dictionaries, vote counting, word frequency, permissions. Implement in C using arrays of structs or parallel arrays.",
+  "type": "Compiler",
   "challenges": [
     {
       "id": 1,

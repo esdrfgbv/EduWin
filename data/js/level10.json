@@ -1,4 +1,6 @@
 {
+    "level": 10,
+  "type" : "Compiler",
   "title": "JavaScript Level 10 — Combined Logic & Data Structures",
   "concept": "Combine loops, arrays, strings, sets and maps to solve slightly larger problems.",
   "challenges": [

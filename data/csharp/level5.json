@@ -1,4 +1,6 @@
 {
+    "level": 5,
+  "type" : "Compiler",
   "title": "C# Level 5 — Arrays & Basic Algorithms",
   "concept": "Use arrays to process sequences: indices, neighbors, maxima, uniqueness and counting.",
   "challenges": [

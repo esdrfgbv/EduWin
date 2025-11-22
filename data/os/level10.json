@@ -1,6 +1,8 @@
 {
+  "level": 10,
   "title": "OS Level 10 — Security & Advanced OS Topics",
   "concept": "Protection, access control, authentication, virtualization and containers.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,

@@ -1,4 +1,6 @@
 {
+    "level": 3,
+  "type" : "Compiler",
   "title": "DSA Level 3 — Strings & Basic Hashing",
   "concept": "Classic string operations: frequency, palindromes, anagrams, sliding window on strings.",
   "challenges": [

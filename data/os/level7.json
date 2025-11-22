@@ -1,6 +1,8 @@
 {
+  "level": 7,
   "title": "OS Level 7 — Synchronization & Classical Problems",
   "concept": "Critical sections, race conditions, semaphores, monitors and classical synchronization problems.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,

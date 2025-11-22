@@ -1,4 +1,6 @@
 {
+    "level": 10,
+  "type" : "Compiler",
   "title": "HTML+CSS Level 10 — Full Page Mini Projects",
   "concept": "Combine all previous concepts to build multi-section, responsive, and interactive pages.",
   "challenges": [

@@ -1,4 +1,6 @@
 {
+    "level": 1,
+  "type" : "Compiler",
   "title": "JavaScript Level 1 — Basics & I/O",
   "concept": "Basic input and output with simple integer arithmetic in JavaScript.",
   "challenges": [

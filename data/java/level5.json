@@ -1,4 +1,6 @@
 {
+    "level": 5,
+  "type" : "Compiler",
   "title": "Java Level 5 — Arrays & Sorting",
   "concept": "Basic sorting, frequency, simple 2D arrays.",
   "language": "java",

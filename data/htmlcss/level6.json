@@ -1,4 +1,6 @@
 {
+    "level": 6,
+  "type" : "Compiler",
   "title": "HTML+CSS Level 6 — Flexbox Layouts",
   "concept": "Use CSS Flexbox to arrange elements in rows and columns with proper alignment.",
   "challenges": [

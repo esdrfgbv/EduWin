@@ -1,4 +1,6 @@
 {
+    "level": 3,
+  "type" : "Compiler",
   "title": "Python Level 3 — Loops & Simple Number Algorithms",
   "concept": "Use while and for loops to iterate ranges, compute sums, factorials, and simple numeric properties.",
   "challenges": [

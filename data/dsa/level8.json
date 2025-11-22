@@ -1,4 +1,6 @@
 {
+    "level": 8,
+  "type" : "Compiler",
   "title": "DSA Level 7 — Trees & BST",
   "concept": "Binary tree traversals, height, diameter, BST operations and searching.",
   "challenges": [

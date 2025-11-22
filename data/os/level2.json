@@ -1,6 +1,8 @@
 {
+  "level": 2,
   "title": "OS Level 2 — Memory & Synchronization",
   "concept": "Paging, segmentation, deadlocks, critical section and semaphores.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,

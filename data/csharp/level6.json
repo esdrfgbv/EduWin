@@ -1,4 +1,6 @@
 {
+    "level": 6,
+  "type" : "Compiler",
   "title": "C# Level 6 — Strings & Character Operations",
   "concept": "Use strings to index, slice, count, replace and modify text.",
   "challenges": [

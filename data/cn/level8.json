@@ -2,66 +2,67 @@
   "level": 8,
   "title": "CN Level 8 — Small Office Network Design",
   "concept": "Scenario-based design for a small office: devices, topology, IP addressing.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,
-      "title": "Q1: Devices & Topology",
-      "description": "Design a basic network for an office with 30 computers and Internet access. List the main network devices you would use (router, switches, access points, etc.) and describe a simple topology connecting them.",
-      "inputDescription": "No input. Design question.",
-      "outputDescription": "Short design with device list and topology explanation (checked manually).",
-      "examples": [
-        "Hint: ISP modem/router → core switch → access switches → PCs and Wi-Fi AP(s)."
-      ],
-      "starterCode": "// Describe devices and how they are connected in a simple diagram (text).\n",
-      "tests": []
+      "question": "For an office with 30 computers that needs Internet access, which of the following is the most appropriate basic topology?",
+      "options": {
+        "A": "All PCs connected in a ring directly with coaxial cable",
+        "B": "ISP modem/router → switch(es) → PCs and Wi-Fi access point(s)",
+        "C": "Each PC directly connected to the ISP modem via its own cable",
+        "D": "Only a single Wi-Fi router with no switches and all PCs on Wi-Fi"
+      },
+      "answer": "B",
+      "explanation": "A typical small office design uses an ISP router, one or more switches, and APs for wireless devices."
     },
     {
       "id": 2,
-      "title": "Q2: IP Addressing Plan",
-      "description": "For the same office network, propose a simple IPv4 addressing plan using a private subnet (e.g., 192.168.x.x). Explain how devices get their IP addresses (DHCP vs static).",
-      "inputDescription": "No input. Design question.",
-      "outputDescription": "Subnet choice and explanation of address assignment (checked manually).",
-      "examples": [
-        "Example: Use 192.168.1.0/24, router = 192.168.1.1, DHCP range 192.168.1.100–192.168.1.200."
-      ],
-      "starterCode": "// Write your IP scheme and how DHCP would be used.\n",
-      "tests": []
+      "question": "Which IPv4 addressing plan is most suitable for a single small office subnet with up to 30 devices?",
+      "options": {
+        "A": "Use public block 8.8.8.0/24 on all devices directly",
+        "B": "Use private subnet 192.168.1.0/24 with DHCP from the router",
+        "C": "Use 127.0.0.0/8 for all hosts",
+        "D": "Use 169.254.0.0/16 for planned static addresses"
+      },
+      "answer": "B",
+      "explanation": "A private /24 like 192.168.1.0/24 with the router acting as DHCP server is standard for small offices."
     },
     {
       "id": 3,
-      "title": "Q3: Wired vs Wireless",
-      "description": "In this office of 30 computers and some mobile devices, explain which devices you would connect via wired Ethernet and which via Wi-Fi, and why.",
-      "inputDescription": "No input. Short descriptive answer.",
-      "outputDescription": "Explanation comparing wired and wireless for different device types.",
-      "examples": [
-        "Hint: Desktops and servers often use wired for reliability, laptops/phones often use Wi-Fi for mobility."
-      ],
-      "starterCode": "// Briefly describe your choice of wired vs wireless for device categories.\n",
-      "tests": []
+      "question": "In a typical office, which devices are best connected via wired Ethernet instead of Wi-Fi?",
+      "options": {
+        "A": "Desktops and servers that require stable, high-throughput connections",
+        "B": "Smartphones only",
+        "C": "Visitors’ laptops only",
+        "D": "All devices must be wireless by design"
+      },
+      "answer": "A",
+      "explanation": "Wired Ethernet offers higher reliability and stable bandwidth, ideal for desktops and servers."
     },
     {
       "id": 4,
-      "title": "Q4: Basic VLAN Idea (Optional Advanced)",
-      "description": "Suppose the office has two departments: Admin and Dev. Explain how VLANs could be used to separate their traffic logically even if they share the same physical switches.",
-      "inputDescription": "No input. Conceptual design.",
-      "outputDescription": "High-level explanation of VLAN tags and isolation.",
-      "examples": [
-        "Hint: VLAN 10 for Admin, VLAN 20 for Dev, router or Layer-3 switch for inter-VLAN routing."
-      ],
-      "starterCode": "// Explain how VLANs help segment the network and why this is useful.\n",
-      "tests": []
+      "question": "How can VLANs help when an office has Admin and Dev departments sharing the same physical switches?",
+      "options": {
+        "A": "VLANs increase Internet speed automatically",
+        "B": "VLANs logically separate traffic so Admin and Dev can be isolated while sharing hardware",
+        "C": "VLANs remove the need for IP addressing",
+        "D": "VLANs replace the need for routers entirely"
+      },
+      "answer": "B",
+      "explanation": "VLANs logically segment networks on the same switches, improving isolation and security."
     },
     {
       "id": 5,
-      "title": "Q5: Internet Redundancy (Bonus)",
-      "description": "If the office requires high availability Internet, briefly describe one way to add redundancy for the WAN connection.",
-      "inputDescription": "No input. Short design idea.",
-      "outputDescription": "Description of adding second ISP or backup link and how failover might work.",
-      "examples": [
-        "Example: Use dual WAN router with two ISPs and automatic failover."
-      ],
-      "starterCode": "// Describe one redundancy option and how it improves reliability.\n",
-      "tests": []
+      "question": "Which option is a common way to add WAN redundancy for high-availability Internet in a small office?",
+      "options": {
+        "A": "Use two different ISPs connected to a dual-WAN router with automatic failover",
+        "B": "Use only Wi-Fi instead of wired connections",
+        "C": "Increase the number of switches on the LAN",
+        "D": "Disable DHCP on the router"
+      },
+      "answer": "A",
+      "explanation": "A dual-WAN router with two ISPs allows failover if one link goes down."
     }
   ]
 }

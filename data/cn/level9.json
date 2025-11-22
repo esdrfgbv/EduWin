@@ -2,66 +2,67 @@
   "level": 9,
   "title": "CN Level 9 — Performance & Troubleshooting",
   "concept": "Scenario-based questions on diagnosing latency, packet loss and connectivity problems.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,
-      "title": "Q1: High Latency Investigation",
-      "description": "Users in an office complain that a web application is very slow. Describe a step-by-step approach you would use to troubleshoot whether the issue is due to the local network, ISP, DNS, or the web server itself.",
-      "inputDescription": "No input. Scenario question.",
-      "outputDescription": "Ordered list of troubleshooting steps (checked manually).",
-      "examples": [
-        "Mention tests like: ping gateway, ping external IP, DNS lookup, traceroute, browser dev tools, checking server status, etc."
-      ],
-      "starterCode": "// List steps you would follow and what each step checks.\n",
-      "tests": []
+      "question": "Users report that a web application is very slow. Which initial step best helps distinguish between a local network issue and a remote/server issue?",
+      "options": {
+        "A": "Immediately reinstall the browser on all client PCs",
+        "B": "Ping the default gateway and then an external IP like 8.8.8.8",
+        "C": "Upgrade all switches to 10 Gbps",
+        "D": "Change the office Wi-Fi password"
+      },
+      "answer": "B",
+      "explanation": "Pinging the gateway checks local network; pinging an external IP checks connectivity beyond the LAN."
     },
     {
       "id": 2,
-      "title": "Q2: Packet Loss Scenario",
-      "description": "Some users notice frequent disconnections in a video call app. Explain possible network-level reasons (e.g., Wi-Fi interference, congestion) and what measurements or tools could help confirm the root cause.",
-      "inputDescription": "No input. Scenario question.",
-      "outputDescription": "Short explanation of causes and measurements (checked manually).",
-      "examples": [
-        "You can mention checking Wi-Fi signal strength, channel overlap, ping/packet-loss stats, speed tests, etc."
-      ],
-      "starterCode": "// Describe likely causes and how you would measure them.\n",
-      "tests": []
+      "question": "Frequent disconnections in a video call app are MOST likely caused by:",
+      "options": {
+        "A": "A faulty keyboard",
+        "B": "Wi-Fi interference or network congestion leading to packet loss",
+        "C": "A wrong system time on PCs",
+        "D": "Using HTTPS instead of HTTP"
+      },
+      "answer": "B",
+      "explanation": "Real-time apps are sensitive to packet loss and jitter, often caused by wireless issues or congestion."
     },
     {
       "id": 3,
-      "title": "Q3: Single User vs All Users",
-      "description": "Only one user in the office reports that the Internet is slow, while others are fine. What checks would you perform on that user’s PC and connection before suspecting the wider network?",
-      "inputDescription": "No input. Scenario question.",
-      "outputDescription": "List of checks at the end host (manual evaluation).",
-      "examples": [
-        "Hint: Check NIC link speed, Wi-Fi signal, background downloads, malware, local DNS settings, etc."
-      ],
-      "starterCode": "// Focus on end-host checks: network adapter, cabling/Wi-Fi, local processes.\n",
-      "tests": []
+      "question": "Only one user in the office has slow Internet while others are fine. Which check should be done FIRST?",
+      "options": {
+        "A": "Replace all switches in the office",
+        "B": "Check that user’s network adapter status, cable/Wi-Fi signal and background downloads",
+        "C": "Change the ISP for the whole office",
+        "D": "Reconfigure the core router’s WAN IP"
+      },
+      "answer": "B",
+      "explanation": "Since the problem is isolated to one user, start with that host’s local connection and processes."
     },
     {
       "id": 4,
-      "title": "Q4: Intermittent Connectivity",
-      "description": "Users complain that the connection drops randomly for a few seconds every hour. Suggest possible physical-layer or data-link-layer causes and how you would investigate them.",
-      "inputDescription": "No input. Scenario question.",
-      "outputDescription": "Possible causes + investigation plan.",
-      "examples": [
-        "Examples: Loose cable, bad switch port, power-saving on NIC, Wi-Fi channel interference."
-      ],
-      "starterCode": "// Mention layer 1/2 issues and tools like link-light checks, swapping cables/ports, Wi-Fi analyzer.\n",
-      "tests": []
+      "question": "Users experience brief disconnections every hour. Which of the following is MOST likely a layer 1 or 2 cause?",
+      "options": {
+        "A": "Incorrect DNS record for external website",
+        "B": "Loose Ethernet cable or failing switch port",
+        "C": "Invalid SSL certificate on the server",
+        "D": "Wrong subnet mask on the WAN link"
+      },
+      "answer": "B",
+      "explanation": "Physical or data-link issues like loose cables and bad ports can cause intermittent link drops."
     },
     {
       "id": 5,
-      "title": "Q5: Baseline Performance",
-      "description": "Explain why having a performance baseline of the network (normal latency, normal throughput) is useful for troubleshooting.",
-      "inputDescription": "No input. Conceptual question.",
-      "outputDescription": "Short reasoning (checked manually).",
-      "examples": [
-        "Hint: You can compare current metrics against baseline to detect anomalies more easily."
-      ],
-      "starterCode": "// Explain 2–3 reasons why baselines help detect and debug problems.\n",
-      "tests": []
+      "question": "Why is having a performance baseline for the network useful?",
+      "options": {
+        "A": "It eliminates the need for monitoring tools",
+        "B": "It allows you to compare current metrics with normal values to detect anomalies",
+        "C": "It guarantees that no future problems will occur",
+        "D": "It is only required for wireless networks"
+      },
+      "answer": "B",
+      "explanation": "A baseline helps identify abnormal latency, throughput, or loss by comparison with known-good conditions."
     }
   ]
 }

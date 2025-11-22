@@ -1,6 +1,8 @@
 {
+  "level": 10,
   "title": "DBMS Level 10 — Data Warehousing & Advanced Topics",
   "concept": "OLTP vs OLAP, star/snowflake schema, column stores, cubes and OLAP operations.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,
@@ -79,7 +81,7 @@
       "question": "In OLAP, 'roll-up' refers to:",
       "options": {
         "A": "Moving from summarized data to more detailed data",
-        "B": "Aggregating data along a dimension hierarchy (e.g., day → month → year)",
+        "B": "Aggregating data along a dimension hierarchy (e.g., day \u2192 month \u2192 year)",
         "C": "Adding a new dimension",
         "D": "Filtering individual records"
       },
@@ -91,7 +93,7 @@
       "question": "In OLAP, 'drill-down' refers to:",
       "options": {
         "A": "Aggregating to higher levels",
-        "B": "Moving from summary to more detailed data (e.g., year → month → day)",
+        "B": "Moving from summary to more detailed data (e.g., year \u2192 month \u2192 day)",
         "C": "Dropping a dimension",
         "D": "Adding random noise to data"
       },

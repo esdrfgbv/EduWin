@@ -1,4 +1,6 @@
 {
+    "level": 2,
+  "type" : "Compiler",
   "title": "Java Level 2 — Conditionals",
   "concept": "if/else, comparison operators, simple branching.",
   "language": "java",

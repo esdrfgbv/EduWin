@@ -1,6 +1,8 @@
 {
+  "level": 8,
   "title": "DBMS Level 7 — Advanced Transactions & Concurrency",
   "concept": "Lock types, isolation anomalies, 2PL variants, timestamp ordering and deadlocks.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,

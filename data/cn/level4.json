@@ -2,66 +2,67 @@
   "level": 4,
   "title": "CN Level 4 — Network Layer & IP Addressing",
   "concept": "IP addressing, subnets, routing basics and ICMP.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,
-      "title": "Q1: IPv4 Address Length",
-      "description": "An IPv4 address is of length:",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option.",
-      "examples": [
-        "Options:\n a) 16 bits\n b) 32 bits\n c) 48 bits\n d) 64 bits"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "An IPv4 address is of length:",
+      "options": {
+        "A": "16 bits",
+        "B": "32 bits",
+        "C": "48 bits",
+        "D": "64 bits"
+      },
+      "answer": "B",
+      "explanation": "IPv4 addresses are 32 bits long, usually written in dotted decimal format."
     },
     {
       "id": 2,
-      "title": "Q2: Router Role",
-      "description": "The main function of a router is to:",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option.",
-      "examples": [
-        "Options:\n a) Connect devices within a single LAN segment only\n b) Route packets between different networks\n c) Convert digital signals to analog only\n d) Provide only Wi-Fi access to clients"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "The main function of a router is to:",
+      "options": {
+        "A": "Connect devices within a single LAN segment only",
+        "B": "Route packets between different networks",
+        "C": "Convert digital signals to analog only",
+        "D": "Provide only Wi-Fi access to clients"
+      },
+      "answer": "B",
+      "explanation": "Routers forward packets between different IP networks based on routing tables."
     },
     {
       "id": 3,
-      "title": "Q3: Private IP Range",
-      "description": "Which of the following is a private IPv4 address range?",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option.",
-      "examples": [
-        "Options:\n a) 8.8.8.0/24\n b) 10.0.0.0/8\n c) 100.64.0.0/10\n d) 172.0.0.0/8"
-      ],
-      "starterCode": "// Note: multiple private ranges exist; choose the best correct one among options.\n// Answer: a / b / c / d",
-      "tests": []
+      "question": "Which of the following is a private IPv4 address range?",
+      "options": {
+        "A": "8.8.8.0/24",
+        "B": "10.0.0.0/8",
+        "C": "100.64.0.0/10",
+        "D": "172.0.0.0/8"
+      },
+      "answer": "B",
+      "explanation": "10.0.0.0/8 is one of the RFC1918 private address blocks."
     },
     {
       "id": 4,
-      "title": "Q4: Default Gateway",
-      "description": "The default gateway in a host's IP configuration is typically:",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option.",
-      "examples": [
-        "Options:\n a) DNS server IP address\n b) IP address of the local switch\n c) IP address of the router interface in the local network\n d) IP address of any device in the Internet"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "The default gateway in a host's IP configuration is typically:",
+      "options": {
+        "A": "DNS server IP address",
+        "B": "IP address of the local switch",
+        "C": "IP address of the router interface in the local network",
+        "D": "IP address of any device in the Internet"
+      },
+      "answer": "C",
+      "explanation": "The default gateway is usually the local router's IP, used to reach other networks."
     },
     {
       "id": 5,
-      "title": "Q5: ICMP Use",
-      "description": "Which of the following protocols is mainly used by the 'ping' command to test reachability?",
-      "inputDescription": "No input. MCQ.",
-      "outputDescription": "Choose the correct option.",
-      "examples": [
-        "Options:\n a) TCP\n b) UDP\n c) ICMP\n d) ARP"
-      ],
-      "starterCode": "// Answer: a / b / c / d",
-      "tests": []
+      "question": "Which protocol is mainly used by the 'ping' command to test reachability?",
+      "options": {
+        "A": "TCP",
+        "B": "UDP",
+        "C": "ICMP",
+        "D": "ARP"
+      },
+      "answer": "C",
+      "explanation": "Ping sends ICMP Echo Request/Reply messages to test connectivity."
     }
   ]
 }

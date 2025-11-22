@@ -1,6 +1,8 @@
 {
+  "level": 1,
   "title": "OS Level 1 — Fundamentals",
   "concept": "Basic OS roles, processes, threads and system calls.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,
