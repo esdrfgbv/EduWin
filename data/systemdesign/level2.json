@@ -1,6 +1,8 @@
 {
-  "title": "System Design Level 2 — Data, Caching & Reliability",
+  "level": 2,
+  "title": "Level 2 — Data, Caching & Reliability",
   "concept": "CAP theorem, consistency, replication, sharding and message queues.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,

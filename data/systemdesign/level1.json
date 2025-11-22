@@ -1,7 +1,8 @@
 {
-  "type" : "MCQ",
-  "title": "System Design Level 1 — Fundamentals",
+  "level": 1,
+  "title": "Level 1 — Fundamentals",
   "concept": "Basic scalability concepts, latency vs throughput, monolith vs microservices, caching and load balancing.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,

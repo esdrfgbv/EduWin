@@ -1,6 +1,8 @@
 {
-  "title": "System Design Level 3 — High-Level Architecture",
+  "level": 3,
+  "title": "Level 3 — High-Level Architecture",
   "concept": "Designing large-scale systems: rate limiting, search, newsfeed, id generation and observability.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,

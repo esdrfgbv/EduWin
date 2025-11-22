@@ -1,6 +1,8 @@
 {
-  "title": "System Design Level 6 — Messaging, Queues & Streaming",
+  "level": 6,
+  "title": "Level 6 — Messaging, Queues & Streaming",
   "concept": "Async communication, message queues, pub/sub, streaming and backpressure.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,

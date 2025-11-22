@@ -1,6 +1,8 @@
 {
-  "title": "System Design Level 5 — Caching & Performance Patterns",
+  "level": 5,
+  "title": "Level 5 — Caching & Performance Patterns",
   "concept": "Cache patterns, invalidation strategies, cache stampede, and performance tuning.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,

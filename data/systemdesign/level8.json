@@ -1,6 +1,8 @@
 {
-  "title": "System Design Level 8 — Social Systems & Rate Limiting",
+  "level": 8,
+  "title": "Level 8 — Social Systems & Rate Limiting",
   "concept": "Timelines, follower graphs, fan-out, abuse prevention and rate limiting patterns.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,

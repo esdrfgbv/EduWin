@@ -1,6 +1,8 @@
 {
-  "title": "System Design Level 10 — End-to-End Design & Trade-offs",
+  "level": 10,
+  "title": "Level 10 — End-to-End Design & Trade-offs",
   "concept": "Holistic design, consistency vs availability, multi-region, cost, and scaling strategies.",
+  "type": "MCQ",
   "challenges": [
     {
       "id": 1,
